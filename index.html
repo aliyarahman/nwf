@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cattle in the Amazon</title>
+    <link href="css/application.css" rel="stylesheet">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery.panelSnap.js"></script>
+    <script>
+      jQuery(function($) {
+        var options = {
+      $menu: false,
+      menuSelector: 'a',
+      panelSelector: '> section',
+      namespace: '.panelSnap',
+      onSnapStart: function(){},
+      onSnapFinish: function(){},
+      onActivate: function(){},
+      directionThreshold: 50,
+      slideSpeed: 200,
+      easing: 'linear',
+      offset: 0,
+      keyboardNavigation: {
+        enabled: false,
+        nextPanelKey: 40,
+        previousPanelKey: 38,
+        wrapAround: true
+      }
+    };
+        $('body').panelSnap(options);
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <!-- Chapter 1 -->
+    <section>
+      <div class="snapbox grey">
+        <div class="chapter-headline">
+          <h1>COWS.<br>Chapter 1.</h1>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Chapter 2 -->
+    <section>
+      <div class="snapbox green">
+        <div class="chapter-headline">
+          <h1>COWS.<br>2.</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 3 -->
+    <section>
+      <div class="snapbox orange">
+        <div class="chapter-headline">
+          <h1>COWS.<br>In the Amazon.</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 4 -->
+    <section>
+      <div class="snapbox blue">
+        <div class="chapter-headline">
+          <h1>COWS.<br>Tokyo Drift.</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 5 -->
+    <section>
+      <div class="snapbox yellow">
+        <div class="chapter-headline">
+          <h1>Deadcau5.<br>The end.</h1>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

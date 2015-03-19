@@ -1,0 +1,51 @@
+body        {
+            background-color: black;
+            
+            }
+
+
+section     { 
+            background-image: url("css/cow.png");
+            height: 900px;
+            opacity: 0.6;
+            }
+
+
+.snapbox    {
+            width : 80%;
+            margin: 0 auto;
+            text-align: center;
+            opacity: 0.4;
+            height: 106%;
+            }
+
+.chapter-headline {
+            
+            }
+
+.chapter-headline h1 {
+            color: white;
+            font-family: Helvetica;
+            font-size: 4em;
+            padding-top: 4em;
+            }
+
+.grey       {
+            background-color: #686868;
+            }
+
+.green      {
+            background-color: #16A085;
+            }
+
+.orange     {
+            background-color: #F39C12;
+            }
+
+.blue     {
+            background-color: #4989dd;
+            }
+
+.yellow     {
+            background-color: #F1C40F;
+            }
