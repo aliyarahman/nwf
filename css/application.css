@@ -1,7 +1,39 @@
 body     { 
             width: 1410px;
             font-family: Helvetica;
+            margin-left: auto; margin-right: auto;
             }
+
+h1,h2        {font-family: Helvetica;
+          color: #363845;}
+
+h1        {font-size: 9em;}
+h2        {font-size: 5em;}
+
+
+.chapter-header {
+          background-color: #fff;
+          height: auto;
+          text-align: center;
+          }
+
+
+.chapter-headline {
+          width: 65%;
+          height: 10%;
+          margin: auto;
+          }
+
+
+
+.chapter-triangle {
+          text-align: center; margin: 0 auto;
+          width: 0; 
+          height: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 20px solid #fff;
+          }
 
 /* Prequel style */
 
@@ -35,17 +67,19 @@ body     {
               margin: 6px;}
 
 
-#contents  {height: 345px;}
+#contents  {height: 345px; margin-left: 60px;}
 
 
-.chapter-button {margin-left: 4%; margin-top: 3.5em;
-                width: 15%;
+.chapter-button {margin-top: 3.5em;
+                width: 19.5%;
                 text-align: left; vertical-align: top;
                 display: inline-block;}
 
 
 .chapter-title {
             color: #363845;
+            height: 2.5em;
+            width: 70%;
             }
 
 
@@ -63,24 +97,92 @@ body     {
 .chapter-line {
             vertical-align: middle;
             display: inline-block;
-            height: 2px; width: 40px;
-            background-color: #363845;
+            height: 2px; width: 88%;
+            background-color: #9a9aa2;
             }
 
 
 /* Chapter 1 style */
 
 #chapter-one { background-color: #db9d2e;
-	    height: 1550px;
-        }
+	    height: 1253px;
+      }
+
+#left-col-ch-1 {
+      display: inline-block;
+      width: 40%;
+      }
+
+.year-number-holder {
+      margin-left: 15%;
+      margin-right: 5%;
+      margin-top: 2em;
+      vertical-align: top;
+}
+
+.year-number-lg  {
+      color: #b98728;
+      text-align: left;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      line-height: 1em;
+  }
+
+.year-number-lg:hover  {
+      color: #363845;
+  }
+
+#summary-text {
+    width: 528px;
+    height: 224px;
+    background-color: white;
+    position: relative;
+    left: 250px;
+    top: 150px;
+  }
+
+#summary-text p {
+    margin: -1em 3em 0 4em;
+}
+
+.tangent-tab  {
+    background-color: #484a56;
+    color: #db9d2e;
+    width: 166px;
+    padding: 1.2em 0em 1.2em 1.2em;
+    position: relative;
+    left: -190px;
+    top: 40px;
+    font-size: 1.25em;
+  }
+
+#brazil-map-ch-1  {
+    background-image: url("../img/brazil-map-ch-1.jpg");
+    background-repeat: no-repeat;
+    height: 950px;
+    width: 751px;
+    display: inline-block;
+    vertical-align: top;
+}
 
 
 /* Chapter 2 style */
 
 #chapter-two {  background-color: #6fb174;
-                height: 1550px;
+                height: 1177px;
             }
 
+#cow-products-ch-2 {
+            background-image: url("../img/cow-products-ch-2.jpg");
+            background-repeat: no-repeat;
+            height: 1400px;
+            }
+
+#top-circle-ch-2 {
+            margin-bottom: -4px;
+            position: relative;
+            left: 495px;
+            }
 
 /* Chapter 3 style */
 
