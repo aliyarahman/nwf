@@ -4,83 +4,119 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cattle in the Amazon</title>
+
+    <title>The Brazilian Amazon - Cattle Ranching</title>
+
     <link href="css/application.css" rel="stylesheet">
+
     <script src="js/jquery-2.1.0.min.js"></script>
-    <script src="js/jquery.panelSnap.js"></script>
-    <script>
-      jQuery(function($) {
-        var options = {
-      $menu: false,
-      menuSelector: 'a',
-      panelSelector: '> section',
-      namespace: '.panelSnap',
-      onSnapStart: function(){},
-      onSnapFinish: function(){},
-      onActivate: function(){},
-      directionThreshold: 50,
-      slideSpeed: 200,
-      easing: 'linear',
-      offset: 0,
-      keyboardNavigation: {
-        enabled: false,
-        nextPanelKey: 40,
-        previousPanelKey: 38,
-        wrapAround: true
-      }
-    };
-        $('body').panelSnap(options);
-      });
-    </script>
+    <script src="js/jquery.panelSnap.js"></script> <!-- Allows chapters to snap into place -->
+    <script src="js/application.js"></script> <!-- Custom non-library JavaScript, including settings for library use in this page -->
+
   </head>
+
   <body>
 
 
-    <!-- Chapter 1 -->
-    <section>
-      <div class="snapbox grey">
-        <div class="chapter-headline">
-          <h1>COWS.<br>Chapter 1.</h1>
+    <!-- Prequel -->
+    <section class="chapter" id="prequel">
+        
+        <div id="prequel-image">
+            <div id="burger-box">
+                <div id="burger-holder">
+                    <div class="burger-bar"></div>
+                    <div class="burger-bar"></div>
+                    <div class="burger-bar"></div>
+                </div>
+            </div>    
         </div>
-      </div>
+
+        <div id="contents">
+            <div class="chapter-button">
+                <div class="chapter-number">
+                    1
+                </div>
+                <div class="chapter-title">
+                    Deforestation and cattle population growth
+                </div>
+                <div class>
+                    <span class="chapter-bullet">&#149</span>
+                    <span class="chapter-line"></span>
+                </div>
+            </div>
+
+            <div class="chapter-button">
+                <div class="chapter-number">
+                    2
+                </div>
+                <div class="chapter-title">
+                    Supply chain links
+                </div>
+            </div>
+
+            <div class="chapter-button">
+                <div class="chapter-number">
+                    3
+                </div>
+                <div class="chapter-title">
+                    Bringing about change
+                </div>
+            </div>
+
+            <div class="chapter-button">
+                <div class="chapter-number">
+                    4
+                </div>
+                <div class="chapter-title">
+                    Impacts of supply chain and governance efforts
+                </div>
+            </div>
+
+            <div class="chapter-button">
+                <div class="chapter-number">
+                    5
+                </div>
+                <div class="chapter-title">
+                    Path forward and next steps
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+        
+
+    <!-- Chapter 1 -->
+    <section class="chapter" id="chapter-one">
+
     </section>
 
 
     <!-- Chapter 2 -->
-    <section>
-      <div class="snapbox green">
-        <div class="chapter-headline">
-          <h1>COWS.<br>2.</h1>
-        </div>
-      </div>
+    <section class="chapter" id="chapter-two">
+
     </section>
 
     <!-- Chapter 3 -->
-    <section>
-      <div class="snapbox orange">
-        <div class="chapter-headline">
-          <h1>COWS.<br>In the Amazon.</h1>
-        </div>
-      </div>
+    <section class="chapter" id="chapter-three">
+
     </section>
+
 
     <!-- Chapter 4 -->
-    <section>
-      <div class="snapbox blue">
-        <div class="chapter-headline">
-          <h1>COWS.<br>Tokyo Drift.</h1>
-        </div>
-      </div>
+    <section class="chapter" id="chapter-four">
+
     </section>
+
 
     <!-- Chapter 5 -->
-    <section>
-      <div class="snapbox yellow">
-        <div class="chapter-headline">
-          <h1>Deadcau5.<br>The end.</h1>
-        </div>
-      </div>
+    <section class="chapter" id="chapter-five">
+
     </section>
 
+
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery.panelSnap.js"></script> <!-- Allows chapters to snap into place -->
+    <script src="js/application.js"></script> <!-- Custom non-library JavaScript, including settings for library use in this page -->
   </body>
 </html>

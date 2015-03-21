@@ -1,51 +1,102 @@
-body        {
-            background-color: black;
-            
-            }
-
-
-section     { 
-            background-image: url("css/cow.png");
-            height: 900px;
-            opacity: 0.6;
-            }
-
-
-.snapbox    {
-            width : 80%;
-            margin: 0 auto;
-            text-align: center;
-            opacity: 0.4;
-            height: 106%;
-            }
-
-.chapter-headline {
-            
-            }
-
-.chapter-headline h1 {
-            color: white;
+body     { 
+            width: 1410px;
             font-family: Helvetica;
+            }
+
+/* Prequel style */
+
+#prequel { background-color: white;
+	       }
+
+
+#prequel-image {background-image: url("../img/prequel-image.png");
+                background-repeat: no-repeat;
+                height: 845px;
+                }
+
+
+#burger-box {background-color: #363845;
+             position: relative;
+             top: 805px;
+             height: 70px;
+             width: 220px;
+            }
+
+
+#burger-holder {height: 27px;
+              position: relative; 
+              left: 120px;
+              top: 20px;}
+
+
+.burger-bar { height: 5px;
+              width: 40px;
+              background-color: #afb0b5;
+              margin: 6px;}
+
+
+#contents  {height: 345px;}
+
+
+.chapter-button {margin-left: 4%; margin-top: 3.5em;
+                width: 15%;
+                text-align: left; vertical-align: top;
+                display: inline-block;}
+
+
+.chapter-title {
+            color: #363845;
+            }
+
+
+#contents .chapter-button .chapter-number {
+            font-size: 6em;
+            color: #db9d2e;
+            }
+
+.chapter-bullet {
             font-size: 4em;
-            padding-top: 4em;
+            color: #363845;
+            vertical-align: middle;
             }
 
-.grey       {
-            background-color: #686868;
+.chapter-line {
+            vertical-align: middle;
+            display: inline-block;
+            height: 2px; width: 40px;
+            background-color: #363845;
             }
 
-.green      {
-            background-color: #16A085;
+
+/* Chapter 1 style */
+
+#chapter-one { background-color: #db9d2e;
+	    height: 1550px;
+        }
+
+
+/* Chapter 2 style */
+
+#chapter-two {  background-color: #6fb174;
+                height: 1550px;
             }
 
-.orange     {
-            background-color: #F39C12;
-            }
 
-.blue     {
-            background-color: #4989dd;
-            }
+/* Chapter 3 style */
 
-.yellow     {
-            background-color: #F1C40F;
-            }
+#chapter-three { background-color: gray;
+            height: 1550px;}
+
+
+
+
+/* Chapter 4 style */
+
+#chapter-four { background-color: #616161;
+            height: 1550px;}
+
+
+/* Chapter 5 style */
+
+#chapter-five { background-color: gray;
+            height: 1550px;}
