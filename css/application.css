@@ -214,7 +214,6 @@ h2        {font-size: 4em;}
           width: 40%;
           }
 
-
 .chapter-landing {
   margin-left: 10%;
   margin-top: -10em;
@@ -500,7 +499,7 @@ h2        {font-size: 4em;}
       vertical-align: top;
 }
 
-.year-number-lg  {
+#chapter-one .year-number-lg  {
       color: #b98728;
       text-align: left;
       margin-top: 0px;
@@ -576,30 +575,52 @@ h2        {font-size: 4em;}
 
 
 
-
-
-
-
-
-
 /* Chapter 2 style */
 
 #chapter-two {  background-color: #6fb174;
                 height: auto;
-            }
+             }
 
-#cow-products-ch-2 {
-            background-image: url("../img/cow-products-ch-2.jpg");
-            background-repeat: no-repeat;
-            height: 1400px;
-            }
+#chapter-two .chapter-summary-tagline {width: 20%;}
 
-#top-circle-ch-2 {
-            position: relative;
-            left: 64em;
-            top: -5em;
-            margin-bottom: -5em;
-            }
+#product-bubbles {
+              text-align: right;
+              margin-bottom: -15em;
+              }
+
+#tallow-bubble, #leather-bubble, #beef-bubble {
+              display: inline-block;
+              width: 30%;
+              position: relative;}
+
+#leather-bubble {top: -27em;}
+#beef-bubble {top: -20em;}
+#tallow-bubble {top: -4em; left: 20em;}
+
+.bubble-pic   {width: 100%;}
+
+.ship-icon    {position: relative; width: 25%;}
+
+#beef-bubble .ship-icon    {top:-2.5em;
+                            left: -8.5em;}
+
+#leather-bubble .ship-icon    {top:-4.5em;
+                              left: -9.5em;}
+
+#tallow-bubble .ship-icon    {top:-3.5em;
+                              left: -1.5em;}
+
+#adult-cow  { margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+              position: relative;
+              top: 5em;
+              left: 1em;
+              }
+
+#adult-cow img {width: 100%;}
+
+#chapter-two .tangent-tab {color: #6fb174;}
 
 
 
@@ -610,13 +631,143 @@ h2        {font-size: 4em;}
             height: auto;}
 
 
+#ch3-left-col {
+      display:inline-block;
+      width: 40%;
+      margin-left: 5%;
+      vertical-align: top;
+      }
+
+#ch3-right-col {
+      display:inline-block;
+      width: 40%;
+      text-align: right;
+      vertical-align: top;
+      }
+
+.g4-holder {
+      margin-left: 10%;
+      margin-right: 5%;
+      margin-top: 6em;
+      vertical-align: top;
+}
+
+.g4-lg  {
+      color: #5e616a;
+      text-align: left;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      line-height: 1em;
+      -webkit-font-feature-settings: 'tnum';
+      -moz-font-feature-settings: 'tnum';
+      -ms-font-feature-settings: 'tnum';
+  }
+
+
+.g4-lg:hover  {
+      color: #fff;
+  }
+
+#ch3-map-legends   {
+      display: inline-block;
+      color: #fff;
+      position: relative;
+      left: -65em;
+      top: 25em;
+      width: 80em;
+      }
+
+
+#company-legend, #g4-legend, #vegetation-legend {
+  vertical-align: top;
+  display: inline-block;
+  width: 18%;
+}
+
+#company-legend {}
+
+.ch3-legend-note   {
+      font-size: 0.8em;
+      display: inline-block;
+      vertical-align: middle;
+      }
+
+.ch3-legend-label   {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1.1em;
+      }
+
+#ch3-legend-box-1, #ch3-legend-box-2, #ch3-legend-box-3, #ch3-legend-box-4, #ch3-legend-box-5, #ch3-legend-box-6, #ch3-legend-box-7, #ch3-legend-box-8 {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 3%;
+      margin-left: 5%;
+      height: 1.8em;
+      width: 1.8em;
+      background-color: #686b74;
+      }
+
+#ch3-legend-box-1-circle, #ch3-legend-box-2-circle, #ch3-legend-box-3-circle, #ch3-legend-box-4-circle, #ch3-legend-box-5-circle {
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: 50%;
+      margin-top: 15%;
+      border-radius: 50%;
+      border: 2px #fff solid;
+    }
+
+#ch3-legend-box-5-circle {border: 2px #40424e solid;}
+
+#ch3-legend-box-1-circle {background-color: #6fb174;}
+#ch3-legend-box-2-circle {background-color: #eb6451;}
+#ch3-legend-box-3-circle {background-color: #c2a993;}
+#ch3-legend-box-4-circle {background-color: #fff;}
+#ch3-legend-box-5-circle {background-color: #40424e;}
+
+#ch3-legend-box-6 {background-color: #6fb174;}
+#ch3-legend-box-7 {background-color: #eb6451;}
+#ch3-legend-box-8 {background-color: #c2a993;}
+
+#brazil-map-ch-3  {
+      display: inline-block;
+      position: relative;
+      top: -10em;
+      left: 2em;
+      width: 100%;
+      }
+
+#brazil-map-ch-3 img  {
+    width: 100%;
+    height: auto;
+}
+
+
+
+#chapter-three .tangent-tab {color: #363845;
+      background-color: #6fb174;}
+
+
+
+
+
+
+
+
+
 /* Chapter 4 style */
 
-#chapter-four { background-color: #b29377;
-            height: 1000px;}
+#chapter-four { background-color: #b29377; height: auto;}
+
+#ch4-mid      {height: 1000px;}
+
+#chapter-four .tangent-tab {color: #b29377;}
 
 
 /* Chapter 5 style */
 
 #chapter-five { background-color: #4bb7b7;
             height: auto;}
+
+#chapter-five .tangent-tab {color: #4bb7b7;}

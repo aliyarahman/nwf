@@ -27,19 +27,23 @@ $(document).ready(function() {
 
   //Global behavior
 
-  $('.chapter-icon').hover(function() {
-      $('.chapter-details').slideDown();
-  });
 
 
   //Chapter 3 behavior
 
+  $("#brazil-map-ch-3").hover(
+  function () {
+    $('#company-legend').show();
+  }, 
+  function () {
+    $('#company-legend').hide();
+  }
+);
 
-
-  $("#ch3-full-image").mouseover(function() { 
-        $(this).attr("src", "img/Ch3-hover.jpg");
-        })
-        .mouseout(function() {
-        $(this).attr("src", "img/Ch3.jpg");
-        });
+//  $("#ch3-full-image").mouseover(function() { 
+//        $(this).attr("src", "img/Ch3-hover.jpg");
+//        })
+//        .mouseout(function() {
+//        $(this).attr("src", "img/Ch3.jpg");
+//        });
 });
