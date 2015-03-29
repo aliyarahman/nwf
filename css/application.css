@@ -1,5 +1,3 @@
-
-
 /* Fonts
 
  * Legal Disclaimer
@@ -439,19 +437,17 @@ h2        {font-size: 4em;}
 
 /* Chapter 3 style */
 
-#chapter-three { background-color: gray;
+#chapter-three { background-color: #363845;
             height: 1550px;}
-
-
 
 
 /* Chapter 4 style */
 
-#chapter-four { background-color: #616161;
+#chapter-four { background-color: #b29377;
             height: 1550px;}
 
 
 /* Chapter 5 style */
 
-#chapter-five { background-color: gray;
+#chapter-five { background-color: #4bb7b7;
             height: 1550px;}
