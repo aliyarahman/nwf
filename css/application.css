@@ -194,6 +194,16 @@ h2        {font-size: 4em;}
           }
 
 
+.prequel-triangle {
+          text-align: center; margin: 0 auto;
+          margin-top: -0.3em;
+          width: 0; 
+          height: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 20px solid #202020;
+          }
+
 #prequel-title {
             position: relative;
             top: -6.5em;
@@ -202,7 +212,7 @@ h2        {font-size: 4em;}
             line-height: 1em;
             color: #fff;
             text-align: left;
-            margin-bottom: -4.5em;
+            margin-bottom: -5.5em;
 }
 
 #prequel-title-left {
@@ -240,16 +250,12 @@ h2        {font-size: 4em;}
 
 #burger-box {background-color: #363845;
              position: relative;
-             top: -7em;
+             top: -2em;
              height: 70px;
              width: 220px;
             }
 
 #burger-box:hover {background-color: #282a3a;
-             position: relative;
-             top: -7em;
-             height: 70px;
-             width: 220px;
             }
 
 
