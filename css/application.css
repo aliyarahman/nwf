@@ -147,10 +147,10 @@ body     {
 
 
 
-h1,h2        {font-family: Circular-Pro-Book;
+h1,h2     {font-family: Circular-Pro-Book;
               color: #363845;}
 
-h1        {font-size: 9em;}
+h1        {font-size: 7em;}
 h2        {font-size: 4em;}
 
 
@@ -161,9 +161,36 @@ h2        {font-size: 4em;}
           }
 
 
+.chapter-number-lg {
+          display: inline-block;
+          vertical-align: middle;
+          color: white;
+          font-family: Dala Floda-Roman;
+          font-size: 16em;
+          height: 1em;
+          width: 1em;
+          border-radius: 50%;
+          margin-right: 0.1em;
+          position: relative;
+          top: 0.2em;
+          }
+
+
+#chapter-one .chapter-number-lg {background-color: #f2dbb2;}
+#chapter-two .chapter-number-lg {background-color: #cae3cd;}
+#chapter-three .chapter-number-lg {background-color: #b6b7bb;}
+#chapter-four .chapter-number-lg {background-color: #e2d8ce;}
+#chapter-five .chapter-number-lg {background-color: #bee5e4;}
+
+
 .chapter-headline {
+          display: inline-block;
+          text-align: left;
+          vertical-align: middle;
           width: 65%;
           height: 10%;
+          line-height: 3.5em;
+          padding-top: 1%;
           margin: auto;
           }
 
@@ -176,6 +203,55 @@ h2        {font-size: 4em;}
           border-right: 20px solid transparent;
           border-top: 20px solid #fff;
           }
+
+.chapter-summary-tagline {
+          font-family: Dala Floda-Roman;
+          color: white;
+          font-size: 1.8em;
+          position: relative;
+          top: 2.5em;
+          left: 10%;
+          width: 40%;
+          }
+
+
+.chapter-landing {
+  margin-left: 10%;
+  margin-top: -10em;
+  }
+
+
+.chapter-landing-text {
+    display: inline-block;
+    color: #484a56;
+    font-size: 1.1em;
+    width: 53%;
+    height: auto;
+    padding: 2em;
+    background-color: white;
+  }
+
+
+.tangent-tab  {
+    display: inline-block;
+    position: relative;
+    left: -0.2em;
+    top: -1.5em;
+    background-color: #484a56;
+    color: #db9d2e;
+    width: 20%;
+    padding: 1.2em 0em 1.2em 1.2em;
+    font-size: 1.1em;
+  }
+
+
+
+
+
+
+
+
+
 
 
 /* Prequel style */
@@ -285,6 +361,35 @@ h2        {font-size: 4em;}
                 margin: -2px;
                 }
 
+.chapter-details {display: none;}
+
+.chapter-details-square {
+    position: absolute;
+    top: 85%;
+    left: 3%;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 2em;
+    width: 10%;
+    height: 8em;
+    background-color: #363845;
+    color: #fff;
+    text-align: center;
+}
+
+.chapter-details-triangle {
+    position: absolute;
+    top: 100.5%;
+    left: 50%;
+    margin-left: -47%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: solid 3em #363845;
+    border-left: solid 6.3em transparent;
+    border-right: solid 6.3em transparent;
+}
+
 
 .chapter-number {
             font-family: Dala Floda-Roman;
@@ -353,21 +458,45 @@ h2        {font-size: 4em;}
 #ch3-button .chapter-line {width: 55%}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Chapter 1 style */
 
 #chapter-one { background-color: #db9d2e;
-	    height: 1203px;
+	    height: auto;
       }
 
-#left-col-ch-1 {
-      display: inline-block;
-      width: 40%;
+#ch1-left-col {
+      display:inline-block;
+      width: 30%;
+      margin-left: 5%;
+      vertical-align: top;
+      }
+
+#ch1-right-col {
+      display:inline-block;
+      width: 50%;
+      text-align: right;
+      vertical-align: top;
       }
 
 .year-number-holder {
-      margin-left: 15%;
+      margin-left: 10%;
       margin-right: 5%;
-      margin-top: 2em;
+      margin-top: 6em;
       vertical-align: top;
 }
 
@@ -377,50 +506,86 @@ h2        {font-size: 4em;}
       margin-top: 0px;
       margin-bottom: 0px;
       line-height: 1em;
+      -webkit-font-feature-settings: 'tnum';
+      -moz-font-feature-settings: 'tnum';
+      -ms-font-feature-settings: 'tnum';
   }
 
 .year-number-lg:hover  {
       color: #363845;
   }
 
-#summary-text {
-    width: 528px;
-    height: 224px;
-    background-color: white;
-    position: relative;
-    left: 250px;
-    top: 150px;
-  }
+#ch1-map-legend   {
+      display: inline-block;
+      color: #363845;
+      position: relative;
+      left: -25em;
+      top: 15em;
+      width: 20em;
+      }
 
-#summary-text p {
-    margin: -1em 3em 0 4em;
-}
+.ch1-legend-note   {
+      font-size: 0.8em;
+      display: inline-block;
+      vertical-align: middle;
+      }
 
-.tangent-tab  {
-    background-color: #484a56;
-    color: #db9d2e;
-    width: 166px;
-    padding: 1.2em 0em 1.2em 1.2em;
-    position: relative;
-    left: -190px;
-    top: 40px;
-    font-size: 1.25em;
-  }
+.ch1-legend-label   {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1.1em;
+      }
+
+#ch1-legend-box-1, #ch1-legend-box-2, #ch1-legend-box-3, #ch1-legend-box-4, #ch1-legend-box-5, #ch1-legend-box-border {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 3%;
+      margin-left: 5%;
+      height: 1.8em;
+      width: 1.8em;
+      background-color: gray;
+      }
+
+#ch1-legend-box-1 {background-color: #fff;}
+#ch1-legend-box-2 {background-color: #f2dbb2;}
+#ch1-legend-box-3 {background-color: #e7c17a;}
+#ch1-legend-box-4 {background-color: #ad7e24;}
+#ch1-legend-box-5 {background-color: #714e0e;}
+#ch1-legend-box-border {
+      background-color: #f4e0bf;
+      background-image: url("../img/border-sprite.png");
+      background-repeat: no-repeat;
+      background-position: center;}
 
 #brazil-map-ch-1  {
-    background-image: url("../img/brazil-map-ch-1.jpg");
-    background-repeat: no-repeat;
-    height: 950px;
-    width: 751px;
-    display: inline-block;
-    vertical-align: top;
+      display: inline-block;
+      position: relative;
+      top: -17em;
+      left: 2em;
+      }
+
+#brazil-map-ch-1 img  {
+    width: 80%;
+    height: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Chapter 2 style */
 
 #chapter-two {  background-color: #6fb174;
-                height: 1218px;
+                height: auto;
             }
 
 #cow-products-ch-2 {
@@ -430,24 +595,28 @@ h2        {font-size: 4em;}
             }
 
 #top-circle-ch-2 {
-            margin-bottom: -4px;
             position: relative;
-            left: 495px;
+            left: 64em;
+            top: -5em;
+            margin-bottom: -5em;
             }
+
+
+
 
 /* Chapter 3 style */
 
 #chapter-three { background-color: #363845;
-            height: 1550px;}
+            height: auto;}
 
 
 /* Chapter 4 style */
 
 #chapter-four { background-color: #b29377;
-            height: 1550px;}
+            height: 1000px;}
 
 
 /* Chapter 5 style */
 
 #chapter-five { background-color: #4bb7b7;
-            height: 1550px;}
+            height: auto;}
