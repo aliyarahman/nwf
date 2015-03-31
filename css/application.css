@@ -153,6 +153,8 @@ h1,h2     {font-family: Circular-Pro-Book;
 h1        {font-size: 7em;}
 h2        {font-size: 4em;}
 
+section   {width: 100%;
+          overflow: hidden;}
 
 .chapter-header {
           background-color: #fff;
@@ -616,10 +618,9 @@ h2        {font-size: 4em;}
               width: 30%;
               position: relative;}
 
-
-#leather-bubble {top: -32em;}
+#leather-bubble {top: -35em;}
 #beef-bubble {top: -26em;}
-#tallow-bubble {top: -4em; left: 20em;}
+#tallow-bubble {top: -10em; left: 20em;}
 
 
 .bubble-pic   {width: 100%;}
@@ -652,7 +653,7 @@ h2        {font-size: 4em;}
 #beef-bubble .ship-icon    {top:-3.5em;
                             left: 6em;}
 
-#leather-bubble .ship-icon    {top:-6em;
+#leather-bubble .ship-icon    {top:-4em;
                               left: 5.5em;}
 
 #tallow-bubble .ship-icon    {top:-3.5em;
