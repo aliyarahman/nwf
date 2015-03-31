@@ -153,8 +153,6 @@ h1,h2     {font-family: Circular-Pro-Book;
 h1        {font-size: 7em;}
 h2        {font-size: 4em;}
 
-section   {width: 100%;
-          overflow: hidden;}
 
 .chapter-header {
           background-color: #fff;
