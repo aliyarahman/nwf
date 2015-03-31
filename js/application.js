@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
 
+  //Global behavior
+  //====================================
+
   //PanelSnap options and function call
   var options = {
     $menu: false,
@@ -22,28 +25,40 @@ $(document).ready(function() {
     }
   };  
 
-//  $('body').panelSnap();
+  //$('body').panelSnap();
 
 
-  //Global behavior
+  // Prequel behavior
+  //=====================================
+
+  $(".chapter-title, .chapter-number, .chapter-icon").mouseover(function () {
+      $('.chapter-details').hide();
+      var el = $(this).closest('.chapter-button, .chapter-button-lower').attr('id').slice(-3);
+      $("."+el).slideDown();
+    })
+  .mouseout(function() {
+      var el = $(this).closest('.chapter-button, .chapter-button-lower').attr('id').slice(-3);
+      $("."+el).hide();
+  });
 
 
 
   //Chapter 3 behavior
+  //=====================================
 
   $("#brazil-map-ch-3").hover(
-  function () {
-    $('#company-legend').show();
-  }, 
-  function () {
-    $('#company-legend').hide();
-  }
-);
+    function () {
+      $('#company-legend').show();
+    }, 
+    function () {
+      $('#company-legend').hide();
+    }
+  );
 
-//  $("#ch3-full-image").mouseover(function() { 
-//        $(this).attr("src", "img/Ch3-hover.jpg");
-//        })
-//        .mouseout(function() {
-//        $(this).attr("src", "img/Ch3.jpg");
-//        });
-});
+  $(".ship-pic img").mouseover(function() { 
+    $(this).attr("src", "img/ship-icon-hover.png");
+    })
+    .mouseout(function() {
+    $(this).attr("src", "img/ship-icon.png");
+    });
+  });

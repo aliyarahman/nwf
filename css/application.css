@@ -176,6 +176,7 @@ h2        {font-size: 4em;}
           }
 
 
+#prequel {background-color: transparent;}
 #chapter-one .chapter-number-lg {background-color: #f2dbb2;}
 #chapter-two .chapter-number-lg {background-color: #cae3cd;}
 #chapter-three .chapter-number-lg {background-color: #b6b7bb;}
@@ -360,35 +361,6 @@ h2        {font-size: 4em;}
                 margin: -2px;
                 }
 
-.chapter-details {display: none;}
-
-.chapter-details-square {
-    position: absolute;
-    top: 85%;
-    left: 3%;
-    margin: 0 auto;
-    font-size: 1em;
-    padding: 2em;
-    width: 10%;
-    height: 8em;
-    background-color: #363845;
-    color: #fff;
-    text-align: center;
-}
-
-.chapter-details-triangle {
-    position: absolute;
-    top: 100.5%;
-    left: 50%;
-    margin-left: -47%;
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: solid 3em #363845;
-    border-left: solid 6.3em transparent;
-    border-right: solid 6.3em transparent;
-}
-
 
 .chapter-number {
             font-family: Dala Floda-Roman;
@@ -437,8 +409,12 @@ h2        {font-size: 4em;}
             height: 5em;
             }
 
-.chapter-icon img {
+.chapter-icon-img-holder {
             display: inline-block;
+            width: auto;
+            }
+
+.chapter-icon-img-holder img {
             width: 5em;
             }
 
@@ -458,15 +434,60 @@ h2        {font-size: 4em;}
 
 
 
+.chapter-details {
+    display: none;
+    position: absolute;
+    top: -4em;
+    z-index: 50;
+    }
 
+.ch5 .chapter-details {right: 100px;}
 
+.chapter-details-square {
+    padding: 2em;
+    width: 8.5em;
+    height: 15em;
+    background-color: #363845;
+    color: #fff;
+    text-align: center;
+}
 
+.chapter-details-text {
+    margin-top: 1em;
+}
 
+.chapter-icon-img-holder-hover {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+}
 
+.chapter-icon-img-holder-hover img {
+    margin-top: 1.5em;
+    width: 70%;
+  }
 
+.ch2 .chapter-icon-img-holder-hover img {
+    position: relative;
+    top: -0.2em;
+  }
 
+.ch5 .chapter-icon-img-holder-hover img {
+    position: relative;
+    left: 0.2em;
+    top: 0.5em;
+  }
 
-
+.chapter-details-triangle {
+    width: 0;
+    height: 0;
+    border-top: solid 2.5em #363845;
+    border-left: solid 6.3em transparent;
+    border-right: solid 6.3em transparent;
+}
 
 
 
@@ -476,6 +497,7 @@ h2        {font-size: 4em;}
 
 #chapter-one { background-color: #db9d2e;
 	    height: auto;
+
       }
 
 #ch1-left-col {
@@ -510,7 +532,7 @@ h2        {font-size: 4em;}
       -ms-font-feature-settings: 'tnum';
   }
 
-.year-number-lg:hover  {
+#chapter-one .year-number-lg:hover  {
       color: #363845;
   }
 
@@ -588,27 +610,54 @@ h2        {font-size: 4em;}
               margin-bottom: -15em;
               }
 
+
 #tallow-bubble, #leather-bubble, #beef-bubble {
               display: inline-block;
               width: 30%;
               position: relative;}
 
-#leather-bubble {top: -27em;}
-#beef-bubble {top: -20em;}
+
+#leather-bubble {top: -32em;}
+#beef-bubble {top: -26em;}
 #tallow-bubble {top: -4em; left: 20em;}
+
 
 .bubble-pic   {width: 100%;}
 
-.ship-icon    {position: relative; width: 25%;}
+.ship-icon    { position: relative;
+                width: 80%;
+                text-align: center;
+                z-index: 0;
+                }
 
-#beef-bubble .ship-icon    {top:-2.5em;
-                            left: -8.5em;}
+.ship-pic     {display: inline-block;
+                vertical-align: middle;
+                z-index: 2;
+              }
 
-#leather-bubble .ship-icon    {top:-4.5em;
-                              left: -9.5em;}
+.ship-tag     { display: inline-block;
+                vertical-align: middle;
+                background-color: #fff;
+                color: #6fb174;
+                padding: 1em;
+                padding-left: 2em;
+                padding-right: 1.5em;
+                position: relative;
+                left: -2em;
+                z-index: -1;}
+
+
+
+
+#beef-bubble .ship-icon    {top:-3.5em;
+                            left: 6em;}
+
+#leather-bubble .ship-icon    {top:-6em;
+                              left: 5.5em;}
 
 #tallow-bubble .ship-icon    {top:-3.5em;
-                              left: -1.5em;}
+                              left: 14.5em;} 
+
 
 #adult-cow  { margin-left: auto;
               margin-right: auto;
@@ -640,7 +689,7 @@ h2        {font-size: 4em;}
 
 #ch3-right-col {
       display:inline-block;
-      width: 40%;
+      width: 50%;
       text-align: right;
       vertical-align: top;
       }
@@ -673,7 +722,7 @@ h2        {font-size: 4em;}
       color: #fff;
       position: relative;
       left: -65em;
-      top: 25em;
+      top: 30em;
       width: 80em;
       }
 
@@ -763,6 +812,13 @@ h2        {font-size: 4em;}
 #ch4-mid      {height: 1000px;}
 
 #chapter-four .tangent-tab {color: #b29377;}
+
+
+
+
+
+
+
 
 
 /* Chapter 5 style */
