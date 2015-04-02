@@ -521,6 +521,7 @@ h2        {font-size: 4em;}
       vertical-align: top;
 }
 
+
 #chapter-one .year-number-lg  {
       color: #b98728;
       text-align: left;
@@ -791,7 +792,12 @@ h2        {font-size: 4em;}
     height: auto;
 }
 
+#magnified {display: none;
+  width: 30%;
+  position: relative; 
+  top: -45em; left: 22em;}
 
+#magnified img {width: 100%;}
 
 #chapter-three .tangent-tab {color: #363845;
       background-color: #6fb174;}
@@ -826,3 +832,5 @@ h2        {font-size: 4em;}
             height: auto;}
 
 #chapter-five .tangent-tab {color: #4bb7b7;}
+
+#ch5-image {width: 60%; margin-left: 30%; margin-top: 5em;}
