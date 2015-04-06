@@ -124,28 +124,30 @@ body     {
             font-size: 100%;
             }
 
+/* Code for targeting device sizes for responsiveness
+   Come back to this after design is finished */
 
-/* Smartphones (portrait) ----------- */
+/* Smartphones (portrait) -----------
 @media only screen and (max-width : 320px) {
     body { font-size: 40%;}
 }
 
-/* Tablet sizing */
+/* Tablet sizing
 @media only screen and (max-width : 768px) {
     body { font-size: 50%;}
 }
 
-/* Desktop sizing */
+/* Desktop sizing
 @media only screen and (min-width : 1224px) {
     body { font-size: 100%;}
 }
 
-/* Large screens */
+/* Large screens 
 @media only screen  and (min-width : 1824px) {
     body { font-size: 120%;}
 }
 
-
+------ */
 
 h1,h2     {font-family: Circular-Pro-Book;
               color: #363845;}
@@ -153,6 +155,9 @@ h1,h2     {font-family: Circular-Pro-Book;
 h1        {font-size: 7em;}
 h2        {font-size: 4em;}
 
+.content {width: 1280px;
+          margin-left: auto;
+          margin-right: auto;}
 
 .chapter-header {
           background-color: #fff;
@@ -208,7 +213,7 @@ h2        {font-size: 4em;}
 .chapter-summary-tagline {
           font-family: Dala Floda-Roman;
           color: white;
-          font-size: 1.8em;
+          font-size: 2.8em;
           position: relative;
           top: 2.5em;
           left: 10%;
