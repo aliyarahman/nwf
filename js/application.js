@@ -31,15 +31,21 @@ $(document).ready(function() {
   // Prequel behavior
   //=====================================
 
-  $(".chapter-title, .chapter-number, .chapter-icon").mouseover(function () {
-      $('.chapter-details').hide();
-      var el = $(this).closest('.chapter-button, .chapter-button-lower').attr('id').slice(-3);
-      $("."+el).slideDown();
-    })
-  .mouseout(function() {
-      var el = $(this).closest('.chapter-button, .chapter-button-lower').attr('id').slice(-3);
-      $("."+el).hide();
+  $(".chapter-button").mouseenter(function() {
+    $('.chapter-details').hide();
+    var top = $(this).offset().top;
+    var left = $(this).offset().left;
+    var detailsbox = $(this).find('.chapter-details');
+    detailsbox.css({'top':top+25, 'left':left+30});
+    $(this).find('.chapter-title, .chapter-number').css('color','#afb0b5');
+    detailsbox.slideDown();
+    detailsbox.mouseout(function() {
+      detailsbox.hide();
+      $('.chapter-title, .chapter-number').css('color','#363845');
+    });
   });
+
+    
 
 
 
