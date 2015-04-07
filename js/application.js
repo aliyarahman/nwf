@@ -31,24 +31,44 @@ $(document).ready(function() {
   // Prequel behavior
   //=====================================
 
+  // Places and repositions site menu on load and resize
+
+    var vidbottom = $("#rainforest-vid").height();
+    var bartop = $("#burger-box").height();
+    var burgertop = vidbottom-1.5*bartop;
+    $("#site-menu").css('top', burgertop);
+    
+    $(window).resize(function() {
+      $("#site-menu").css('top', burgertop);
+      location.reload();
+    });
+
 
   // Code to control rollover for table of contents buttons
 
-  $(".chapter-button").mouseenter(function() {
+  $(".chapter-button").hover(function() {
     $('.chapter-details').hide();
     var top = $(this).offset().top;
     var left = $(this).offset().left;
     var detailsbox = $(this).find('.chapter-details');
+
     detailsbox.css({'top':top+25, 'left':left+30});
-    $(this).find('.chapter-title, .chapter-number').css('color','#afb0b5');
-    detailsbox.slideDown();
-    detailsbox.mouseout(function() {
-      detailsbox.hide();
-      $('.chapter-title, .chapter-number').css('color','#363845');
-    });
+
+    detailsbox.slideToggle();
+    $(this).find('.chapter-title, .chapter-number').toggleClass('greyed-out');
+
   });
 
-  // Draws lines on table of contents
+// Controls site-menu
+
+$("#burger-box").on('click', function(){
+    $('.chapter-details').hide();
+    $("#burger-menu").slideToggle();
+    $("#site-map-link").on('click', function(){
+      $("#site-map").show();
+    });
+
+});
 
 
 
