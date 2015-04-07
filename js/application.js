@@ -31,6 +31,9 @@ $(document).ready(function() {
   // Prequel behavior
   //=====================================
 
+
+  // Code to control rollover for table of contents buttons
+
   $(".chapter-button").mouseenter(function() {
     $('.chapter-details').hide();
     var top = $(this).offset().top;
@@ -45,7 +48,7 @@ $(document).ready(function() {
     });
   });
 
-    
+  // Draws lines on table of contents
 
 
 
