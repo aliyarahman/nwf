@@ -28,6 +28,7 @@ $(document).ready(function() {
   //$('body').panelSnap();
 
 
+
   // Prequel behavior
   //=====================================
 
@@ -59,16 +60,34 @@ $(document).ready(function() {
 
   });
 
-// Controls site-menu
+// Controls site menu / burger box
 
+var menuopen = false;
+var sitemapopen = false;
 $("#burger-box").on('click', function(){
+  if (menuopen === false) {
     $('.chapter-details').hide();
-    $("#burger-menu").slideToggle();
+    $("#burger-menu").slideDown();
     $("#site-map-link").on('click', function(){
-      $("#site-map").show();
+      if (sitemapopen === false) {
+        $("#site-map").show();
+        sitemapopen = true;
+      }
+      else {
+        $("#site-map").hide();
+        sitemapopen = false;
+      }
     });
+    menuopen = true;
+  }
+  else {
+    $("#burger-menu").slideUp();
+    $("#site-map").hide();
+    menuopen = false;
+  }
 
 });
+
 
 
 
@@ -77,18 +96,15 @@ $("#burger-box").on('click', function(){
 
 
 $(window).on('scroll', function() {
-    var y_scroll_pos = window.pageYOffset;
-    var sec_1_y = $('#chapter-one').offset();
+    var yscroll = window.pageYOffset;
+    var sec_1_top = $('#chapter-one').offset().top;
+    console.log("we've reached chapter one");
 
-    if(y_scroll_pos > sec_1_y.top) {
-        console.log("we've reached chapter one");
-    }
 });
 
 
 //Chapter 2 behavior
 //=====================================
-
 
 $(window).on('scroll', function() {
     var y_scroll_pos = window.pageYOffset;
@@ -98,6 +114,56 @@ $(window).on('scroll', function() {
         console.log("we've reached chapter two");
     }
 });
+
+var commodity = "beef";
+
+$('#beef-bubble').on('click', function() {
+    commodity = "beef";
+    ('#tallow-data').hide();
+    ('#leather-data').hide();
+    ('#beef-data').show();
+});
+
+$('#leather-bubble').on('click', function() {
+    commodity = "leather";
+    ('#tallow-data').hide();
+    ('#beef-data').hide();
+    ('#leather-data').show();
+});
+
+$('#tallow-bubble').on('click', function() {
+    commodity = "tallow";
+    ('#leather-data').hide();
+    ('#beef-data').hide();
+    ('#tallow-data').show();
+});
+
+
+var trademapstop = $(".trade-maps-container").offset().top-155;
+$('.trade-map').css('top', trademapstop);
+
+$('.trade-map-legend h3').mouseenter(function() {
+  var country = $(this).attr('class');
+  $('h3').removeClass("trade-map-data-rollover");
+  $('.'+country).addClass("trade-map-data-rollover");
+  var img_url = "img/"+commodity+"-"+country+".jpg";
+  $("#main-trade-map").attr('src', img_url);
+  if (country == "europe") {
+    $("#EU-popup").show();
+  }
+})
+.mouseout(function(){
+    $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
+    $("#EU-popup").hide();
+});
+
+$('.trade-map-legend h3').click(function() {
+  var country = $(this).attr('class').split(' ')[0];
+  var img_url = "img/"+commodity+"-"+country+".jpg";
+  $('.trade-map img').attr('src', img_url);
+});
+
+
 
 
 

@@ -124,6 +124,8 @@ body     {
             font-size: 100%;
             }
 
+section  {overflow: hidden;}
+
 /* Code for targeting device sizes for responsiveness
    Come back to this after design is finished */
 
@@ -150,7 +152,7 @@ body     {
 ------ */
 
 h1,h2     {font-family: Circular-Pro-Book;
-              color: #363845;}
+           color: #363845;}
 
 h1        {font-size: 7em;}
 h2        {font-size: 4em;}
@@ -163,7 +165,7 @@ h2        {font-size: 4em;}
 
 .chapter-header {
           background-color: #fff;
-          height: auto;
+          height: 15em;
           text-align: center;
           }
 
@@ -173,17 +175,20 @@ h2        {font-size: 4em;}
           vertical-align: middle;
           color: white;
           font-family: Dala Floda-Roman;
-          font-size: 16em;
-          height: 1em;
-          width: 1em;
+          -webkit-font-feature-settings: 'tnum';
+          -moz-font-feature-settings: 'tnum';
+          -ms-font-feature-settings: 'tnum';
+          font-size: 15em;
+          line-height: 0.9em;
+          height: 0.9em;
+          width: 0.9em;
           border-radius: 50%;
           margin-right: 0.1em;
           position: relative;
-          top: 0.2em;
+          top: 0.15em;
           }
 
 
-#prequel {background-color: transparent;}
 #chapter-one .chapter-number-lg {background-color: #f2dbb2;}
 #chapter-two .chapter-number-lg {background-color: #cae3cd;}
 #chapter-three .chapter-number-lg {background-color: #b6b7bb;}
@@ -217,21 +222,20 @@ h2        {font-size: 4em;}
           color: white;
           font-size: 2.8em;
           position: relative;
-          top: 2.5em;
-          left: 10%;
-          width: 40%;
+          top: 1.2em;
+          width: 50%;
           }
 
 .chapter-landing {
   margin-left: 10%;
-  margin-top: -10em;
+  margin-top: -16em;
   }
 
 
 .chapter-landing-text {
     display: inline-block;
     color: #484a56;
-    font-size: 1.1em;
+    font-size: 1.4em;
     width: 53%;
     height: auto;
     padding: 2em;
@@ -266,7 +270,8 @@ h2        {font-size: 4em;}
 /* Prequel style */
 
 #prequel    {  
-            background-color: white;}
+            background-color: white;
+            }
 
 #rainforest-vid {
           width: 100%; height: auto;
@@ -389,7 +394,8 @@ h2        {font-size: 4em;}
 #site-map {position: absolute;
            display: none;
            left: 15em;
-           top: 40em;}
+           top: 40em;
+            }
 
 #site-map-menu {
     `         color: #afb0b5;
@@ -549,15 +555,13 @@ h2        {font-size: 4em;}
 /* Chapter 1 style */
 
 #chapter-one { background-color: #db9d2e;
-	    height: auto;
-      top: 80em;
+	    height: 2000px;
       }
 
 #ch1-left-col {
       display:inline-block;
       width: 30%;
-      margin-left: 5%;
-      vertical-align: top;
+      margin-left: 1em;
       }
 
 #ch1-right-col {
@@ -568,12 +572,8 @@ h2        {font-size: 4em;}
       }
 
 .year-number-holder {
-      margin-left: 10%;
-      margin-right: 5%;
-      margin-top: 6em;
-      vertical-align: top;
+      margin-top: 4.5em;
 }
-
 
 #chapter-one .year-number-lg  {
       color: #b98728;
@@ -581,6 +581,7 @@ h2        {font-size: 4em;}
       margin-top: 0px;
       margin-bottom: 0px;
       line-height: 1em;
+      font-size: 6em;
       -webkit-font-feature-settings: 'tnum';
       -moz-font-feature-settings: 'tnum';
       -ms-font-feature-settings: 'tnum';
@@ -667,11 +668,11 @@ h2        {font-size: 4em;}
 
 #tallow-bubble, #leather-bubble, #beef-bubble {
               display: inline-block;
-              width: 30%;
+              width: 25%;
               position: relative;}
 
-#leather-bubble {top: -35em;}
-#beef-bubble {top: -26em;}
+#leather-bubble {top: -38em; left: -2em;}
+#beef-bubble {top: -24em; left:-17em;}
 #tallow-bubble {top: -10em; left: 20em;}
 
 
@@ -724,6 +725,120 @@ h2        {font-size: 4em;}
 
 #chapter-two .tangent-tab {color: #6fb174;}
 
+.trade-maps-container {
+    width: 1280px;
+    height: 1000px;
+/*    border-radius: 50%; */
+    overflow: hidden;
+    background-color: #89bf8d;
+    background-repeat: no-repeat;}
+
+.trade-map-title  {
+    margin-left: 3.5em;
+    margin-top: -0.5em;}
+
+.trade-map-title h2 {
+    color: #fff;}
+
+.trade-map {position: absolute;
+            z-index: 0;
+            left: 250px;
+            background: transparent;}
+
+#EU-popup {
+    display: none;
+    position: relative;
+    width: 30em;
+    height: auto;
+    top: -32em;
+    left: 38em;}
+
+.trade-map-bubble   {position: relative;
+                    top: 8em;
+                    z-index: 0;}
+
+.trade-map-info-holder {
+      display: inline-block;
+      position: relative;
+      top: 4.6em;
+      left: 7.5em;
+      z-index:1;}
+
+.trade-map-info {
+      display: inline-block;
+      background-color: #fff;
+      vertical-align: top;
+      margin-right: 5px;
+      color: #6fb174;
+      padding: 1em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+  }
+
+.trade-map-ship-icon {
+      display: inline-block;
+      position: relative;
+      top: -1em;
+      left: 1.5em;
+      z-index: 2;}
+
+.trade-map-ship-tag {
+      color: #6fb174;
+      padding: 1em;
+      padding-left: 2em;
+      padding-right: 1.5em;}
+
+
+.trade-map-legend   {
+    height: 20em;
+    width: 25em;
+    position: relative;
+    }
+
+
+.trade-map-legend h3 {
+  font-size: 2.25em;
+  font-weight: normal;
+  line-height: 0.1em;}
+
+
+.trade-map-data-rollover {
+  color: #f5d954 !important;}
+
+
+.trade-map-quantity-column, .trade-map-partner-column {
+    display: inline-block;
+    margin-left: 1em;
+    }
+
+.trade-map-data-column-title {
+  margin-bottom: -0.5em;
+  }
+
+.trade-map-quantity-column {text-align: right;}
+
+.trade-map-partner-column {text-align: left;}
+
+.trade-map-pie {
+  text-align: left;
+}
+
+#pie-data, #pie-graphic {margin-top: 0.5em;}
+
+#pie-data {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0.1em;  
+}
+
+#export-quantity, .trade-map-info h3 {
+  color: #363845;
+  }
+
+
+.beef-data {}
+.tallow-data {display: none;}
+.leather-data {display: none;}
 
 
 

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <!-- Uncomment this for auto refreshing browser when front-end coding 
-    <meta http-equiv="refresh" content="3">
-    -->
-    
+    <!-- Uncomment this for auto refreshing browser when front-end coding
+    <meta http-equiv="refresh" content="3"> 
+-->
+
 
     <title>The Brazilian Amazon - Cattle Ranching</title>
 
@@ -237,10 +237,21 @@
     </section>
         
 
+
+
+
+
+
+
+
+
+
+
+
     <!-- Chapter 1 -->
     <section class="chapter" id="chapter-one">
-        <a name="chapter1"></a>
-
+    <a name="chapter1"></a>
+    <div class="holder">
         <div class="chapter-header">
             <div class="content">
                 <div class="chapter-number-lg">
@@ -258,10 +269,9 @@
 
             <div id="ch1-left-col">
                 <div class="year-number-holder">
-                        <div><h1 class="year-number-lg">1983</h1></div>
-                        <div><h1 class="year-number-lg">1993</h1></div>
-                        <div><h1 class="year-number-lg">2003</h1></div>
-                        <div><h1 class="year-number-lg">2013</h1></div>
+                        <div><h1 class="year-number-lg" id="yr1993">1993</h1></div>
+                        <div><h1 class="year-number-lg" id="yr2003">2003</h1></div>
+                        <div><h1 class="year-number-lg" id="yr2013">2013</h1></div>
                 </div>
             </div>
 
@@ -310,7 +320,11 @@
                 <div class="tangent-tab">tangential topic</div>
             </div>
         </div>
+    </div>
     </section>
+
+
+
 
 
 
@@ -320,9 +334,10 @@
     <!-- Chapter 2 -->
 
     <section class="chapter" id="chapter-two">
+    <a name="chapter2"></a>
 
-        <a name="chapter2"></a>
-          
+    <div class="container">
+         
         <div class="chapter-header">
             <div class="content">
                 <div class="chapter-number-lg">
@@ -334,6 +349,7 @@
             </div>
         </div>
         
+
         <div class="content">
         
             <div class="chapter-triangle"></div>
@@ -345,7 +361,7 @@
 
             <div id="product-bubbles">
 
-                <div id="beef-bubble">
+                <div id="beef-bubble" onClick="location.href='#trade-maps-section'">
 
                     <div class="bubble-pic">
                         <img class="bubble-pic" src="img/beef-bubble.png">
@@ -361,7 +377,7 @@
                 </div>
 
 
-                <div id="tallow-bubble">
+                <div id="tallow-bubble" onClick="location.href='#trade-maps-section'">
 
                     <div class="bubble-pic">
                         <img src="img/tallow-bubble.png">
@@ -377,7 +393,7 @@
                 </div>
 
 
-                <div id="leather-bubble">
+                <div id="leather-bubble" onClick="location.href='#trade-maps-section'">
 
                     <div class="bubble-pic">
                         <img src="img/leather-bubble.png">
@@ -398,11 +414,74 @@
                     </div>
                 <div class="tangent-tab">tangential topic</div>
             </div>
-
-            <img class="ch5-image" src="img/ch2-b.png">
-
-            <img class="ch5-image" src="img/ch2-c.png">
         </div>
+    </div>
+
+    <div class="trade-maps-container">
+    <a name="trade-maps-section"></a>
+
+        <div class="trade-map-title" id="beef-data">
+            <h2>Top trade partners for beef, 2014</h2>
+        </div>
+
+        <div class="trade-map" id="beef-data">
+            <img id="main-trade-map" src="img/beef.jpg">
+            <img id="EU-popup" src="img/beef-EU-popup.jpg">
+        </div>
+
+        <div class="trade-map-bubble" id="beef-data">
+            <img src="img/beef-bubble.png">
+        </div>
+
+        <div class="trade-map-info-holder">
+            <div class="trade-map-ship-icon">
+                <img src="img/ship-icon.png">
+            </div>
+            <div class="trade-map-ship-tag trade-map-info" id="beef-data">
+                Beef
+            </div>
+            <div class="trade-map-ship-tag trade-map-info" id="beef-data">
+                Fresh, frozen, processed
+            </div>
+            <div class="trade-map-legend trade-map-info" id="beef-data">
+                <div class="trade-map-quantity-column">
+                    <div class="trade-map-data-column-title">
+                        TOP TRADE<br>QUANTITY, KG
+                    </div>
+                    <h3 class="china">24%</h3>
+                    <h3 class="russia">18%</h3>
+                    <h3 class="europe">13%</h3>
+                    <h3 class="venezuela">12%</h3>
+                    <h3 class="egypt">8%</h3>
+                    <h3 class="iran">4%</h3>
+                    <h3 class="chile">4%</h3>
+                </div>
+                <div class="trade-map-partner-column">
+                    <div class="trade-map-data-column-title">
+                        TOP TRADE<br>PARTNERS
+                    </div>
+                    <h3 class="china">China</h3>
+                    <h3 class="russia">Russia</h3>
+                    <h3 class="europe">Europe-28</h3>
+                    <h3 class="venezuela">Venezuela</h3>
+                    <h3 class="egypt">Egypt</h3>
+                    <h3 class="iran">Iran</h3>
+                    <h3 class="chile">Chile</h3>
+                </div>
+            </div>
+            <div class="trade-map-pie trade-map-info" id="beef-data">
+                BEEF PRODUCTION <br>IN BRAZIL
+                <div id="pie-graphic">
+                    <img src="img/pie-graphic.png"
+                </div>
+                <div id="pie-data">
+                    <div id="export-quantity">20% Export</div>
+                    <div id="import-quantity">80% Export</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </section>
 
 
