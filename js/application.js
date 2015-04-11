@@ -91,6 +91,13 @@ $("#burger-box").on('click', function(){
 
 
 
+
+
+
+
+
+
+
 //Chapter 1 behavior
 //=====================================
 
@@ -101,6 +108,37 @@ $(window).on('scroll', function() {
     console.log("we've reached chapter one");
 
 });
+
+$('.year-number-lg').click(function(){
+    $('.year-number-lg').css('color','#b98728');
+    $(this).css('color', '#363845');
+});
+
+$('#cattle-head-yr-1').click(function(){
+    $('.cattle-head-growth img').attr('src','img/cattle-head-map1-ch-1.png');
+});
+$('#cattle-head-yr-2').click(function(){
+    $('.cattle-head-growth img').attr('src','img/cattle-head-map2-ch-1.png');
+});
+$('#cattle-head-yr-3').click(function(){
+    $('.cattle-head-growth img').attr('src','img/cattle-head-map3-ch-1.png');
+});
+
+
+$('#forest-cover-yr-1').click(function(){
+    $('.forest-cover-loss img').attr('src','img/forest-cover-map1-ch-1.png');
+});
+$('#forest-cover-yr-2').click(function(){
+    $('.forest-cover-loss img').attr('src','img/forest-cover-map2-ch-1.png');
+});
+$('#forest-cover-yr-3').click(function(){
+    $('.forest-cover-loss img').attr('src','img/forest-cover-map3-ch-1.png');
+});
+
+
+
+
+
 
 
 //Chapter 2 behavior
@@ -115,53 +153,166 @@ $(window).on('scroll', function() {
     }
 });
 
+//Positions the trade map
+var trademapstop = $(".trade-maps-container").offset().top-155;
+$('.trade-map').css('top', trademapstop);
+
+
+//Ship button rollover
+$(".ship-pic img").mouseover(function() { 
+    $(this).attr("src", "img/ship-icon-hover.png");
+    })
+    .mouseout(function() {
+    $(this).attr("src", "img/ship-icon.png");
+    });
+});
+
+
+//Sets the first commodity to open to beef if no clicking happenss
 var commodity = "beef";
+
+
+// Controls country name rollover and map switching
+$('.trade-map-legend h3').mouseenter(function() {
+        var country = $(this).attr('class');
+        $('h3').removeClass("trade-map-data-rollover");
+        $('.'+country).addClass("trade-map-data-rollover");
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);
+        if (country == "europe") {
+          $("#EU-popup").show();
+        }
+    })
+    .mouseout(function(){
+          $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
+          $("#EU-popup").hide();
+    });
+    $('.trade-map-legend h3').click(function() {
+        var country = $(this).attr('class').split(' ')[0];
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);
+    });
+
 
 $('#beef-bubble').on('click', function() {
     commodity = "beef";
-    ('#tallow-data').hide();
-    ('#leather-data').hide();
-    ('#beef-data').show();
+    $(".trade-map-title h2").text("Top trade partners for beef, 2014");
+    $("#main-trade-map").attr('src','img/beef.jpg');
+    $('#EU-popup').hide();
+    $('.trade-map-bubble img').attr('src', 'img/beef-bubble.png');
+    $('.trade-map-ship-tag').first().text("Beef");
+    $('.trade-map-ship-tag').eq(2).text("Fresh, frozen, processed");
+    $('.trade-map-pie').show();
+    $('.trade-map-quantity-column').find('h3').hide();
+    $('.trade-map-partner-column').find('h3').hide();
+    $('.trade-map-quantity-column').append( '<h3 class="china">24%</h3><h3 class="russia">18%</h3><h3 class="europe">13%</h3><h3 class="venezuela">12%</h3><h3 class="egypt">8%</h3><h3 class="iran">4%</h3><h3 class="chile">4%</h3>' );
+    $('.trade-map-partner-column').append( '<h3 class="china">China</h3><h3 class="russia">Russia</h3><h3 class="europe">Europe-28</h3><h3 class="venezuela">Venezuela</h3><h3 class="egypt">Egypt</h3><h3 class="iran">Iran</h3><h3 class="chile">Chile</h3>' );
+    $('.trade-map-legend h3').mouseenter(function() {
+        var country = $(this).attr('class');
+        $('h3').removeClass("trade-map-data-rollover");
+        $('.'+country).addClass("trade-map-data-rollover");
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);
+        if (country == "europe") {
+          $("#EU-popup").show();
+        }
+    })
+    .mouseout(function(){
+          $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
+          $("#EU-popup").hide();
+    });
+    $('.trade-map-legend h3').click(function() {
+        var country = $(this).attr('class').split(' ')[0];
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);    });
 });
+
 
 $('#leather-bubble').on('click', function() {
     commodity = "leather";
-    ('#tallow-data').hide();
-    ('#beef-data').hide();
-    ('#leather-data').show();
+    $(".trade-map-title h2").text("Top trade partners for leather, 2014");
+    $("#main-trade-map").attr('src','img/leather.jpg');
+    $('#EU-popup').hide();
+    $('.trade-map-bubble img').attr('src', 'img/leather-bubble.png');
+    $('.trade-map-ship-tag').first().text("Leather");
+    $('.trade-map-extra-info-tag').hide();
+    $('.trade-map-pie').hide();
+    $('.trade-map-quantity-column').find('h3').hide();
+    $('.trade-map-partner-column').find('h3').hide();
+    $('.trade-map-quantity-column').append( '<h3 class="china">48%</h3><h3 class="italy">20%</h3><h3 class="vietnam">8%</h3><h3 class="taiwan">4%</h3><h3 class="thailand">3%</h3><h3 class="south-korea">3%</h3><h3 class="united-states">3%</h3>' );
+    $('.trade-map-partner-column').append( '<h3 class="china">China</h3><h3 class="italy">Italy</h3><h3 class="Vietnam">Vietnam</h3><h3 class="taiwan">Taiwan</h3><h3 class="thailand">Thailand</h3><h3 class="south-korea">South Korea</h3><h3 class="united-states">United States</h3>' );
+    $('.trade-map-legend h3').mouseenter(function() {
+        var country = $(this).attr('class');
+        $('h3').removeClass("trade-map-data-rollover");
+        $('.'+country).addClass("trade-map-data-rollover");
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);
+        if (country == "europe") {
+          $("#EU-popup").show();
+        }
+    })
+    .mouseout(function(){
+          $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
+          $("#EU-popup").hide();
+    });
+    $('.trade-map-legend h3').click(function() {
+        var country = $(this).attr('class').split(' ')[0];
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);
+    });
 });
 
 $('#tallow-bubble').on('click', function() {
     commodity = "tallow";
-    ('#leather-data').hide();
-    ('#beef-data').hide();
-    ('#tallow-data').show();
+    $(".trade-map-title h2").text("Top trade partners for tallow, 2014");
+    $("#main-trade-map").attr('src','img/tallow.jpg');
+    $('#EU-popup').hide();
+    $('.trade-map-bubble img').attr('src', 'img/tallow-bubble.png');
+    $('.trade-map-ship-tag').first().text("Tallow");
+    $('.trade-map-extra-info-tag').hide();
+    $('.trade-map-pie').hide();
+    $('.trade-map-quantity-column').find('h3').hide();
+    $('.trade-map-partner-column').find('h3').hide();
+    $('.trade-map-quantity-column').append( '<h3 class="europe">100%</h3>' );
+    $('.trade-map-partner-column').append( '<h3 class="europe">Europe-28</h3>' );
+    $('.trade-map-legend h3').mouseenter(function() {
+        var country = $(this).attr('class');
+        $('h3').removeClass("trade-map-data-rollover");
+        $('.'+country).addClass("trade-map-data-rollover");
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);
+        if (country == "europe") {
+          $("#EU-popup").show();
+        }
+    })
+    .mouseout(function(){
+          $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
+          $("#EU-popup").hide();
+    });
+    $('.trade-map-legend h3').click(function() {
+        var country = $(this).attr('class').split(' ')[0];
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);
+    });
 });
 
 
-var trademapstop = $(".trade-maps-container").offset().top-155;
-$('.trade-map').css('top', trademapstop);
 
-$('.trade-map-legend h3').mouseenter(function() {
-  var country = $(this).attr('class');
-  $('h3').removeClass("trade-map-data-rollover");
-  $('.'+country).addClass("trade-map-data-rollover");
-  var img_url = "img/"+commodity+"-"+country+".jpg";
-  $("#main-trade-map").attr('src', img_url);
-  if (country == "europe") {
-    $("#EU-popup").show();
-  }
-})
-.mouseout(function(){
-    $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
-    $("#EU-popup").hide();
-});
 
-$('.trade-map-legend h3').click(function() {
-  var country = $(this).attr('class').split(' ')[0];
-  var img_url = "img/"+commodity+"-"+country+".jpg";
-  $('.trade-map img').attr('src', img_url);
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,30 +332,38 @@ $(window).on('scroll', function() {
     }
 });
 
-  $("#brazil-map-ch-3").hover(
-    function () {
-      $('#company-legend').show();
-      $('#magnified').show();
-    }, 
-    function () {
-      $('#company-legend').hide();
-      $('#magnified').hide();
-    }
-  );
 
-  $(".ship-pic img").mouseover(function() { 
-    $(this).attr("src", "img/ship-icon-hover.png");
-    })
-    .mouseout(function() {
-    $(this).attr("src", "img/ship-icon.png");
-    });
-  });
+// Code for switching out maps
+$('.g4-lg').click(function(){
+    $('.g4-lg').css('color','#5e616a');
+    $(this).css('color', '#fff');
+});
+
+$('#pre-g4').click(function(){
+    $('#brazil-map-ch-3 img').attr('src','img/preg4-map-ch-3.png');
+});
+$('#post-g4').click(function(){
+    $('#brazil-map-ch-3 img').attr('src','img/postg4-map-ch-3.png');
+});
+
+
+
+// Magnifying glass code
+$("#brazil-map-ch-3").mouseenter(function () {
+    $('#company-legend').show();
+    $('#magnified').css({"border-color": "#fff", "left": "500px !important"});
+}).mouseout(function () {
+    $('#company-legend').hide();
+    $('#magnified').css({"border-color": "#5e616a"});
+});
+
+
+
 
 
 
 //Chapter 4 behavior
 //=====================================
-
 
 $(window).on('scroll', function() {
     var y_scroll_pos = window.pageYOffset;
@@ -214,6 +373,20 @@ $(window).on('scroll', function() {
         console.log("we've reached chapter four");
     }
 });
+
+
+$('.ch4-yr-lg').on('mouseenter', function(){
+    var which_map = $(this).attr('id').split('-')[0];
+    var ch4_map_image_url = 'img/'+which_map+'agreement.jpg';
+    $('#map-ch-4 img').attr('src', ch4_map_image_url);
+});
+
+
+
+
+
+
+
 
 
 

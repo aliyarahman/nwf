@@ -251,6 +251,7 @@
     <!-- Chapter 1 -->
     <section class="chapter" id="chapter-one">
     <a name="chapter1"></a>
+
     <div class="holder">
         <div class="chapter-header">
             <div class="content">
@@ -267,16 +268,18 @@
             <div class="chapter-summary-tagline">Ranches have steadily increased the cattle population over the past four decades.</div>
 
 
-            <div id="ch1-left-col">
+            <!-- First set of maps -->
+
+            <div class="cattle-head-growth" id="ch1-left-col">
                 <div class="year-number-holder">
-                        <div><h1 class="year-number-lg" id="yr1993">1993</h1></div>
-                        <div><h1 class="year-number-lg" id="yr2003">2003</h1></div>
-                        <div><h1 class="year-number-lg" id="yr2013">2013</h1></div>
+                        <div><h1 class="year-number-lg" id="cattle-head-yr-1">1993</h1></div>
+                        <div><h1 class="year-number-lg" id="cattle-head-yr-2">2003</h1></div>
+                        <div><h1 class="year-number-lg" id="cattle-head-yr-3">2013</h1></div>
                 </div>
             </div>
 
-            <div id="ch1-right-col">
 
+            <div class="cattle-head-growth" id="ch1-right-col">
                 <div id="ch1-map-legend">
                         <div class="ch1-legend-line">
                             <div class="ch1-legend-note">Head of Cattle per Municipality</div>
@@ -307,11 +310,61 @@
                         </div>
                 </div>
 
-                <div id="brazil-map-ch-1">
-                    <img src="img/brazil-map-ch-1.png">
+                <div class="cattle-head-growth" id="brazil-map-ch-1">
+                    <img src="img/cattle-head-map1-ch-1.png">
+                </div>
+            </div>
+
+            
+
+            <!-- Second set of maps: forest cover loss -->
+
+            <div class="forest-cover-loss" id="ch1-left-col">
+                <div class="year-number-holder">
+                        <div><h1 class="year-number-lg" id="forest-cover-yr-1">1983</h1></div>
+                        <div><h1 class="year-number-lg" id="forest-cover-yr-2">2003</h1></div>
+                        <div><h1 class="year-number-lg" id="forest-cover-yr-3">2013</h1></div>
+                </div>
+            </div>
+
+            <div class="forest-cover-loss" id="ch1-right-col">
+                <div id="ch1-map-legend">
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-note">Forest Cover Loss</div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">0-50,000</div>
+                            <div id="ch1-legend-box-1"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">50,001-200,000</div>
+                            <div id="ch1-legend-box-2"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">200,001-400,000</div>
+                            <div id="ch1-legend-box-3"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">400,001-1,000,000</div>
+                            <div id="ch1-legend-box-4"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">1,000,001-2,000,000</div>
+                            <div id="ch1-legend-box-5"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-note">Legal Amazon boundary</div>
+                            <div id="ch1-legend-box-border"></div>
+                        </div>
+                </div>
+
+                <div class="forest-cover-loss" id="brazil-map-ch-1">
+                    <img src="img/forest-cover-map1-ch-1.png">
                 </div>
 
             </div>
+
+
 
 
             <div class="chapter-landing">
@@ -320,8 +373,14 @@
                 <div class="tangent-tab">tangential topic</div>
             </div>
         </div>
+
+
+
     </div>
     </section>
+
+
+
 
 
 
@@ -440,7 +499,7 @@
             <div class="trade-map-ship-tag trade-map-info" id="beef-data">
                 Beef
             </div>
-            <div class="trade-map-ship-tag trade-map-info" id="beef-data">
+            <div class="trade-map-ship-tag trade-map-info trade-map-extra-info-tag" id="beef-data">
                 Fresh, frozen, processed
             </div>
             <div class="trade-map-legend trade-map-info" id="beef-data">
@@ -489,8 +548,8 @@
 
     <!-- Chapter 3 -->
     <section class="chapter" id="chapter-three">
-   
-        <a name="chapter3"></a>
+    <a name="chapter3"></a>
+            
             <div class="chapter-header">
                 <div class="content">
                     <div class="chapter-number-lg">
@@ -509,8 +568,8 @@
 
             <div id="ch3-left-col">
                 <div class="g4-holder">
-                        <div><h1 class="g4-lg">Pre-G4</h1></div>
-                        <div><h1 class="g4-lg">Post-G4</h1></div>
+                        <div><h1 id="pre-g4" class="g4-lg">Pre-G4</h1></div>
+                        <div><h1 id="post-g4" class="g4-lg">Post-G4</h1></div>
                 </div>
             </div>
 
@@ -570,10 +629,10 @@
                 </div>
                 
                 <div id="brazil-map-ch-3">
-                    <img src="img/brazil-map-ch-3.png">
+                    <img src="img/preg4-map-ch-3.png">
                 </div>
+
                 <div id="magnified">
-                    <img src="img/magnified.png">
                 </div>
 
                 </div>
@@ -612,13 +671,60 @@
         <div class="content">        
             <div class="chapter-triangle"></div>
 
-            <div class="chapter-summary-tagline">Regulation made a big difference.</div>
+            <div class="chapter-summary-tagline">Regulation mattered.</div>
 
-            <div id="ch4-mid">
+            <div id="ch4-left-col">
 
-            <img class="ch5-image" src="img/ch4-a.png">
+                <div class="ch4-yr-holder">
+                        <div class="ch4-yr-lg" id="pre-agreement-ch4">
+                            <div class="ch4-title">Pre-agreement</div>
+                            <div class="ch4-subtitle">2006-2009 deforestation</div>
+                        </div>
+                        <div class="ch4-yr-lg" id="prepost-agreement-ch4">
+                            <div class="ch4-title">Post-agreement</div>
+                            <div class="ch4-subtitle">2006-2009 and 2010-2013 deforestation</div>
+                        </div>
+                        <div class="ch4-yr-lg" id="post-agreement-ch4">
+                            <div class="ch4-title">Post-agreement</div>
+                            <div class="ch4-subtitle">2010-2013 deforestation</div>
+                        </div>
+                </div>
 
             </div>
+
+
+
+            <div id="ch4-right-col">
+
+                <div id="map-ch-4">
+                    <img src="img/preagreement.jpg">
+                </div>
+
+                <div id="ch4-legends">
+                    <div id="ch4-legend">
+                        <div class="ch4-legend-line">
+                            <div class="ch4-legend-label">
+                                Deforestation (2006-2009)
+                            </div>
+                            <div id="ch4-legend-box-1"></div>
+                        </div>
+                        <div class="ch4-legend-line">
+                            <div class="ch4-legend-label">2012 or 2013 suppliers</div>
+                            <div id="ch4-legend-box-2"></div>
+                        </div>
+                        <div class="ch4-legend-line">
+                            <div class="ch4-legend-label">Suppliers that sold pre-agreement</div>
+                            <div id="ch4-legend-box-3"></div>
+                        </div>
+                        <div class="ch4-legend-line">
+                            <div class="ch4-legend-label">Non-supplying properties</div>
+                            <div id="ch4-legend-box-4"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end right column -->
+
 
             <div class="chapter-landing">
                 <div class="chapter-landing-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -626,9 +732,6 @@
                 <div class="tangent-tab">tangential topic</div>
             </div>
 
-            <img class="ch5-image" src="img/ch4-b.png">
-
-            <img class="ch5-image" src="img/ch4-c.png">
         </div>
     </section>
 
@@ -657,7 +760,7 @@
             
             <div class="chapter-summary-tagline">Slaughterhouses must source their cattle from traceable, monitored direct suppliers.</div>
 
-            <img id="ch5-image" src="img/ch5.png">
+            <img id="ch5-image" src="img/ch5.jpg">
 
             <div class="chapter-landing">
                 <div class="chapter-landing-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -665,15 +768,12 @@
                 <div class="tangent-tab">tangential topic</div>
             </div>
 
-            <img id="ch5-image" src="img/ch5-full.jpg">
         </div>
     </section>
 
 
     <script src="js/jquery-2.1.0.min.js"></script>
-
     <script src="js/jquery.panelSnap.js"></script>
-
     <script src="js/application.js"></script> <!-- Custom non-library JavaScript, including settings for library use in this page -->
   </body>
 </html>
