@@ -1116,7 +1116,7 @@ h2        {font-size: 4em;}
 
 #chapter-five .tangent-tab {color: #4bb7b7;}
 
-.ch5tests   {position: absolute; top: 7600px; font-size: 2em; color: #fff;}
+.ch5tests   {position: absolute; top: 7450px; font-size: 2em; color: #fff;}
 
 #chapter-five .chapter-landing {margin-top: 5em;}
 
@@ -1126,15 +1126,11 @@ h2        {font-size: 4em;}
             overflow: hidden;
             margin-left: 15em;
             margin-top: 1em;
-            border: 2px green solid;
+            background-image: url('../img/ch5.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            -moz-transition: all .5s;
+            -webkit-transition: all .5s;
+            transition: all .5s;
             }
-
-#ch5-image-holder img {width: 100%;}
-
-
-
-
-
-
-
 

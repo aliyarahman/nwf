@@ -407,3 +407,35 @@ $(window).on('scroll', function() {
         console.log("we've reached chapter five");
     }
 });
+
+
+$('#ct1').on('click', function(){
+    $('#ch5-image-holder').css({
+        "background-size": "300% 300%",
+        "background-position": "left center"});
+});
+
+$('#ct2').on('click', function(){
+    $('#ch5-image-holder').css({
+        "background-size": "200% 200%",
+        "background-position": "left center"});
+});
+
+$('#ct3').on('click', function(){
+    $('#ch5-image-holder').css({
+        "background-size": "200% 200%",
+        "background-position": "center center"});
+});
+
+$('#ct4').on('click', function(){
+    $('#ch5-image-holder').css({
+        "background-size": "200% 200%",
+        "background-position": "right center"});
+});
+
+$('#ct5').on('click', function(){
+    $('#ch5-image-holder').css({
+        "background-size": "100% 100%"});
+});
+
+
