@@ -153,10 +153,6 @@ $(window).on('scroll', function() {
     }
 });
 
-//Positions the trade map
-var trademapstop = $(".trade-maps-container").offset().top-155;
-$('.trade-map').css('top', trademapstop);
-
 
 //Ship button rollover
 $(".ship-pic img").mouseover(function() { 
@@ -196,6 +192,12 @@ $('.trade-map-legend h3').mouseenter(function() {
 
 $('#beef-bubble').on('click', function() {
     commodity = "beef";
+    
+    //Shows and positions the trade map
+    $('.trade-maps-container').show();
+    var trademapstop = $(".trade-maps-title").offset().top;
+    $('.trade-map').css('top', trademapstop);
+
     $(".trade-map-title h2").text("Top trade partners for beef, 2014");
     $("#main-trade-map").attr('src','img/beef.jpg');
     $('#EU-popup').hide();
@@ -351,7 +353,7 @@ $('#post-g4').click(function(){
 // Magnifying glass code
 $("#brazil-map-ch-3").mouseenter(function () {
     $('#company-legend').show();
-    $('#magnified').css({"border-color": "#fff", "left": "500px !important"});
+    $('#magnified').css({"border-color": "#fff"});
 }).mouseout(function () {
     $('#company-legend').hide();
     $('#magnified').css({"border-color": "#5e616a"});
@@ -379,6 +381,8 @@ $('.ch4-yr-lg').on('mouseenter', function(){
     var which_map = $(this).attr('id').split('-')[0];
     var ch4_map_image_url = 'img/'+which_map+'agreement.jpg';
     $('#map-ch-4 img').attr('src', ch4_map_image_url);
+    $(".ch4-subtitle").hide();
+    $("#"+which_map+"-subtitle").show();
 });
 
 
