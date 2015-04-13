@@ -223,12 +223,13 @@ h2        {font-size: 4em;}
           font-size: 2.8em;
           position: relative;
           top: 1.2em;
-          width: 50%;
+          width: 15em;
           }
 
+
 .chapter-landing {
-  margin-left: 10%;
-  margin-top: 1em;
+  margin: 5em 0em -0.3em 10em;
+  vertical-align: top;
   }
 
 
@@ -237,28 +238,45 @@ h2        {font-size: 4em;}
     color: #484a56;
     font-size: 1.4em;
     width: 53%;
-    height: auto;
+    height: 10em;
+    overflow: hidden;
     padding: 2em;
     background-color: white;
   }
 
+.tangent-tab-holder {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 9em;
+    left: -0.2em;
+    }
 
 .tangent-tab  {
-    display: inline-block;
-    position: relative;
-    left: -0.2em;
-    top: -1.5em;
     background-color: #484a56;
     color: #db9d2e;
-    width: 20%;
-    padding: 1.2em 0em 1.2em 1.2em;
+    margin-bottom: 0.5em;
+    padding: 1.2em 1.2em 1.2em 2.2em;
     font-size: 1.1em;
-    -webkit-transition: padding-left 2s;
+    -webkit-transition: padding-left 0.4s;
     transition: padding-left 0.4s;
   }
 
+.tangent-tab:hover {padding-left: 4em;}
 
-.tangent-tab:hover {padding-left: 3em;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -293,7 +311,7 @@ h2        {font-size: 4em;}
 
 #prequel-title {
             position: relative;
-            top: -6.5em;
+            top: -8em;
             width: 100%;
             font-size: 5.5em;
             line-height: 1em;
@@ -332,7 +350,7 @@ h2        {font-size: 4em;}
             line-height: 1em;
             width: 50%;
             margin-left: 35%;
-            margin-top: 4%;}
+            margin-top: 3em;}
 
 
 
@@ -437,10 +455,6 @@ h2        {font-size: 4em;}
             text-align: center;
             color: #363845;
           }
-
-#table-of-contents {
-  margin-top: 3em;
-}
 
 
 .chapter-button {
@@ -554,52 +568,74 @@ h2        {font-size: 4em;}
 
 /* Chapter 1 style */
 
-#chapter-one { background-color: #db9d2e;
-	    height: 2000px;
+#chapter-one {
+      background-color: #db9d2e;
+	    height: auto;
+      }
+
+
+.chapter-1-summary-tagline {
+      text-align: left;
+      font-family: Dala Floda-Roman;
+      color: white;
+      font-size: 1.9em;
+      margin-top: 1em;
+      margin-bottom: 3em;
+      width: 18em;
       }
 
 #ch1-left-col {
       display:inline-block;
-      width: 30%;
-      margin-left: 1em;
-      }
-
-#ch1-right-col {
-      display:inline-block;
       width: 50%;
-      text-align: right;
+      margin-top: 2em;
       vertical-align: top;
       }
 
-#chapter-one .chapter-landing {margin-top: -18em;}
+#ch1-right-col {
+      margin-top: 5em;
+      display:inline-block;
+      width: 49%;
+      vertical-align: top;
+      }
+
+#chapter-one .chapter-landing {
+      margin-top: -22em;
+      }
 
 .year-number-holder {
-      margin-top: 4.5em;
-}
+      margin-top: 3.5em;
+      }
 
 #chapter-one .year-number-lg  {
       color: #b98728;
       text-align: left;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      line-height: 1em;
-      font-size: 6em;
+      line-height: 0.1em;
+      font-size: 5em;
       -webkit-font-feature-settings: 'tnum';
       -moz-font-feature-settings: 'tnum';
       -ms-font-feature-settings: 'tnum';
-  }
+      }
 
-#chapter-one .year-number-lg:hover  {
+#ch1-right-col .year-number-holder {
+      margin-left: 3em;
+      }
+
+
+
+#chapter-one .year-number-lg:hover {
       color: #363845;
-  }
+      }
 
-#ch1-map-legend   {
+.ch1-map-legend   {
       display: inline-block;
       color: #363845;
-      position: relative;
-      left: -25em;
-      top: 15em;
-      width: 20em;
+      text-align: right;
+      width: 15em;
+      margin-left: 3em;
+      }
+
+#ch1-right-col .ch1-map-legend {
+      margin-left: 6em;
       }
 
 .ch1-legend-note   {
@@ -635,17 +671,21 @@ h2        {font-size: 4em;}
       background-repeat: no-repeat;
       background-position: center;}
 
-#brazil-map-ch-1  {
+.brazil-map-ch-1  {
+      width: 25em;
       display: inline-block;
       position: relative;
-      top: -17em;
-      left: 2em;
+      top: -30em;
+      left: 14em;
       }
 
-#brazil-map-ch-1 img  {
-    width: 80%;
-    height: auto;
-}
+.forest-cover-loss .brazil-map-ch-1  {
+      left: 16em;
+      }
+
+.brazil-map-ch-1 img  {
+    width: 100%;
+    }
 
 
 
@@ -670,8 +710,6 @@ h2        {font-size: 4em;}
                 height: auto;
              }
 
-#chapter-two .chapter-summary-tagline {width: 40%;}
-
 #chapter-two .chapter-landing {margin-top: -28em;}
 
 #product-bubbles {
@@ -687,7 +725,7 @@ h2        {font-size: 4em;}
 
 #leather-bubble {top: -40em; left: -3em;}
 #beef-bubble {top: -26em; left:-17em;}
-#tallow-bubble {top: -10em; left: 19em;}
+#tallow-bubble {top: -12em; left: 19em;}
 
 
 .bubble-pic   {width: 100%;}
@@ -749,16 +787,17 @@ h2        {font-size: 4em;}
 .trade-map-title  {
     margin-left: 2.5em;
     margin-top: -0.5em;
-    margin-bottom: -4.5em;}
+    margin-bottom: -3.5em;
+    }
 
 .trade-map-title h2 {
     text-align: center;
-    color: #fff;}
+    color: #fff;
+    }
 
 .trade-map {position: absolute;
-            z-index: 0;
             left: 12.5em;
-            background: transparent;}
+            }
 
 #EU-popup {
     display: none;
@@ -776,7 +815,7 @@ h2        {font-size: 4em;}
 .trade-map-info-holder {
       display: inline-block;
       position: relative;
-      top: 9.6em;
+      top: 9em;
       left: 7.5em;
       z-index:1;}
 
@@ -804,6 +843,10 @@ h2        {font-size: 4em;}
       padding-left: 2em;
       padding-right: 1.5em;}
 
+.testing-ships {
+    position: relative;
+    top: -15em;
+    opacity: 0.5;}
 
 .trade-map-legend   {
     height: 20em;
@@ -869,7 +912,9 @@ h2        {font-size: 4em;}
 #chapter-three { background-color: #363845;
             height: auto;}
 
-#chapter-three .chapter-landing {margin-top: -20em;}
+#chapter-three .chapter-landing {
+      margin-top: -50em;
+      }
 
 #ch3-left-col {
       display:inline-block;
@@ -886,9 +931,8 @@ h2        {font-size: 4em;}
       }
 
 .g4-holder {
-      margin-left: 10%;
       margin-right: 5%;
-      margin-top: 6em;
+      margin-top: 8em;
       vertical-align: top;
 }
 
@@ -898,6 +942,7 @@ h2        {font-size: 4em;}
       margin-top: 0px;
       margin-bottom: 0px;
       line-height: 1em;
+      font-size: 4.2em;
       -webkit-font-feature-settings: 'tnum';
       -moz-font-feature-settings: 'tnum';
       -ms-font-feature-settings: 'tnum';
@@ -924,8 +969,6 @@ h2        {font-size: 4em;}
   width: 18%;
 }
 
-
-#company-legend {}
 
 
 .ch3-legend-note   {
@@ -980,6 +1023,13 @@ h2        {font-size: 4em;}
       width: 100%;
       }
 
+#brazil-map-ch-3-overlay {
+      position: relative;
+      left: 2em;
+      top: -61em;
+      height: 30em;
+      }
+
 #brazil-map-ch-3 img  {
     width: 100%;
     height: auto;
@@ -987,19 +1037,19 @@ h2        {font-size: 4em;}
 
 
 #magnified {
+  display: none;
   width: 20em;
   height: 20em;
   border-radius: 50%;
   background: transparent;
-  border: 5px solid #363845;
-  position: absolute;
-  top: 4915px;
-  left: 1008px;
+  border: 6px solid #363845;
   }
 
 
-#chapter-three .tangent-tab {color: #363845;
-      background-color: #6fb174;}
+#chapter-three .tangent-tab {
+      color: #363845;
+      background-color: #6fb174;
+      }
 
 
 
@@ -1016,6 +1066,10 @@ h2        {font-size: 4em;}
 #chapter-four .tangent-tab {color: #b29377;}
 
 #chapter-four .chapter-landing {margin-top: 2em;}
+
+#chapter-four .chapter-summary-tagline {
+      width: 70%;
+      font-size: 2em;}
 
 #ch4-left-col {
       display:inline-block;
@@ -1068,8 +1122,21 @@ h2        {font-size: 4em;}
 
 #pre-subtitle, #prepost-subtitle, #post-subtitle {display: none;}
 
-#map-ch-4 {height: 35em;
-           }
+#map-ch-4 {
+      background-image: url("../img/ch4-zoomout.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 50em;
+      width: 45em;
+      position: relative;
+      top: -2em;
+      }
+
+#map-ch-4-overlay {
+      position: absolute;
+      left: 3000px;
+      border: 2px blue solid;
+      }
 
 #ch4-map-legend {
       display: inline-block;
@@ -1111,26 +1178,59 @@ h2        {font-size: 4em;}
 
 /* Chapter 5 style */
 
-#chapter-five { background-color: #4bb7b7;
-            height: auto;}
+#chapter-five {
+      background-color: #4bb7b7;
+      height: auto;}
 
-#chapter-five .tangent-tab {color: #4bb7b7;}
+#chapter-five .chapter-summary-tagline {
+      width: 30em;
+      font-size: 2em;
+      }
 
-.ch5tests   {position: absolute; top: 7450px; font-size: 2em; color: #fff;}
+#chapter-five .tangent-tab {
+      color: #4bb7b7;
+      }
 
-#chapter-five .chapter-landing {margin-top: 5em;}
+.ch5tests   {
+      position: absolute;
+      top: 7150px;
+      font-size: 2em;
+      color: #fff;
+      }
+
+#chapter-five .chapter-landing {
+      margin-top: 5em;
+    }
 
 #ch5-image-holder {
-            width: 70em;
-            height: 30em;
-            overflow: hidden;
-            margin-left: 15em;
-            margin-top: 1em;
-            background-image: url('../img/ch5.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            -moz-transition: all .5s;
-            -webkit-transition: all .5s;
-            transition: all .5s;
-            }
+      width: 70em;
+      height: 30em;
+      overflow: hidden;
+      margin-left: 15em;
+      margin-top: 3em;
+      background-image: url('../img/ch5.jpg');
+      background-size: 300% 300%;
+      background-position: left center;
+      background-repeat: no-repeat;
+      -moz-transition: all .5s;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      }
 
+.recommendation-holder {
+    width: 100%;
+    background-color: #fff;
+    font-size: 1.5em;
+    margin-top: 3em;
+    padding: 2em;
+    color: #363845;
+    }
+
+.recommendations-header {
+    color: #363845;
+    }
+
+.recommendation {
+    margin-left: 3em;
+    margin-top: 1em;
+    }

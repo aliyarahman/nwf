@@ -192,7 +192,6 @@ $('.trade-map-legend h3').mouseenter(function() {
 
 $('#beef-bubble').on('click', function() {
     commodity = "beef";
-    
     //Shows and positions the trade map
     $('.trade-maps-container').show();
     var trademapstop = $(".trade-maps-title").offset().top;
@@ -230,7 +229,7 @@ $('#beef-bubble').on('click', function() {
 });
 
 
-$('#leather-bubble').on('click', function() {
+$('#leather-bubble, #leather-bubble-nav').on('click', function() {
     commodity = "leather";
     $(".trade-map-title h2").text("Top trade partners for leather, 2014");
     $("#main-trade-map").attr('src','img/leather.jpg');
@@ -264,7 +263,7 @@ $('#leather-bubble').on('click', function() {
     });
 });
 
-$('#tallow-bubble').on('click', function() {
+$('#tallow-bubble, #tallow-bubble-nav').on('click', function() {
     commodity = "tallow";
     $(".trade-map-title h2").text("Top trade partners for tallow, 2014");
     $("#main-trade-map").attr('src','img/tallow.jpg');
@@ -300,7 +299,40 @@ $('#tallow-bubble').on('click', function() {
 
 
 
+$('#beef-bubble-nav').on('click', function() {
+    commodity = "beef";
 
+    $(".trade-map-title h2").text("Top trade partners for beef, 2014");
+    $("#main-trade-map").attr('src','img/beef.jpg');
+    $('#EU-popup').hide();
+    $('.trade-map-bubble img').attr('src', 'img/beef-bubble.png');
+    $('.trade-map-ship-tag').first().text("Beef");
+    $('.trade-map-extra-info-tag').show();
+    $('.trade-map-extra-info-tag').text("Fresh, frozen, processed");
+    $('.trade-map-pie').show();
+    $('.trade-map-quantity-column').find('h3').hide();
+    $('.trade-map-partner-column').find('h3').hide();
+    $('.trade-map-quantity-column').append( '<h3 class="china">24%</h3><h3 class="russia">18%</h3><h3 class="europe">13%</h3><h3 class="venezuela">12%</h3><h3 class="egypt">8%</h3><h3 class="iran">4%</h3><h3 class="chile">4%</h3>' );
+    $('.trade-map-partner-column').append( '<h3 class="china">China</h3><h3 class="russia">Russia</h3><h3 class="europe">Europe-28</h3><h3 class="venezuela">Venezuela</h3><h3 class="egypt">Egypt</h3><h3 class="iran">Iran</h3><h3 class="chile">Chile</h3>' );
+    $('.trade-map-legend h3').mouseenter(function() {
+        var country = $(this).attr('class');
+        $('h3').removeClass("trade-map-data-rollover");
+        $('.'+country).addClass("trade-map-data-rollover");
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);
+        if (country == "europe") {
+          $("#EU-popup").show();
+        }
+    })
+    .mouseout(function(){
+          $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
+          $("#EU-popup").hide();
+    });
+    $('.trade-map-legend h3').click(function() {
+        var country = $(this).attr('class').split(' ')[0];
+        var img_url = "img/"+commodity+"-"+country+".jpg";
+        $("#main-trade-map").attr('src', img_url);    });
+});
 
 
 
@@ -351,7 +383,7 @@ $('#post-g4').click(function(){
 
 
 // Magnifying glass code
-$("#brazil-map-ch-3").mouseenter(function () {
+$("#brazil-map-ch-3-overlay").mouseenter(function () {
     $('#company-legend').show();
     $('#magnified').css({"border-color": "#fff"});
 }).mouseout(function () {
@@ -380,7 +412,7 @@ $(window).on('scroll', function() {
 $('.ch4-yr-lg').on('mouseenter', function(){
     var which_map = $(this).attr('id').split('-')[0];
     var ch4_map_image_url = 'img/'+which_map+'agreement.jpg';
-    $('#map-ch-4 img').attr('src', ch4_map_image_url);
+    $('#map-ch-4-overlay img').attr('src', ch4_map_image_url);
     $(".ch4-subtitle").hide();
     $("#"+which_map+"-subtitle").show();
 });
@@ -417,13 +449,13 @@ $('#ct1').on('click', function(){
 
 $('#ct2').on('click', function(){
     $('#ch5-image-holder').css({
-        "background-size": "200% 200%",
+        "background-size": "180% 180%",
         "background-position": "left center"});
 });
 
 $('#ct3').on('click', function(){
     $('#ch5-image-holder').css({
-        "background-size": "200% 200%",
+        "background-size": "180% 180%",
         "background-position": "center center"});
 });
 
