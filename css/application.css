@@ -681,6 +681,7 @@ h2        {font-size: 4em;}
 
 .forest-cover-loss .brazil-map-ch-1  {
       left: 16em;
+      top: -22em;
       }
 
 .brazil-map-ch-1 img  {
@@ -767,7 +768,7 @@ h2        {font-size: 4em;}
               margin-right: auto;
               width: 50%;
               position: relative;
-              top: 2em;
+              top: 5em;
               left: 1em;
               }
 
@@ -1059,37 +1060,37 @@ h2        {font-size: 4em;}
 
 
 
+
+
+
+
+
 /* Chapter 4 style */
 
-#chapter-four { background-color: #5a4a3d; height: auto;}
+#chapter-four { 
+      background-color: #5a4a3d;
+      height: auto;
+      background-image: url("../img/ch4-zoomout.png");
+      background-repeat: no-repeat;
+      background-size: auto 70%;
+      background-position: right 80%;
+      -moz-transition: all .75s;
+      -webkit-transition: all .75s;
+      transition: all .75s;}
 
 #chapter-four .tangent-tab {color: #b29377;}
 
 #chapter-four .chapter-landing {
-      margin-top: -10em;
+      margin-top: 2em;
       }
 
 #chapter-four .chapter-summary-tagline {
-      width: 70%;
+      width: 60%;
       font-size: 2em;}
 
-#ch4-left-col {
-      display:inline-block;
-      width: 50%;
-      vertical-align: top;
-      margin-left: 2%;
-      }
-
-#ch4-right-col {
-      display:inline-block;
-      width: 40%;
-      text-align: right;
-      vertical-align: top;
-      }
-
-
 .ch4-yr-holder {
-      margin-top: 7em;
+      margin-top: 8em;
+      margin-left: 2em;
       vertical-align: top;
       color: #876e5a;
       }
@@ -1124,41 +1125,55 @@ h2        {font-size: 4em;}
 
 #pre-subtitle, #prepost-subtitle, #post-subtitle {display: none;}
 
-#map-ch-4 {
-      background-image: url("../img/ch4-zoomout.png");
+.ch4-map-overlay {
+      background-image: url("../img/preagreement.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      height: 50em;
-      width: 45em;
-      position: relative;
-      top: -2em;
+      position: absolute;
+      left: 1100px;
+      top: 5520px;
+      width: 7.5em;
+      height: 10em;
+      -moz-transition: all .75s;
+      -webkit-transition: all .75s;
+      transition: all .75s;}
       }
 
-#map-ch-4-overlay {
-      position: absolute;
-      left: 3000px;
-      border: 2px blue solid;
+.ch4-map-overlay-pre {
+      background-image: url("../img/preagreement.jpg");
       }
+
+.ch4-map-overlay-prepost {
+      background-image: url("../img/prepostagreement.jpg");
+      }
+
+
+.ch4-map-overlay-post {
+      background-image: url("../img/postagreement.jpg");
+      }
+
 
 #ch4-map-legend {
       display: inline-block;
       color: #fff;
       position: relative;
       width: 50%;
-      margin-top: 4em;
+      margin-top: 2em;
+      margin-left: 20em;
       }
+
 
 .ch4-legend-label   {
       display: inline-block;
       vertical-align: middle;
       font-size: 1.1em;
-      margin-top: 3%;
+      margin-top: 1%;
       }
 
 #ch4-legend-box-1, #ch4-legend-box-2, #ch4-legend-box-3, #ch4-legend-box-4, #ch4-legend-box-5 {
       display: inline-block;
       vertical-align: middle;
-      margin-top: 3%;
+      margin-top: 1%;
       margin-right: 1%;
       height: 1.8em;
       width: 1.8em;

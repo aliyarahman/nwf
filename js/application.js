@@ -409,17 +409,28 @@ $(window).on('scroll', function() {
 });
 
 
-$('.ch4-yr-lg').on('mouseenter', function(){
+
+$('.ch4-yr-lg').on('click', function(){
+    $('#chapter-four').css({'background-size':'auto 150%','background-position':'15% 5%'});
+    $('.ch4-map-overlay').css({'width':'30em','height':'40em','left':'900px','top':'5220px'});
     var which_map = $(this).attr('id').split('-')[0];
-    var ch4_map_image_url = 'img/'+which_map+'agreement.jpg';
-    $('#map-ch-4-overlay img').attr('src', ch4_map_image_url);
-    $(".ch4-subtitle").hide();
-    $("#"+which_map+"-subtitle").show();
+    $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
+    $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
+    if (which_map == 'pre') {
+        $('.ch4-box-1').hide();
+        $('.ch4-box-2').show();
+    }
+    else if (which_map =='prepost') {
+        $('.ch4-box-1').show();
+        $('.ch4-box-2').show();
+    }
+    else if (which_map =='post') {
+        $('.ch4-box-1').show();
+        $('.ch4-box-2').hide();
+    }
+    //$(".ch4-subtitle").hide();
+    //$("#"+which_map+"-subtitle").show();
 });
-
-
-
-
 
 
 
