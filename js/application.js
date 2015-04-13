@@ -460,13 +460,13 @@ $('#ct1').on('click', function(){
 
 $('#ct2').on('click', function(){
     $('#ch5-image-holder').css({
-        "background-size": "180% 180%",
-        "background-position": "left center"});
+        "background-size": "210% 210%",
+        "background-position": "10% 55%"});
 });
 
 $('#ct3').on('click', function(){
     $('#ch5-image-holder').css({
-        "background-size": "170% 170%",
+        "background-size": "200% 200%",
         "background-position": "70% center"});
 });
 
@@ -478,7 +478,12 @@ $('#ct4').on('click', function(){
 
 $('#ct5').on('click', function(){
     $('#ch5-image-holder').css({
-        "background-size": "100% 100%"});
+        "background-size": "110% 110%",
+        "background-position": "center center"});    
 });
 
+$('#ct6').on('click', function(){
+    $('#ch5-image-holder').css({
+        "background-size": "100% 100%"});
+});
 
