@@ -455,8 +455,8 @@ $('#ct2').on('click', function(){
 
 $('#ct3').on('click', function(){
     $('#ch5-image-holder').css({
-        "background-size": "180% 180%",
-        "background-position": "center center"});
+        "background-size": "170% 170%",
+        "background-position": "70% center"});
 });
 
 $('#ct4').on('click', function(){

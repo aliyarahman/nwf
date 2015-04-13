@@ -1065,7 +1065,9 @@ h2        {font-size: 4em;}
 
 #chapter-four .tangent-tab {color: #b29377;}
 
-#chapter-four .chapter-landing {margin-top: 2em;}
+#chapter-four .chapter-landing {
+      margin-top: -10em;
+      }
 
 #chapter-four .chapter-summary-tagline {
       width: 70%;
@@ -1193,7 +1195,7 @@ h2        {font-size: 4em;}
 
 .ch5tests   {
       position: absolute;
-      top: 7150px;
+      top: 7200px;
       font-size: 2em;
       color: #fff;
       }
