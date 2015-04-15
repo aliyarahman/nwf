@@ -101,6 +101,11 @@ $("#burger-box").on('click', function(){
 
 
 
+$('.site-sub-link').on('click', function(){
+    var which_tangent= $(this).attr('onClick').split('="')[1].split('"')[0];
+    alert(which_tangent);
+});
+
 
 
 

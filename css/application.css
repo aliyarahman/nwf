@@ -248,10 +248,9 @@ h2        {font-size: 4em;}
           border-left: 20px solid transparent;
           border-right: 20px solid transparent;
           border-top: 20px solid #fff;
-
           }
 
-.tangent-tab {
+.tangent-tab, .tangent-go-back {
     width: 20em;
     margin-right: 0;
     margin-left: auto;
@@ -270,14 +269,50 @@ h2        {font-size: 4em;}
 
 .tangent-tab:hover {padding-right: 7em;}
 
+.tangent-go-back {width: 15em;}
+
+.tangent-go-back:hover {
+    padding-right: 0em;
+    padding-left: 5em;
+    width: 13.5em;
+    }
+
+.tangent-article {
+    margin: 2em auto;
+    padding: 3em;
+    width: 1280px;
+    height: 800px;
+    }
+
+.tangent-article-title {
+    }
+
+.tangent-article-title h2 {
+    color: #fff;
+    line-height: 0em;
+    }
+
+.tangent-article-image {
+  margin: 2em;
+  display: inline-block;
+}
 
 
+.tangent-article-image img {
+  height: 20em;
+  width: auto;
+}
+  
 
-
-
-
-
-
+.tangent-article-text {
+  vertical-align: top;
+  position: relative;
+  top: 5em;
+  color: #fff;
+  font-size: 1.5em;
+  display: inline-block;
+  width: 20em;
+}
 
 
 
@@ -298,6 +333,7 @@ h2        {font-size: 4em;}
 
 #rainforest-vid {
           width: 100%; height: auto;
+          min-width: 1280px;
           z-index: -100;
           background: url("../img/rainforest-backdrop.jpg") no-repeat;
           background-size: cover;
@@ -314,14 +350,22 @@ h2        {font-size: 4em;}
           border-top: 20px solid #202020;
           }
 
+
 #prequel-title {
-            position: absolute;
-            top: 5em;
-            left: 2em;
-            width: 100%;
-            color: #fff;
-            text-align: left;
-}
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          color: #fff;
+          text-align: left;
+          }
+
+
+.prequel-title-wrapper {
+          width: 1280px;
+          margin: 3em auto auto auto;
+          vertical-align: middle;
+          }
 
 #prequel-title-large {
       font-size: 6em;
@@ -382,7 +426,7 @@ h2        {font-size: 4em;}
 
 #burger-menu {
               display: none;
-    `         color: #afb0b5;
+              color: #afb0b5;
               width: 100%;
               margin: 0px;
               }
@@ -602,6 +646,8 @@ h2        {font-size: 4em;}
 	    height: auto;
       }
 
+#ch1t1 {background-color: #db9d2e;}
+
 #chapter-one .graphic-content {height: 800px;}
 
 #chapter-one .chapter-summary-tagline {
@@ -713,7 +759,7 @@ h2        {font-size: 4em;}
     width: 100%;
     }
 
-#tab-one .tangent-read-more {color: #db9d2e;}
+#tab-one .tangent-read-more, #tab-one .tangent-title:hover {color: #db9d2e;}
 
 
 
@@ -737,6 +783,8 @@ h2        {font-size: 4em;}
 #chapter-two {  background-color: #6fb174;
                 height: auto;
              }
+
+#ch2t1 {background-color: #6fb174;}             
 
 #chapter-two .graphic-content {height: 800px;}
 
@@ -927,7 +975,7 @@ h2        {font-size: 4em;}
 .tallow-data {display: none;}
 .leather-data {display: none;}
 
-#tab-two .tangent-read-more {color: #6fb174;}
+#tab-two .tangent-read-more, #tab-two .tangent-title:hover {color: #6fb174;}
 
 
 
@@ -950,6 +998,8 @@ h2        {font-size: 4em;}
 
 #chapter-three { background-color: #363845;
             height: 1400px;}
+
+#ch3t1, #ch3t2  {background-color: #363845;}
 
 #chapter-three .chapter-number-lg {
       line-height: 0.65em; }
@@ -1085,7 +1135,7 @@ h2        {font-size: 4em;}
 
 #tab-three {background-color: #71747d}
 
-#tab-three .tangent-read-more {color: #363845;}
+#tab-three .tangent-read-more, #tab-three .tangent-title:hover {color: #363845;}
 
 
 
@@ -1110,6 +1160,8 @@ h2        {font-size: 4em;}
       -webkit-transition: all .75s;
       transition: all .75s;
       height: 1500px;}
+
+#ch4t1 {background-color: #5a4a3d;}
 
 #chapter-four .chapter-number-lg {
       line-height: 0.65em; }
@@ -1218,7 +1270,7 @@ h2        {font-size: 4em;}
 #ch4-legend-box-5 {background-color: #ecea7b;}
 
 
-#tab-four .tangent-read-more {color: #c2a993;}
+#tab-four .tangent-read-more, , #tab-four .tangent-title:hover {color: #c2a993;}
 
 
 
@@ -1233,6 +1285,8 @@ h2        {font-size: 4em;}
 #chapter-five {
       background-color: #4bb7b7;
       height: auto;}
+
+#ch5t1, #ch5t2  {background-color: #4bb7b7;}
 
 #chapter-five .chapter-number-lg {
       line-height: 0.65em; }
@@ -1296,7 +1350,7 @@ h2        {font-size: 4em;}
     margin-top: 1em;
     }
 
-#tab-five .tangent-read-more {color: #4bb7b7;}
+#tab-five .tangent-read-more, , #tab-five .tangent-title:hover {color: #4bb7b7;}
 
 .about-this-site {
     text-align: center;
