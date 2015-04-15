@@ -8,8 +8,7 @@
 
     <!-- Uncomment this for auto refreshing browser when front-end coding
     <meta http-equiv="refresh" content="3">
-     -->
-
+    -->
 
 
     <title>The Brazilian Amazon - Cattle Ranching</title>
@@ -26,9 +25,7 @@
     <section class="chapter" id="prequel">
 
         <video autoplay loop poster="img/rainforest-backdrop.jpg" id="rainforest-vid">
-                    <source src="img/forest.webm" type="video/webm">
-                    <source src="img/burning.webm" type="video/webm">
-                    <source src="img/burning.webm" type="video/webm">
+            <source src="img/forest.webm" type="video/webm">
         </video>
 
         <div class="content">
@@ -53,7 +50,7 @@
             </div>
             <div id="burger-menu">
                 <ul>
-                    <li>About this site</li>
+                    <li onClick='location.href="#about"'>About this site >></li>
                     <li id="site-map-link">Site-map >></li>
                 </ul>
             </div>
@@ -62,21 +59,24 @@
         <div id="site-map">
             <div id="site-map-menu">
                 <ul>
-                    <li>Chapter 1</li>
-                        <li class="site-sub-link">Tangent 1</li>
-                        <li class="site-sub-link">PDF 1</li>
-                    <li>Chapter 2</li>
-                        <li class="site-sub-link">Tangent 1</li>
-                        <li class="site-sub-link">PDF 1</li>
-                    <li>Chapter 3</li>
-                        <li class="site-sub-link">Tangent 1</li>
-                        <li class="site-sub-link">PDF 1</li>
-                    <li>Chapter 4</li>
-                        <li class="site-sub-link">Tangent 1</li>
-                        <li class="site-sub-link">PDF 1</li>
-                    <li>Chapter 5</li>
-                        <li class="site-sub-link">Tangent 1</li>
-                        <li class="site-sub-link">PDF 1</li>
+
+                    <li onClick="location.href='#chapter1'">Chapter 1: The Brazilian Amazon and Cattle Ranching</li>
+                        <li class="site-sub-link">The Clandestine Slaughter</li>
+
+                    <li onClick="location.href='#chapter2'">Chapter 2: Supply Chain Links</li>
+                        <li class="site-sub-link">Export vs. Consumption</li>
+
+                    <li onClick="location.href='#chapter3'">Chapter 3: </li>
+                        <li class="site-sub-link">Reversing the Deforestation Trend</li>
+                        <li class="site-sub-link">Forest Code & CAR</li>
+
+                    <li onClick="location.href='#chapter4'">Chapter 4: Assessing Impacts</li>
+                        <li class="site-sub-link">JBS Alters Purchase Criteria</li>
+
+                    <li onClick="location.href='#chapter5'">Chapter 5: Pathway Forward and Recommendations</li>
+                        <li class="site-sub-link" onClick="location.href='#recommendations'">Recommendations</li>
+                        <li class="site-sub-link">Productive Capacity of Existing Pasture</li>
+                        <li class="site-sub-link">Moderate Intensification</li>
                 </ul>
             </div>
         </div>
@@ -280,103 +280,108 @@
                         <p>Cattle ranching occurs on over two-thirds of deforested land in the Brazilian Amazon and has been the default land use for rural properties for many decades, in a complex process that includes land occupation, speculation, and cultural tradition. Over the past several decades, this region has undergone a shift from a relatively loose arrangement of un-organized agricultural producers towards more commercially integrated and export-driven production systems.</p>
                         <p>From 1993 to 2013, the cattle herd in the Brazilian Amazon biome expanded by nearly 200%, while the herd in the rest of Brazil increased by only 13%. The large-scale expansion of the cattle herd into the Brazilian Amazon has come at great environmental cost, as large expanses of tropical forests have been cut, burned, and converted to pastures. As a result, over 330,000 km2 of forest (an area larger than Italy) was cleared in the Brazilian Amazon during this period.</p>
                         <p>In many ways, cattle ranching was once “beyond the law” and few efforts were able to effectively change land use practices. However, this trend has changed significantly in recent years. A combination of supply chain interventions, commitments to deforestation-free production, and government policies have helped reduce the rates of deforestation in the Brazilian Amazon by over 80 percent in the past decade. Continued support from responsible companies throughout the supply chain is helping to sever the links between cattle and forest destruction in the Amazon once and for all.</p>
-                        <div class="read-more-less">
-                            <div class="read-less-button">
-                                READ LESS -
-                            </div>
-                        </div>
+                        
                     </div> 
+                    <div class="read-more-less">
+                        <div class="read-less-button">
+                            READ LESS -
+                        </div>
+                    </div>
                 </div>
                 
             </div>
         </div>
+        <div class="graphic-content">
+            <div class="content">
+                <div class="chapter-triangle"></div>
+                
+                <!-- First set of maps -->
 
-        <div class="content">
-            <div class="chapter-triangle"></div>
-            
-            <!-- First set of maps -->
+                <div id="ch1-left-col">
 
-            <div id="ch1-left-col">
-
-                <div class="year-number-holder">
-                    <div><h1 class="year-number-lg" id="cattle-head-yr-1">1983</h1></div>
-                    <div><h1 class="year-number-lg" id="cattle-head-yr-2">2003</h1></div>
-                    <div><h1 class="year-number-lg" id="cattle-head-yr-3">2013</h1></div>
-                </div>
-
-                <div class="ch1-map-legend">
-                    <div class="ch1-legend-line">
-                        <div class="ch1-legend-note">Head of Cattle per Municipality</div>
+                    <div class="year-number-holder">
+                        <div><h1 class="year-number-lg" id="cattle-head-yr-1">1983</h1></div>
+                        <div><h1 class="year-number-lg" id="cattle-head-yr-2">2003</h1></div>
+                        <div><h1 class="year-number-lg" id="cattle-head-yr-3">2013</h1></div>
                     </div>
-                    <div class="ch1-legend-line">
-                        <div class="ch1-legend-label">0-50,000</div>
-                        <div id="ch1-legend-box-1"></div>
-                    </div>
-                    <div class="ch1-legend-line">
-                        <div class="ch1-legend-label">50,001-200,000</div>
-                        <div id="ch1-legend-box-2"></div>
-                    </div>
-                    <div class="ch1-legend-line">
-                        <div class="ch1-legend-label">200,001-400,000</div>
-                        <div id="ch1-legend-box-3"></div>
-                    </div>
-                    <div class="ch1-legend-line">
-                        <div class="ch1-legend-label">400,001-1,000,000</div>
-                        <div id="ch1-legend-box-4"></div>
-                    </div>
-                    <div class="ch1-legend-line">
-                        <div class="ch1-legend-label">1,000,001-2,000,000</div>
-                        <div id="ch1-legend-box-5"></div>
-                    </div>
-                    <div class="ch1-legend-line">
-                        <div class="ch1-legend-note">Legal Amazon boundary</div>
-                        <div id="ch1-legend-box-border"></div>
-                    </div>
-                </div>
 
-                <div class="cattle-head-growth brazil-map-ch-1">
-                    <img src="img/cattle-head-map1-ch-1.png">
-                </div>
-
-            </div>
-
-
-
-
-            <!-- Second set of maps: forest cover loss -->
-
-            <div class="forest-cover-loss" id="ch1-right-col">
-
-                <div class="year-number-holder">
-                    <div><h1 class="year-number-lg" id="forest-cover-yr-1">1993</h1></div>
-                    <div><h1 class="year-number-lg" id="forest-cover-yr-2">2003</h1></div>
-                    <div><h1 class="year-number-lg" id="forest-cover-yr-3">2013</h1></div>
-                </div>
-
-                <div class="ch1-map-legend">
+                    <div class="ch1-map-legend">
                         <div class="ch1-legend-line">
-                            <div class="ch1-legend-note">Forest Cover Loss</div>
+                            <div class="ch1-legend-note">Head of Cattle per Municipality</div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">0-50,000</div>
+                            <div id="ch1-legend-box-1"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">50,001-200,000</div>
+                            <div id="ch1-legend-box-2"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">200,001-400,000</div>
+                            <div id="ch1-legend-box-3"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">400,001-1,000,000</div>
+                            <div id="ch1-legend-box-4"></div>
+                        </div>
+                        <div class="ch1-legend-line">
+                            <div class="ch1-legend-label">1,000,001-2,000,000</div>
+                            <div id="ch1-legend-box-5"></div>
                         </div>
                         <div class="ch1-legend-line">
                             <div class="ch1-legend-note">Legal Amazon boundary</div>
                             <div id="ch1-legend-box-border"></div>
                         </div>
+                    </div>
+
+                    <div class="cattle-head-growth brazil-map-ch-1">
+                        <img src="img/cattle-head-map1-ch-1.png">
+                    </div>
+
                 </div>
 
-                <div class="forest-cover brazil-map-ch-1">
-                    <img src="img/forest-cover-map1-ch-1.png">
-                </div>
 
+
+
+                <!-- Second set of maps: forest cover loss -->
+
+                <div class="forest-cover-loss" id="ch1-right-col">
+
+                    <div class="year-number-holder">
+                        <div><h1 class="year-number-lg" id="forest-cover-yr-1">1993</h1></div>
+                        <div><h1 class="year-number-lg" id="forest-cover-yr-2">2003</h1></div>
+                        <div><h1 class="year-number-lg" id="forest-cover-yr-3">2013</h1></div>
+                    </div>
+
+                    <div class="ch1-map-legend">
+                            <div class="ch1-legend-line">
+                                <div class="ch1-legend-note">Forest Cover Loss</div>
+                            </div>
+                            <div class="ch1-legend-line">
+                                <div class="ch1-legend-note">Legal Amazon boundary</div>
+                                <div id="ch1-legend-box-border"></div>
+                            </div>
+                    </div>
+
+                    <div class="forest-cover brazil-map-ch-1">
+                        <img src="img/forest-cover-map1-ch-1.png">
+                    </div>
+
+                </div>
             </div>
         </div>
 
-        <div class="tangent-tab-holder">
-            <div class="tangent-tab">
-                the Clandestine Slaughter >>
-            </div>
-        </div>
     </div>
     </section>
+    <div id="tab-one" class="tangent-tab">
+        <div class="tangent-read-more">
+            FURTHER READING FOR CHAPTER ONE
+        </div>
+        <div class="tangent-title">
+            the Clandestine Slaughter >>
+        </div>
+    </div>
 
 
 
@@ -418,75 +423,76 @@
                         <p>The top Brazilian beef trade partners in 2014 were China (including Hong Kong), Russia, and the European Union, which collectively accounted for over half of all exports (by value). While China and Russia tend to dominate overall trade, the United States and the United Kingdom are (by far) the largest export destinations for processed beef products, accounting for 35 and 25 percent of total processed beef exports in 2014, respectively.</p> 
                         <p>The primary export destinations for Brazilian hides and leather (by value) are China and Italy. Over the past five years, Brazil has been (on average) the largest source of hides to Italy and the 2nd/3rd largest source for China (after the United States and Australia). Italy and China, the top global leather processors, export the majority of finished leather goods to the United States and the European Union (EU-28). The degree of market integration and value added production in leather supply chains helps illustrate the impacts that consumption preferences in developed nations and sourcing criteria of multi-national brands can have on the Brazilian cattle sector and potentially the Amazon rainforest.</p>
                         <p>Tallow has a wide range of applications, including pet food, pharmaceuticals, and personal care products, such as soaps. One of the most prominent uses of Brazilian tallow is in the production of biodiesel, which typically consists of a feedstock ratio of about 20 percent tallow. Although the majority of production is consumed domestically, Brazil exported over $32 million US worth of biodiesel to Europe in 2013.  As fuel blend mandates, continue to rely on increasingly greater proportions of biodiesel, tallow is likely to become an increasingly important feedstock for the energy and transportation sectors, both within Brazil and internationally.</p>
-                        <p>Support from domestic and international markets for more deforestation-free beef and leather, can have a tremendous impact on the cattle sector in Brazil, especially in ecologically important regions, such as the Amazon biome.</p>
-                        <div class="read-more-less">
-                            <div class="read-less-button">
-                                READ LESS -
-                            </div>
-                        </div> 
+                        <p>Support from domestic and international markets for more deforestation-free beef and leather, can have a tremendous impact on the cattle sector in Brazil, especially in ecologically important regions, such as the Amazon biome.</p> 
+                    </div>
+                    <div class="read-more-less">
+                        <div class="read-less-button">
+                            READ LESS -
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-
-        <div class="content">
-        
-            <div class="chapter-triangle"></div>
+        <div class="graphic-content">
+            <div class="content">
             
-            <div id="adult-cow"><img src="img/adult-cow.png"></div>
+                <div class="chapter-triangle"></div>
+                
+                <div id="adult-cow"><img src="img/adult-cow.png"></div>
 
-            <div id="product-bubbles">
+                <div id="product-bubbles">
 
-                <div id="beef-bubble" onClick="location.href='#trade-maps-section'">
+                    <div id="beef-bubble" onClick="location.href='#trade-maps-section'">
 
-                    <div class="bubble-pic">
-                        <img class="bubble-pic" src="img/beef-bubble.png">
-                    </div>
-
-                    <div class="ship-icon">
-                        <div class="ship-pic">
-                            <img src="img/ship-icon.png">
+                        <div class="bubble-pic">
+                            <img class="bubble-pic" src="img/beef-bubble.png">
                         </div>
-                        <div class="ship-tag">Beef</div>
+
+                        <div class="ship-icon">
+                            <div class="ship-pic">
+                                <img src="img/ship-icon.png">
+                            </div>
+                            <div class="ship-tag">Beef</div>
+                        </div>
+
                     </div>
 
+
+                    <div id="tallow-bubble" onClick="location.href='#trade-maps-section'">
+
+                        <div class="bubble-pic">
+                            <img src="img/tallow-bubble.png">
+                        </div>
+
+                        <div class="ship-icon">
+                            <div class="ship-pic">
+                                <img src="img/ship-icon.png">
+                            </div>
+                            <div class="ship-tag">Tallow</div>
+                        </div>
+
+                    </div>
+
+
+                    <div id="leather-bubble" onClick="location.href='#trade-maps-section'">
+
+                        <div class="bubble-pic">
+                            <img src="img/leather-bubble.png">
+                        </div>
+
+                        <div class="ship-icon">
+                            <div class="ship-pic">
+                                <img src="img/ship-icon.png">
+                            </div>
+                            <div class="ship-tag">Leather</div>
+                        </div>
+
+                    </div>
                 </div>
 
-
-                <div id="tallow-bubble" onClick="location.href='#trade-maps-section'">
-
-                    <div class="bubble-pic">
-                        <img src="img/tallow-bubble.png">
-                    </div>
-
-                    <div class="ship-icon">
-                        <div class="ship-pic">
-                            <img src="img/ship-icon.png">
-                        </div>
-                        <div class="ship-tag">Tallow</div>
-                    </div>
-
-                </div>
-
-
-                <div id="leather-bubble" onClick="location.href='#trade-maps-section'">
-
-                    <div class="bubble-pic">
-                        <img src="img/leather-bubble.png">
-                    </div>
-
-                    <div class="ship-icon">
-                        <div class="ship-pic">
-                            <img src="img/ship-icon.png">
-                        </div>
-                        <div class="ship-tag">Leather</div>
-                    </div>
-
-                </div>
+               
             </div>
-
-           
         </div>
     </div>
 
@@ -582,16 +588,17 @@
         </div>
         <!-- End testing code -->
 
-        <div class="tangent-tab-holder">
-            <div class="tangent-tab">
-                Exports vs Consumption >>
-            </div>
-        </div>
     </div>
     </section>
 
-
-
+    <div id="tab-two" class="tangent-tab">
+        <div class="tangent-read-more">
+            FURTHER READING FOR CHAPTER TWO
+        </div>
+        <div class="tangent-title">
+            Exports vs Consumption >>
+        </div>
+    </div>
 
 
 
@@ -629,106 +636,110 @@
                             <p>(2) G4 Cattle Agreement: In October 2009, Brazil’s largest meatpacking companies (JBS, Marfrig, Minerva, and Bertin – which was subsequently purchased by JBS) also signed a zero-deforestation agreement with Greenpeace, known as the G4 Cattle Agreement. Under the agreement, these meatpackers committed to set-up monitoring systems to block the purchase of cattle from ranches with deforestation, slave labor, or located on indigenous lands and conservation areas. The G4 meatpackers collectively slaughter around half of the slaughter in the Legal Amazon, so the G4 Agreement has a wide reach.</p>
                             <p>The G4 and MPF-TAC agreements share many similarities. Meatpacking companies committed to block sales from properties: (1) with deforestation occurring after the agreements or (2) that were not registered in the Rural Environmental Registry (Portuguese acronym CAR), which stores georeferenced property boundaries for monitoring purposes.  </p>
                             <p>The MPF-TAC agreements emphasize avoiding illegal deforestation defined by the Brazilian Forest Code, which stipulates that 80% of a property’s forest area must be reserved as a set-aside across much of the Brazilian Amazon biome. The G4 Agreement goes beyond legality and prohibits any forest clearing, even if it is within the legal limit.</p>
+                        
+                        </div>
                         <div class="read-more-less">
                             <div class="read-less-button">
                                 READ LESS -
                             </div>
                         </div>
-                        </div>
-                        
                     </div> 
 
                 </div>
             </div>
+        <div class="graphic-content">
+            <div class="content">
+                <div class="chapter-triangle"></div>
 
-        <div class="content">
-            <div class="chapter-triangle"></div>
-
-            <div id="ch3-left-col">
-                <div class="g4-holder">
-                    <div><h1 id="pre-g4" class="g4-lg">Pre-agreement</h1></div>
-                    <div><h1 id="post-g4" class="g4-lg">Post-agreement</h1></div>
-                </div>
-            </div>
-
-            <div id="ch3-right-col">
-
-                <div id="ch3-map-legends">
-
-                    <div id="company-legend">
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-note">Slaughterhouse type</div>
-                        </div>
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-label">JBS</div>
-                            <div id="ch3-legend-box-1"><div id="ch3-legend-box-1-circle"></div></div>
-                        </div>
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-label">Marfring</div>
-                            <div id="ch3-legend-box-2"><div id="ch3-legend-box-2-circle"></div></div>
-                        </div>
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-label">Other</div>
-                            <div id="ch3-legend-box-3"><div id="ch3-legend-box-3-circle"></div></div>
-                        </div>
-                    </div>
-
-                    <div id="g4-legend">
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-note">G4 regulated</div>
-                        </div>
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-label">No agreement</div>
-                            <div id="ch3-legend-box-4"><div id="ch3-legend-box-4-circle"></div></div>
-                        </div>
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-label">No agreement</div>
-                            <div id="ch3-legend-box-5"><div id="ch3-legend-box-5-circle"></div></div>
-                        </div>
-                    </div>
-
-                    <div id="vegetation-legend">
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-note">Land cover</div>
-                        </div>
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-label">Forest</div>
-                            <div id="ch3-legend-box-6"></div>
-                        </div>
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-label">Deforested</div>
-                            <div id="ch3-legend-box-7"></div>
-                        </div>
-                        <div class="ch3-legend-line">
-                            <div class="ch3-legend-label">Non-forested</div>
-                            <div id="ch3-legend-box-8"></div>
-                        </div>
+                <div id="ch3-left-col">
+                    <div class="g4-holder">
+                        <div><h1 id="pre-g4" class="g4-lg">Pre-agreement</h1></div>
+                        <div><h1 id="post-g4" class="g4-lg">Post-agreement</h1></div>
                     </div>
                 </div>
-                
-                    <div id="brazil-map-ch-3">
-                        <img src="img/preg4-map-ch-3.png">
+
+                <div id="ch3-right-col">
+
+                    <div id="ch3-map-legends">
+
+                        <div id="company-legend">
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-note">Slaughterhouse type</div>
+                            </div>
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-label">JBS</div>
+                                <div id="ch3-legend-box-1"><div id="ch3-legend-box-1-circle"></div></div>
+                            </div>
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-label">Marfring</div>
+                                <div id="ch3-legend-box-2"><div id="ch3-legend-box-2-circle"></div></div>
+                            </div>
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-label">Other</div>
+                                <div id="ch3-legend-box-3"><div id="ch3-legend-box-3-circle"></div></div>
+                            </div>
+                        </div>
+
+                        <div id="g4-legend">
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-note">G4 regulated</div>
+                            </div>
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-label">No agreement</div>
+                                <div id="ch3-legend-box-4"><div id="ch3-legend-box-4-circle"></div></div>
+                            </div>
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-label">No agreement</div>
+                                <div id="ch3-legend-box-5"><div id="ch3-legend-box-5-circle"></div></div>
+                            </div>
+                        </div>
+
+                        <div id="vegetation-legend">
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-note">Land cover</div>
+                            </div>
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-label">Forest</div>
+                                <div id="ch3-legend-box-6"></div>
+                            </div>
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-label">Deforested</div>
+                                <div id="ch3-legend-box-7"></div>
+                            </div>
+                            <div class="ch3-legend-line">
+                                <div class="ch3-legend-label">Non-forested</div>
+                                <div id="ch3-legend-box-8"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <div id="brazil-map-ch-3">
+                            <img src="img/preg4-map-ch-3.png">
+                        </div>
+
+                        <div id="brazil-map-ch-3-overlay">
+                            <div id="magnified"></div>
+                        </div>
+
                     </div>
 
-                    <div id="brazil-map-ch-3-overlay">
-                        <div id="magnified"></div>
-                    </div>
-
                 </div>
 
-            </div>
-
-            <div class="tangent-tab-holder">
-                <div class="tangent-tab">
-                    Reversing the Deforestation Trend >>
-                </div>
-                <div class="tangent-tab">
-                    Forest Code & CAR >>
-                </div>
             </div>
         </div>
     </section>
 
+    <div id="tab-three" class="tangent-tab">
+        <div class="tangent-read-more">
+            FURTHER READING FOR CHAPTER THREE
+        </div>
+        <div class="tangent-title">
+            Reversing the Deforestation Trend >>
+        </div>
+        <div class="tangent-title">
+            Forest Code & CAR >>
+        </div>
+    </div>
 
 
 
@@ -761,85 +772,87 @@
                         <p>An analysis of the MPF-TAC and G4 Cattle Agreements in Brazil provides evidence that these supply chain interventions had a significant impact on the sourcing of major slaughterhouses in the Amazon. The results from this study indicate that JBS (the largest beef processor in the world) made substantial changes to its procurement criteria after the agreements were formalized, effectively blocking purchases from direct supplying ranches that were found to have deforestation. In addition, supplying ranchers registered their properties in the CAR nearly two years before surrounding non-supplying ranches, indicating that the MPF-TAC and G4 Cattle Agreements were a driving force behind this. Results also indicate that supplying properties had significantly lower rates of deforestation following the agreements.</p>
                         <p>Since 2004, the rate of deforestation in the Amazon has decreased by over 80%. Although many factors contributed to the overall decline in the rate of forest loss, these zero-deforestation agreements have had an impact on cattle-driven deforestation - a leading driver of forest conversion - in the Brazilian Amazon.</p>
                         <p>Despite these important changes in the supply chain, there are still major gaps that need to be addressed. As such, the limited scope of the agreements may diminish the potential outcomes for forest conservation. In order to ensure lasting and wide ranging effects, support is needed to expand the scope of coverage of these supply chain interventions.</p>
+                     
+                    </div>
                     <div class="read-more-less">
                         <div class="read-less-button">
                             READ LESS -
                         </div>
-                    </div> 
                     </div>
                     
                 </div>
 
             </div>
         </div>
+        <div class="graphic-content">
+            <div class="content">        
+                <div class="chapter-triangle"></div>
 
-        <div class="content">        
-            <div class="chapter-triangle"></div>
+                <div class="ch4-yr-holder">
+                        <div class="ch4-yr-lg" id="pre-agreement-ch4">
+                            <div class="ch4-title">Pre-agreement</div>
+                        </div>
+                        <div class="ch4-yr-lg" id="prepost-agreement-ch4">
+                            <div class="ch4-title">Pre/post-agreement</div>
+                        </div>
+                        <div class="ch4-yr-lg" id="post-agreement-ch4">
+                            <div class="ch4-title">Post-agreement</div>
+                        </div>
+                </div>
 
-            <div class="ch4-yr-holder">
+                <div class="ch4-map-overlay"></div>
 
-                    <div class="ch4-yr-lg" id="pre-agreement-ch4">
-                        <div class="ch4-title">Pre-agreement</div>
+                <div id="ch4-map-legend">
+                    <div class="ch4-legend-line ch4-box-1">
+                        <div id="ch4-legend-box-1"></div>
+                        <div class="ch4-legend-label">
+                            Deforestation (2010-2013)
+                        </div>
                     </div>
-                    <div class="ch4-yr-lg" id="prepost-agreement-ch4">
-                        <div class="ch4-title">Pre/post-agreement</div>
+                    <div class="ch4-legend-line ch4-box-2">
+                        <div id="ch4-legend-box-2"></div>
+                        <div class="ch4-legend-label">
+                            Deforestation (2006-2009)
+                        </div>
                     </div>
-                    <div class="ch4-yr-lg" id="post-agreement-ch4">
-                        <div class="ch4-title">Post-agreement</div>
+                    <div class="ch4-legend-line">
+                        <div id="ch4-legend-box-3"></div>
+                        <div class="ch4-legend-label">
+                            2012 or 2013 suppliers
+                        </div>
                     </div>
-                    <br><br>
+                    <div class="ch4-legend-line">
+                        <div id="ch4-legend-box-4"></div>
+                        <div class="ch4-legend-label">
+                            Suppliers that sold pre-agreement
+                        </div>
+                    </div>
+                    <div class="ch4-legend-line">
+                        <div id="ch4-legend-box-5"></div>
+                        <div class="ch4-legend-label">
+                            Non-supplying properties
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Not used for now -->
+                <div class="ch4-subtitle" id="pre-subtitle">2006-2009 deforestation</div>
+                <div class="ch4-subtitle" id="prepost-subtitle">2006-2009 and 2010-2013 deforestation</div>
+                <div class="ch4-subtitle" id="post-subtitle">2010-2013 deforestation</div>
+                <!-- End not used block -->
+
             </div>
-
-
-            <div id="ch4-map-legend">
-                <div class="ch4-legend-line ch4-box-1">
-                    <div id="ch4-legend-box-1"></div>
-                    <div class="ch4-legend-label">
-                        Deforestation (2010-2013)
-                    </div>
-                </div>
-                <div class="ch4-legend-line ch4-box-2">
-                    <div id="ch4-legend-box-2"></div>
-                    <div class="ch4-legend-label">
-                        Deforestation (2006-2009)
-                    </div>
-                </div>
-                <div class="ch4-legend-line">
-                    <div id="ch4-legend-box-3"></div>
-                    <div class="ch4-legend-label">
-                        2012 or 2013 suppliers
-                    </div>
-                </div>
-                <div class="ch4-legend-line">
-                    <div id="ch4-legend-box-4"></div>
-                    <div class="ch4-legend-label">
-                        Suppliers that sold pre-agreement
-                    </div>
-                </div>
-                <div class="ch4-legend-line">
-                    <div id="ch4-legend-box-5"></div>
-                    <div class="ch4-legend-label">
-                        Non-supplying properties
-                    </div>
-                </div>
-            </div>
-
-            <!-- Not used for now -->
-            <div class="ch4-subtitle" id="pre-subtitle">2006-2009 deforestation</div>
-            <div class="ch4-subtitle" id="prepost-subtitle">2006-2009 and 2010-2013 deforestation</div>
-            <div class="ch4-subtitle" id="post-subtitle">2010-2013 deforestation</div>
-            <!-- End not used block -->
-
-            <div class="ch4-map-overlay"></div>
-
-            <div class="tangent-tab-holder">
-                <div class="tangent-tab">
-                    JBS Alters Purchase Criteria >>
-                </div>
-            </div>
-
         </div>
     </section>
+
+    <div id="tab-four" class="tangent-tab">
+        <div class="tangent-read-more">
+            FURTHER READING FOR CHAPTER FOUR
+        </div>
+        <div class="tangent-title">
+            JBS Alters Purchase Criteria >>
+        </div>
+    </div>
 
 
 
@@ -870,45 +883,44 @@
                     <div class="chapter-main-text">
                         <p>An independent property-level analysis of JBS slaughterhouses in southern Pará helps show that G4 meatpackers have indeed taken steps to alter their procurement criteria and monitor their suppliers. The number of properties effectively monitored represents an enormous achievement of the cattle sector.</p>
                         <p>Despite this progress, major challenges still remain to ensuring fully-deforestation free supply chains. The G4 Agreement only extends to three meatpacking companies, which leaves about half of the documented slaughter in the Brazilian Amazon exposed to relatively minimal (if any) monitoring for deforestation and illegal activities. In addition, direct suppliers are the only segment of the supply chain that is current covered by these monitoring efforts. Cattle can move from calving ranches and fattening farms through middlemen and other indirect suppliers without being monitored. Preliminary evidence indicates that the majority of deforestation is now likely occurring on these indirect supplying ranches.</p>
-                        <div class="read-more-less">
+                        
+                    </div>
+                    <div class="read-more-less">
                             <div class="read-less-button">
                                 READ LESS -
                             </div>
                         </div>
-                    </div>
-                    
-                </div>                   
-
+                    </div>                   
             </div>
         </div>
+        <div class="graphic-content">
+            <div class="content">    
+                <div class="chapter-triangle"></div>
 
-        <div class="content">    
-            <div class="chapter-triangle"></div>
+                <div id="ch5-image-holder"></div>
 
-            <div id="ch5-image-holder"></div>
-
-            <div class="ch5tests">
-                <div id="ct1">Click test 1.</div>
-                <div id="ct2">Click test 2.</div>
-                <div id="ct3">Click test 3.</div>
-                <div id="ct4">Click test 4.</div>
-                <div id="ct5">Click test 5.</div>
-                <div id="ct6">Click test 6.</div>
-            </div>
-            
-            <div class="tangent-tab-holder">
-                <div class="tangent-tab">
-                    Productive Capacity of Existing Pasture >>
-                </div>
-                <div class="tangent-tab">
-                    Moderate Intensification >>
+                <div class="ch5tests">
+                    <div id="ct1">T1.</div>
+                    <div id="ct2">T2.</div>
+                    <div id="ct3">T3.</div>
+                    <div id="ct4">T4.</div>
+                    <div id="ct5">T5.</div>
+                    <div id="ct6">T6.</div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="recommendation-holder">
-                <div class="recommendations-header">
-                    <h3>Recommendations</h3>
-                    Support is needed for the continuation, improvement, and expansion of scope of these efforts, helping to ensure a forest-friendly future for the Amazon cattle industry. There are several ways that retailers, manufacturers, and other supply chain actors (including individuals and families) can play a crucial role in ensuring lasting, and environmentally and socially responsible, cattle ranching in the Brazilian Amazon:</div>
+
+    <section id="recommendations" >
+        <a name="recommendations"></a>
+        <div class="recommendation-holder">
+            <div class="recommendations-header">
+                <h3>Recommendations</h3>
+                Support is needed for the continuation, improvement, and expansion of scope of these efforts, helping to ensure a forest-friendly future for the Amazon cattle industry. There are several ways that retailers, manufacturers, and other supply chain actors (including individuals and families) can play a crucial role in ensuring lasting, and environmentally and socially responsible, cattle ranching in the Brazilian Amazon:</div>
+
+                <div class="recommendation-photo"><br><br><br><br><br><br>[Photo from NWF goes here]</div>
+
                 <div class="recommendation">
                     Companies buying beef, leather, tallow (and other cattle-derived products) from Brazil, should preferentially source from meatpackers who have: (1) made commitments to zero-deforestation production and (2) set-up monitoring systems to ensure forest-friendly supply chains.
                 </div>
@@ -931,9 +943,27 @@
                     Individuals and families can help by starting the conversation at the local level and asking your favorite retailers and brands simply questions like: “Where do you source your raw materials from?”  - AND – “Do you have a zero-deforestation policy that covers cattle products?”
                 </div>
             </div>
-
-        </div>
     </section>
+
+    <div id="tab-five" class="tangent-tab">
+        <div class="tangent-read-more">
+            FURTHER READING FOR CHAPTER FIVE
+        </div>
+        <div class="tangent-title">
+            Productive Capacity of Existing Pasture >>
+        </div>
+        <div class="tangent-title">
+            Moderate Intensification >>
+        </div>
+    </div>
+    <div class="about-this-site">
+        <a name="about"></a>
+        <h2>Partner organization logos and names go here</h2>
+    </div>
+    </div>
+
+
+
 
 
     <script src="js/jquery-2.1.0.min.js"></script>
@@ -943,3 +973,5 @@
 
   </body>
 </html>
+
+

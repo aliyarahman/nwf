@@ -212,6 +212,8 @@ h2        {font-size: 4em;}
     background-color: #484a56;
     padding: 1em;
     width: 6em;
+    position: relative;
+    top: -3em;
     }
 
 .read-more-button:hover, .read-less-button:hover {
@@ -231,8 +233,14 @@ h2        {font-size: 4em;}
     column-gap: 3em;
     }
 
+.chapter-main-text p {
+    -webkit-margin-before: 0;
+-webkit-margin-after: 0;
+    }
 
 .chapter-triangle {
+          position: relative;
+          top: -2em;
           text-align: center;
           margin: 0 auto;
           width: 0; 
@@ -240,28 +248,27 @@ h2        {font-size: 4em;}
           border-left: 20px solid transparent;
           border-right: 20px solid transparent;
           border-top: 20px solid #fff;
+
           }
 
-
-.tangent-tab-holder {
-    display: inline-block;
-    vertical-align: bottom;
+.tangent-tab {
+    width: 20em;
+    margin-right: 0;
+    margin-left: auto;
     position: relative;
-    left: 60em;
-    }
-
-.tangent-tab  {
+    top: -3em;
+    z-index: 100;
+    color: #fff;
     background-color: #484a56;
-    color: #db9d2e;
+    text-align: left;
     margin-bottom: 0.5em;
     padding: 1.2em 1.2em 1.2em 2.2em;
     font-size: 1.1em;
-    -webkit-transition: padding-left 0.4s;
-    transition: padding-left 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
 
-.tangent-tab:hover {padding-left: 4em;}
-
+.tangent-tab:hover {padding-right: 7em;}
 
 
 
@@ -309,7 +316,8 @@ h2        {font-size: 4em;}
 
 #prequel-title {
             position: absolute;
-            top: 8em;
+            top: 5em;
+            left: 2em;
             width: 100%;
             color: #fff;
             text-align: left;
@@ -338,9 +346,15 @@ h2        {font-size: 4em;}
 
 
 
-#site-menu, #site-map {width: 15em;
+#site-menu, #site-map {
             position: absolute;
             z-index: 60;
+            }
+
+#site-menu {width: 15em;
+            }
+
+#site-map {width: 35em;
             }
 
 #burger-box {background-color: #363845;
@@ -585,8 +599,10 @@ h2        {font-size: 4em;}
 
 #chapter-one {
       background-color: #db9d2e;
-	    height: 1300px;
+	    height: auto;
       }
+
+#chapter-one .graphic-content {height: 800px;}
 
 #chapter-one .chapter-summary-tagline {
       -webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -697,6 +713,8 @@ h2        {font-size: 4em;}
     width: 100%;
     }
 
+#tab-one .tangent-read-more {color: #db9d2e;}
+
 
 
 
@@ -720,6 +738,7 @@ h2        {font-size: 4em;}
                 height: auto;
              }
 
+#chapter-two .graphic-content {height: 800px;}
 
 #product-bubbles {
               text-align: right;
@@ -732,9 +751,9 @@ h2        {font-size: 4em;}
               width: 25%;
               position: relative;}
 
-#leather-bubble {top: -40em; left: -3em;}
+#leather-bubble {top: -36em; left: -1em;}
 #beef-bubble {top: -26em; left:-17em;}
-#tallow-bubble {top: -12em; left: 19em;}
+#tallow-bubble {top: -10em; left: 19em;}
 
 
 .bubble-pic   {width: 100%;}
@@ -908,6 +927,7 @@ h2        {font-size: 4em;}
 .tallow-data {display: none;}
 .leather-data {display: none;}
 
+#tab-two .tangent-read-more {color: #6fb174;}
 
 
 
@@ -930,6 +950,9 @@ h2        {font-size: 4em;}
 
 #chapter-three { background-color: #363845;
             height: 1400px;}
+
+#chapter-three .chapter-number-lg {
+      line-height: 0.65em; }
 
 #ch3-left-col {
       display:inline-block;
@@ -1060,15 +1083,9 @@ h2        {font-size: 4em;}
   border: 6px solid #363845;
   }
 
+#tab-three {background-color: #71747d}
 
-#chapter-three .tangent-tab {
-      color: #363845;
-      background-color: #6fb174;
-      }
-
-
-
-
+#tab-three .tangent-read-more {color: #363845;}
 
 
 
@@ -1094,14 +1111,18 @@ h2        {font-size: 4em;}
       transition: all .75s;
       height: 1500px;}
 
+#chapter-four .chapter-number-lg {
+      line-height: 0.65em; }
+
 #chapter-four .tangent-tab {color: #b29377;}
 
 
 .ch4-yr-holder {
       margin-top: 8em;
       margin-left: 2em;
-      vertical-align: top;
+      vertical-align: middle;
       color: #876e5a;
+      display: inline-block;
       }
 
 
@@ -1135,14 +1156,16 @@ h2        {font-size: 4em;}
 #pre-subtitle, #prepost-subtitle, #post-subtitle {display: none;}
 
 .ch4-map-overlay {
+      display: inline-block;
       background-image: url("../img/preagreement.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      position: absolute;
-      left: 950px;
-      top: 7080px;
       width: 7.5em;
       height: 10em;
+      vertical-align: middle;
+      position: relative;
+      left: 29em;
+      top: 1em;
       -moz-transition: all .75s;
       -webkit-transition: all .75s;
       transition: all .75s;}
@@ -1167,7 +1190,7 @@ h2        {font-size: 4em;}
       color: #fff;
       position: relative;
       width: 50%;
-      margin-top: 2em;
+      margin-top: 3em;
       margin-left: 20em;
       }
 
@@ -1195,6 +1218,9 @@ h2        {font-size: 4em;}
 #ch4-legend-box-5 {background-color: #ecea7b;}
 
 
+#tab-four .tangent-read-more {color: #c2a993;}
+
+
 
 
 
@@ -1208,6 +1234,8 @@ h2        {font-size: 4em;}
       background-color: #4bb7b7;
       height: auto;}
 
+#chapter-five .chapter-number-lg {
+      line-height: 0.65em; }
 
 #chapter-five .tangent-tab {
       color: #4bb7b7;
@@ -1238,10 +1266,10 @@ h2        {font-size: 4em;}
       }
 
 .recommendation-holder {
-    width: 100%;
+    width: 60%;
+    margin: 3em auto 3em 30%;
     background-color: #fff;
     font-size: 1.5em;
-    margin-top: 3em;
     padding: 2em;
     color: #363845;
     }
@@ -1250,7 +1278,30 @@ h2        {font-size: 4em;}
     color: #363845;
     }
 
+.recommendation-photo {
+    background-color: #363845;
+    height: 20em;
+    width: 40em;
+    margin: 2em;
+    position: relative;
+    left: -10em;
+    border: 4px dashed #fff;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+
+    }
+
 .recommendation {
-    margin-left: 3em;
     margin-top: 1em;
     }
+
+#tab-five .tangent-read-more {color: #4bb7b7;}
+
+.about-this-site {
+    text-align: center;
+    border: #4bb7b7 3px dashed;
+    width: 80%;
+    margin: 0 auto;}
+
+.about-this-site h3 {text-align: center; width: 60%;}

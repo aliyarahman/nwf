@@ -34,7 +34,7 @@ $(document).ready(function() {
   });
 
   $('.read-less-button').on('click', function(){
-        $(this).parent().parent().parent().slideUp();
+        $(this).parent().parent().parent().find('.chapter-main-text').slideUp();
         $('.read-more-button').show();  
         $(this).hide();
   });
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     var vidbottom = $("#rainforest-vid").height();
     var bartop = $("#burger-box").height();
-    var burgertop = vidbottom-1.9*bartop;
+    var burgertop = vidbottom-1.6*bartop;
     $("#site-menu").css('top', burgertop);
     
     $(window).resize(function() {
@@ -407,6 +407,29 @@ $("#brazil-map-ch-3-overlay").mouseenter(function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Chapter 4 behavior
 //=====================================
 
@@ -420,10 +443,9 @@ $(window).on('scroll', function() {
 });
 
 
-
 $('.ch4-yr-lg').on('click', function(){
-    $('#chapter-four').css({'background-size':'auto 150%','background-position':'15% 5%'});
-    $('.ch4-map-overlay').css({'width':'30em','height':'40em','left':'900px','top':'5220px'});
+    $('#chapter-four').css({'background-size':'auto 200%','background-position':'25% 10%'});
+    $('.ch4-map-overlay').css({'width':'30em','height':'40em', 'left':'8em'});
     var which_map = $(this).attr('id').split('-')[0];
     $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
     $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
@@ -442,6 +464,12 @@ $('.ch4-yr-lg').on('click', function(){
     //$(".ch4-subtitle").hide();
     //$("#"+which_map+"-subtitle").show();
 });
+
+
+
+
+
+
 
 
 
