@@ -15,8 +15,13 @@
         height: 50em;
         width: initial;
     }
+
+    /* Prequel */
     #prequel-title {
         font-size: 5em;
+    }
+    #prequel-title-right {
+        top: 0;
     }
     .prequel-title {
         text-align: center !important;
@@ -39,6 +44,8 @@
     #burger-bar-holder {
         left: 1em;
     }
+
+    /* Chapter Selection */
     .chapter-button, .chapter-button-left, .chapter-button-right {
         display: inline;
     }
@@ -51,6 +58,8 @@
     .chapter-details {
         display: none !important;
     }
+
+    /* Chapter 1 */
     .chapter-header {
         padding-bottom: 20em;
     }
@@ -85,6 +94,17 @@
     .forest-cover-loss .brazil-map-ch-1 {
         left: 14em;
     }
+
+    /* Chapter 2 */
+    /* In development */
+    /*.trade-maps-container {
+        display: initial;
+        width: 100%;
+        height: initial;
+    }
+    #ch2, .trade-map-bubble, .trade-map-ship-icon, .trade-map-ship-tag, .trade-map-pie {
+        display: none;
+    }*/
 
 }
 
