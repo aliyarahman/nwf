@@ -126,30 +126,10 @@ body     {
 
 section  {overflow: hidden;}
 
-/* Code for targeting device sizes for responsiveness
-   Come back to this after design is finished */
+/* Code for targeting device sizes for responsiveness */
+/* SVT: Moved to adaptive.css */
 
-/* Smartphones (portrait) -----------
-@media only screen and (max-width : 320px) {
-    body { font-size: 40%;}
-}
 
-/* Tablet sizing
-@media only screen and (max-width : 768px) {
-    body { font-size: 50%;}
-}
-
-/* Desktop sizing
-@media only screen and (min-width : 1224px) {
-    body { font-size: 100%;}
-}
-
-/* Large screens 
-@media only screen  and (min-width : 1824px) {
-    body { font-size: 120%;}
-}
-
------- */
 
 h1,h2     {font-family: Circular-Pro-Book;
            color: #363845;}
@@ -341,11 +321,10 @@ h2        {font-size: 4em;}
       margin-bottom: -0.5em;
 }
 
-
 #prequel-title-small {
       font-size: 4em;
       line-height: 1em;
-}
+      }
 
 
 #prequel-blurb {color: white;

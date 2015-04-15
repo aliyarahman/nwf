@@ -1,0 +1,104 @@
+.show-small {
+    display: none;
+}
+
+/* Smartphones (portrait) */
+@media only screen and (max-width : 320px) {
+    .content {
+        width: 100%;
+    }
+    .show-small {
+        display: initial;
+    }
+    body { font-size: 40%; }
+    #rainforest-vid {
+        height: 50em;
+        width: initial;
+    }
+    #prequel-title {
+        font-size: 5em;
+    }
+    .prequel-title {
+        text-align: center !important;
+        width: 100% !important;
+    }
+    #prequel-blurb {
+        margin-left: initial;
+        margin-top: 1.25em;
+    }
+    .prequel-triangle {
+        margin: -0.4em auto 0px;
+    }
+    #site-menu {
+        top: 48em !important;
+        width: 5em;
+    }
+    #burger-box {
+        height: 5.5em;
+    }
+    #burger-bar-holder {
+        left: 1em;
+    }
+    .chapter-button, .chapter-button-left, .chapter-button-right {
+        display: inline;
+    }
+    .chapter-title, .chapter-icon-holder {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2em;
+    }
+    .chapter-details {
+        display: none !important;
+    }
+    .chapter-header {
+        padding-bottom: 20em;
+    }
+    .chapter-headline {
+        text-align: center;
+    }
+    .chapter-number-lg {
+        top: 0;
+    }
+    #ch1-left-col {
+        width: 100%;
+        margin-bottom: -25em;
+    }
+    #ch1-right-col {
+        width: 100%;
+        margin-top: 1em;
+    }
+    .chapter-1-summary-tagline {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .year-number-holder, #ch1-right-col .year-number-holder {
+        margin-left: 2em;
+    }
+    .ch1-map-legend {
+        margin-left: 2em;
+    }
+    .ch1-legend-note {
+        font-size: 1.1em;
+    }
+    .forest-cover-loss .brazil-map-ch-1 {
+        left: 14em;
+    }
+
+}
+
+/* Tablet sizing */
+@media only screen and (max-width : 768px) {
+    body { font-size: 50%; }
+}
+
+/* Desktop sizing */
+@media only screen and (min-width : 1224px) {
+    body { font-size: 100%; }
+}
+
+/* Large screens */
+@media only screen  and (min-width : 1824px) {
+    body { font-size: 120%; }
+}
