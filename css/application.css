@@ -165,7 +165,7 @@ h2        {font-size: 4em;}
 
 .chapter-header {
           background-color: #fff;
-          height: 15em;
+          height: auto;
           text-align: center;
           }
 
@@ -196,20 +196,65 @@ h2        {font-size: 4em;}
 #chapter-five .chapter-number-lg {background-color: #bee5e4;}
 
 
-.chapter-headline {
+.chapter-header-text {
           display: inline-block;
           text-align: left;
-          vertical-align: middle;
-          width: 65%;
-          height: 10%;
-          line-height: 3.5em;
+          vertical-align: top;
+          width: 75%;
           padding-top: 1%;
-          margin: auto;
           }
+
+.chapter-header-text h2 {
+          line-height: 1em;
+          margin-bottom: 0.4em;
+          }
+
+.chapter-summary-tagline {
+          font-size: 1.5em;
+          text-align: left;
+          }
+
+.read-more-less {
+    text-align: left;
+    margin: 2em 0;
+    }
+
+.read-more-button {
+    color: #fff;
+    background-color: #484a56;
+    padding: 1em;
+    width: 6.75em;
+    }
+
+.read-less-button {
+    display: none;
+    color: #fff;
+    background-color: #484a56;
+    padding: 1em;
+    width: 6em;
+    }
+
+.read-more-button:hover, .read-less-button:hover {
+    color: #db9d2e;
+    }
+
+
+.chapter-main-text {
+    display: none;
+    text-align: left;
+    padding-bottom: 2em;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 3em; /* Chrome, Safari, Opera */
+    -moz-column-gap: 3em; /* Firefox */
+    column-gap: 3em;
+    }
 
 
 .chapter-triangle {
-          text-align: center; margin: 0 auto;
+          text-align: center;
+          margin: 0 auto;
           width: 0; 
           height: 0;
           border-left: 20px solid transparent;
@@ -217,39 +262,12 @@ h2        {font-size: 4em;}
           border-top: 20px solid #fff;
           }
 
-.chapter-summary-tagline {
-          font-family: Dala Floda-Roman;
-          color: white;
-          font-size: 2.8em;
-          position: relative;
-          top: 1.2em;
-          width: 15em;
-          }
-
-
-.chapter-landing {
-  margin: 5em 0em -0.3em 10em;
-  vertical-align: top;
-  }
-
-
-.chapter-landing-text {
-    display: inline-block;
-    color: #484a56;
-    font-size: 1.4em;
-    width: 53%;
-    height: 10em;
-    overflow: hidden;
-    padding: 2em;
-    background-color: white;
-  }
 
 .tangent-tab-holder {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
     position: relative;
-    top: 9em;
-    left: -0.2em;
+    left: 60em;
     }
 
 .tangent-tab  {
@@ -310,47 +328,34 @@ h2        {font-size: 4em;}
           }
 
 #prequel-title {
-            position: relative;
-            top: -8em;
+            position: absolute;
+            top: 8em;
             width: 100%;
-            font-size: 5.5em;
-            line-height: 1em;
             color: #fff;
             text-align: left;
-            margin-bottom: -5.5em;
 }
 
-#prequel-title-left {
-            display: inline-block;
-            position: relative;
-            text-align: right;
-            width: 45%;
-}
-#prequel-title-middle {
-            font-size: 1.5em;
-            display: inline-block;
-            position: relative;
-            vertical-align: middle;
-            text-align: middle;
-            width: auto;
+#prequel-title-large {
+      font-size: 6em;
+      line-height: 1em;
+      margin-bottom: -0.5em;
 }
 
-#prequel-title-right {
-            display: inline-block;
-            position: relative;
-            text-align: left;
-            width: 40%;
-            vertical-align: middle;
+
+#prequel-title-small {
+      font-size: 4em;
+      line-height: 1em;
 }
+
 
 #prequel-blurb {color: white;
             position: relative;
             font-family: Dala Floda-Roman;
-            font-size: 0.4em;
+            font-size: 2.2em;
             line-height: 1em;
-            width: 50%;
-            margin-left: 35%;
-            margin-top: 3em;}
+            width: 23em;
+            margin-left: 10em;
+            margin-top: 2em;}
 
 
 
@@ -450,6 +455,7 @@ h2        {font-size: 4em;}
 
 #table-of-contents, #chapter-lines-holder  {
             width: 100%;
+            margin-top: 3em;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -492,13 +498,16 @@ h2        {font-size: 4em;}
           margin-top: 0.5em;
             }
 
+#chapter-4-button .chapter-icon-holder {margin-top:1.7em;}
+#chapter-5-button .chapter-icon-holder {margin-top:1em;}
+
 .chapter-icon-holder img{
             width: 100%;
             }
 
 #chapter-lines-holder {
   position: relative;
-  top: -3em;
+  top: -6em;
   left: 4.5em;
 }
 
@@ -566,22 +575,47 @@ h2        {font-size: 4em;}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Chapter 1 style */
 
 #chapter-one {
       background-color: #db9d2e;
-	    height: auto;
+	    height: 1300px;
       }
 
-
-.chapter-1-summary-tagline {
-      text-align: left;
-      font-family: Dala Floda-Roman;
-      color: white;
-      font-size: 1.9em;
-      margin-top: 1em;
-      margin-bottom: 3em;
-      width: 18em;
+#chapter-one .chapter-summary-tagline {
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+      -webkit-column-gap: 2em; /* Chrome, Safari, Opera */
+      -moz-column-gap: 2em; /* Firefox */
+      column-gap: 2em;
       }
 
 #ch1-left-col {
@@ -598,9 +632,6 @@ h2        {font-size: 4em;}
       vertical-align: top;
       }
 
-#chapter-one .chapter-landing {
-      margin-top: -22em;
-      }
 
 .year-number-holder {
       margin-top: 3.5em;
@@ -619,7 +650,6 @@ h2        {font-size: 4em;}
 #ch1-right-col .year-number-holder {
       margin-left: 3em;
       }
-
 
 
 #chapter-one .year-number-lg:hover {
@@ -711,7 +741,6 @@ h2        {font-size: 4em;}
                 height: auto;
              }
 
-#chapter-two .chapter-landing {margin-top: -28em;}
 
 #product-bubbles {
               text-align: right;
@@ -908,14 +937,20 @@ h2        {font-size: 4em;}
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* Chapter 3 style */
 
 #chapter-three { background-color: #363845;
-            height: auto;}
-
-#chapter-three .chapter-landing {
-      margin-top: -50em;
-      }
+            height: 1400px;}
 
 #ch3-left-col {
       display:inline-block;
@@ -1065,28 +1100,23 @@ h2        {font-size: 4em;}
 
 
 
+
 /* Chapter 4 style */
 
 #chapter-four { 
       background-color: #5a4a3d;
-      height: auto;
+      height: 2000px;
       background-image: url("../img/ch4-zoomout.png");
       background-repeat: no-repeat;
       background-size: auto 70%;
       background-position: right 80%;
       -moz-transition: all .75s;
       -webkit-transition: all .75s;
-      transition: all .75s;}
+      transition: all .75s;
+      height: 1500px;}
 
 #chapter-four .tangent-tab {color: #b29377;}
 
-#chapter-four .chapter-landing {
-      margin-top: 2em;
-      }
-
-#chapter-four .chapter-summary-tagline {
-      width: 60%;
-      font-size: 2em;}
 
 .ch4-yr-holder {
       margin-top: 8em;
@@ -1130,8 +1160,8 @@ h2        {font-size: 4em;}
       background-repeat: no-repeat;
       background-size: 100% 100%;
       position: absolute;
-      left: 1100px;
-      top: 5520px;
+      left: 950px;
+      top: 7080px;
       width: 7.5em;
       height: 10em;
       -moz-transition: all .75s;
@@ -1199,25 +1229,18 @@ h2        {font-size: 4em;}
       background-color: #4bb7b7;
       height: auto;}
 
-#chapter-five .chapter-summary-tagline {
-      width: 30em;
-      font-size: 2em;
-      }
 
 #chapter-five .tangent-tab {
       color: #4bb7b7;
       }
 
 .ch5tests   {
-      position: absolute;
-      top: 7000px;
       font-size: 2em;
       color: #fff;
+      position: relative;
+      top: -10em;
       }
 
-#chapter-five .chapter-landing {
-      margin-top: 5em;
-    }
 
 #ch5-image-holder {
       width: 70em;
@@ -1225,6 +1248,7 @@ h2        {font-size: 4em;}
       overflow: hidden;
       margin-left: 15em;
       margin-top: 3em;
+      margin-bottom: -10em;
       background-image: url('../img/ch5.jpg');
       background-size: 300% 300%;
       background-position: left center;

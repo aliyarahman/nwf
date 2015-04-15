@@ -27,6 +27,17 @@ $(document).ready(function() {
 
   //$('body').panelSnap();
 
+  $('.read-more-button').on('click', function(){
+        $(this).hide();
+        $(this).parent().parent().parent().find('.chapter-main-text').slideDown();
+        $(this).parent().parent().parent().find('.read-less-button').show();        
+  });
+
+  $('.read-less-button').on('click', function(){
+        $(this).parent().parent().parent().slideUp();
+        $('.read-more-button').show();  
+        $(this).hide();
+  });
 
 
   // Prequel behavior
@@ -36,7 +47,7 @@ $(document).ready(function() {
 
     var vidbottom = $("#rainforest-vid").height();
     var bartop = $("#burger-box").height();
-    var burgertop = vidbottom-1.5*bartop;
+    var burgertop = vidbottom-1.9*bartop;
     $("#site-menu").css('top', burgertop);
     
     $(window).resize(function() {
