@@ -1209,6 +1209,12 @@ h2        {font-size: 4em;}
 
 #pre-subtitle, #prepost-subtitle, #post-subtitle {display: none;}
 
+#compliance-tag {
+      position: relative;
+      top: 1em;
+      left: 1em;
+      font-size: 1.3em;}
+
 .ch4-map-overlay {
       display: inline-block;
       background-image: url("../img/preagreement.jpg");
