@@ -269,7 +269,7 @@ h2        {font-size: 4em;}
 
 .tangent-tab:hover {padding-right: 7em;}
 
-.tangent-go-back {width: 15em;}
+.tangent-go-back {width: 15em; top: 1em;}
 
 .tangent-go-back:hover {
     padding-right: 0em;
@@ -278,6 +278,8 @@ h2        {font-size: 4em;}
     }
 
 .tangent-article {
+    position: absolute;
+    display: none;
     margin: 2em auto;
     padding: 3em;
     width: 1280px;

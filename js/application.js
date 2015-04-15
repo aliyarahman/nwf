@@ -351,6 +351,20 @@ $('#beef-bubble-nav').on('click', function() {
 });
 
 
+$('#tab-one').on('click', function() {
+    var topcoord = window.pageYOffset;
+    var leftcoord = window.pageXOffset;
+    $('#ch1t1').css({'left':leftcoord+50, 'top':topcoord});
+    $('#tab-one').hide();
+    $('section').css('opacity', '0.2');
+    $('#ch1t1').toggle("slide");
+});
+
+$('.tangent-go-back').on('click', function() {
+    $('#ch1t1').hide();
+    $('#tab-one').show();
+    $('section').css('opacity', '1');
+});
 
 
 
