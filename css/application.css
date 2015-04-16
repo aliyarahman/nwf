@@ -854,17 +854,52 @@ h2        {font-size: 4em;}
 #chapter-two .tangent-tab {color: #6fb174;}
 
 .trade-maps-container {
-    display: none;
-    width: 1280px;
-    height: 1000px;
-/*  border-radius: 50%; */
     overflow: hidden;
     background-color: #89bf8d;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: auto;
+    padding-right: auto;
+    
+  }
+
+.trade-map-content {
+  text-align: center;
+  margin-top: 10em;
+}
+
+.trade-maps-container-start {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+    top: -24em;
+    left: -24em;
+}
+
+.trade-maps-container-end {
+    width: 108em; /* ~ 2100px */
+    height: 108em;
+    border-radius: 50%;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+    top: -64em;
+    left: 0;
+}
+
+.close-trade-map {
+  position: relative;
+  left: .5em;
+}
 
 .trade-map-title  {
     margin-left: 2.5em;
-    margin-top: -0.5em;
+    margin-top: 12.5em;
     margin-bottom: -3.5em;
     }
 
@@ -873,9 +908,9 @@ h2        {font-size: 4em;}
     color: #fff;
     }
 
-.trade-map {position: absolute;
+/*.trade-map {position: absolute;
             left: 12.5em;
-            }
+            }*/
 
 #EU-popup {
     display: none;
@@ -885,17 +920,20 @@ h2        {font-size: 4em;}
     top: -32em;
     left: 38em;}
 
-
-.trade-map-bubble   {position: relative;
-                    top: 12em;
-                    z-index: 0;}
+.trade-map-bubble {
+    position: relative;
+    left: -30em;
+    z-index: 0;
+}
 
 .trade-map-info-holder {
-      display: inline-block;
-      position: relative;
-      top: 9em;
-      left: 7.5em;
-      z-index:1;}
+    display: inline-block;
+    position: relative;
+    top: -15em;
+    left: 15em;
+    z-index: 1;
+}
+
 
 .trade-map-info {
       display: inline-block;
@@ -923,8 +961,10 @@ h2        {font-size: 4em;}
 
 .testing-ships {
     position: relative;
-    top: -15em;
-    opacity: 0.5;}
+    top: -30em;
+    left: -10em;
+    opacity: 0.5;
+}
 
 .trade-map-legend   {
     height: 20em;

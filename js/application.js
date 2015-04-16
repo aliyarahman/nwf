@@ -207,9 +207,16 @@ $('.trade-map-legend h3').mouseenter(function() {
 
 
 $('#beef-bubble').on('click', function() {
+    // To prevent trade map from closing before it opens,
+    // we need to stop propagation
+    event.stopPropagation();
+
     commodity = "beef";
     //Shows and positions the trade map
-    $('.trade-maps-container').show();
+
+    $('.trade-maps-container').removeClass('trade-maps-container-start');
+    $('.trade-maps-container').addClass('trade-maps-container-end');
+
     var trademapstop = $(".trade-maps-title").offset().top;
     $('.trade-map').css('top', trademapstop);
 
@@ -244,6 +251,23 @@ $('#beef-bubble').on('click', function() {
         $("#main-trade-map").attr('src', img_url);    });
 });
 
+
+// Trade map will close either when the X is clicked or you click outside of the circle
+$('#chapter-two').click(function() {
+    $('.trade-maps-container').removeClass('trade-maps-container-end');
+    $('.trade-maps-container').addClass('trade-maps-container-start');
+});
+
+$(".close-trade-map").click(function() {
+    $('.trade-maps-container').removeClass('trade-maps-container-end');
+    $('.trade-maps-container').addClass('trade-maps-container-start');
+});
+
+// To prevent trade map from closing when clicking inside of the circle,
+// we need to stop propagation
+$(".trade-maps-container").click(function() {
+    event.stopPropagation();
+});
 
 $('#leather-bubble, #leather-bubble-nav').on('click', function() {
     commodity = "leather";
