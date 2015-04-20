@@ -862,8 +862,7 @@ h2        {font-size: 4em;}
     margin-left: auto;
     padding-left: auto;
     padding-right: auto;
-    
-  }
+}
 
 .trade-map-content {
   text-align: center;
@@ -882,8 +881,8 @@ h2        {font-size: 4em;}
 }
 
 .trade-maps-container-end {
-    width: 108em; /* ~ 2100px */
-    height: 108em;
+    width: 1200px;
+    height: 1200px;
     border-radius: 50%;
     -moz-transition: all 1.5s;
     -webkit-transition: all 1.5s;
@@ -892,21 +891,27 @@ h2        {font-size: 4em;}
     left: 0;
 }
 
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
 .close-trade-map {
   position: relative;
   left: .5em;
 }
 
 .trade-map-title  {
-    margin-left: 2.5em;
-    margin-top: 12.5em;
-    margin-bottom: -3.5em;
-    }
+    /*margin-left: 2.5em;*/
+    margin-top: 5.5em;
+    margin-bottom: -6.5em;
+}
 
 .trade-map-title h2 {
     text-align: center;
     color: #fff;
-    }
+    font-size: 2em;
+}
 
 /*.trade-map {position: absolute;
             left: 12.5em;
@@ -922,15 +927,16 @@ h2        {font-size: 4em;}
 
 .trade-map-bubble {
     position: relative;
-    left: -30em;
+    top: -15em;
+    left: 3em;
     z-index: 0;
+    width: 18%;
 }
 
 .trade-map-info-holder {
     display: inline-block;
     position: relative;
     top: -15em;
-    left: 15em;
     z-index: 1;
 }
 
@@ -962,7 +968,7 @@ h2        {font-size: 4em;}
 .testing-ships {
     position: relative;
     top: -30em;
-    left: -10em;
+    left: -18em;
     opacity: 0.5;
 }
 
