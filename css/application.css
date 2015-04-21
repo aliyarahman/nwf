@@ -333,7 +333,12 @@ h2        {font-size: 4em;}
             background-color: white;
             }
 
+.video-wrapper  {
+                overflow: hidden;
+                 }
+
 #rainforest-vid {
+          vertical-align: middle;
           width: 100%; height: auto;
           min-width: 1280px;
           z-index: -100;
@@ -1304,7 +1309,7 @@ h2        {font-size: 4em;}
       }
 
 .ch5tests   {
-      font-size: 2em;
+      font-size: 1.5em;
       color: #fff;
       position: relative;
       top: -10em;
@@ -1341,17 +1346,14 @@ h2        {font-size: 4em;}
     }
 
 .recommendation-photo {
-    background-color: #363845;
-    height: 20em;
-    width: 40em;
+    height: 30em;
     margin: 2em;
     position: relative;
     left: -10em;
-    border: 4px dashed #fff;
-    text-align: center;
-    vertical-align: middle;
-    color: #fff;
+    }
 
+.recommendation-photo img {
+    height: 100%;
     }
 
 .recommendation {
