@@ -441,99 +441,58 @@
             <div id="ch2" class="content">
             
                 <div class="chapter-triangle"></div>
-                
-                <div id="adult-cow"><img src="img/adult-cow.png"></div>
 
-                <div id="product-bubbles">
-
-                    <div id="beef-bubble">
-
-                        <div class="bubble-pic">
-                            <img class="bubble-pic" src="img/beef-bubble.png">
-                        </div>
-
-                        <div class="ship-icon">
-                            <div class="ship-pic">
-                                <img src="img/ship-icon.png">
-                            </div>
-                            <div class="ship-tag">Beef</div>
-                        </div>
-
-                    </div>
-
-
-                    <div id="tallow-bubble" onClick="location.href='#trade-maps-section'">
-
-                        <div class="bubble-pic">
-                            <img src="img/tallow-bubble.png">
-                        </div>
-
-                        <div class="ship-icon">
-                            <div class="ship-pic">
-                                <img src="img/ship-icon.png">
-                            </div>
-                            <div class="ship-tag">Tallow</div>
-                        </div>
-
-                    </div>
-
-
-                    <div id="leather-bubble" onClick="location.href='#trade-maps-section'">
-
-                        <div class="bubble-pic">
-                            <img src="img/leather-bubble.png">
-                        </div>
-
-                        <div class="ship-icon">
-                            <div class="ship-pic">
-                                <img src="img/ship-icon.png">
-                            </div>
-                            <div class="ship-tag">Leather</div>
-                        </div>
-
-                    </div>
+                <div class="beef-product-headers">
+                    <h4>Top trade partners for 2014:</h4>
+                    <h3 id="beef-product-link">Beef (fresh, frozen, processed)</h3>
+                    <h3>Leather</h3>
+                    <h3>Tallow</h3>
                 </div>
 
-               
-            </div>
-        </div>
-    </div>
+                <div class="beef-products">
 
+                    <div id="adult-cow"><img src="img/adult-cow.png"></div>
 
-    <div class="trade-maps-container trade-maps-container-start">
+                    <div id="product-bubbles">
+                        <div id="beef-bubble">
+                            <div class="bubble-pic">
+                                <img class="bubble-pic" src="img/beef-bubble.png">
+                            </div>
+                        </div>
+                        <div id="tallow-bubble" onClick="location.href='#trade-maps-section'">
+                            <div class="bubble-pic">
+                                <img src="img/tallow-bubble.png">
+                            </div>
+                        </div>
+                        <div id="leather-bubble" onClick="location.href='#trade-maps-section'">
+                            <div class="bubble-pic">
+                                <img src="img/leather-bubble.png">
+                            </div>
+                        </div>
+                    </div> <!-- #product-bubbles -->
+
+                </div> <!-- .beef-products -->
+
+            </div> <!-- #ch2 -->
+        </div> <!-- #chapter-two-pt-two -->
+    </div> <!-- .container -->
+
     <a name="trade-maps-section"></a>
 
-        <div class="trade-map-title" id="beef-data">
+    <!-- Beef map -->
+    <div id="beef-trade-map-container" class="trade-maps-container trade-maps-container-start beef-bubble-start">
+        <div class="trade-map-title">
             <h2>Top trade partners for beef, 2014<i class="fa fa-times close-trade-map"></i></h2>
         </div>
 
         <div class="trade-map-content">
-
-            <div class="trade-map" id="beef-data">
+            <div class="trade-map">
                 <img id="main-trade-map" src="img/beef.jpg" class="img-responsive">
                 <img id="EU-popup" src="img/beef-EU-popup.jpg" class="img-responsive">
             </div>
 
-            <div class="trade-map-bubble" id="beef-data">
-                <img src="img/beef-bubble.png" class="img-responsive">
-            </div>
-
             <div class="trade-map-info-holder">
-
-                <div class="trade-map-ship-icon">
-                    <img src="img/ship-icon.png">
-                </div>
-
-                <div class="trade-map-ship-tag trade-map-info" id="beef-data">
-                    Beef
-                </div>
-
-                <div class="trade-map-ship-tag trade-map-info trade-map-extra-info-tag">
-                    Fresh, frozen, processed
-                </div>
-
-
-                <div class="trade-map-legend trade-map-info" id="beef-data">
+                <div class="trade-map-legend trade-map-info">
                     <div class="trade-map-quantity-column">
                         <div class="trade-map-data-column-title">
                             TOP TRADE<br>QUANTITY, KG
@@ -558,44 +517,82 @@
                         <h3 class="iran">Iran</h3>
                         <h3 class="chile">Chile</h3>
                     </div>
-                </div>
+                </div> <!-- .trade-map-legend -->
+            </div> <!-- .trade-map-info-holder -->
+        </div> <!-- .trade-map-content -->
+    </div> <!-- .trade-maps-container -->
 
-                <div class="trade-map-pie trade-map-info" id="beef-data">
-                    BEEF PRODUCTION <br>IN BRAZIL
-                    <div id="pie-graphic">
-                        <img src="img/pie-graphic.png"
-                    </div>
-                    <div id="pie-data">
-                        <div id="export-quantity">20% Export</div>
-                        <div id="import-quantity">80% Export</div>
-                    </div>
-                </div>
-
-            </div>
-
+    <!-- Leather map -->
+    <div id="leather-trade-map-container" class="trade-maps-container trade-maps-container-start leather-bubble-start">
+        <div class="trade-map-title">
+            <h2>Top trade partners for leather, 2014<i class="fa fa-times close-trade-map"></i></h2>
         </div>
 
-
-        <!-- For testing only -->
-        <div class="testing-ships">
-            <div id="beef-bubble-nav">
-                <div class="trade-map-ship-icon"><img src="img/ship-icon.png"></div>
-                <div class="trade-map-ship-tag trade-map-info">Beef</div>
+        <div class="trade-map-content">
+            <div class="trade-map">
+                <img id="main-trade-map" src="img/leather.jpg" class="img-responsive">
             </div>
 
-            <div id="leather-bubble-nav">
-                <div class="trade-map-ship-icon"><img src="img/ship-icon.png"></div>
-                <div class="trade-map-ship-tag trade-map-info" id="beef-data">Leather</div>
-            </div>
+            <div class="trade-map-info-holder">
+                <div class="trade-map-legend trade-map-info">
+                    <div class="trade-map-quantity-column">
+                        <div class="trade-map-data-column-title">
+                            TOP TRADE<br>QUANTITY, KG
+                        </div>
+                        <h3 class="china">48%</h3>
+                        <h3 class="italy">20%</h3>
+                        <h3 class="vietnam">8%</h3>
+                        <h3 class="taiwan">4%</h3>
+                        <h3 class="thailand">3%</h3>
+                        <h3 class="south-korea">3%</h3>
+                        <h3 class="united-states">3%</h3>
+                    </div>
+                    <div class="trade-map-partner-column">
+                        <div class="trade-map-data-column-title">
+                            TOP TRADE<br>PARTNERS
+                        </div>
+                        <h3 class="china">China</h3>
+                        <h3 class="italy">Italy</h3>
+                        <h3 class="Vietnam">Vietnam</h3>
+                        <h3 class="taiwan">Taiwan</h3>
+                        <h3 class="thailand">Thailand</h3>
+                        <h3 class="south-korea">South Korea</h3>
+                        <h3 class="united-states">United States</h3>
+                    </div>
+                </div> <!-- .trade-map-legend -->
+            </div> <!-- .trade-map-info-holder -->
+        </div> <!-- .trade-map-content -->
+    </div> <!-- .trade-maps-container -->
 
-            <div id="tallow-bubble-nav">
-                <div class="trade-map-ship-icon"><img src="img/ship-icon.png"></div>
-                <div class="trade-map-ship-tag trade-map-info" id="beef-data">Tallow</div>
-            </div>
+    <!-- Tallow map -->
+    <div id="tallow-trade-map-container" class="trade-maps-container trade-maps-container-start tallow-bubble-start">
+        <div class="trade-map-title">
+            <h2>Top trade partners for tallow, 2014<i class="fa fa-times close-trade-map"></i></h2>
         </div>
-        <!-- End testing code -->
 
-    </div>
+        <div class="trade-map-content">
+            <div class="trade-map">
+                <img id="main-trade-map" src="img/tallow.jpg" class="img-responsive">
+            </div>
+
+            <div class="trade-map-info-holder">
+                <div class="trade-map-legend trade-map-info" id="beef-data">
+                    <div class="trade-map-quantity-column">
+                        <div class="trade-map-data-column-title">
+                            TOP TRADE<br>QUANTITY, KG
+                        </div>
+                        <h3 class="europe">100%</h3>
+                    </div>
+                    <div class="trade-map-partner-column">
+                        <div class="trade-map-data-column-title">
+                            TOP TRADE<br>PARTNERS
+                        </div>
+                        <h3 class="europe">Europe-28</h3>
+                    </div>
+                </div> <!-- .trade-map-legend -->
+            </div> <!-- .trade-map-info-holder -->
+        </div> <!-- .trade-map-content -->
+    </div> <!-- .trade-maps-container -->
     </section>
 
     <div id="tab-two" class="tangent-tab">
