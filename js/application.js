@@ -4,29 +4,6 @@ $(document).ready(function() {
   //Global behavior
   //====================================
 
-  //PanelSnap options and function call
-  var options = {
-    $menu: false,
-    menuSelector: 'a',
-    panelSelector: '> section',
-    namespace: '.panelSnap',
-    onSnapStart: function(){},
-    onSnapFinish: function(){},
-    onActivate: function(){},
-    directionThreshold: 50,
-    slideSpeed: 200,
-    easing: 'linear',
-    offset: 0,
-    keyboardNavigation: {
-      enabled: true,
-      nextPanelKey: 40,
-      previousPanelKey: 38,
-      wrapAround: true
-    }
-  };  
-
-  //$('body').panelSnap();
-
   $('.read-more-button').on('click', function(){
         $(this).hide();
         $(this).parent().parent().parent().find('.chapter-main-text').slideDown();
@@ -121,7 +98,7 @@ $('.site-sub-link').on('click', function(){
 $(window).on('scroll', function() {
     var yscroll = window.pageYOffset;
     var sec_1_top = $('#chapter-one').offset().top;
-    console.log("we've reached chapter one");
+    // console.log("we've reached chapter one");
 
 });
 
@@ -165,7 +142,7 @@ $(window).on('scroll', function() {
     var sec_2_y = $('#chapter-two').offset();
 
     if(y_scroll_pos > sec_2_y.top) {
-        console.log("we've reached chapter two");
+        // console.log("we've reached chapter two");
     }
 });
 
@@ -205,11 +182,50 @@ $('.trade-map-legend h3').mouseenter(function() {
         $("#main-trade-map").attr('src', img_url);
     });
 
+// Waypoint occurs at #beef-bubble
+var waypoint = new Waypoint({
+    element: document.getElementById('beef-bubble'),
+    handler: function(direction) {
+        $("#beef-bubble").click();
+    }
+});
+
+var waypoint_close_bubbles = new Waypoint({
+    element: document.getElementById('chapter-two-pt-two'),
+    handler: function(direction) {
+        if (direction == 'up') {
+            $(".close-trade-map").click();
+        }
+        else {
+            console.log("well not quite ");
+            console.log(direction);
+        }
+    }
+});
+
+var waypoint = new Waypoint({
+    element: document.getElementById('chapter-three'),
+    handler: function(direction) {
+        // $("#beef-bubble").click();
+    }
+});
 
 $('#beef-bubble').on('click', function() {
+    // To prevent trade map from closing before it opens,
+    // we need to stop propagation
+    try {
+        event.stopPropagation();
+    } catch (e) {
+        // But we only want to stop propagation on actual click.
+        // If it's opening because of a waypoint, continue on.
+    }
+
     commodity = "beef";
     //Shows and positions the trade map
-    $('.trade-maps-container').show();
+
+    $('.trade-maps-container').removeClass('trade-maps-container-start');
+    $('.trade-maps-container').addClass('trade-maps-container-end');
+
     var trademapstop = $(".trade-maps-title").offset().top;
     $('.trade-map').css('top', trademapstop);
 
@@ -244,6 +260,23 @@ $('#beef-bubble').on('click', function() {
         $("#main-trade-map").attr('src', img_url);    });
 });
 
+
+// Trade map will close either when the X is clicked or you click outside of the circle
+$('#chapter-two').click(function() {
+    $('.trade-maps-container').removeClass('trade-maps-container-end');
+    $('.trade-maps-container').addClass('trade-maps-container-start');
+});
+
+$(".close-trade-map").click(function() {
+    $('.trade-maps-container').removeClass('trade-maps-container-end');
+    $('.trade-maps-container').addClass('trade-maps-container-start');
+});
+
+// To prevent trade map from closing when clicking inside of the circle,
+// we need to stop propagation
+$(".trade-maps-container").click(function() {
+    event.stopPropagation();
+});
 
 $('#leather-bubble, #leather-bubble-nav').on('click', function() {
     commodity = "leather";
