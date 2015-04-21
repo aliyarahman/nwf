@@ -921,8 +921,6 @@ h2 {
     -moz-transition: all 1.5s;
     -webkit-transition: all 1.5s;
     transition: all 1.5s;
-    top: -24em;
-    left: -24em;
 }
 
 .trade-maps-container-end {
@@ -932,8 +930,38 @@ h2 {
     -moz-transition: all 1.5s;
     -webkit-transition: all 1.5s;
     transition: all 1.5s;
+}
+
+.beef-bubble-start {
+    top: -4em;
+    left: -24em;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.beef-bubble-end {
     top: -64em;
     left: 0;
+    -moz-transition: all 3.5s;
+    -webkit-transition: all 3.5s;
+    transition: all 3.5s;
+}
+
+.leather-bubble-start {
+    top: -4em;
+    left: -24em;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.leather-bubble-end {
+    top: -64em;
+    left: 0;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
 }
 
 .img-responsive {

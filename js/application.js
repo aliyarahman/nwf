@@ -84,6 +84,43 @@ $('.site-sub-link').on('click', function(){
 });
 
 
+// Chapter Scrolling behavior
+// ====================================
+$(window).on('scroll', function() {
+    
+    var y_scroll_pos = window.pageYOffset;
+    var sec_2_y = $('#chapter-two').offset().top;
+    var sec_3_y = $('#chapter-three').offset().top;
+    var sec_4_y = $('#chapter-four').offset().top;
+    var sec_5_y = $('#chapter-five').offset().top;
+
+    var beef_bubble_expand = $("#beef-product-link").offset().top;
+
+    if (y_scroll_pos < sec_2_y) {
+        // Chapter 1
+        // Close Chapter 2's trade maps container if it's open
+        if ($('.trade-maps-container').hasClass('trade-maps-container-end')) {
+            $("#chapter-two").click();
+        }
+    }
+    else if (y_scroll_pos > sec_2_y) {
+        // Chapter 2
+        console.log("we've reached chapter two");
+    }
+    else if (y_scroll_pos > sec_3_y) {
+        console.log("we've reached chapter three");
+    }
+    else if (y_scroll_pos > sec_4_y) {
+        console.log("we've reached chapter four");
+    }
+    else if (y_scroll_pos > sec_5_y) {
+        console.log("we've reached chapter five");
+    }
+
+});
+
+
+
 
 
 
@@ -95,12 +132,7 @@ $('.site-sub-link').on('click', function(){
 //=====================================
 
 
-$(window).on('scroll', function() {
-    var yscroll = window.pageYOffset;
-    var sec_1_top = $('#chapter-one').offset().top;
-    // console.log("we've reached chapter one");
 
-});
 
 $('.year-number-lg').click(function(){
     $('.year-number-lg').css('color','#b98728');
@@ -136,15 +168,6 @@ $('#forest-cover-yr-3').click(function(){
 
 //Chapter 2 behavior
 //=====================================
-
-$(window).on('scroll', function() {
-    var y_scroll_pos = window.pageYOffset;
-    var sec_2_y = $('#chapter-two').offset();
-
-    if(y_scroll_pos > sec_2_y.top) {
-        // console.log("we've reached chapter two");
-    }
-});
 
 
 //Ship button rollover
@@ -182,35 +205,49 @@ $('.trade-map-legend h3').mouseenter(function() {
         $("#main-trade-map").attr('src', img_url);
     });
 
-// Waypoint occurs at #beef-bubble
+// Trade maps opening
+// 1. Beef
+// 2. Leather
+// 3. Tallow
+
+
+var waypoint = new Waypoint({
+    element: document.getElementById('beef-product-link'),
+    handler: function(direction) {
+        //Shows and positions the trade map for beef
+        if (direction == 'down') {
+            $("#beef-bubble").click();
+            $('#beef-trade-map-container').toggleClass('trade-maps-container-start');
+            $('#beef-trade-map-container').toggleClass('trade-maps-container-end');    
+        }
+    }
+});
+
+var waypoint = new Waypoint({
+    element: document.getElementById('tallow-bubble'),
+    handler: function(direction) {
+        //Shows and positions the trade map for leather
+        if (direction == 'down') {
+            $('#leather-bubble').click();
+            $('#leather-trade-map-container').toggleClass('trade-maps-container-start');
+            $('#leather-trade-map-container').toggleClass('trade-maps-container-end');
+        }
+    }
+});
+
 var waypoint = new Waypoint({
     element: document.getElementById('beef-bubble'),
     handler: function(direction) {
-        $("#beef-bubble").click();
-    }
-});
-
-var waypoint_close_bubbles = new Waypoint({
-    element: document.getElementById('chapter-two-pt-two'),
-    handler: function(direction) {
-        if (direction == 'up') {
-            $(".close-trade-map").click();
-        }
-        else {
-            console.log("well not quite ");
-            console.log(direction);
+        //Shows and positions the trade map for tallow
+        if (direction == 'down') {
+            $("#tallow-bubble").click();
+            $('#tallow-trade-map-container').toggleClass('trade-maps-container-start');
+            $('#tallow-trade-map-container').toggleClass('trade-maps-container-end');
         }
     }
 });
 
-var waypoint = new Waypoint({
-    element: document.getElementById('chapter-three'),
-    handler: function(direction) {
-        // $("#beef-bubble").click();
-    }
-});
-
-$('#beef-bubble').on('click', function() {
+$('#beef-bubble, #beef-bubble-nav').on('click', function() {
     // To prevent trade map from closing before it opens,
     // we need to stop propagation
     try {
@@ -221,25 +258,19 @@ $('#beef-bubble').on('click', function() {
     }
 
     commodity = "beef";
+
     //Shows and positions the trade map
+    $('#beef-trade-map-container').toggleClass('trade-maps-container-start beef-bubble-start');
+    $('#beef-trade-map-container').toggleClass('trade-maps-container-end beef-bubble-end');
 
-    $('.trade-maps-container').removeClass('trade-maps-container-start');
-    $('.trade-maps-container').addClass('trade-maps-container-end');
+    setTimeout(function() {
+        $('#beef-trade-map-container').width('100%');
+        $('#beef-trade-map-container').css('border-radius', '0');
+    }, 2500)
 
-    var trademapstop = $(".trade-maps-title").offset().top;
+    var trademapstop = $(".trade-map-title").offset().top;
     $('.trade-map').css('top', trademapstop);
 
-    $(".trade-map-title h2").text("Top trade partners for beef, 2014");
-    $("#main-trade-map").attr('src','img/beef.jpg');
-    $('#EU-popup').hide();
-    $('.trade-map-bubble img').attr('src', 'img/beef-bubble.png');
-    $('.trade-map-ship-tag').first().text("Beef");
-    $('.trade-map-ship-tag').eq(2).text("Fresh, frozen, processed");
-    $('.trade-map-pie').show();
-    $('.trade-map-quantity-column').find('h3').hide();
-    $('.trade-map-partner-column').find('h3').hide();
-    $('.trade-map-quantity-column').append( '<h3 class="china">24%</h3><h3 class="russia">18%</h3><h3 class="europe">13%</h3><h3 class="venezuela">12%</h3><h3 class="egypt">8%</h3><h3 class="iran">4%</h3><h3 class="chile">4%</h3>' );
-    $('.trade-map-partner-column').append( '<h3 class="china">China</h3><h3 class="russia">Russia</h3><h3 class="europe">Europe-28</h3><h3 class="venezuela">Venezuela</h3><h3 class="egypt">Egypt</h3><h3 class="iran">Iran</h3><h3 class="chile">Chile</h3>' );
     $('.trade-map-legend h3').mouseenter(function() {
         var country = $(this).attr('class');
         $('h3').removeClass("trade-map-data-rollover");
@@ -260,7 +291,6 @@ $('#beef-bubble').on('click', function() {
         $("#main-trade-map").attr('src', img_url);    });
 });
 
-
 // Trade map will close either when the X is clicked or you click outside of the circle
 $('#chapter-two').click(function() {
     $('.trade-maps-container').removeClass('trade-maps-container-end');
@@ -280,17 +310,9 @@ $(".trade-maps-container").click(function() {
 
 $('#leather-bubble, #leather-bubble-nav').on('click', function() {
     commodity = "leather";
-    $(".trade-map-title h2").text("Top trade partners for leather, 2014");
-    $("#main-trade-map").attr('src','img/leather.jpg');
-    $('#EU-popup').hide();
-    $('.trade-map-bubble img').attr('src', 'img/leather-bubble.png');
-    $('.trade-map-ship-tag').first().text("Leather");
-    $('.trade-map-extra-info-tag').hide();
-    $('.trade-map-pie').hide();
-    $('.trade-map-quantity-column').find('h3').hide();
-    $('.trade-map-partner-column').find('h3').hide();
-    $('.trade-map-quantity-column').append( '<h3 class="china">48%</h3><h3 class="italy">20%</h3><h3 class="vietnam">8%</h3><h3 class="taiwan">4%</h3><h3 class="thailand">3%</h3><h3 class="south-korea">3%</h3><h3 class="united-states">3%</h3>' );
-    $('.trade-map-partner-column').append( '<h3 class="china">China</h3><h3 class="italy">Italy</h3><h3 class="Vietnam">Vietnam</h3><h3 class="taiwan">Taiwan</h3><h3 class="thailand">Thailand</h3><h3 class="south-korea">South Korea</h3><h3 class="united-states">United States</h3>' );
+    //Shows and positions the trade map
+    $('#leather-trade-map-container').toggleClass('trade-maps-container-start');
+    $('#leather-trade-map-container').toggleClass('trade-maps-container-end');
     $('.trade-map-legend h3').mouseenter(function() {
         var country = $(this).attr('class');
         $('h3').removeClass("trade-map-data-rollover");
@@ -314,17 +336,9 @@ $('#leather-bubble, #leather-bubble-nav').on('click', function() {
 
 $('#tallow-bubble, #tallow-bubble-nav').on('click', function() {
     commodity = "tallow";
-    $(".trade-map-title h2").text("Top trade partners for tallow, 2014");
-    $("#main-trade-map").attr('src','img/tallow.jpg');
-    $('#EU-popup').hide();
-    $('.trade-map-bubble img').attr('src', 'img/tallow-bubble.png');
-    $('.trade-map-ship-tag').first().text("Tallow");
-    $('.trade-map-extra-info-tag').hide();
-    $('.trade-map-pie').hide();
-    $('.trade-map-quantity-column').find('h3').hide();
-    $('.trade-map-partner-column').find('h3').hide();
-    $('.trade-map-quantity-column').append( '<h3 class="europe">100%</h3>' );
-    $('.trade-map-partner-column').append( '<h3 class="europe">Europe-28</h3>' );
+    //Shows and positions the trade map
+    $('#tallow-trade-map-container').toggleClass('trade-maps-container-start');
+    $('#tallow-trade-map-container').toggleClass('trade-maps-container-end');
     $('.trade-map-legend h3').mouseenter(function() {
         var country = $(this).attr('class');
         $('h3').removeClass("trade-map-data-rollover");
@@ -348,40 +362,7 @@ $('#tallow-bubble, #tallow-bubble-nav').on('click', function() {
 
 
 
-$('#beef-bubble-nav').on('click', function() {
-    commodity = "beef";
 
-    $(".trade-map-title h2").text("Top trade partners for beef, 2014");
-    $("#main-trade-map").attr('src','img/beef.jpg');
-    $('#EU-popup').hide();
-    $('.trade-map-bubble img').attr('src', 'img/beef-bubble.png');
-    $('.trade-map-ship-tag').first().text("Beef");
-    $('.trade-map-extra-info-tag').show();
-    $('.trade-map-extra-info-tag').text("Fresh, frozen, processed");
-    $('.trade-map-pie').show();
-    $('.trade-map-quantity-column').find('h3').hide();
-    $('.trade-map-partner-column').find('h3').hide();
-    $('.trade-map-quantity-column').append( '<h3 class="china">24%</h3><h3 class="russia">18%</h3><h3 class="europe">13%</h3><h3 class="venezuela">12%</h3><h3 class="egypt">8%</h3><h3 class="iran">4%</h3><h3 class="chile">4%</h3>' );
-    $('.trade-map-partner-column').append( '<h3 class="china">China</h3><h3 class="russia">Russia</h3><h3 class="europe">Europe-28</h3><h3 class="venezuela">Venezuela</h3><h3 class="egypt">Egypt</h3><h3 class="iran">Iran</h3><h3 class="chile">Chile</h3>' );
-    $('.trade-map-legend h3').mouseenter(function() {
-        var country = $(this).attr('class');
-        $('h3').removeClass("trade-map-data-rollover");
-        $('.'+country).addClass("trade-map-data-rollover");
-        var img_url = "img/"+commodity+"-"+country+".jpg";
-        $("#main-trade-map").attr('src', img_url);
-        if (country == "europe") {
-          $("#EU-popup").show();
-        }
-    })
-    .mouseout(function(){
-          $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
-          $("#EU-popup").hide();
-    });
-    $('.trade-map-legend h3').click(function() {
-        var country = $(this).attr('class').split(' ')[0];
-        var img_url = "img/"+commodity+"-"+country+".jpg";
-        $("#main-trade-map").attr('src', img_url);    });
-});
 
 
 $('#tab-one').on('click', function() {
@@ -420,14 +401,6 @@ $('.tangent-go-back').on('click', function() {
   //=====================================
 
 
-$(window).on('scroll', function() {
-    var y_scroll_pos = window.pageYOffset;
-    var sec_3_y = $('#chapter-three').offset();
-
-    if(y_scroll_pos > sec_3_y.top) {
-        console.log("we've reached chapter three");
-    }
-});
 
 
 // Code for switching out maps
@@ -485,14 +458,6 @@ $("#brazil-map-ch-3-overlay").mouseenter(function () {
 //Chapter 4 behavior
 //=====================================
 
-$(window).on('scroll', function() {
-    var y_scroll_pos = window.pageYOffset;
-    var sec_4_y = $('#chapter-four').offset();
-
-    if(y_scroll_pos > sec_4_y.top) {
-        console.log("we've reached chapter four");
-    }
-});
 
 
 $('.ch4-yr-lg').on('click', function(){
@@ -532,15 +497,6 @@ $('.ch4-yr-lg').on('click', function(){
 //Chapter 5 behavior
 //=====================================
 
-
-$(window).on('scroll', function() {
-    var y_scroll_pos = window.pageYOffset;
-    var sec_5_y = $('#chapter-five').offset();
-
-    if(y_scroll_pos > sec_5_y.top) {
-        console.log("we've reached chapter five");
-    }
-});
 
 
 $('#ct1').on('click', function(){
