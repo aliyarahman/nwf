@@ -411,8 +411,8 @@ h2 {
 }
 
 .video-wrapper  {
-                overflow: hidden;
-                 }
+    overflow: hidden;
+}
 
 
 #rainforest-vid {
@@ -1531,36 +1531,80 @@ h2 {
     transition: all .5s;
 }
 
-.recommendation-holder {
-    width: 60%;
-    margin: 3em auto 3em 30%;
-    background-color: #fff;
-    font-size: 1.5em;
-    padding: 2em;
-    color: #363845;
-}
-
-.recommendations-header {
-    color: #363845;
-}
-
-.recommendation-photo {
-    height: 30em;
-    margin: 2em;
-    position: relative;
-    left: -10em;
-    }
-
-.recommendation-photo img {
-    height: 100%;
-    }
-
-.recommendation {
-    margin-top: 1em;
-}
 
 #tab-five .tangent-read-more, #tab-five .tangent-title:hover {
     color: #4bb7b7;
+}
+
+
+
+/* Recommendations style */
+
+
+#recommendations {
+
+}
+
+
+.recommendations-header {
+    color: #363845;
+    width: 30em;
+    margin-bottom: 3em;
+}
+
+.recommendations-header h2 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.recommendations-header .chapter-summary-tagline {
+    font-family: Dala Floda-Roman;
+}
+
+
+.recommendations-subcolumn {
+    vertical-align: top;
+    display: inline-block;
+    width: 12.75em;
+    background-color: #fff;
+    color: #363845;
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+.recommendations-lg-column {
+    display: inline-block;
+    width: 50em;
+}
+
+.recommendations-actor {
+    color: #4bb7b7;
+    font-size: 1.25em;
+}
+
+.recommendations-photo {
+    width: 47em;
+    }
+
+
+.recommendations-photo img {
+    width: 100%;
+    }
+
+
+/* Uncomment to hide major content sections for debugging */
+/*
+#prequel, #chapter-one, #chapter-two, #chapter-three, #chapter-four, #chapter-five {display: none;}
+*/
+
+
+
+
+/* Footer style */
+
+#about_and_credits {
+    padding-top: 4em;
 }
 
 .about-this-site {
