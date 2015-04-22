@@ -365,8 +365,8 @@ $('#beef-bubble, #beef-bubble-nav').on('click', function() {
         }, 1000);
     }
 
-    var trademapstop = $(".trade-map-title").offset().top;
-    $('.trade-map').css('top', trademapstop);
+    // var trademapstop = $(".trade-map-title").offset().top;
+    // $('.trade-map').css('top', trademapstop);
 
     $('.trade-map-legend h3').mouseenter(function() {
         var country = $(this).attr('class');
@@ -377,11 +377,16 @@ $('#beef-bubble, #beef-bubble-nav').on('click', function() {
         $("#main-trade-map").attr('src', img_url);
         if (country == "europe") {
           $("#EU-popup").show();
+        } else {
+            $("#EU-popup").hide();
         }
     })
-    .mouseout(function(){
-          $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
-          $("#EU-popup").hide();
+    .mouseleave(function(){
+            setTimeout(function() {
+                $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
+                $("#EU-popup").hide();
+                $('h3').removeClass("trade-map-data-rollover");
+            }, 2000);
     });
     $('.trade-map-legend h3').click(function() {
         var country = $(this).attr('class').split(' ')[0];
