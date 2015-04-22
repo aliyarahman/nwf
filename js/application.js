@@ -539,40 +539,72 @@ $('.ch4-yr-lg').on('click', function(){
 //Chapter 5 behavior
 //=====================================
 
+var which_frame = 1;
 
 
-$('#ct1').on('click', function(){
-    $('#ch5-image-holder').css({
-        "background-size": "300% 300%",
-        "background-position": "left center"});
+function ch5_switch_frame() {
+    if (which_frame ==1) {
+        $('.ch5-label-text div').hide();
+        $('#ct1').show();
+        $('#ch5-image-holder').css({
+         "background-size": "300% 300%",
+         "background-position": "left center"});
+    }
+    else if (which_frame ==2) {
+        $('.ch5-label-text div').hide();
+        $('#ct2').show();
+        $('#ch5-image-holder').css({
+            "background-size": "210% 210%",
+            "background-position": "10% 55%"});
+    }
+    else if (which_frame ==3) {
+        $('.ch5-label-text div').hide();
+        $('#ct3').show();
+        $('#ch5-image-holder').css({
+            "background-size": "200% 200%",
+            "background-position": "70% center"});
+    }
+    else if (which_frame ==4) {
+        $('.ch5-label-text div').hide();
+        $('#ct4').show();
+        $('#ch5-image-holder').css({
+            "background-size": "200% 200%",
+            "background-position": "right center"});
+    }
+    else if (which_frame ==5) {
+        $('.ch5-label-text div').hide();
+        $('#ct5').show();
+        $('#ch5-image-holder').css({
+            "background-size": "100% 100%"});
+    }
+    else if (which_frame ==6) {
+        $('.ch5-label-text div').hide();
+        $('#ct6').show();
+        $('#ch5-image-holder').css({
+            "background-size": "110% 110%",
+            "background-position": "center center"});    
+    }
+}
+
+
+$('.ch5-left-arrow').on('click', function() {
+    if (which_frame > 1) {
+        which_frame--;
+    }
+    else {
+        which_frame = 6;
+    }
+    ch5_switch_frame();
 });
 
-$('#ct2').on('click', function(){
-    $('#ch5-image-holder').css({
-        "background-size": "210% 210%",
-        "background-position": "10% 55%"});
-});
 
-$('#ct3').on('click', function(){
-    $('#ch5-image-holder').css({
-        "background-size": "200% 200%",
-        "background-position": "70% center"});
-});
-
-$('#ct4').on('click', function(){
-    $('#ch5-image-holder').css({
-        "background-size": "200% 200%",
-        "background-position": "right center"});
-});
-
-$('#ct5').on('click', function(){
-    $('#ch5-image-holder').css({
-        "background-size": "110% 110%",
-        "background-position": "center center"});    
-});
-
-$('#ct6').on('click', function(){
-    $('#ch5-image-holder').css({
-        "background-size": "100% 100%"});
+$('.ch5-right-arrow').on('click', function() {
+    if (which_frame < 6) {
+        which_frame++;
+    }
+    else {
+        which_frame = 1;
+    }
+    ch5_switch_frame();
 });
 
