@@ -17,6 +17,23 @@ $(document).ready(function() {
   });
 
 
+  $(".tangent-tab").click(function () {
+        var which_chapter = $(this).attr('id').split("-")[1];
+        var which_tangent = $(this).attr('class').split(" tab-")[1];
+        var topcoord = window.pageYOffset;
+        var leftcoord = window.pageXOffset;
+        $('.tangent-tab').hide();
+        $('section').css('opacity',0.2);
+        $("#"+which_tangent).css({'top':topcoord+20, 'left':leftcoord+(window.innerWidth-1280)/2});
+        $("#"+which_tangent).show();
+        $('section, .tangent-article-back').on('click', function() {
+            $("#"+which_tangent).hide();
+            $('section').css('opacity',1);
+            $('.tangent-tab').show();
+        });
+  });
+
+
   // Prequel behavior
   //=====================================
 
@@ -403,26 +420,6 @@ $('#tallow-bubble, #tallow-bubble-nav').on('click', function() {
         var img_url = "img/"+commodity+"-"+country+".jpg";
         $("#main-trade-map").attr('src', img_url);
     });
-});
-
-
-
-
-
-
-$('#tab-one').on('click', function() {
-    var topcoord = window.pageYOffset;
-    var leftcoord = window.pageXOffset;
-    $('#ch1t1').css({'left':leftcoord+50, 'top':topcoord});
-    $('#tab-one').hide();
-    $('section').css('opacity', '0.2');
-    $('#ch1t1').toggle("slide");
-});
-
-$('.tangent-go-back').on('click', function() {
-    $('#ch1t1').hide();
-    $('#tab-one').show();
-    $('section').css('opacity', '1');
 });
 
 
