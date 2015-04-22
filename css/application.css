@@ -291,7 +291,7 @@ h2 {
 
 
 .tangent-article {
-    display: none;
+/*    display: none; */
     background-color: #fff;
     border-left: 4em solid #484a56;
     color: #484a56;
@@ -1680,9 +1680,9 @@ h2 {
 
 
 /* Uncomment to hide major content sections for debugging */
-
+/*
 #prequel, #chapter-one, #chapter-two, #chapter-three, #chapter-four {display: none;}
-
+*/
 
 
 
