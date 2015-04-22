@@ -994,7 +994,7 @@ h2 {
 }
 
 .trade-maps-container-start {
-    width: 0px;
+    width: 0px !important; /* Otherwise the width will be overwritten when shrinking */
     height: 0px;
     border-radius: 50%;
     -moz-transition: all 1.5s;
@@ -1011,6 +1011,22 @@ h2 {
     transition: all 1.5s;
 }
 
+.circle-to-square-start {
+    width: 1200px;
+    border-radius: 50%;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.circle-to-square-end {
+    width: 100%;
+    border-radius: 0;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
 .beef-bubble-start {
     top: -4em;
     left: -24em;
@@ -1022,14 +1038,14 @@ h2 {
 .beef-bubble-end {
     top: -64em;
     left: 0;
-    -moz-transition: all 3.5s;
-    -webkit-transition: all 3.5s;
-    transition: all 3.5s;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
 }
 
 .leather-bubble-start {
-    top: -4em;
-    left: -24em;
+    top: -64em;
+    left: 24em;
     -moz-transition: all 1.5s;
     -webkit-transition: all 1.5s;
     transition: all 1.5s;
@@ -1042,6 +1058,24 @@ h2 {
     -webkit-transition: all 1.5s;
     transition: all 1.5s;
 }
+
+.tallow-bubble-start {
+    top: -12em;
+    left: 24em;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.tallow-bubble-end {
+    top: -12em;
+    left: 0;
+    -moz-transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+
 
 .img-responsive {
     max-width: 100%;
