@@ -194,25 +194,25 @@ var commodity = "beef";
 
 
 // Controls country name rollover and map switching
-$('.trade-map-legend h3').mouseenter(function() {
-        var country = $(this).attr('class');
-        $('h3').removeClass("trade-map-data-rollover");
-        $('.'+country).addClass("trade-map-data-rollover");
-        var img_url = "img/"+commodity+"-"+country+".jpg";
-        $("#main-trade-map").attr('src', img_url);
-        if (country == "europe") {
-          $("#EU-popup").show();
-        }
-    })
-    .mouseout(function(){
-          $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
-          $("#EU-popup").hide();
-    });
-    $('.trade-map-legend h3').click(function() {
-        var country = $(this).attr('class').split(' ')[0];
-        var img_url = "img/"+commodity+"-"+country+".jpg";
-        $("#main-trade-map").attr('src', img_url);
-    });
+// $('.trade-map-legend h3').mouseenter(function() {
+//         var country = $(this).attr('class');
+//         $('h3').removeClass("trade-map-data-rollover");
+//         $('.'+country).addClass("trade-map-data-rollover");
+//         var img_url = "img/"+commodity+"-"+country+".jpg";
+//         $("#main-trade-map").attr('src', img_url);
+//         if (country == "europe") {
+//           $("#EU-popup").show();
+//         }
+//     })
+//     .mouseout(function(){
+//           $('#main-trade-map').attr('src', "img/"+commodity+".jpg");
+//           $("#EU-popup").hide();
+//     });
+//     $('.trade-map-legend h3').click(function() {
+//         var country = $(this).attr('class').split(' ')[0];
+//         var img_url = "img/"+commodity+"-"+country+".jpg";
+//         $("#main-trade-map").attr('src', img_url);
+//     });
 
 // Trade maps opening
 // 1. Beef
@@ -226,7 +226,9 @@ var waypoint = new Waypoint({
         if (direction == 'down') {
             $("#beef-bubble").click();
             $('#beef-trade-map-container').removeClass('trade-maps-container-start');
-            $('#beef-trade-map-container').addClass('trade-maps-container-end');    
+            $('#beef-trade-map-container').addClass('trade-maps-container-end');
+            $('body').addClass('lock-scroll');
+            $('#beef-trade-map-container').addClass('overlay-scroll');
         }
         else { // Hide the other maps when scrolling up
             $('#leather-trade-map-container').removeClass('trade-maps-container-end');
@@ -260,87 +262,87 @@ var waypoint = new Waypoint({
     }
 });
 
-var waypoint = new Waypoint({
-    element: document.getElementById('tallow-bubble'),
-    handler: function(direction) {
-        //Shows and positions the trade map for leather
-        if (direction == 'down') {
-            $('#leather-bubble').click();
-            $('#leather-trade-map-container').removeClass('trade-maps-container-start');
-            $('#leather-trade-map-container').addClass('trade-maps-container-end');
-        }
-        else { // Hide the other maps when scrolling up
-            $('#beef-trade-map-container').removeClass('trade-maps-container-end');
-            $('#beef-trade-map-container').addClass('trade-maps-container-start');
-            $('#tallow-trade-map-container').removeClass('trade-maps-container-end');
-            $('#tallow-trade-map-container').addClass('trade-maps-container-start');
-            ['#beef-trade-map-container', '#tallow-trade-map-container'].forEach(function(trade_map_container) {
-                trade_map_container = $(trade_map_container);
-                if (trade_map_container.hasClass('circle-to-square-end')) {
-                    trade_map_container.removeClass('circle-to-square-end');
-                    trade_map_container.addClass('circle-to-square-start');
-                    setTimeout(function() {
-                        if (trade_map_container.hasClass('beef-bubble-end')) {
-                            trade_map_container.removeClass('beef-bubble-end');
-                            trade_map_container.addClass('beef-bubble-start');
-                        }
-                        else if (trade_map_container.hasClass('leather-bubble-end')) {
-                            trade_map_container.removeClass('leather-bubble-end');
-                            trade_map_container.addClass('leather-bubble-start');
-                        }
-                        else if (trade_map_container.hasClass('tallow-bubble-end')) {
-                            trade_map_container.removeClass('tallow-bubble-end');
-                            trade_map_container.addClass('tallow-bubble-start');
-                        }
-                        trade_map_container.removeClass('trade-maps-container-end');
-                        trade_map_container.addClass('trade-maps-container-start');
-                    }, 1500);
-                }
-            });
-        }
-    }
-});
+// var waypoint = new Waypoint({
+//     element: document.getElementById('tallow-bubble'),
+//     handler: function(direction) {
+//         //Shows and positions the trade map for leather
+//         if (direction == 'down') {
+//             $('#leather-bubble').click();
+//             $('#leather-trade-map-container').removeClass('trade-maps-container-start');
+//             $('#leather-trade-map-container').addClass('trade-maps-container-end');
+//         }
+//         else { // Hide the other maps when scrolling up
+//             $('#beef-trade-map-container').removeClass('trade-maps-container-end');
+//             $('#beef-trade-map-container').addClass('trade-maps-container-start');
+//             $('#tallow-trade-map-container').removeClass('trade-maps-container-end');
+//             $('#tallow-trade-map-container').addClass('trade-maps-container-start');
+//             ['#beef-trade-map-container', '#tallow-trade-map-container'].forEach(function(trade_map_container) {
+//                 trade_map_container = $(trade_map_container);
+//                 if (trade_map_container.hasClass('circle-to-square-end')) {
+//                     trade_map_container.removeClass('circle-to-square-end');
+//                     trade_map_container.addClass('circle-to-square-start');
+//                     setTimeout(function() {
+//                         if (trade_map_container.hasClass('beef-bubble-end')) {
+//                             trade_map_container.removeClass('beef-bubble-end');
+//                             trade_map_container.addClass('beef-bubble-start');
+//                         }
+//                         else if (trade_map_container.hasClass('leather-bubble-end')) {
+//                             trade_map_container.removeClass('leather-bubble-end');
+//                             trade_map_container.addClass('leather-bubble-start');
+//                         }
+//                         else if (trade_map_container.hasClass('tallow-bubble-end')) {
+//                             trade_map_container.removeClass('tallow-bubble-end');
+//                             trade_map_container.addClass('tallow-bubble-start');
+//                         }
+//                         trade_map_container.removeClass('trade-maps-container-end');
+//                         trade_map_container.addClass('trade-maps-container-start');
+//                     }, 1500);
+//                 }
+//             });
+//         }
+//     }
+// });
 
-var waypoint = new Waypoint({
-    element: document.getElementById('beef-bubble'),
-    handler: function(direction) {
-        //Shows and positions the trade map for tallow
-        if (direction == 'down') {
-            $("#tallow-bubble").click();
-            $('#tallow-trade-map-container').removeClass('trade-maps-container-start');
-            $('#tallow-trade-map-container').addClass('trade-maps-container-end');
-        }
-        else { // Hide the other maps when scrolling up
-            $('#beef-trade-map-container').removeClass('trade-maps-container-end');
-            $('#beef-trade-map-container').addClass('trade-maps-container-start');
-            $('#leather-trade-map-container').removeClass('trade-maps-container-end');
-            $('#leather-trade-map-container').addClass('trade-maps-container-start');
-            ['#leather-trade-map-container', '#beef-trade-map-container'].forEach(function(trade_map_container) {
-                trade_map_container = $(trade_map_container);
-                if (trade_map_container.hasClass('circle-to-square-end')) {
-                    trade_map_container.removeClass('circle-to-square-end');
-                    trade_map_container.addClass('circle-to-square-start');
-                    setTimeout(function() {
-                        if (trade_map_container.hasClass('beef-bubble-end')) {
-                            trade_map_container.removeClass('beef-bubble-end');
-                            trade_map_container.addClass('beef-bubble-start');
-                        }
-                        else if (trade_map_container.hasClass('leather-bubble-end')) {
-                            trade_map_container.removeClass('leather-bubble-end');
-                            trade_map_container.addClass('leather-bubble-start');
-                        }
-                        else if (trade_map_container.hasClass('tallow-bubble-end')) {
-                            trade_map_container.removeClass('tallow-bubble-end');
-                            trade_map_container.addClass('tallow-bubble-start');
-                        }
-                        trade_map_container.removeClass('trade-maps-container-end');
-                        trade_map_container.addClass('trade-maps-container-start');
-                    }, 1500);
-                }
-            });
-        }
-    }
-});
+// var waypoint = new Waypoint({
+//     element: document.getElementById('beef-bubble'),
+//     handler: function(direction) {
+//         //Shows and positions the trade map for tallow
+//         if (direction == 'down') {
+//             $("#tallow-bubble").click();
+//             $('#tallow-trade-map-container').removeClass('trade-maps-container-start');
+//             $('#tallow-trade-map-container').addClass('trade-maps-container-end');
+//         }
+//         else { // Hide the other maps when scrolling up
+//             $('#beef-trade-map-container').removeClass('trade-maps-container-end');
+//             $('#beef-trade-map-container').addClass('trade-maps-container-start');
+//             $('#leather-trade-map-container').removeClass('trade-maps-container-end');
+//             $('#leather-trade-map-container').addClass('trade-maps-container-start');
+//             ['#leather-trade-map-container', '#beef-trade-map-container'].forEach(function(trade_map_container) {
+//                 trade_map_container = $(trade_map_container);
+//                 if (trade_map_container.hasClass('circle-to-square-end')) {
+//                     trade_map_container.removeClass('circle-to-square-end');
+//                     trade_map_container.addClass('circle-to-square-start');
+//                     setTimeout(function() {
+//                         if (trade_map_container.hasClass('beef-bubble-end')) {
+//                             trade_map_container.removeClass('beef-bubble-end');
+//                             trade_map_container.addClass('beef-bubble-start');
+//                         }
+//                         else if (trade_map_container.hasClass('leather-bubble-end')) {
+//                             trade_map_container.removeClass('leather-bubble-end');
+//                             trade_map_container.addClass('leather-bubble-start');
+//                         }
+//                         else if (trade_map_container.hasClass('tallow-bubble-end')) {
+//                             trade_map_container.removeClass('tallow-bubble-end');
+//                             trade_map_container.addClass('tallow-bubble-start');
+//                         }
+//                         trade_map_container.removeClass('trade-maps-container-end');
+//                         trade_map_container.addClass('trade-maps-container-start');
+//                     }, 1500);
+//                 }
+//             });
+//         }
+//     }
+// });
 
 $('#beef-bubble, #beef-bubble-nav').on('click', function() {
     // To prevent trade map from closing before it opens,
@@ -370,7 +372,8 @@ $('#beef-bubble, #beef-bubble-nav').on('click', function() {
         var country = $(this).attr('class');
         $('h3').removeClass("trade-map-data-rollover");
         $('.'+country).addClass("trade-map-data-rollover");
-        var img_url = "img/"+commodity+"-"+country+".jpg";
+        country = country.replace(" trade-map-data-rollover", ""); // this gets added
+        var img_url = "img/"+commodity.charAt(0).toUpperCase()+commodity.slice(1)+"Map-"+country.charAt(0).toUpperCase()+country.slice(1)+".png";
         $("#main-trade-map").attr('src', img_url);
         if (country == "europe") {
           $("#EU-popup").show();
@@ -382,7 +385,8 @@ $('#beef-bubble, #beef-bubble-nav').on('click', function() {
     });
     $('.trade-map-legend h3').click(function() {
         var country = $(this).attr('class').split(' ')[0];
-        var img_url = "img/"+commodity+"-"+country+".jpg";
+        country = country.replace(" trade-map-data-rollover", ""); // this gets added
+        var img_url = "img/"+commodity.charAt(0).toUpperCase()+commodity.slice(1)+"Map-"+country.charAt(0).toUpperCase()+country.slice(1)+".png";
         $("#main-trade-map").attr('src', img_url);    });
 });
 
@@ -441,7 +445,8 @@ $('#leather-bubble, #leather-bubble-nav').on('click', function() {
         var country = $(this).attr('class');
         $('h3').removeClass("trade-map-data-rollover");
         $('.'+country).addClass("trade-map-data-rollover");
-        var img_url = "img/"+commodity+"-"+country+".jpg";
+        country = country.replace(" trade-map-data-rollover", ""); // this gets added
+        var img_url = "img/"+commodity.charAt(0).toUpperCase()+commodity.slice(1)+"Map-"+country.charAt(0).toUpperCase()+country.slice(1)+".png";
         $("#main-trade-map").attr('src', img_url);
         if (country == "europe") {
           $("#EU-popup").show();
@@ -453,7 +458,8 @@ $('#leather-bubble, #leather-bubble-nav').on('click', function() {
     });
     $('.trade-map-legend h3').click(function() {
         var country = $(this).attr('class').split(' ')[0];
-        var img_url = "img/"+commodity+"-"+country+".jpg";
+        country = country.replace(" trade-map-data-rollover", ""); // this gets added
+        var img_url = "img/"+commodity.charAt(0).toUpperCase()+commodity.slice(1)+"Map-"+country.charAt(0).toUpperCase()+country.slice(1)+".png";
         $("#main-trade-map").attr('src', img_url);
     });
 });
@@ -474,7 +480,8 @@ $('#tallow-bubble, #tallow-bubble-nav').on('click', function() {
         var country = $(this).attr('class');
         $('h3').removeClass("trade-map-data-rollover");
         $('.'+country).addClass("trade-map-data-rollover");
-        var img_url = "img/"+commodity+"-"+country+".jpg";
+        country = country.replace(" trade-map-data-rollover", ""); // this gets added
+        var img_url = "img/"+commodity.charAt(0).toUpperCase()+commodity.slice(1)+"Map-"+country.charAt(0).toUpperCase()+country.slice(1)+".png";
         $("#main-trade-map").attr('src', img_url);
         if (country == "europe") {
           $("#EU-popup").show();
@@ -486,7 +493,8 @@ $('#tallow-bubble, #tallow-bubble-nav').on('click', function() {
     });
     $('.trade-map-legend h3').click(function() {
         var country = $(this).attr('class').split(' ')[0];
-        var img_url = "img/"+commodity+"-"+country+".jpg";
+        country = country.replace(" trade-map-data-rollover", ""); // this gets added
+        var img_url = "img/"+commodity.charAt(0).toUpperCase()+commodity.slice(1)+"Map-"+country.charAt(0).toUpperCase()+country.slice(1)+".png";
         $("#main-trade-map").attr('src', img_url);
     });
 });

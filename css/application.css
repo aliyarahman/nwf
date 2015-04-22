@@ -1074,7 +1074,23 @@ h2 {
     transition: all 1.5s;
 }
 
+.lock-scroll {
+    overflow: hidden;
+    position: relative;
+}
 
+.overlay-scroll {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.scrollable {
+    position: static;
+}
 
 .img-responsive {
     max-width: 100%;
@@ -1083,18 +1099,48 @@ h2 {
 
 .close-trade-map {
     position: relative;
-    left: .5em;
+}
+
+.close-trade-map-button {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 1em;
+}
+
+.trade-map {
+    width: 80%;
+    margin-left: auto;
 }
 
 .trade-map-title {
-    margin-top: 5.5em;
-    margin-bottom: -6.5em;
+    /*margin-top: 5.5em;*/
+    /*margin-bottom: -6.5em;*/
+    margin-bottom: 3em;
+    color: #fff;
+    text-align: left;
+    margin-left: 3em;
+}
+
+.col-9 {
+    float: left;
+    width: 75%;
+    position: relative;
+}
+
+.col-3 {
+    float: left;
+    width: 25%;
+    position: relative;
+}
+
+.trade-map-title h4 {
+    font-size: 1.5em;
+    color: #fff;
 }
 
 .trade-map-title h2 {
-    text-align: center;
-    color: #fff;
     font-size: 2em;
+    color: #fff;
 }
 
 #EU-popup {
@@ -1117,19 +1163,18 @@ h2 {
 .trade-map-info-holder {
     display: inline-block;
     position: relative;
-    top: -15em;
+    top: -20em;
     z-index: 1;
+    left: -30em;
 }
 
 .trade-map-info {
     display: inline-block;
-    background-color: #fff;
+    /*background-color: #fff;*/
     vertical-align: top;
     margin-right: 5px;
     color: #6fb174;
     padding: 1em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
 }
 
 .trade-map-ship-icon {
@@ -1178,6 +1223,7 @@ h2 {
 
 .trade-map-data-column-title {
     margin-bottom: -0.5em;
+    color: #363845;
 }
 
 .trade-map-quantity-column {
