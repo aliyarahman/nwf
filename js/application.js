@@ -101,7 +101,7 @@ $(window).on('scroll', function() {
         // Close Chapter 2's trade maps container if it's open
         if ($('.trade-maps-container').hasClass('trade-maps-container-end')) {
             // $("#chapter-two").click();
-            // $('.close-trade-map').click();
+            $('.close-trade-map').click();
         }
     }
     else if (y_scroll_pos > sec_2_y) {
@@ -216,6 +216,29 @@ var waypoint = new Waypoint({
             $('#leather-trade-map-container').addClass('trade-maps-container-start');
             $('#tallow-trade-map-container').removeClass('trade-maps-container-end');
             $('#tallow-trade-map-container').addClass('trade-maps-container-start');
+            ['#leather-trade-map-container', '#tallow-trade-map-container'].forEach(function(trade_map_container) {
+                trade_map_container = $(trade_map_container);
+                if (trade_map_container.hasClass('circle-to-square-end')) {
+                    trade_map_container.removeClass('circle-to-square-end');
+                    trade_map_container.addClass('circle-to-square-start');
+                    setTimeout(function() {
+                        if (trade_map_container.hasClass('beef-bubble-end')) {
+                            trade_map_container.removeClass('beef-bubble-end');
+                            trade_map_container.addClass('beef-bubble-start');
+                        }
+                        else if (trade_map_container.hasClass('leather-bubble-end')) {
+                            trade_map_container.removeClass('leather-bubble-end');
+                            trade_map_container.addClass('leather-bubble-start');
+                        }
+                        else if (trade_map_container.hasClass('tallow-bubble-end')) {
+                            trade_map_container.removeClass('tallow-bubble-end');
+                            trade_map_container.addClass('tallow-bubble-start');
+                        }
+                        trade_map_container.removeClass('trade-maps-container-end');
+                        trade_map_container.addClass('trade-maps-container-start');
+                    }, 1500);
+                }
+            });
         }
     }
 });
@@ -234,6 +257,29 @@ var waypoint = new Waypoint({
             $('#beef-trade-map-container').addClass('trade-maps-container-start');
             $('#tallow-trade-map-container').removeClass('trade-maps-container-end');
             $('#tallow-trade-map-container').addClass('trade-maps-container-start');
+            ['#beef-trade-map-container', '#tallow-trade-map-container'].forEach(function(trade_map_container) {
+                trade_map_container = $(trade_map_container);
+                if (trade_map_container.hasClass('circle-to-square-end')) {
+                    trade_map_container.removeClass('circle-to-square-end');
+                    trade_map_container.addClass('circle-to-square-start');
+                    setTimeout(function() {
+                        if (trade_map_container.hasClass('beef-bubble-end')) {
+                            trade_map_container.removeClass('beef-bubble-end');
+                            trade_map_container.addClass('beef-bubble-start');
+                        }
+                        else if (trade_map_container.hasClass('leather-bubble-end')) {
+                            trade_map_container.removeClass('leather-bubble-end');
+                            trade_map_container.addClass('leather-bubble-start');
+                        }
+                        else if (trade_map_container.hasClass('tallow-bubble-end')) {
+                            trade_map_container.removeClass('tallow-bubble-end');
+                            trade_map_container.addClass('tallow-bubble-start');
+                        }
+                        trade_map_container.removeClass('trade-maps-container-end');
+                        trade_map_container.addClass('trade-maps-container-start');
+                    }, 1500);
+                }
+            });
         }
     }
 });
@@ -252,6 +298,29 @@ var waypoint = new Waypoint({
             $('#beef-trade-map-container').addClass('trade-maps-container-start');
             $('#leather-trade-map-container').removeClass('trade-maps-container-end');
             $('#leather-trade-map-container').addClass('trade-maps-container-start');
+            ['#leather-trade-map-container', '#beef-trade-map-container'].forEach(function(trade_map_container) {
+                trade_map_container = $(trade_map_container);
+                if (trade_map_container.hasClass('circle-to-square-end')) {
+                    trade_map_container.removeClass('circle-to-square-end');
+                    trade_map_container.addClass('circle-to-square-start');
+                    setTimeout(function() {
+                        if (trade_map_container.hasClass('beef-bubble-end')) {
+                            trade_map_container.removeClass('beef-bubble-end');
+                            trade_map_container.addClass('beef-bubble-start');
+                        }
+                        else if (trade_map_container.hasClass('leather-bubble-end')) {
+                            trade_map_container.removeClass('leather-bubble-end');
+                            trade_map_container.addClass('leather-bubble-start');
+                        }
+                        else if (trade_map_container.hasClass('tallow-bubble-end')) {
+                            trade_map_container.removeClass('tallow-bubble-end');
+                            trade_map_container.addClass('tallow-bubble-start');
+                        }
+                        trade_map_container.removeClass('trade-maps-container-end');
+                        trade_map_container.addClass('trade-maps-container-start');
+                    }, 1500);
+                }
+            });
         }
     }
 });
