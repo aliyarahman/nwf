@@ -344,6 +344,16 @@ var waypoint = new Waypoint({
 //     }
 // });
 
+$("#beef-trade-map-container").scroll(function() {
+    var y_pos = $(this).scrollTop();
+    var sensitivity = 60;
+    var container_bottom = (($(this).height() / 2) - sensitivity);
+    if (y_pos >= container_bottom) {
+        console.log("now switch to leather map!");
+        // Here, switch to leather map
+    }
+});
+
 $('#beef-bubble, #beef-bubble-nav').on('click', function() {
     // To prevent trade map from closing before it opens,
     // we need to stop propagation
