@@ -155,23 +155,23 @@ $('.year-number-lg').click(function(){
 });
 
 $('#cattle-head-yr-1').click(function(){
-    $('.cattle-head-growth img').attr('src','img/cattle-head-map1-ch-1.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd1993.png');
 });
 $('#cattle-head-yr-2').click(function(){
-    $('.cattle-head-growth img').attr('src','img/cattle-head-map2-ch-1.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd2003.png');
 });
 $('#cattle-head-yr-3').click(function(){
-    $('.cattle-head-growth img').attr('src','img/cattle-head-map3-ch-1.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd2013.png');
 });
 
 $('#forest-cover-yr-1').click(function(){
-    $('.forest-cover-loss img').attr('src','img/forest-cover-map1-ch-1.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor1991.png');
 });
 $('#forest-cover-yr-2').click(function(){
-    $('.forest-cover-loss img').attr('src','img/forest-cover-map2-ch-1.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor2003.png');
 });
 $('#forest-cover-yr-3').click(function(){
-    $('.forest-cover-loss img').attr('src','img/forest-cover-map3-ch-1.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor2013.png');
 });
 
 
@@ -218,6 +218,9 @@ var commodity = "beef";
 // 1. Beef
 // 2. Leather
 // 3. Tallow
+
+
+
 
 var waypoint = new Waypoint({
     element: document.getElementById('beef-product-link'),

@@ -741,18 +741,21 @@ h2 {
     column-gap: 2em;
 }
 
-#ch1-left-col {
-    display:inline-block;
-    width: 50%;
-    margin-top: 2em;
+#ch1-left-col, #ch1-right-col {
+    margin-top: -3.2em;
+    padding-top: 2em;
     vertical-align: top;
+    display: inline-block;
+}
+
+#ch1-left-col {
+    width: 50%;
+    background-image: url("../img/BackgroundTile.png");
+    background-repeat: repeat-y;
 }
 
 #ch1-right-col {
-    margin-top: 5em;
-    display:inline-block;
     width: 49%;
-    vertical-align: top;
 }
 
 .year-number-holder {
@@ -781,13 +784,18 @@ h2 {
 .ch1-map-legend {
     display: inline-block;
     color: #363845;
-    text-align: right;
+    text-align: left;
     width: 15em;
-    margin-left: 3em;
+    margin-left: 0.5em;
+    margin-top: 12em;
+    -webkit-font-feature-settings: 'tnum';
+    -moz-font-feature-settings: 'tnum';
+    -ms-font-feature-settings: 'tnum';
+
 }
 
 #ch1-right-col .ch1-map-legend {
-    margin-left: 6em;
+    margin-left: 3.5em;
 }
 
 .ch1-legend-note {
@@ -803,14 +811,13 @@ h2 {
 }
 
 #ch1-legend-box-1, #ch1-legend-box-2, #ch1-legend-box-3, 
-#ch1-legend-box-4, #ch1-legend-box-5, #ch1-legend-box-border {
+#ch1-legend-box-4, #ch1-legend-box-5, 
+#ch1-legend-box-6, #ch1-legend-box-7, #ch1-legend-box-8, #ch1-legend-box-9 {
     display: inline-block;
     vertical-align: middle;
     margin-top: 3%;
-    margin-left: 5%;
     height: 1.8em;
     width: 1.8em;
-    background-color: gray;
 }
 
 #ch1-legend-box-1 {
@@ -833,24 +840,38 @@ h2 {
     background-color: #714e0e;
 }
 
-#ch1-legend-box-border {
-    background-color: #f4e0bf;
-    background-image: url("../img/border-sprite.png");
+#ch1-legend-box-6 {
+    background-image: url("../img/ch1_state_line.png");
+    background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+#ch1-legend-box-7 {
+    background-color: #eb6451;
+}
+
+#ch1-legend-box-8 {
+    background-color: #4d7c50;
+}
+
+#ch1-legend-box-9 {
+    background-color: #a3cda7;
+}
+
+
+
 .brazil-map-ch-1 {
-    width: 25em;
+    width: 31em;
     display: inline-block;
     position: relative;
-    top: -30em;
-    left: 14em;
+    top: -32em;
+    left: 9em;
 }
 
 .forest-cover-loss .brazil-map-ch-1 {
-    left: 16em;
-    top: -22em;
+    left: 12em;
+    top: -29em;
 }
 
 .brazil-map-ch-1 img {
@@ -1307,7 +1328,7 @@ h2 {
     margin-top: 0px;
     margin-bottom: 0px;
     line-height: 1em;
-    font-size: 4.2em;
+    font-size: 3.9em;
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
