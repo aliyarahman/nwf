@@ -1614,7 +1614,7 @@ h2 {
 /* Chapter 5 style */
 
 #chapter-five {
-    background-color: #6fb174;
+    background-color: #fff;
     height: auto;
 }
 
@@ -1640,7 +1640,7 @@ h2 {
     overflow: hidden;
     background-image: url('../img/ch5.jpg');
     background-size: 300% 300%;
-    background-position: -5% center;
+    background-position: left center;
     background-repeat: no-repeat;
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
@@ -1649,13 +1649,19 @@ h2 {
 
 
 .ch5-label  {
+    vertical-align: top;
+    display: inline-block;
     background-color: #fff;
     color: #000;
-    width: 20em;
-    height: 5em;
-    margin: 1em 0 0 1em;
+    width: 17em;
+    height: 7em;
     padding: 1em;
-    font-size: 1.25em;
+    padding-top: 1.25em;
+    padding-right: 0.3em;
+    position: relative;
+    top: 1em;
+    left: 1em;
+    font-size: 1em;
 }
 
 
@@ -1673,11 +1679,27 @@ h2 {
 
 .ch5-label-text {
     vertical-align: middle;
-    width: 15em;
-    padding: 0 1em;
+    width: 12em;
+    padding: 0em 1em;
     display: inline-block;
 }
 
+
+#ch5-image-overlay-holder {
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 5em;
+    height: 35em;
+}
+
+#ch5-image-overlay {
+    height: 100%;
+    display: none;
+}
+
+#ch5-image-overlay img {
+    height: 100%;
+}
 
 
 #ct2, #ct3, #ct4, #ct5, #ct6 {

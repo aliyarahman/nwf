@@ -347,6 +347,7 @@ var waypoint = new Waypoint({
 //     }
 // });
 
+
 $("#beef-trade-map-container").scroll(function() {
     var y_pos = $(this).scrollTop();
     var sensitivity = 60;
@@ -639,6 +640,7 @@ var which_frame = 1;
 
 function ch5_switch_frame() {
     if (which_frame ==1) {
+        $('#ch5-image-overlay').hide();
         $('.ch5-label-text div').hide();
         $('#ct1').show();
         $('#ch5-image-holder').css({
@@ -646,6 +648,7 @@ function ch5_switch_frame() {
          "background-position": "left center"});
     }
     else if (which_frame ==2) {
+        $('#ch5-image-overlay').hide();
         $('.ch5-label-text div').hide();
         $('#ct2').show();
         $('#ch5-image-holder').css({
@@ -653,6 +656,7 @@ function ch5_switch_frame() {
             "background-position": "10% 55%"});
     }
     else if (which_frame ==3) {
+        $('#ch5-image-overlay').hide();
         $('.ch5-label-text div').hide();
         $('#ct3').show();
         $('#ch5-image-holder').css({
@@ -660,6 +664,7 @@ function ch5_switch_frame() {
             "background-position": "70% center"});
     }
     else if (which_frame ==4) {
+        $('#ch5-image-overlay').hide();
         $('.ch5-label-text div').hide();
         $('#ct4').show();
         $('#ch5-image-holder').css({
@@ -667,17 +672,19 @@ function ch5_switch_frame() {
             "background-position": "right center"});
     }
     else if (which_frame ==5) {
+        $('#ch5-image-overlay').hide();
         $('.ch5-label-text div').hide();
         $('#ct5').show();
         $('#ch5-image-holder').css({
             "background-size": "100% 100%"});
     }
     else if (which_frame ==6) {
+        $('#ch5-image-overlay').hide();
         $('.ch5-label-text div').hide();
         $('#ct6').show();
         $('#ch5-image-holder').css({
-            "background-size": "110% 110%",
-            "background-position": "center center"});    
+            "background-size": "100% 100%"});
+        $('#ch5-image-overlay').fadeIn(1000);
     }
 }
 
