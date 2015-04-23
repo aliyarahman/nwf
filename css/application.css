@@ -1466,12 +1466,12 @@ h2 {
 /* Chapter 4 style */
 
 #chapter-four { 
-    background-color: #5a4a3d;
+    background-color: #cfbaa9;
     height: 2000px;
     background-image: url("../img/ch4-zoomout.png");
     background-repeat: no-repeat;
-    background-size: auto 70%;
-    background-position: right 80%;
+    background-size: auto 55%;
+    background-position: right 90%;
     -moz-transition: all .75s;
     -webkit-transition: all .75s;
     transition: all .75s;
@@ -1488,9 +1488,8 @@ h2 {
 }
 
 .ch4-yr-holder {
-    margin-top: 8em;
-    margin-left: 2em;
-    vertical-align: middle;
+    margin-top: 7em;
+    margin-left: 1em;
     color: #876e5a;
     display: inline-block;
 }
@@ -1533,39 +1532,40 @@ h2 {
 
 .ch4-map-overlay {
     display: inline-block;
-    background-image: url("../img/preagreement.jpg");
+    background-image: url("../img/preagreement.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 7.5em;
-    height: 10em;
+    width: 3em;
+    height: 4em;
     vertical-align: middle;
     position: relative;
-    left: 29em;
-    top: 1em;
-    -moz-transition: all .75s;
-    -webkit-transition: all .75s;
-    transition: all .75s;
+    left: 19em;
+    top: -1.5em;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
 }
 
 .ch4-map-overlay-pre {
-    background-image: url("../img/preagreement.jpg");
+    background-image: url("../img/preagreement.gif");
 }
 
 .ch4-map-overlay-prepost {
-    background-image: url("../img/prepostagreement.jpg");
+    background-image: url("../img/prepostagreement.gif");
 }
 
 .ch4-map-overlay-post {
-    background-image: url("../img/postagreement.jpg");
+    background-image: url("../img/postagreement.gif");
 }
 
 #ch4-map-legend {
     display: inline-block;
     color: #fff;
     position: relative;
-    width: 50%;
-    margin-top: 3em;
-    margin-left: 20em;
+    top: 20em;
+    left: -43.5em;
+    overflow: hidden;
+    width: 20em;
 }
 
 .ch4-legend-label {
@@ -1586,23 +1586,23 @@ h2 {
 }
 
 #ch4-legend-box-1 {
-    background-color: #612900;
+    background-color: #f6f2ef;
 }
 
 #ch4-legend-box-2 {
-    background-color: #dd9d79;
+    background-color: #ea6350;
 }
 
 #ch4-legend-box-3 {
-    background-color: #83c42c;
+    background-color: #6fb174;
 }
 
 #ch4-legend-box-4 {
-    background-color: #cbf48e;
+    background-color: #f5d954;
 }
 
 #ch4-legend-box-5 {
-    background-color: #ecea7b;
+    background-color: #9b8578;
 }
 
 #tab-four .tangent-read-more, #tab-four .tangent-title:hover {

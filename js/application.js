@@ -599,8 +599,11 @@ $("#brazil-map-ch-3-overlay").mouseenter(function () {
 
 
 $('.ch4-yr-lg').on('click', function(){
-    $('#chapter-four').css({'background-size':'auto 200%','background-position':'25% 10%'});
-    $('.ch4-map-overlay').css({'width':'30em','height':'40em', 'left':'8em'});
+    var ch4legendleft = $('#ch4-map-legend').offset().left;
+    var ch4legendtop = $('#ch4-map-legend').offset().top;
+    $('#ch4-map-legend').css({'position':'absolute', 'left': ch4legendleft, 'top': ch4legendtop});
+    $('#chapter-four').css({'background-size':'600% 600%','background-position':'53% 25%'});
+    $('.ch4-map-overlay').css({'width':'30em','height':'40em', 'left':'2.5em', 'top':'8em'});
     var which_map = $(this).attr('id').split('-')[0];
     $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
     $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
@@ -616,8 +619,6 @@ $('.ch4-yr-lg').on('click', function(){
         $('.ch4-box-1').show();
         $('.ch4-box-2').hide();
     }
-    //$(".ch4-subtitle").hide();
-    //$("#"+which_map+"-subtitle").show();
 });
 
 
