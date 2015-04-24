@@ -373,18 +373,41 @@ h2 {
     margin-bottom: 0.6em;
 }
 
-.tangent-article-left-col {
+.tangent-article-left-col, .tangent-article-right-col,
+.ch5t1-top-left, .ch5t1-top-right {
     vertical-align: top;
-    width: 36%;
     display: inline-block;
+}
+
+.tangent-article-left-col {
+    width: 36%;
     padding-right: 2em;
 }
 
 .tangent-article-right-col {
-    vertical-align: top;
-    display: inline-block;
-    width: 56%;
+    width: 40%;
     padding-left: 2em;
+}
+
+.ch5t1-bottom .tangent-article-left-col {
+    width: 20%;
+}
+
+.ch5t1-bottom .tangent-article-right-col {
+    width: 60% !important;
+}
+
+.ch5t1-top-left {
+    width: 40%;
+    margin-right: 2em;
+}
+
+.ch5t1-top-right {
+    width: 40%;
+}
+
+.ch5t1-bottom {
+    margin-top: 2em;
 }
 
 .tangent-article-caption {
@@ -493,6 +516,7 @@ h2 {
 
 #site-menu, #site-map {
     position: absolute;
+    left: 0;
     z-index: 60;
 }
 
@@ -1322,6 +1346,7 @@ h2 {
     vertical-align: top;
 }
 
+
 .g4-lg {
     color: #5e616a;
     text-align: left;
@@ -1333,6 +1358,7 @@ h2 {
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
 }
+
 
 .g4-lg:hover {
     color: #fff;
@@ -1791,3 +1817,5 @@ h2 {
 .about-this-site h3 {
     text-align: center; width: 60%;
 }
+
+

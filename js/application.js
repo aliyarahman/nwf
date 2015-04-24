@@ -220,7 +220,7 @@ var commodity = "beef";
 // 3. Tallow
 
 
-
+/*
 
 var waypoint = new Waypoint({
     element: document.getElementById('beef-product-link'),
@@ -347,7 +347,7 @@ var waypoint = new Waypoint({
 //     }
 // });
 
-
+*/
 $("#beef-trade-map-container").scroll(function() {
     var y_pos = $(this).scrollTop();
     var sensitivity = 60;
