@@ -73,10 +73,16 @@ $("#burger-box").on('click', function(){
   if (menuopen === false) {
     $('.chapter-details').hide();
     $("#burger-menu").slideDown();
+
     $("#site-map-link").on('click', function(){
       if (sitemapopen === false) {
         $("#site-map").show();
         sitemapopen = true;
+        $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
+            $('#site-map, #burger-menu').hide();
+            sitemapopen = false;
+            menuopen = false;
+        });
       }
       else {
         $("#site-map").hide();
@@ -90,14 +96,11 @@ $("#burger-box").on('click', function(){
     $("#site-map").hide();
     menuopen = false;
   }
-
 });
-
 
 
 $('.site-sub-link').on('click', function(){
     var which_tangent= $(this).attr('onClick').split('="')[1].split('"')[0];
-    alert(which_tangent);
 });
 
 
