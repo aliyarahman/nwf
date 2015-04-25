@@ -39,106 +39,135 @@ $(document).ready(function() {
 
   // Places and repositions site menu on load and resize
 
-    var vidbottom = $("#rainforest-vid").height();
-    var bartop = $("#burger-box").height();
-    var burgertop = vidbottom-1.6*bartop;
-    $("#site-menu").css('top', burgertop);
-    
+    function position_site_menu() {
+        var videobottom = $('#rainforest-vid').height();
+        var menubarheight = $('#site-menu').height();
+        $('#site-menu, #site-map').css('top', videobottom-menubarheight);
+    }
+
+    position_site_menu();
+
     $(window).resize(function() {
-      $("#site-menu").css('top', burgertop);
-      location.reload();
+      position_site_menu();
     });
 
 
-  // Code to control rollover for table of contents buttons
+    // Controls site menu / burger box
 
-  $(".chapter-button").hover(function() {
-    $('.chapter-details').hide();
-    var top = $(this).offset().top;
-    var left = $(this).offset().left;
-    var detailsbox = $(this).find('.chapter-details');
+    var menuopen = false;
+    var sitemapopen = false;
+    $("#burger-box").on('click', function(){
+      if (menuopen === false) {
+        $('.chapter-details').hide();
+        $("#burger-menu").slideDown();
 
-    detailsbox.css({'top':top+25, 'left':left+30});
-
-    detailsbox.slideToggle();
-    $(this).find('.chapter-title, .chapter-number').toggleClass('greyed-out');
-
-  });
-
-// Controls site menu / burger box
-
-var menuopen = false;
-var sitemapopen = false;
-$("#burger-box").on('click', function(){
-  if (menuopen === false) {
-    $('.chapter-details').hide();
-    $("#burger-menu").slideDown();
-
-    $("#site-map-link").on('click', function(){
-      if (sitemapopen === false) {
-        $("#site-map").show();
-        sitemapopen = true;
-        $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
-            $('#site-map, #burger-menu').hide();
+        $("#site-map-link").on('click', function(){
+          if (sitemapopen === false) {
+            $("#site-map").show();
+            sitemapopen = true;
+            $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
+                $('#site-map, #burger-menu').hide();
+                sitemapopen = false;
+                menuopen = false;
+            });
+          }
+          else {
+            $("#site-map").hide();
             sitemapopen = false;
-            menuopen = false;
+          }
         });
+        menuopen = true;
       }
       else {
+        $("#burger-menu").slideUp();
         $("#site-map").hide();
-        sitemapopen = false;
+        menuopen = false;
       }
     });
-    menuopen = true;
-  }
-  else {
-    $("#burger-menu").slideUp();
-    $("#site-map").hide();
-    menuopen = false;
-  }
-});
 
 
-$('.site-sub-link').on('click', function(){
-    var which_tangent= $(this).attr('onClick').split('="')[1].split('"')[0];
-});
+    $('.site-sub-link').on('click', function(){
+        var which_tangent= $(this).attr('onClick').split('="')[1].split('"')[0];
+    });
 
 
-// Chapter Scrolling behavior
-// ====================================
-$(window).on('scroll', function() {
-    
-    var y_scroll_pos = window.pageYOffset;
-    var sec_2_y = $('#chapter-two').offset().top;
-    var sec_3_y = $('#chapter-three').offset().top;
-    var sec_4_y = $('#chapter-four').offset().top;
-    var sec_5_y = $('#chapter-five').offset().top;
+      // Places and repositions table of contents details on load and resize
 
-    var beef_bubble_expand = $("#beef-product-link").offset().top;
+    function position_contents_details () {
+        var top = $('#chapter-1-button').offset().top;
+        $('.chapter-details').css({'top':top+25});
 
-    if (y_scroll_pos < sec_2_y) {
-        // Chapter 1
-        // Close Chapter 2's trade maps container if it's open
-        if ($('.trade-maps-container').hasClass('trade-maps-container-end')) {
-            // $("#chapter-two").click();
-            $('.close-trade-map').click();
+        var ch1left = $('#chapter-1-button').offset().left;
+        $('#chapter-1-button .chapter-details').css({'left':ch1left+25});
+
+        var ch2left = $('#chapter-2-button').offset().left;
+        $('#chapter-2-button .chapter-details').css({'left':ch2left+25});
+
+        var ch3left = $('#chapter-3-button').offset().left;
+        $('#chapter-3-button .chapter-details').css({'left':ch3left+25});
+
+        var ch4left = $('#chapter-4-button').offset().left;
+        $('#chapter-4-button .chapter-details').css({'left':ch4left+25});
+
+        var ch5left = $('#chapter-5-button').offset().left;
+        $('#chapter-5-button .chapter-details').css({'left':ch5left+25});
+    }
+
+    position_contents_details();
+
+    $(window).resize(function() {
+          position_contents_details();
+        });
+
+
+
+    // Code to control rollover for table of contents buttons
+
+    var is_detail_open = false;
+        $(".chapter-button").on('mouseover', function() {
+            $(this).find('.chapter-details').show();
+         })
+        .on('mouseout', function(e) {
+            $(this).find('.chapter-details').hide();
+        });
+
+
+
+    // Chapter Scrolling behavior
+    // ====================================
+    $(window).on('scroll', function() {
+        
+        var y_scroll_pos = window.pageYOffset;
+        var sec_2_y = $('#chapter-two').offset().top;
+        var sec_3_y = $('#chapter-three').offset().top;
+        var sec_4_y = $('#chapter-four').offset().top;
+        var sec_5_y = $('#chapter-five').offset().top;
+
+        var beef_bubble_expand = $("#beef-product-link").offset().top;
+
+        if (y_scroll_pos < sec_2_y) {
+            // Chapter 1
+            // Close Chapter 2's trade maps container if it's open
+            if ($('.trade-maps-container').hasClass('trade-maps-container-end')) {
+                // $("#chapter-two").click();
+                $('.close-trade-map').click();
+            }
         }
-    }
-    else if (y_scroll_pos > sec_2_y) {
-        // Chapter 2
-        console.log("we've reached chapter two");
-    }
-    else if (y_scroll_pos > sec_3_y) {
-        console.log("we've reached chapter three");
-    }
-    else if (y_scroll_pos > sec_4_y) {
-        console.log("we've reached chapter four");
-    }
-    else if (y_scroll_pos > sec_5_y) {
-        console.log("we've reached chapter five");
-    }
+        else if (y_scroll_pos > sec_2_y) {
+            // Chapter 2
+            console.log("we've reached chapter two");
+        }
+        else if (y_scroll_pos > sec_3_y) {
+            console.log("we've reached chapter three");
+        }
+        else if (y_scroll_pos > sec_4_y) {
+            console.log("we've reached chapter four");
+        }
+        else if (y_scroll_pos > sec_5_y) {
+            console.log("we've reached chapter five");
+        }
 
-});
+    });
 
 
 
@@ -640,7 +669,6 @@ $('.ch4-yr-lg').on('click', function(){
 //=====================================
 
 var which_frame = 1;
-
 
 function ch5_switch_frame() {
     if (which_frame ==1) {
