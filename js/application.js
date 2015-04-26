@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   //Global behavior
   //====================================
 
@@ -76,20 +75,6 @@ $(document).ready(function() {
 
   // Prequel behavior
   //=====================================
-
-  // Places and repositions site menu on load and resize
-
-    function position_site_menu() {
-        var videobottom = $('#rainforest-vid').height();
-        var menubarheight = $('#site-menu').height();
-        $('#site-menu, #site-map').css('top', videobottom-menubarheight);
-    }
-
-    position_site_menu();
-
-    $(window).resize(function() {
-      position_site_menu();
-    });
 
 
     // Controls site menu / burger box
@@ -212,9 +197,6 @@ $('#forest-cover-yr-3').click(function(){
 $(".ship-pic img").mouseover(function() { 
     $(this).attr("src", "img/ship-icon-hover.png");
     })
-    .mouseout(function() {
-    $(this).attr("src", "img/ship-icon.png");
-    });
 });
 
 
