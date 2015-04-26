@@ -34,6 +34,46 @@ $(document).ready(function() {
   });
 
 
+
+    // Chapter Scrolling behavior
+    // ====================================
+    $(window).on('scroll', function() {
+        
+        var y_scroll_pos = window.pageYOffset;
+        var sec_2_y = $('#chapter-two').offset().top;
+        var sec_3_y = $('#chapter-three').offset().top;
+        var sec_4_y = $('#chapter-four').offset().top;
+        var sec_5_y = $('#chapter-five').offset().top;
+
+        var beef_bubble_expand = $("#beef-product-link").offset().top;
+
+        if (y_scroll_pos < sec_2_y) {
+            // Chapter 1
+            // Close Chapter 2's trade maps container if it's open
+            if ($('.trade-maps-container').hasClass('trade-maps-container-end')) {
+                // $("#chapter-two").click();
+                $('.close-trade-map').click();
+            }
+        }
+        else if (y_scroll_pos > sec_2_y) {
+            // Chapter 2
+            console.log("we've reached chapter two");
+        }
+        else if (y_scroll_pos > sec_3_y) {
+            console.log("we've reached chapter three");
+        }
+        else if (y_scroll_pos > sec_4_y) {
+            console.log("we've reached chapter four");
+        }
+        else if (y_scroll_pos > sec_5_y) {
+            console.log("we've reached chapter five");
+        }
+
+    });
+
+
+
+
   // Prequel behavior
   //=====================================
 
@@ -116,8 +156,8 @@ $(document).ready(function() {
     position_contents_details();
 
     $(window).resize(function() {
-          position_contents_details();
-        });
+        position_contents_details();
+    });
 
 
 
@@ -130,49 +170,6 @@ $(document).ready(function() {
         .on('mouseout', function(e) {
             $(this).find('.chapter-details').hide();
         });
-
-
-
-    // Chapter Scrolling behavior
-    // ====================================
-    $(window).on('scroll', function() {
-        
-        var y_scroll_pos = window.pageYOffset;
-        var sec_2_y = $('#chapter-two').offset().top;
-        var sec_3_y = $('#chapter-three').offset().top;
-        var sec_4_y = $('#chapter-four').offset().top;
-        var sec_5_y = $('#chapter-five').offset().top;
-
-        var beef_bubble_expand = $("#beef-product-link").offset().top;
-
-        if (y_scroll_pos < sec_2_y) {
-            // Chapter 1
-            // Close Chapter 2's trade maps container if it's open
-            if ($('.trade-maps-container').hasClass('trade-maps-container-end')) {
-                // $("#chapter-two").click();
-                $('.close-trade-map').click();
-            }
-        }
-        else if (y_scroll_pos > sec_2_y) {
-            // Chapter 2
-            console.log("we've reached chapter two");
-        }
-        else if (y_scroll_pos > sec_3_y) {
-            console.log("we've reached chapter three");
-        }
-        else if (y_scroll_pos > sec_4_y) {
-            console.log("we've reached chapter four");
-        }
-        else if (y_scroll_pos > sec_5_y) {
-            console.log("we've reached chapter five");
-        }
-
-    });
-
-
-
-
-
 
 
 
@@ -740,5 +737,27 @@ $('.ch5-right-arrow').on('click', function() {
         which_frame = 1;
     }
     ch5_switch_frame();
+});
+
+
+
+
+//Recommendations behavior
+//=====================================
+
+$('.map-point').on('click', function() {
+    var which_panel = $(this).attr('id').split('open-')[1];
+    var offset_top = ($('.recommendations-map-holder').height() - $('.recommendations-panel').height())/4;
+    var offset_left = ($('.recommendations-map-holder').width() - $('.recommendations-panel').width())/4;
+    var recs_top = $('.recommendations-map-holder').offset().top+offset_top;
+    var recs_left = $('.recommendations-map-holder').offset().left+offset_left*1.5;
+    $('.recommendations-panel').css({'top': recs_top, 'left': recs_left});
+    $('.recommendations-map-holder').css('opacity', 0.4);
+    $('#'+which_panel).fadeIn();
+
+    $('.close-recs').on('click', function() {
+        $('.recommendations-map-holder').css('opacity', 1.0);
+        $('.recommendations-panel').hide();
+    });
 });
 

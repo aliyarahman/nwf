@@ -909,31 +909,29 @@ h2 {
 
 #chapter-two {  
     background-color: #6fb174;
-    height: auto;
+    height: 76em;
     overflow: initial;
 }
 
-
-#chapter-two .graphic-content {
-    height: auto;
-}
 
 #product-bubbles {
     text-align: right;
     margin-bottom: -15em;
 }
 
-.beef-product-headers {
+.product-headers {
     color: white;
 }
 
-.beef-product-headers h4 {
-    font-size: 150%
+.product-headers-tagline {
+    font-family: Dala Floda-Roman;
+    font-size: 2em;
 }
 
-.beef-product-headers h3 {
-    font-size: 300%;
+.product-headers-product {
+    font-size: 3.5em;
     margin: 0.1em;
+    line-height: 1em;
 }
 
 #tallow-bubble, #leather-bubble, #beef-bubble {
@@ -943,17 +941,18 @@ h2 {
 }
 
 #leather-bubble {
-    top: -56em;
+    top: -60em;
     left: -9em;
 }
 
 #beef-bubble {
-    top: -11em;
-    left:-17em;
+    top: -32em;
+    left:-16em;
+    width: 28%;
 }
 
 #tallow-bubble {
-    top: -26em;
+    top: -38em;
     left: 21em;
 }
 
@@ -1008,6 +1007,7 @@ h2 {
     width: 50%;
     position: relative;
     left: 1em;
+    top: -9em;
 }
 
 #adult-cow img {
@@ -1729,6 +1729,11 @@ h2 {
     display: none;
 }
 
+#tab-five {
+    position: relative;
+    top: -5em;
+}
+
 #tab-five .tangent-read-more, #tab-five .tangent-title:hover {
     color: #6fb174;
 }
@@ -1760,34 +1765,74 @@ h2 {
 }
 
 
-.recommendations-subcolumn {
-    vertical-align: top;
-    display: inline-block;
-    width: 12.75em;
-    background-color: #fff;
-    color: #363845;
-    margin-top: 2em;
-    margin-right: 2em;
-}
-
-.recommendations-lg-column {
-    display: inline-block;
-    width: 50em;
-}
-
-.recommendations-actor {
-    color: #4bb7b7;
-    font-size: 1.25em;
-}
-
-.recommendations-photo {
-    width: 47em;
+.recommendations-map-holder {
+    margin: auto;
+    width: 1175px;
+    height: 783px;
+    background-image: url('../img/recommendations-map.png');
     }
 
 
-.recommendations-photo img {
+.recommendations-map-holder img {
     width: 100%;
     }
+
+
+.map-point {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    position: relative;
+}
+
+.map-point:hover {
+    background-color: #fff;
+}
+
+#open-ranchers-recs {top: 561px; left: 681px;}
+#open-meatpackers-recs {top: 610px; left: 9px;}
+#open-retailers-recs {top: 450px; left: 77px;}
+#open-government-recs {top: 80px; left: 25px;}
+#open-individuals-recs {top: 310px; left: 13px;}
+
+
+
+
+
+
+.recommendations-panel {
+    display: none;
+    padding: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 815px;
+    height: auto;
+    background-color: #363845;
+    color: #fff;
+    position: absolute;
+}
+
+
+.recommendations-actor {
+    color: #f27050;
+    font-size: 2em;
+}
+
+.close-recs {
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #f27050;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.4em;
+    position: relative;
+    left: -0.5em;
+    top: -0.5em;
+}
 
 
 /* Uncomment to hide major content sections for debugging */
