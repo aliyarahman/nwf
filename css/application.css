@@ -283,7 +283,7 @@ h2 {
     margin-right: 0;
     margin-left: auto;
     position: relative;
-    top: -3em;
+    top: -1em;
     z-index: 100;
     color: #fff;
     background-color: #484a56;
@@ -926,9 +926,15 @@ h2 {
 /* Chapter 2 style */
 
 #chapter-two {  
-    background-color: #6fb174;
-    height: 76em;
     overflow: initial;
+}
+
+#chapter-two .graphic-content {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #6fb174;
+    width: 1280px;
+    height: 760px;
 }
 
 
@@ -939,6 +945,8 @@ h2 {
 
 .product-headers {
     color: white;
+    margin-top: 3em;
+    margin-left: 3em;
 }
 
 .product-headers-tagline {
@@ -952,80 +960,43 @@ h2 {
     line-height: 1em;
 }
 
+.beef-subproducts {
+    font-size: 0.75em;
+}
+
 #tallow-bubble, #leather-bubble, #beef-bubble {
     display: inline-block;
-    width: 25%;
+    width: 365px;
     position: relative;
 }
 
 #leather-bubble {
-    top: -58em;
-    left: -9em;
+    top: -64em;
+    left: -4em;
 }
 
 #beef-bubble {
     top: -32em;
-    left:-16em;
-    width: 28%;
+    left: -13em;
 }
 
 #tallow-bubble {
-    top: -36em;
-    left: 21em;
+    top: -39em;
+    left: 29em;
 }
 
 .bubble-pic {
     width: 100%;
 }
 
-.ship-icon { 
-    position: relative;
-    width: 80%;
-    text-align: center;
-    z-index: 0;
-}
-
-.ship-pic {
-    display: inline-block;
-    vertical-align: middle;
-    z-index: 2;
-}
-
-.ship-tag {
-    display: inline-block;
-    vertical-align: middle;
-    background-color: #fff;
-    color: #6fb174;
-    padding: 1em;
-    padding-left: 2em;
-    padding-right: 1.5em;
-    position: relative;
-    left: -2em;
-    z-index: -1;
-}
-
-#beef-bubble .ship-icon {
-    top:-3.5em;
-    left: 6em;
-}
-
-#leather-bubble .ship-icon {
-    top:-4em;
-    left: 5.5em;
-}
-
-#tallow-bubble .ship-icon {
-    top:-3.5em;
-    left: 10.5em;
-}
 
 #adult-cow {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 58%;
     position: relative;
     left: 1em;
-    top: -9em;
+    top: -8.5em;
 }
 
 #adult-cow img {
@@ -1038,6 +1009,7 @@ h2 {
 
 .trade-maps-container {
     overflow: hidden;
+    display: none;
     background-color: #89bf8d;
     background-repeat: no-repeat;
     position: relative;
@@ -1050,112 +1022,6 @@ h2 {
 .trade-map-content {
     text-align: center;
     /*margin-top: 10em;*/
-}
-
-.trade-maps-container-start {
-    width: 0px !important; /* Otherwise the width will be overwritten when shrinking */
-    height: 0px;
-    border-radius: 50%;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.trade-maps-container-end {
-    width: 1200px;
-    height: 1200px;
-    border-radius: 50%;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.circle-to-square-start {
-    width: 1200px;
-    border-radius: 50%;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.circle-to-square-end {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.beef-bubble-start {
-    top: -4em;
-    left: -24em;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.beef-bubble-end {
-    top: -64em;
-    left: 0;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.leather-bubble-start {
-    top: -64em;
-    left: 24em;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.leather-bubble-end {
-    top: -64em;
-    left: 0;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.tallow-bubble-start {
-    top: -12em;
-    left: 24em;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.tallow-bubble-end {
-    top: -12em;
-    left: 0;
-    -moz-transition: all 1.5s;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-.lock-scroll {
-    overflow: hidden;
-    position: relative;
-}
-
-.overlay-scroll {
-    position: fixed;
-    overflow-y: scroll;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.scrollable {
-    position: static;
-}
-
-.img-responsive {
-    max-width: 100%;
-    height: auto;
 }
 
 .close-trade-map {
@@ -1182,17 +1048,6 @@ h2 {
     margin-left: 3em;
 }
 
-.col-9 {
-    float: left;
-    width: 75%;
-    position: relative;
-}
-
-.col-3 {
-    float: left;
-    width: 25%;
-    position: relative;
-}
 
 .trade-map-title h4 {
     font-size: 2em;
@@ -1883,32 +1738,90 @@ h2 {
 }
 
 
-/* Uncomment to hide major content sections for debugging */
-/*
-#prequel, #chapter-one, #chapter-two, #chapter-three, #chapter-four {display: none;}
-*/
-
-
-
 
 /* Footer style */
 
 #about_and_credits {
+    background-color: #363845;
     padding-top: 4em;
+    margin-top: 3em;    
 }
 
 .about-this-site {
     text-align: center;
-    border: #4bb7b7 3px dashed;
-    width: 80%;
     margin: 0 auto;
+    color: #fff;
 }
 
-.about-this-site h3 {
-    text-align: center; width: 60%;
+.social-media {
+    color: #4bb7b7;
+}
+
+.social-media-icons {
+    margin-top: 1.5em;
+    margin-bottom: 3.5em;
+}
+
+.twitter-icon, .facebook-icon {
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 2em;
+    position: relative;
+    left: -0.2em;
 }
 
 
+.funders, .contributors, .endorsers {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2em;
+    line-height: 0.4em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.funders h3, .contributors h3, .endorsers h3 {
+    font-weight: normal;
+    font-size: 1.3em;
+
+}
+
+.contributors {
+    margin-left: 4em;
+}
+
+.endorsers {
+    margin-top: 2.5em;
+    margin-bottom: 3.5em;
+}
+
+.logos {
+    background-color: #d7d6db;
+    padding-top: 3em;
+    padding-bottom: 2em; 
+    text-align: center;  
+}
+
+
+.logo {
+    display: inline-block;
+    height: 6em;
+    margin: 1em;
+    margin-bottom: 4em;
+}
+
+#moore-logo {
+    height: 5em;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.copyright-info {
+    color: #363845;
+}
 
 /* Citation style */
 
