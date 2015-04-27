@@ -213,11 +213,6 @@ $('#forest-cover-yr-3').click(function(){
 //Chapter 2 behavior
 //=====================================
 
-//Ship button rollover
-$(".ship-pic img").mouseover(function() { 
-    $(this).attr("src", "img/ship-icon-hover.png");
-});
-
 
 //Sets the first commodity to open to beef if no clicking happenss
 var commodity = "beef";
