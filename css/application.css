@@ -505,7 +505,7 @@ h2 {
 #prequel-title-large {
     font-size: 6em;
     line-height: 1em;
-    margin-bottom: -0.5em;
+    margin-top: 2em;
 }
 
 #prequel-title-small {
@@ -515,13 +515,12 @@ h2 {
 
 #prequel-blurb {
     color: white;
-    position: relative;
     font-family: Dala Floda-Roman;
     font-size: 2.2em;
     line-height: 1em;
     width: 23em;
     margin-left: 10em;
-    margin-top: 2em;
+    margin-top: 3em;
 }
 
 .menu-bar {
@@ -1604,8 +1603,8 @@ h2 {
     height: 4em;
     vertical-align: middle;
     position: relative;
-    left: 19em;
-    top: -1.5em;
+    left: 21em;
+    top: -19.5em;
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
     transition: all 1s;
@@ -1809,7 +1808,7 @@ h2 {
     margin: auto;
     width: 1175px;
     height: 783px;
-    background-image: url('../img/recommendations-map.png');
+    background-image: url('../img/recommendations-map.jpg');
     }
 
 
@@ -1911,8 +1910,6 @@ h2 {
 /* Citation style */
 
 .citation-number {
-    font-weight: bold;
-    color: #6fb174;
     text-decoration: underline;
 }
 
@@ -1924,6 +1921,15 @@ h2 {
     background-color: #363845;
     color: #fff;
     font-size: 1em;
+    box-shadow: 7px 7px #e5e5e5;
+}
+
+#citation6, #citation7 {
+    box-shadow: 7px 7px #b98728;
+}
+
+#citation17 {
+    background-color: #5e616a;
 }
 
 .citation a {

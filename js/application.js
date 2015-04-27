@@ -90,47 +90,48 @@ $(document).ready(function() {
   // Prequel behavior
   //=====================================
 
-
     // Controls site menu / burger box
 
     var menuopen = false;
     var sitemapopen = false;
-    $("#burger-box").on('click', function(){
-      if (menuopen === false) {
-        $('.chapter-details').hide();
-        $("#burger-menu").slideDown();
 
-        $("#site-map-link").on('click', function(){
-          if (sitemapopen === false) {
-            $("#site-map").show();
-            sitemapopen = true;
-            $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
-                $('#site-map, #burger-menu').hide();
-                sitemapopen = false;
-                menuopen = false;
+    $("#burger-box").on('click', function(){
+        if (menuopen === false) {
+            $('.chapter-details').hide();
+            $("#burger-menu").slideDown();
+
+            $("#site-map-link").on('click', function(){
+                if (sitemapopen === false) {
+                    $("#site-map").show();
+                    sitemapopen = true;
+                    $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
+                        $('#site-map, #burger-menu').hide();
+                        sitemapopen = false;
+                        menuopen = false;
+                    });
+                }
+                else {
+                    $("#site-map").hide();
+                    sitemapopen = false;
+                }
             });
-          }
-          else {
+            menuopen = true;
+            }
+        else {
+            $("#burger-menu").slideUp();
             $("#site-map").hide();
-            sitemapopen = false;
-          }
-        });
-        menuopen = true;
-      }
-      else {
-        $("#burger-menu").slideUp();
-        $("#site-map").hide();
-        menuopen = false;
-      }
+            menuopen = false;
+            }
     });
 
+    // Link code for site-map links
 
     $('.site-sub-link').on('click', function(){
         var which_tangent= $(this).attr('onClick').split('="')[1].split('"')[0];
     });
 
 
-      // Places and repositions table of contents details on load and resize
+    // Places and repositions table of contents details on load and resize
 
     function position_contents_details () {
         var top = $('#chapter-1-button').offset().top;
@@ -163,12 +164,13 @@ $(document).ready(function() {
     // Code to control rollover for table of contents buttons
 
     var is_detail_open = false;
-        $(".chapter-button").on('mouseover', function() {
-            $(this).find('.chapter-details').show();
-         })
-        .on('mouseout', function(e) {
-            $(this).find('.chapter-details').hide();
-        });
+    
+    $(".chapter-button").on('mouseover', function() {
+        $(this).find('.chapter-details').show();
+     })
+    .on('mouseout', function(e) {
+        $(this).find('.chapter-details').hide();
+    });
 
 
 
@@ -185,9 +187,11 @@ $('.year-number-lg').click(function(){
 $('#cattle-head-yr-1').click(function(){
     $('.cattle-head-growth img').attr('src','img/Map-Herd1993.png');
 });
+
 $('#cattle-head-yr-2').click(function(){
     $('.cattle-head-growth img').attr('src','img/Map-Herd2003.png');
 });
+
 $('#cattle-head-yr-3').click(function(){
     $('.cattle-head-growth img').attr('src','img/Map-Herd2013.png');
 });
@@ -195,9 +199,11 @@ $('#cattle-head-yr-3').click(function(){
 $('#forest-cover-yr-1').click(function(){
     $('.forest-cover-loss img').attr('src','img/Map-Defor1991.png');
 });
+
 $('#forest-cover-yr-2').click(function(){
     $('.forest-cover-loss img').attr('src','img/Map-Defor2003.png');
 });
+
 $('#forest-cover-yr-3').click(function(){
     $('.forest-cover-loss img').attr('src','img/Map-Defor2013.png');
 });
@@ -210,7 +216,6 @@ $('#forest-cover-yr-3').click(function(){
 //Ship button rollover
 $(".ship-pic img").mouseover(function() { 
     $(this).attr("src", "img/ship-icon-hover.png");
-    })
 });
 
 
@@ -372,7 +377,7 @@ var waypoint = new Waypoint({
 //     }
 // });
 
-*/
+
 $("#beef-trade-map-container").scroll(function() {
     var y_pos = $(this).scrollTop();
     var sensitivity = 60;
@@ -542,7 +547,7 @@ $('#tallow-bubble, #tallow-bubble-nav').on('click', function() {
         $("#main-trade-map").attr('src', img_url);
     });
 });
-
+*/
 
 
 
@@ -628,7 +633,7 @@ $('.ch4-yr-lg').on('click', function(){
     var ch4legendtop = $('#ch4-map-legend').offset().top;
     $('#ch4-map-legend').css({'position':'absolute', 'left': ch4legendleft, 'top': ch4legendtop});
     $('#chapter-four').css({'background-size':'600% 600%','background-position':'53% 25%'});
-    $('.ch4-map-overlay').css({'width':'30em','height':'40em', 'left':'2.5em', 'top':'8em'});
+    $('.ch4-map-overlay').css({'width':'30em','height':'40em', 'left':'2.5em', 'top':'-14em'});
     var which_map = $(this).attr('id').split('-')[0];
     $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
     $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
@@ -757,3 +762,6 @@ $('.map-point').on('click', function() {
     });
 });
 
+
+
+});
