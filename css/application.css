@@ -145,6 +145,12 @@ h2 {
     color: #afb0b5;
 }
 
+.citation-number {
+    font-weight: bold;
+    color: #6fb174;
+    text-decoration: underline;
+}
+
 .content {
     width: 1280px;
     margin-left: auto;
@@ -266,6 +272,15 @@ h2 {
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid #fff;
+}
+
+.graphic-title, .graphic-caption, .graphic-title .citation-number, .graphic-caption .citation-number {
+    color: #fff;
+}
+
+.graphic-title {
+    font-weight: bold;
+    font-size: 1.25em;
 }
 
 .tangent-tab {
@@ -759,14 +774,6 @@ h2 {
     height: 800px;
 }
 
-#chapter-one .chapter-summary-tagline {
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-    -webkit-column-gap: 2em; /* Chrome, Safari, Opera */
-    -moz-column-gap: 2em; /* Firefox */
-    column-gap: 2em;
-}
 
 #ch1-left-col, #ch1-right-col {
     margin-top: -3.2em;
@@ -783,6 +790,14 @@ h2 {
 
 #ch1-right-col {
     width: 49%;
+}
+
+#ch1-right-col .graphic-title {
+    margin-left: 2.5em;
+}
+
+#ch1-right-col .graphic-caption {
+    margin-left: 3em;
 }
 
 .year-number-holder {
@@ -947,7 +962,7 @@ h2 {
 }
 
 #leather-bubble {
-    top: -60em;
+    top: -58em;
     left: -9em;
 }
 
@@ -958,7 +973,7 @@ h2 {
 }
 
 #tallow-bubble {
-    top: -38em;
+    top: -36em;
     left: 21em;
 }
 
@@ -1183,7 +1198,7 @@ h2 {
 }
 
 .trade-map-title h4 {
-    font-size: 1.5em;
+    font-size: 2em;
     color: #fff;
 }
 
@@ -1329,6 +1344,8 @@ h2 {
     line-height: 0.65em; 
 }
 
+.agreement-bullet {margin-left: 2em;}
+
 #ch3-left-col {
     display:inline-block;
     width: 40%;
@@ -1342,6 +1359,17 @@ h2 {
     text-align: right;
     vertical-align: top;
 }
+
+#chapter-three .graphic-title {
+    width: 30em;
+    margin-bottom: 1em;
+}
+
+
+#chapter-three .graphic-caption {
+    width: 30em;
+}
+
 
 .g4-holder {
     margin-right: 5%;
@@ -1511,6 +1539,19 @@ h2 {
 #chapter-four .chapter-number-lg {
     line-height: 0.65em;
 }
+
+
+#chapter-four .graphic-title {
+    width: 30em;
+    margin-bottom: 1em;
+}
+
+
+#chapter-four .graphic-caption {
+    width: 30em;
+    font-size: 1.25em;
+}
+
 
 #chapter-four .tangent-tab {
     color: #b29377;
@@ -1748,12 +1789,6 @@ h2 {
 
 /* Recommendations style */
 
-
-#recommendations {
-
-}
-
-
 .recommendations-header {
     color: #363845;
     width: 30em;
@@ -1768,6 +1803,10 @@ h2 {
 
 .recommendations-header .chapter-summary-tagline {
     font-family: Dala Floda-Roman;
+    font-size: 1.7em;
+    width: 31em;
+    margin-top: 1em;
+    margin-left: 0.2em;
 }
 
 
@@ -1801,8 +1840,7 @@ h2 {
 #open-retailers-recs {top: 450px; left: 77px;}
 #open-government-recs {top: 80px; left: 25px;}
 #open-individuals-recs {top: 310px; left: 13px;}
-
-
+#open-banks-recs {top: 180px; left: 130px;}
 
 
 
@@ -1817,27 +1855,34 @@ h2 {
     background-color: #363845;
     color: #fff;
     position: absolute;
+    font-size: 1.25em;
 }
-
 
 .recommendations-actor {
     color: #f27050;
     font-size: 2em;
+    margin-top: -0.5em;
+}
+
+.recommendations-panel li {
+    margin-bottom: 1em;
 }
 
 .close-recs {
-    font-size: 2.5em;
-    font-weight: bold;
-    width: 1.5em;
-    height: 1.5em;
     background-color: #f27050;
     color: #fff;
-    border-radius: 50%;
+    font-size: 2.2em;
+    font-weight: bold;
     text-align: center;
-    line-height: 1.4em;
+    width: 1.2em;
+    padding-left: -0.15em;
+    padding-right: 0.05em;
+    height: 1.2em;
+    border-radius: 50%;
+    line-height: 1.1em;
     position: relative;
-    left: -0.5em;
-    top: -0.5em;
+    left: -0.75em;
+    top: -0.75em;
 }
 
 
