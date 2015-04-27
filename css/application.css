@@ -1571,14 +1571,12 @@ h2 {
 
 
 .ch5-label  {
-    vertical-align: top;
     display: inline-block;
     background-color: #fff;
     color: #000;
-    width: 17em;
+    width: 22em;
     height: 7em;
     padding: 1em;
-    padding-top: 1.25em;
     padding-right: 0.3em;
     position: relative;
     top: 1em;
@@ -1587,23 +1585,31 @@ h2 {
 }
 
 
-.ch5-left-arrow, .ch5-right-arrow {
-    color: #9a9aa2;
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-}
-
-.ch5-left-arrow:hover, .ch5-right-arrow:hover {
-    color: #484a56;
-}
-
-
 .ch5-label-text {
+    height: 100%;
     vertical-align: middle;
     width: 12em;
     padding: 0em 1em;
     display: inline-block;
+}
+
+.ch5-left-arrow, .ch5-right-arrow {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #f27050;
+    font-size: 3.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    line-height: 0.9em;
+}
+
+.ch5-left-arrow:hover, .ch5-right-arrow:hover {
+    color: #484a56;
 }
 
 
