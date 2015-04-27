@@ -71,6 +71,20 @@ $(document).ready(function() {
     });
 
 
+  // Citation behavior
+  // ====================================
+
+    $('.citation-number').on('mouseover', function() {
+        var which_citation = '#citation'+$(this).text();
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $(which_citation).css({'top': citation_top, 'left': citation_left}).show();
+        $(which_citation).on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+
 
 
   // Prequel behavior

@@ -145,11 +145,6 @@ h2 {
     color: #afb0b5;
 }
 
-.citation-number {
-    font-weight: bold;
-    color: #6fb174;
-    text-decoration: underline;
-}
 
 .content {
     width: 1280px;
@@ -1912,3 +1907,29 @@ h2 {
 }
 
 
+
+/* Citation style */
+
+.citation-number {
+    font-weight: bold;
+    color: #6fb174;
+    text-decoration: underline;
+}
+
+.citation {
+    display: none;
+    position: absolute;
+    width: 20em;
+    padding: 1.5em;
+    background-color: #363845;
+    color: #fff;
+    font-size: 1em;
+}
+
+.citation a {
+    color: #fff;
+}
+
+.citation-link {
+    text-decoration: underline;
+}
