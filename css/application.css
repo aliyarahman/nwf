@@ -146,7 +146,7 @@ h2 {
 }
 
 
-.content {
+.content, .graphic-content {
     width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -259,7 +259,6 @@ h2 {
 
 .chapter-triangle {
     position: relative;
-    top: -2em;
     text-align: center;
     margin: 0 auto;
     width: 0; 
@@ -274,9 +273,29 @@ h2 {
 }
 
 .graphic-title {
-    font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.8em;
+    width: 15em;
+    margin-top: 2em;
+    margin-bottom: 0.3em;
+    font-family: Dala Floda-Roman;
 }
+
+.graphic-caption {
+    width: 34em;
+    font-size: 1em;
+}
+
+
+.year-number-lg  {
+    color: #b98728;
+    text-align: left;
+    line-height: 0.1em;
+    font-size: 4.5em;
+    -webkit-font-feature-settings: 'tnum';
+    -moz-font-feature-settings: 'tnum';
+    -ms-font-feature-settings: 'tnum';
+}
+
 
 .tangent-tab {
     width: 20em;
@@ -763,58 +782,40 @@ h2 {
 /* Chapter 1 style */
 
 #chapter-one {
-    background-color: #db9d2e;
     height: auto;
 }
 
 #chapter-one .graphic-content {
-    height: 800px;
+    background-color: #db9d2e;
+    height: 880px;
+}
+
+#chapter-one .chapter-triangle {
+    left: -0.5em;
 }
 
 
 #ch1-left-col, #ch1-right-col {
-    margin-top: -3.2em;
-    padding-top: 2em;
     vertical-align: top;
     display: inline-block;
+    width: 47%;
+    padding-left: 2em;
 }
 
 #ch1-left-col {
-    width: 50%;
     background-image: url("../img/BackgroundTile.png");
     background-repeat: repeat-y;
 }
 
-#ch1-right-col {
-    width: 49%;
+#ch1-left-col .year-number-holder {
+    position: relative;
+    top: 2em;
 }
 
-#ch1-right-col .graphic-title {
-    margin-left: 2.5em;
-}
-
-#ch1-right-col .graphic-caption {
-    margin-left: 3em;
-}
-
-.year-number-holder {
-    margin-top: 3.5em;
-}
 
 #chapter-one .year-number-lg  {
     color: #b98728;
-    text-align: left;
-    line-height: 0.1em;
-    font-size: 5em;
-    -webkit-font-feature-settings: 'tnum';
-    -moz-font-feature-settings: 'tnum';
-    -ms-font-feature-settings: 'tnum';
 }
-
-#ch1-right-col .year-number-holder {
-    margin-left: 3em;
-}
-
 
 #chapter-one .year-number-lg:hover {
     color: #363845;
@@ -825,16 +826,11 @@ h2 {
     color: #363845;
     text-align: left;
     width: 15em;
-    margin-left: 0.5em;
-    margin-top: 12em;
+    margin-top: 10em;
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
 
-}
-
-#ch1-right-col .ch1-map-legend {
-    margin-left: 3.5em;
 }
 
 .ch1-legend-note {
@@ -898,24 +894,25 @@ h2 {
     background-color: #a3cda7;
 }
 
-
-
 .brazil-map-ch-1 {
-    width: 31em;
+    width: 29em;
     display: inline-block;
     position: relative;
-    top: -32em;
-    left: 9em;
+    top: -28em;
+    left: 8.5em;
 }
 
-.forest-cover-loss .brazil-map-ch-1 {
-    left: 12em;
-    top: -29em;
-}
 
 .brazil-map-ch-1 img {
     width: 100%;
 }
+
+#ch1-right-col .brazil-map-ch-1 {
+    width: 30em;
+    left: 8.1em;
+    top: -27em;
+}
+
 
 #tab-one .tangent-read-more, #tab-one .tangent-title:hover {
     color: #db9d2e;
@@ -930,10 +927,7 @@ h2 {
 }
 
 #chapter-two .graphic-content {
-    margin-left: auto;
-    margin-right: auto;
     background-color: #6fb174;
-    width: 1280px;
     height: 760px;
 }
 
@@ -1212,16 +1206,6 @@ h2 {
     vertical-align: top;
 }
 
-#chapter-three .graphic-title {
-    width: 30em;
-    margin-bottom: 1em;
-}
-
-
-#chapter-three .graphic-caption {
-    width: 30em;
-}
-
 
 .g4-holder {
     margin-right: 5%;
@@ -1393,18 +1377,6 @@ h2 {
 }
 
 
-#chapter-four .graphic-title {
-    width: 30em;
-    margin-bottom: 1em;
-}
-
-
-#chapter-four .graphic-caption {
-    width: 30em;
-    font-size: 1.25em;
-}
-
-
 #chapter-four .tangent-tab {
     color: #b29377;
 }
@@ -1550,8 +1522,8 @@ h2 {
 }
 
 #chapter-five .tangent-tab {
-      color: #6fb174;
-      }
+    color: #6fb174;
+    }
 
 #ch5-image-holder {
     width: 100%;
