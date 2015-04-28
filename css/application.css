@@ -3,7 +3,7 @@
  * Legal Disclaimer
  *
  * These Fonts are licensed only for use on these domains and their subdomains:
- * www.nwf.org
+ * www.zerodeforestationcattle.org
  *
  * It is illegal to download or use them on other websites.
  *
@@ -217,6 +217,8 @@ h2 {
 .read-more-less {
     text-align: left;
     margin: 2em 0;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .read-more-button {
@@ -268,6 +270,10 @@ h2 {
     border-top: 20px solid #fff;
 }
 
+#chapter-three .chapter-triangle, #chapter-four .chapter-triangle, #chapter-five .chapter-triangle {
+    top: -2em;
+}
+
 .graphic-title, .graphic-caption, .graphic-title .citation-number, .graphic-caption .citation-number {
     color: #fff;
 }
@@ -290,6 +296,8 @@ h2 {
     color: #b98728;
     text-align: left;
     line-height: 0.1em;
+    cursor: pointer;
+    cursor: hand;
     font-size: 4.5em;
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
@@ -312,6 +320,8 @@ h2 {
     font-size: 1.1em;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .tangent-tab:hover {
@@ -348,7 +358,9 @@ h2 {
     color: #eb6451;
 }
 
-#ch3t2 img {width: 15em;}
+#ch3t2 img {
+    width: 15em;
+}
 
 
 #ch4t1 .tangent-article-tagline {
@@ -396,6 +408,8 @@ h2 {
     color: #9a9aa2;
     font-size: 1.75em;
     margin: 0.2em 0 0.6em 0;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .tangent-article-title {
@@ -464,6 +478,8 @@ h2 {
     padding: 0.1em;
     margin-right: 1em;
     margin-top: 0.1em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .tangent-article-download-image {
@@ -527,7 +543,8 @@ h2 {
 #prequel-title-large {
     font-size: 6em;
     line-height: 1em;
-    margin-top: 2em;
+    margin-top: 1em;
+    margin-left: 1em;
 }
 
 #prequel-title-small {
@@ -542,16 +559,20 @@ h2 {
     line-height: 1em;
     width: 23em;
     margin-left: 10em;
-    margin-top: 3em;
+    margin-top: 5em;
 }
 
 .menu-bar {
     z-index: 60;
     margin-top: -3em;
     position: absolute;
+    cursor: pointer;
+    cursor: hand;
 }
 
 #site-menu, #site-map {
+    cursor: pointer;
+    cursor: hand;
 }
 
 #site-menu {
@@ -667,6 +688,8 @@ h2 {
     width: 19%;
     display: inline-block;
     vertical-align: top;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .chapter-button-left {
@@ -729,6 +752,8 @@ h2 {
     position: absolute;
     left: 6em;
     z-index: 50;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .chapter-details-square {
@@ -830,7 +855,6 @@ h2 {
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
-
 }
 
 .ch1-legend-note {
@@ -844,6 +868,7 @@ h2 {
     vertical-align: middle;
     font-size: 1.1em;
 }
+
 
 #ch1-legend-box-1, #ch1-legend-box-2, #ch1-legend-box-3, 
 #ch1-legend-box-4, #ch1-legend-box-5, 
@@ -962,6 +987,8 @@ h2 {
     display: inline-block;
     width: 365px;
     position: relative;
+    cursor: pointer;
+    cursor: hand;
 }
 
 #leather-bubble {
@@ -1026,6 +1053,8 @@ h2 {
     text-align: center;
     font-size: 30px;
     margin-top: 1em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .trade-map {
@@ -1086,28 +1115,6 @@ h2 {
     padding: 1em;
 }
 
-.trade-map-ship-icon {
-    display: inline-block;
-    position: relative;
-    top: -1em;
-    left: 1.5em;
-    z-index: 2;
-}
-
-.trade-map-ship-tag {
-    color: #6fb174;
-    padding: 1em;
-    padding-left: 2em;
-    padding-right: 1.5em;
-}
-
-.testing-ships {
-  display: none;
-    position: relative;
-    top: -30em;
-    left: -18em;
-    opacity: 0.5;
-}
 
 .trade-map-legend {
     height: 20em;
@@ -1119,6 +1126,8 @@ h2 {
     font-size: 2.25em;
     font-weight: normal;
     line-height: 0.1em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .trade-map-data-rollover {
@@ -1161,10 +1170,6 @@ h2 {
   color: #363845;
 }
 
-.beef-data {
-
-}
-
 .tallow-data {
     display: none;
 }
@@ -1186,6 +1191,11 @@ h2 {
     height: 1400px;
 }
 
+#chapter-three .g4-holder {
+    position: relative;
+    top: -7em;
+}
+
 #chapter-three .chapter-number-lg {
     line-height: 0.65em; 
 }
@@ -1195,7 +1205,6 @@ h2 {
 #ch3-left-col {
     display:inline-block;
     width: 40%;
-    margin-left: 5%;
     vertical-align: top;
 }
 
@@ -1224,6 +1233,8 @@ h2 {
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
+    cursor: pointer;
+    cursor: hand;
 }
 
 
@@ -1236,7 +1247,7 @@ h2 {
     color: #fff;
     position: relative;
     left: -65em;
-    top: 25em;
+    top: 15em;
     width: 80em;
 }
 
@@ -1320,15 +1331,17 @@ h2 {
 #brazil-map-ch-3  {
     display: inline-block;
     position: relative;
-    top: -10em;
+    top: -25em;
     left: 2em;
     width: 100%;
+    cursor: pointer;
+    cursor: hand;
 }
 
 #brazil-map-ch-3-overlay {
     position: relative;
     left: 2em;
-    top: -61em;
+    top: -70em;
     height: 30em;
 }
 
@@ -1374,6 +1387,8 @@ h2 {
 
 #chapter-four .chapter-number-lg {
     line-height: 0.65em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 
@@ -1382,8 +1397,6 @@ h2 {
 }
 
 .ch4-yr-holder {
-    margin-top: 7em;
-    margin-left: 1em;
     color: #876e5a;
     display: inline-block;
 }
@@ -1395,7 +1408,10 @@ h2 {
     font-size: 1.4em;
     margin-top: 2em;
     font-weight: bold;
+    cursor: pointer;
+    cursor: hand;
 }
+
 
 .ch4-yr-lg:hover {
     color: #fff;
@@ -1456,7 +1472,7 @@ h2 {
     display: inline-block;
     color: #fff;
     position: relative;
-    top: 20em;
+    top: 18em;
     left: -43.5em;
     overflow: hidden;
     width: 20em;
@@ -1578,6 +1594,8 @@ h2 {
     height: 1em;
     border-radius: 50%;
     line-height: 0.9em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .ch5-left-arrow:hover, .ch5-right-arrow:hover {
@@ -1659,6 +1677,8 @@ h2 {
     height: 3em;
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .map-point:hover {
@@ -1671,8 +1691,6 @@ h2 {
 #open-government-recs {top: 80px; left: 25px;}
 #open-individuals-recs {top: 310px; left: 13px;}
 #open-banks-recs {top: 180px; left: 130px;}
-
-
 
 
 .recommendations-panel {
@@ -1713,6 +1731,8 @@ h2 {
     position: relative;
     left: -0.75em;
     top: -0.75em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 
@@ -1738,6 +1758,8 @@ h2 {
 .social-media-icons {
     margin-top: 1.5em;
     margin-bottom: 3.5em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .twitter-icon, .facebook-icon {
@@ -1805,6 +1827,8 @@ h2 {
 
 .citation-number {
     text-decoration: underline;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .citation {
@@ -1828,8 +1852,12 @@ h2 {
 
 .citation a {
     color: #fff;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .citation-link {
     text-decoration: underline;
+    cursor: pointer;
+    cursor: hand;
 }
