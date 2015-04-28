@@ -1,9 +1,10 @@
-/* Fonts
+/* FONTS
 
+/*
  * Legal Disclaimer
  *
  * These Fonts are licensed only for use on these domains and their subdomains:
- * www.zerodeforestationcattle.org
+ * zerodeforestationcattle.org
  *
  * It is illegal to download or use them on other websites.
  *
@@ -91,16 +92,6 @@
 }
 
 @font-face {
-    font-family: "Dala Floda-Roman";
-    src:url("../fonts/Dala Floda-Roman.otf");
-    src:url("../fonts/DalaFloda-Roman-Web.woff") format("woff"),
-        url("../fonts/DalaFloda-Roman-Web.ttf") format("truetype"),
-        url("../fonts/DalaFloda-Roman-Web.svg") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "Circular-Pro-Bold";
     src:url("../fonts/lineto-circular-pro-bold.eot");
     src:url("../fonts/lineto-circular-pro-bold.eot?#iefix") format("embedded-opentype"),
@@ -110,6 +101,40 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2013 Schwartzco Inc.
+        License: 1504-DPVTJK     
+*/
+
+
+@font-face {
+  font-family: 'Dala Floda Web';
+  src: url('../fonts/DalaFloda-Roman-Web.eot');
+  src: url('../fonts/DalaFloda-Roman-Web.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/DalaFloda-Roman-Web.woff') format('woff'),
+     url('../fonts/DalaFloda-Roman-Web.ttf') format('truetype'),
+     url('../fonts/DalaFloda-Roman-Web.svg#DalaFloda-Roman') format('svg');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.DalaFloda-Roman-Web {
+  font-family: 'Dala Floda Web';
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
 
 
 /* Global style */
@@ -162,7 +187,7 @@ h2 {
     display: inline-block;
     vertical-align: middle;
     color: white;
-    font-family: Dala Floda-Roman;
+    font-family: Dala Floda Web;
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
@@ -270,7 +295,7 @@ h2 {
     border-top: 20px solid #fff;
 }
 
-#chapter-three .chapter-triangle, #chapter-four .chapter-triangle, #chapter-five .chapter-triangle {
+#chapter-three .chapter-triangle, #chapter-five .chapter-triangle {
     top: -2em;
 }
 
@@ -283,12 +308,30 @@ h2 {
     width: 15em;
     margin-top: 2em;
     margin-bottom: 0.3em;
-    font-family: Dala Floda-Roman;
+    font-family: Dala Floda Web;
+}
+
+#chapter-three .graphic-title, #chapter-four .graphic-title {
+    margin-left: 2em;
+}
+
+#chapter-three .graphic-caption, #chapter-four .graphic-caption {
+    margin-left: 3.5em;
+}
+
+#chapter-three .year-number-holder, #chapter-four .year-number-holder {
+    margin-left: 3.2em;
 }
 
 .graphic-caption {
     width: 34em;
     font-size: 1em;
+}
+
+
+.year-number-holder {
+    position: relative;
+    top: 2em;
 }
 
 
@@ -554,7 +597,7 @@ h2 {
 
 #prequel-blurb {
     color: white;
-    font-family: Dala Floda-Roman;
+    font-family: Dala Floda Web;
     font-size: 2.2em;
     line-height: 1em;
     width: 23em;
@@ -704,7 +747,7 @@ h2 {
 }
 
 .chapter-number {
-    font-family: Dala Floda-Roman;
+    font-family: Dala Floda Web;
     font-size: 6em;
     position: relative;
     top: -0.3em;
@@ -832,10 +875,6 @@ h2 {
     background-repeat: repeat-y;
 }
 
-#ch1-left-col .year-number-holder {
-    position: relative;
-    top: 2em;
-}
 
 
 #chapter-one .year-number-lg  {
@@ -969,7 +1008,7 @@ h2 {
 }
 
 .product-headers-tagline {
-    font-family: Dala Floda-Roman;
+    font-family: Dala Floda Web;
     font-size: 2em;
 }
 
@@ -1186,21 +1225,32 @@ h2 {
 
 /* Chapter 3 style */
 
-#chapter-three { 
-    background-color: #363845;
-    height: 1400px;
+#chapter-three .graphic-content {
+    background-color: #363845;    
+    height: 900px;
 }
 
-#chapter-three .g4-holder {
-    position: relative;
-    top: -7em;
+
+#chapter-three .year-number-holder {
+    width: 35em;
 }
+
+#chapter-three .year-number-lg {
+    color: #5e616a;
+}
+
+#chapter-three .year-number-lg:hover {
+    color: #fff;
+}
+
 
 #chapter-three .chapter-number-lg {
     line-height: 0.65em; 
 }
 
-.agreement-bullet {margin-left: 2em;}
+.agreement-bullet {
+    margin-left: 2em;
+    }
 
 #ch3-left-col {
     display:inline-block;
@@ -1215,32 +1265,6 @@ h2 {
     vertical-align: top;
 }
 
-
-.g4-holder {
-    margin-right: 5%;
-    margin-top: 8em;
-    vertical-align: top;
-}
-
-
-.g4-lg {
-    color: #5e616a;
-    text-align: left;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    line-height: 1em;
-    font-size: 3.9em;
-    -webkit-font-feature-settings: 'tnum';
-    -moz-font-feature-settings: 'tnum';
-    -ms-font-feature-settings: 'tnum';
-    cursor: pointer;
-    cursor: hand;
-}
-
-
-.g4-lg:hover {
-    color: #fff;
-}
 
 #ch3-map-legends {
     display: inline-block;
@@ -1371,24 +1395,8 @@ h2 {
 
 /* Chapter 4 style */
 
-#chapter-four { 
-    background-color: #cfbaa9;
-    height: 2000px;
-    background-image: url("../img/ch4-zoomout.png");
-    background-repeat: no-repeat;
-    background-size: auto 55%;
-    background-position: right 90%;
-    -moz-transition: all .75s;
-    -webkit-transition: all .75s;
-    transition: all .75s;
-    height: 1500px;
-}
-
-
 #chapter-four .chapter-number-lg {
     line-height: 0.65em;
-    cursor: pointer;
-    cursor: hand;
 }
 
 
@@ -1396,49 +1404,51 @@ h2 {
     color: #b29377;
 }
 
-.ch4-yr-holder {
+#chapter-four .graphic-content {
+    height: 890px;
+    background-color: #cfbaa9;
+    background-image: url("../img/ch4-zoomout.png");
+    background-repeat: no-repeat;
+    background-size: 55% auto;
+    background-position: 112% 10%;
+    -moz-transition: all .75s;
+    -webkit-transition: all .75s;
+    transition: all .75s;
+}
+
+#chapter-four .graphic-title {
+    width: 17em;
+}
+
+#chapter-four .graphic-caption {
+    width: 36em;
+}
+
+#chapter-four .year-number-holder {
+    width: 43em;
+    margin-top: -3em;
+    margin-bottom: 2em;
+}
+
+#chapter-four .year-number-lg {
     color: #876e5a;
-    display: inline-block;
-}
-
-.ch4-yr-lg {
-    width: 100%;
-    text-align: left;
-    line-height: 0.5em;
-    font-size: 1.4em;
-    margin-top: 2em;
-    font-weight: bold;
-    cursor: pointer;
-    cursor: hand;
+    line-height: 0.8em;
+    margin-bottom: -0.5em;
 }
 
 
-.ch4-yr-lg:hover {
+#chapter-four .year-number-lg:hover {
     color: #fff;
-}
-
-.ch4-title {
-    display: inline-block;
-    font-size: 3em;
-}
-
-.ch4-subtitle {
-    color: #876e5a;
-    margin-bottom: 1em;
-    font-size: 1.5em;
-    margin-left: 0.1em;
-    display: inline-block;
-}
-
-#pre-subtitle, #prepost-subtitle, #post-subtitle {
-    display: none;
 }
 
 #compliance-tag {
       position: relative;
-      top: 1em;
-      left: 1em;
-      font-size: 1.3em;}
+      left: 0.1em;
+      top: 0.3em;
+      font-size: 2.9em;
+      font-weight: normal;
+}
+
 
 .ch4-map-overlay {
     display: inline-block;
@@ -1449,8 +1459,8 @@ h2 {
     height: 4em;
     vertical-align: middle;
     position: relative;
-    left: 21em;
-    top: -19.5em;
+    left: 62em;
+    top: -23em;
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
     transition: all 1s;
@@ -1471,36 +1481,41 @@ h2 {
 #ch4-map-legend {
     display: inline-block;
     color: #fff;
-    position: relative;
-    top: 18em;
-    left: -43.5em;
-    overflow: hidden;
+    position: absolute;
     width: 20em;
+    left: 12.5em;
+    margin-top: 5em;
 }
 
 .ch4-legend-label {
     display: inline-block;
     vertical-align: middle;
     font-size: 1.1em;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 #ch4-legend-box-1, #ch4-legend-box-2, #ch4-legend-box-3,
 #ch4-legend-box-4, #ch4-legend-box-5 {
     display: inline-block;
     vertical-align: middle;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-right: 1%;
     height: 1.8em;
     width: 1.8em;
 }
 
 #ch4-legend-box-1 {
-    background-color: #f6f2ef;
+    background: -webkit-repeating-linear-gradient(-45deg, #f6f2ef, #f6f2ef 5px, transparent 5px, transparent 10px);
+    background: -o-repeating-linear-gradient(-45deg, #f6f2ef, #f6f2ef 5px, transparent 5px, transparent 10px);
+    background: -moz-repeating-linear-gradient(-45deg, #f6f2ef, #f6f2ef 5px, transparent 5px, transparent 10px);
+    background: repeating-linear-gradient(-45deg, #f6f2ef, #f6f2ef 5px, transparent 5px, transparent 10px);
 }
 
 #ch4-legend-box-2 {
-    background-color: #ea6350;
+    background: -webkit-repeating-linear-gradient(-45deg, #ea6350, #ea6350 5px, transparent 5px, transparent 10px);
+    background: -o-repeating-linear-gradient(-45deg, #ea6350, #ea6350 5px, transparent 5px, transparent 10px);
+    background: -moz-repeating-linear-gradient(-45deg, #ea6350, #ea6350 5px, transparent 5px, transparent 10px);
+    background: repeating-linear-gradient(-45deg, #ea6350, #ea6350 5px, transparent 5px, transparent 10px);
 }
 
 #ch4-legend-box-3 {
@@ -1650,7 +1665,7 @@ h2 {
 }
 
 .recommendations-header .chapter-summary-tagline {
-    font-family: Dala Floda-Roman;
+    font-family: Dala Floda Web;
     font-size: 1.7em;
     width: 31em;
     margin-top: 1em;

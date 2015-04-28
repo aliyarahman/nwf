@@ -229,20 +229,18 @@ var commodity = "beef";
   //=====================================
 
 
+    // Code for switching out maps
+    $('#chapter-three').find('.year-number-lg').click(function(){
+        $('#chapter-three').find('.year-number-lg').css('color','#5e616a');
+        $(this).css('color', '#fff');
+    });
 
-
-// Code for switching out maps
-$('.g4-lg').click(function(){
-    $('.g4-lg').css('color','#5e616a');
-    $(this).css('color', '#fff');
-});
-
-$('#pre-g4').click(function(){
-    $('#brazil-map-ch-3 img').attr('src','img/preg4-map-ch-3.png');
-});
-$('#post-g4').click(function(){
-    $('#brazil-map-ch-3 img').attr('src','img/postg4-map-ch-3.png');
-});
+    $('#pre-g4').click(function(){
+        $('#brazil-map-ch-3 img').attr('src','img/preg4-map-ch-3.png');
+    });
+    $('#post-g4').click(function(){
+        $('#brazil-map-ch-3 img').attr('src','img/postg4-map-ch-3.png');
+    });
 
 
 
@@ -287,13 +285,13 @@ $("#brazil-map-ch-3-overlay").mouseenter(function () {
 //=====================================
 
 
+    // Control parcel maps
 
-$('.ch4-yr-lg').on('click', function(){
-    var ch4legendleft = $('#ch4-map-legend').offset().left;
-    var ch4legendtop = $('#ch4-map-legend').offset().top;
-    $('#ch4-map-legend').css({'position':'absolute', 'left': ch4legendleft, 'top': ch4legendtop});
-    $('#chapter-four').css({'background-size':'600% 600%','background-position':'53% 25%'});
-    $('.ch4-map-overlay').css({'width':'30em','height':'40em', 'left':'2.5em', 'top':'-14em'});
+$('.year-number-lg').on('click', function(){
+    $('.year-number-lg').css('color', '#876e5a');
+    $(this).css('color', '#fff');
+    $('#chapter-four .graphic-content').css({'background-size':'830% 830%','background-position':'49% 28%'});
+    $('.ch4-map-overlay').css({'width':'35em','height':'48em', 'left':'42em', 'top':'-33em'});
     var which_map = $(this).attr('id').split('-')[0];
     $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
     $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
