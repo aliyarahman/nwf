@@ -1736,6 +1736,7 @@ h2 {
     display: inline-block;
     width: 3em;
     height: 3em;
+    border: red 1px solid;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
@@ -1746,12 +1747,12 @@ h2 {
     background-color: #fff;
 }
 
-#open-ranchers-recs {top: 561px; left: 681px;}
-#open-meatpackers-recs {top: 610px; left: 9px;}
-#open-retailers-recs {top: 450px; left: 77px;}
-#open-government-recs {top: 80px; left: 25px;}
-#open-individuals-recs {top: 310px; left: 13px;}
-#open-banks-recs {top: 180px; left: 130px;}
+#open-ranchers-recs {top: 245px; left: 667px;}
+#open-meatpackers-recs {top: 245px; left: 9px;}
+#open-retailers-recs {top: 110px; left: 213px;}
+#open-government-recs {top: 515px; left: -55px;}
+#open-individuals-recs {top: 605px; left: 240px;}
+#open-banks-recs {top: 560px; left: 623px;}
 
 
 .recommendations-panel {
@@ -1801,7 +1802,7 @@ h2 {
 /* Footer style */
 
 #about_and_credits {
-    background-color: #363845;
+    background-color: #2b2e37;
     padding-top: 4em;
     margin-top: 3em;    
 }
@@ -1813,7 +1814,7 @@ h2 {
 }
 
 .social-media {
-    color: #4bb7b7;
+    color: #fff;
 }
 
 .social-media-icons {
@@ -1831,58 +1832,103 @@ h2 {
     left: -0.2em;
 }
 
-
-.funders, .contributors, .endorsers {
-    text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 2em;
-    line-height: 0.4em;
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-.funders h3, .contributors h3, .endorsers h3 {
-    font-weight: normal;
-    font-size: 1.3em;
-
-}
-
-.contributors {
-    margin-left: 4em;
-}
-
-.endorsers {
-    margin-top: 2.5em;
-    margin-bottom: 3.5em;
-}
-
-.logos {
+.credits {
+    width: 100%;
     background-color: #d7d6db;
     padding-top: 3em;
     padding-bottom: 2em; 
     text-align: center;  
 }
 
-
-.logo {
-    display: inline-block;
-    height: 6em;
-    margin: 1em;
-    margin-bottom: 4em;
+.credits-row-1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280px;
+    padding-bottom: 3em;
+    border-bottom: 4px solid #fff;
 }
 
-#moore-logo {
+.funders, .contributors, .endorsers, .copyright-info {
+    text-align: center;
+    margin: 1em;
+    color: #83838b;
+}
+
+.funders, .contributors {
+    display: inline-block;
+    vertical-align: top;
+    height: 12em;
+}
+
+.funders h3, .contributors h3, .endorsers h3 {
+    font-weight: normal;
+    font-size: 1.3em;
+}
+
+
+.contributors {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.funders {
+    border-left: 4px #fff solid;
+    padding-left: 4em;
+}
+
+.endorsers {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1160px;
+    padding: 2em;
+    width: 1280px;
+    padding-bottom: 3em;
+    border-bottom: 4px solid #fff;
+}
+
+.logo {
+    margin-top: 2em;
+    display: inline-block;
     height: 5em;
+    margin-bottom: 4em;
 }
 
 .logo img {
     height: 100%;
 }
 
-.copyright-info {
-    color: #363845;
+.contributors .logo {
+    height: 8em;
+    margin-top: 1em;
 }
+
+.funders .logo {
+    height: 4em;
+}
+
+#GLUE-logo {
+    height: 10em;
+    position: relative;
+    top: 1em;
+}
+
+#moore-logo {
+    height: 3em;
+    position: relative;
+    top: -0.5em;
+    margin-right: 2em;
+}
+
+#CLUA-logo {
+    height: 4em;
+    position: relative;
+    top: -4em;
+}
+
+.copyright-info {
+    padding-top: 1em;
+}
+
 
 /* Citation style */
 
