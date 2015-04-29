@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <!-- Uncomment this for auto refreshing browser when front-end coding
-    <meta http-equiv="refresh" content="3">
-    -->
+    <!-- Uncomment this for auto refreshing browser when front-end coding 
 
+
+    <meta http-equiv="refresh" content="3">
+ -->
 
 
     <title>The Brazilian Amazon - Cattle Ranching</title>
@@ -643,9 +644,9 @@
 
                 </div>
             </div>
+ 
         <div class="graphic-content" id="chapter-three-pt-two">
-            <div class="content">
-                <div class="chapter-triangle"></div>
+            <div id="ch3-col-left">
 
                 <div class="graphic-title">
                     Major slaughterhouses in the Brazilian Legal Amazon that have (and have not) signed a zero-deforestation cattle agreement.<sup class="citation-number">17</sup>
@@ -654,83 +655,67 @@
                     Pressure from international retailers and brands, environmental groups, and the federal government, led major meatpackers in Brazil to make public commitments to stop directly sourcing cattle from ranches with deforestation and illegal activity. 
                 </div>
 
-                <div id="ch3-left-col">
-                    <div class="year-number-holder">
-                        <div><h1 id="pre-g4" class="year-number-lg">Pre-agreements</h1></div>
-                        <div><h1 id="post-g4" class="year-number-lg">Post-agreements</h1></div>
-                    </div>
+                <div class="year-number-holder">
+                    <div><h1 id="ch3-pre-g4" class="year-number-lg">Pre-agreements</h1></div>
+                    <div><h1 id="ch3-post-g4" class="year-number-lg">Post-agreements</h1></div>
                 </div>
 
-                <div id="ch3-right-col">
+                <div id="ch3-map-legends">
 
-                    <div id="ch3-map-legends">
-
-                        <div id="company-legend">
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-note">Slaughterhouse type</div>
-                            </div>
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-label">JBS</div>
-                                <div id="ch3-legend-box-1"><div id="ch3-legend-box-1-circle"></div></div>
-                            </div>
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-label">Marfring</div>
-                                <div id="ch3-legend-box-2"><div id="ch3-legend-box-2-circle"></div></div>
-                            </div>
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-label">Other</div>
-                                <div id="ch3-legend-box-3"><div id="ch3-legend-box-3-circle"></div></div>
-                            </div>
+                    <div id="vegetation-legend">
+                        <div class="ch3-legend-line">
+                            <div class="ch3-legend-note">Geography</div>
                         </div>
-
-                        <div id="g4-legend">
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-note">G4 regulated</div>
-                            </div>
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-label">No agreement</div>
-                                <div id="ch3-legend-box-4"><div id="ch3-legend-box-4-circle"></div></div>
-                            </div>
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-label">No agreement</div>
-                                <div id="ch3-legend-box-5"><div id="ch3-legend-box-5-circle"></div></div>
-                            </div>
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-6"></div>
+                            <div class="ch3-legend-label">Forest</div>
                         </div>
-
-                        <div id="vegetation-legend">
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-note">Land cover</div>
-                            </div>
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-label">Forest</div>
-                                <div id="ch3-legend-box-6"></div>
-                            </div>
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-label">Deforested</div>
-                                <div id="ch3-legend-box-7"></div>
-                            </div>
-                            <div class="ch3-legend-line">
-                                <div class="ch3-legend-label">Non-forested</div>
-                                <div id="ch3-legend-box-8"></div>
-                            </div>
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-7"></div>
+                            <div class="ch3-legend-label">Deforested</div>
+                        </div>
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-8"></div>
+                            <div class="ch3-legend-label">Non-forest</div>
+                        </div>
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-roads"></div>
+                            <div class="ch3-legend-label">Roads</div>
+                        </div>
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-states"></div>
+                            <div class="ch3-legend-label">Brazil state boundaries</div>
                         </div>
                     </div>
-                    
-                        <div id="brazil-map-ch-3">
-                            <img src="img/preg4-map-ch-3.png">
+                    <div id="agreements-legend">
+                        <div class="ch3-legend-line">
+                            <div class="ch3-legend-note">Slaughterhouse categories</div>
                         </div>
-
-                        <div id="brazil-map-ch-3-overlay">
-                            <div id="magnified"></div>
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-1"><div id="ch3-legend-box-1-circle"></div></div>
+                            <div class="ch3-legend-label">G4 slaughterhouses included in study</div>
                         </div>
-
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-2"><div id="ch3-legend-box-2-circle"></div></div>
+                            <div class="ch3-legend-label">All SIF slaughterhouses (pre-agreement)</div>
+                        </div>
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-3"><div id="ch3-legend-box-3-circle"></div></div>
+                           <div class="ch3-legend-label">Did not sign agreement (post-agreements)</div>
+                        </div>
+                        <div class="ch3-legend-line">
+                            <div id="ch3-legend-box-4"><div id="ch3-legend-box-4-circle"></div></div>
+                            <div class="ch3-legend-label">Signed either TAC or G4 agreement (post-agreements)</div>
+                        </div>
                     </div>
-
                 </div>
-
+            </div>
+            <div id="brazil-map-ch3">
+                <img src="img/ch3-pre-overlay.png">
             </div>
         </div>
     </section>
+
 
     <div id="tab-three" class="tangent-tab tab-ch3t1">
         <div class="tangent-read-more">

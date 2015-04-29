@@ -182,8 +182,8 @@ $(document).ready(function() {
 //Chapter 1 behavior
 //=====================================
 
-$('.year-number-lg').click(function(){
-    $('.year-number-lg').css('color','#b98728');
+$('#chapter-one .year-number-lg').click(function(){
+    $('#chapter-one .year-number-lg').css('color','#b98728');
     $(this).css('color', '#363845');
 });
 
@@ -228,6 +228,7 @@ var commodity = "beef";
   //Chapter 3 behavior
   //=====================================
 
+    $('#ch3-pre-g4').css('color','#fff');
 
     // Code for switching out maps
     $('#chapter-three').find('.year-number-lg').click(function(){
@@ -235,28 +236,13 @@ var commodity = "beef";
         $(this).css('color', '#fff');
     });
 
-    $('#pre-g4').click(function(){
-        $('#brazil-map-ch-3 img').attr('src','img/preg4-map-ch-3.png');
-    });
-    $('#post-g4').click(function(){
-        $('#brazil-map-ch-3 img').attr('src','img/postg4-map-ch-3.png');
+    $('#ch3-pre-g4').on('click', function(){
+        $('#brazil-map-ch3').find('img').attr('src', "img/ch3-pre-overlay.png");
     });
 
-
-
-// Magnifying glass code
-$("#brazil-map-ch-3-overlay").mouseenter(function () {
-    $('#company-legend').show();
-    $('#magnified').css({"border-color": "#fff"});
-}).mouseout(function () {
-    $('#company-legend').hide();
-    $('#magnified').css({"border-color": "#5e616a"});
-});
-
-
-
-
-
+    $('#ch3-post-g4').on('click', function(){
+        $('#brazil-map-ch3').find('img').attr('src', "img/ch3-post-overlay.png");
+    });
 
 
 
@@ -287,8 +273,8 @@ $("#brazil-map-ch-3-overlay").mouseenter(function () {
 
     // Control parcel maps
 
-$('.year-number-lg').on('click', function(){
-    $('.year-number-lg').css('color', '#876e5a');
+$('#chapter-four .year-number-lg').on('click', function(){
+    $('#chapter-four .year-number-lg').css('color', '#876e5a');
     $(this).css('color', '#fff');
     $('#chapter-four .graphic-content').css({'background-size':'830% 830%','background-position':'49% 28%'});
     $('.ch4-map-overlay').css({'width':'35em','height':'48em', 'left':'42em', 'top':'-33em'});

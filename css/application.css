@@ -875,7 +875,13 @@ h2 {
     background-repeat: repeat-y;
 }
 
+#ch1-left-col .year-number-holder {
+    top: 2.5em;
+}
 
+#ch1-right-col .year-number-holder {
+    top: 0em;
+}
 
 #chapter-one .year-number-lg  {
     color: #b98728;
@@ -1226,16 +1232,24 @@ h2 {
 /* Chapter 3 style */
 
 #chapter-three .graphic-content {
-    background-color: #363845;    
-    height: 900px;
+    height: 915px;
+    background-image: url("../img/ch3-base-map.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+#chapter-three .graphic-title {
+    width: 18em;
+}
 
 #chapter-three .year-number-holder {
+    margin-top: -2em;
     width: 35em;
 }
 
 #chapter-three .year-number-lg {
+    font-size: 3.5em;
     color: #5e616a;
 }
 
@@ -1252,93 +1266,51 @@ h2 {
     margin-left: 2em;
     }
 
-#ch3-left-col {
-    display:inline-block;
-    width: 40%;
-    vertical-align: top;
-}
-
-#ch3-right-col {
-    display:inline-block;
-    width: 50%;
-    text-align: right;
-    vertical-align: top;
-}
-
 
 #ch3-map-legends {
-    display: inline-block;
     color: #fff;
     position: relative;
-    left: -65em;
-    top: 15em;
-    width: 80em;
+    top: 2em;
+    left: 3.7em;
+    width: 34em;
 }
 
-#company-legend, #g4-legend, #vegetation-legend {
-    vertical-align: top;
-    display: inline-block;
-    width: 18%;
+#agreements-legend {
+    margin-top: 2em;    
 }
 
 .ch3-legend-note {
     font-size: 0.8em;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .ch3-legend-label   {
     display: inline-block;
-    vertical-align: middle;
-    font-size: 1.1em;
+    vertical-align: bottom;
+    font-size: 1.2em;
 }
 
-#ch3-legend-box-1, #ch3-legend-box-2, #ch3-legend-box-3, 
-#ch3-legend-box-4, #ch3-legend-box-5, #ch3-legend-box-6, 
-#ch3-legend-box-7, #ch3-legend-box-8 {
+#ch3-legend-box-1, #ch3-legend-box-2, #ch3-legend-box-3, #ch3-legend-box-4, 
+#ch3-legend-box-6, #ch3-legend-box-7, #ch3-legend-box-8, #ch3-legend-box-roads, #ch3-legend-box-states {
     display: inline-block;
-    vertical-align: middle;
-    margin-top: 3%;
-    margin-left: 5%;
+    vertical-align: bottom;
+    margin-top: 2%;
+    margin-right: 3%;
     height: 1.8em;
     width: 1.8em;
-    background-color: #686b74;
 }
+
 
 #ch3-legend-box-1-circle, #ch3-legend-box-2-circle, #ch3-legend-box-3-circle, 
-#ch3-legend-box-4-circle, #ch3-legend-box-5-circle {
+#ch3-legend-box-4-circle {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    height: 50%;
+    width: 1.3em;
+    height: 1.3em;
     margin-top: 15%;
     border-radius: 50%;
-    border: 2px #fff solid;
+    border: 4px #27272f solid;
 }
 
-#ch3-legend-box-5-circle {
-    border: 2px #40424e solid;
-}
-
-#ch3-legend-box-1-circle {
-    background-color: #6fb174;
-}
-
-#ch3-legend-box-2-circle {
-    background-color: #eb6451;
-}
-
-#ch3-legend-box-3-circle {
-    background-color: #c2a993;
-}
-
-#ch3-legend-box-4-circle {
-    background-color: #fff;
-}
-
-#ch3-legend-box-5-circle {
-    background-color: #40424e;
-}
 
 #ch3-legend-box-6 {
     background-color: #6fb174;
@@ -1352,36 +1324,60 @@ h2 {
     background-color: #c2a993;
 }
 
-#brazil-map-ch-3  {
+
+#ch3-legend-box-roads {
+    background-image: url("../img/ch3_road_legend.png");
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ch3-legend-box-states {
+    background-image: url("../img/ch3_state_legend.png");
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ch3-legend-box-1-circle {
+    background-color: transparent;
+    border-width: 10px;
+    height: 0.6em;
+    width: 0.6em;
+}
+
+#ch3-legend-box-2-circle {
+    background-color: #db9d2e;
+}
+
+#ch3-legend-box-3-circle {
+    background-color: #eb6451;
+}
+
+#ch3-legend-box-4-circle {
+    background-color: #6fb174;
+}
+
+
+#ch3-col-left {
     display: inline-block;
     position: relative;
-    top: -25em;
-    left: 2em;
-    width: 100%;
-    cursor: pointer;
-    cursor: hand;
+    top: -8.7em;
+    width: 635px;
+    height: 915px;
 }
 
-#brazil-map-ch-3-overlay {
-    position: relative;
-    left: 2em;
-    top: -70em;
-    height: 30em;
+#brazil-map-ch3 {
+    display: inline-block;
+    height: 915px;
+    width: 635px;
+    margin: 0px;
 }
 
-#brazil-map-ch-3 img {
-    width: 100%;
-    height: auto;
+#brazil-map-ch3 img {
+    width: 100%;   
 }
 
-#magnified {
-    display: none;
-    width: 20em;
-    height: 20em;
-    border-radius: 50%;
-    background: transparent;
-    border: 6px solid #363845;
-}
 
 #tab-three {
     background-color: #71747d;
