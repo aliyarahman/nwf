@@ -32,6 +32,15 @@ $(document).ready(function() {
   });
 
 
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) {
+            $(".tangent-article").hide();
+            $('section').css('opacity',1);
+            $('.tangent-tab').show();
+        }
+    });
+
+
 /*
     // Chapter Scrolling behavior
     // ====================================
@@ -43,17 +52,7 @@ $(document).ready(function() {
         var sec_4_y = $('#chapter-four').offset().top;
         var sec_5_y = $('#chapter-five').offset().top;
 
-        var beef_bubble_expand = $("#beef-product-link").offset().top;
-
-        if (y_scroll_pos < sec_2_y) {
-            // Chapter 1
-            // Close Chapter 2's trade maps container if it's open
-            if ($('.trade-maps-container').hasClass('trade-maps-container-end')) {
-                // $("#chapter-two").click();
-                $('.close-trade-map').click();
-            }
-        }
-        else if (y_scroll_pos > sec_2_y) {
+        if (y_scroll_pos > sec_2_y) {
             // Chapter 2
             console.log("we've reached chapter two");
         }
@@ -129,7 +128,19 @@ $(document).ready(function() {
     // Link code for site-map links
 
     $('.site-sub-link').on('click', function(){
-        var which_tangent= $(this).attr('onClick').split('="')[1].split('"')[0];
+        var which_tangent= $(this).attr('id').split('link-')[1];
+        var topcoord = window.pageYOffset;
+        var leftcoord = window.pageXOffset;
+        $('section').css('opacity',0.2);
+        $("#"+which_tangent).css({'top':topcoord+20, 'left':leftcoord+(window.innerWidth-1280)/2});
+        $("#"+which_tangent).show();
+
+        $('.tangent-article-back, #rainforest-vid, #chapter-one .chapter-header').on('click', function() {
+            $("#"+which_tangent).hide();
+            $('section').css('opacity',1);
+            $('.tangent-tab').show();
+        });
+
     });
 
 

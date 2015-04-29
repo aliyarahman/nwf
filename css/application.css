@@ -1736,7 +1736,6 @@ h2 {
     display: inline-block;
     width: 3em;
     height: 3em;
-    border: red 1px solid;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
@@ -1747,12 +1746,12 @@ h2 {
     background-color: #fff;
 }
 
-#open-ranchers-recs {top: 245px; left: 667px;}
-#open-meatpackers-recs {top: 245px; left: 9px;}
-#open-retailers-recs {top: 110px; left: 213px;}
-#open-government-recs {top: 515px; left: -55px;}
-#open-individuals-recs {top: 605px; left: 240px;}
-#open-banks-recs {top: 560px; left: 623px;}
+#open-ranchers-recs {top: 246px; left: 668px;}
+#open-meatpackers-recs {top: 245px; left: 11px;}
+#open-retailers-recs {top: 111px; left: 217px;}
+#open-government-recs {top: 516px; left: -48px;}
+#open-individuals-recs {top: 606px; left: 249px;}
+#open-banks-recs {top: 561px; left: 633px;}
 
 
 .recommendations-panel {
