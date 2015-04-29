@@ -17,8 +17,7 @@ $(document).ready(function() {
 
 
   $(".tangent-tab").click(function () {
-        var which_chapter = $(this).attr('id').split("-")[1];
-        var which_tangent = $(this).attr('class').split(" tab-")[1];
+        var which_tangent = $(this).attr('id').split("tab-")[1];
         var topcoord = window.pageYOffset;
         var leftcoord = window.pageXOffset;
         $('.tangent-tab').hide();

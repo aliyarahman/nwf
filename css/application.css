@@ -191,7 +191,7 @@ h2 {
     border-radius: 50%;
     margin-right: 1.5em;
     position: relative;
-    top: 2em;
+    top: 2.5em;
 }
 
 
@@ -347,27 +347,88 @@ h2 {
 }
 
 
-.tangent-tab {
-    width: 20em;
-    margin-right: 0;
+.tangent-tab-holder {
+    margin-top: -1.25em;
+    margin-right: 0em;
     margin-left: auto;
-    position: relative;
-    top: -1em;
-    z-index: 100;
-    color: #fff;
-    background-color: #484a56;
-    text-align: left;
-    margin-bottom: 0.5em;
-    padding: 1.2em 1.2em 1.2em 2.2em;
-    font-size: 1.1em;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    cursor: pointer;
-    cursor: hand;
+    background-color: #363845;
+    padding: 2.2em 0em 2.2em;
+    z-index: 200;
 }
 
+
+#tab-one {
+    width: 45em;
+}
+#tab-one .tangent-tab {
+    width: 23em;
+}
+
+
+#tab-two {
+    width: 32em;
+}
+#tab-two .tangent-tab {
+    width: 15.5em;
+}
+
+
+#tab-three {
+    width: 50em;
+}
+
+#tab-three .tangent-tab {
+    width: 26em;
+}
+
+
+#tab-four {
+    width: 32.5em;
+}
+#tab-four .tangent-tab {
+    width: 16em;
+}
+
+
+#tab-five {
+    width: 42.5em;
+}
+#tab-five .tangent-tab {
+    width: 21.5em;
+}
+
+
+
+.tangent-read-more {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-left: 2.5em;
+    margin-bottom: 0.75em;
+}
+
+
+.tangent-tab {
+    margin-bottom: 0.2em;
+    margin-right: 0em;
+    margin-left: auto;
+    padding: 0.2em 0.5em 0.5em 0.5em;
+    color: #fff;
+    background-color: #40424e;
+    text-align: left;
+    font-size: 1.75em;
+    cursor: pointer;
+    cursor: hand;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+
 .tangent-tab:hover {
-    padding-right: 7em;
+    padding-right: 8.2em;
+    -ms-transform: translateX(-6em);
+    -webkit-transform: translateX(-6em);
+    transform: translateX(-6em);
+ 
 }
 
 
@@ -1232,6 +1293,10 @@ h2 {
 
 /* Chapter 3 style */
 
+#chapter-three .chapter-header-text h2{
+    font-size: 3.9em;
+}
+
 #chapter-three .graphic-content {
     height: 915px;
     background-image: url("../img/ch3-base-map.jpg");
@@ -1258,9 +1323,6 @@ h2 {
     color: #fff;
 }
 
-
-#chapter-three .chapter-number-lg {
-}
 
 .agreement-bullet {
     margin-left: 2em;
@@ -1379,20 +1441,13 @@ h2 {
 }
 
 
-#tab-three {
-    background-color: #71747d;
-}
-
 #tab-three .tangent-read-more, #tab-three .tangent-title:hover {
-    color: #363845;
+    color: #eb6451;
 }
 
 
 
 /* Chapter 4 style */
-
-#chapter-four .chapter-number-lg {
-}
 
 
 #chapter-four .tangent-tab {
@@ -1478,7 +1533,7 @@ h2 {
     color: #fff;
     position: absolute;
     width: 20em;
-    left: 12.5em;
+    left: 14.8em;
     margin-top: 5em;
 }
 
@@ -1538,9 +1593,6 @@ h2 {
     height: auto;
 }
 
-
-#chapter-five .chapter-number-lg {
-}
 
 #chapter-five .chapter-triangle {
     z-index: 2;
