@@ -185,21 +185,20 @@ h2 {
 
 .chapter-number-lg {
     display: inline-block;
-    vertical-align: middle;
-    color: white;
-    font-family: Dala Floda Web;
-    -webkit-font-feature-settings: 'tnum';
-    -moz-font-feature-settings: 'tnum';
-    -ms-font-feature-settings: 'tnum';
-    font-size: 15em;
-    line-height: 0.9em;
-    height: 0.9em;
-    width: 0.9em;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
     border-radius: 50%;
-    margin-right: 0.1em;
+    margin-right: 1.5em;
     position: relative;
-    top: 0.15em;
+    top: 2em;
 }
+
+
+.chapter-number-lg img {
+    width: 10em;
+}
+
 
 #chapter-one .chapter-number-lg {
     background-color: #f2dbb2;
@@ -402,7 +401,8 @@ h2 {
 }
 
 #ch3t2 img {
-    width: 15em;
+    margin-top: 1em;
+    width: 35em;
 }
 
 
@@ -747,10 +747,11 @@ h2 {
 }
 
 .chapter-number {
-    font-family: Dala Floda Web;
-    font-size: 6em;
-    position: relative;
-    top: -0.3em;
+    width: 3em;
+}
+
+.chapter-number img {
+    width: 100%;
 }
 
 .chapter-title {
@@ -1259,7 +1260,6 @@ h2 {
 
 
 #chapter-three .chapter-number-lg {
-    line-height: 0.65em; 
 }
 
 .agreement-bullet {
@@ -1392,7 +1392,6 @@ h2 {
 /* Chapter 4 style */
 
 #chapter-four .chapter-number-lg {
-    line-height: 0.65em;
 }
 
 
@@ -1466,7 +1465,7 @@ h2 {
     background-image: url("../img/preagreement.gif");
 }
 
-.ch4-map-overlay-prepost {
+.ch4-map-overlay-prepost {  
     background-image: url("../img/prepostagreement.gif");
 }
 
@@ -1541,7 +1540,6 @@ h2 {
 
 
 #chapter-five .chapter-number-lg {
-    line-height: 0.65em; 
 }
 
 #chapter-five .chapter-triangle {
