@@ -353,13 +353,13 @@ h2 {
     margin-left: auto;
     background-color: #363845;
     padding: 2.2em 0em 2.2em;
-    z-index: 200;
 }
 
 
 #tab-one {
     width: 45em;
 }
+
 #tab-one .tangent-tab {
     width: 23em;
 }
@@ -909,6 +909,35 @@ h2 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Chapter 1 style */
 
 #chapter-one {
@@ -1042,12 +1071,23 @@ h2 {
 #ch1-right-col .brazil-map-ch-1 {
     width: 30em;
     left: 8.1em;
-    top: -27em;
+    top: -27.9em;
 }
 
 
 #tab-one .tangent-read-more, #tab-one .tangent-title:hover {
     color: #db9d2e;
+}
+
+
+.brazil-map-ch1 {
+    position: relative;
+    z-index: 1;
+}
+
+#tab-one {
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -1687,7 +1727,7 @@ h2 {
 
 #tab-five {
     position: relative;
-    top: -5em;
+    top: -3.5em;
 }
 
 #tab-five .tangent-read-more, #tab-five .tangent-title:hover {
