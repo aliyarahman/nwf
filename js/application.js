@@ -226,8 +226,14 @@ $('#forest-cover-yr-3').click(function(){
 //Chapter 2 behavior
 //=====================================
 
-//Sets the first commodity to open to beef if no clicking happenss
-var commodity = "beef";
+    //Sets the first commodity to open to beef if no clicking happenss
+    var commodity = "beef";
+
+    // Functionality for the close button
+    $('.close-trade-map').on('click', function(){
+        $('.ch2-screen-holder').fadeOut();
+        $('section, .tangent-tab-holder').css('opacity',1);
+    });
 
 $('.product-category').on('click', function() {
     var topcoord = window.pageYOffset;
