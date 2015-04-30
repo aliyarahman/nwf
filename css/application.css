@@ -1103,12 +1103,6 @@ h2 {
     height: 760px;
 }
 
-
-#product-bubbles {
-    text-align: right;
-    margin-bottom: -15em;
-}
-
 .product-headers {
     color: white;
     margin-top: 3em;
@@ -1120,41 +1114,16 @@ h2 {
     font-size: 2em;
 }
 
-.product-headers-product {
+.product-category {
     font-size: 3.5em;
     margin: 0.1em;
     line-height: 1em;
-}
-
-.beef-subproducts {
-    font-size: 0.75em;
-}
-
-#tallow-bubble, #leather-bubble, #beef-bubble {
-    display: inline-block;
-    width: 365px;
-    position: relative;
     cursor: pointer;
     cursor: hand;
 }
 
-#leather-bubble {
-    top: -64em;
-    left: -4em;
-}
-
-#beef-bubble {
-    top: -32em;
-    left: -13em;
-}
-
-#tallow-bubble {
-    top: -39em;
-    left: 29em;
-}
-
-.bubble-pic {
-    width: 100%;
+.beef-subproducts {
+    font-size: 0.75em;
 }
 
 
@@ -1171,9 +1140,85 @@ h2 {
     width: 100%;
 }
 
+
+#tallow-bubble, #leather-bubble, #beef-bubble {
+    display: inline-block;
+    width: 365px;
+    position: relative;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#leather-bubble {
+    top: -64em;
+    left: 7em;
+}
+
+#beef-bubble {
+    top: -32em;
+    left: -2em;
+}
+
+#tallow-bubble {
+    top: -39em;
+    left: 39em;
+}
+
+#leather-bubble img, #beef-bubble img, #tallow-bubble img {
+    width: 100%;
+}
+
+
 #chapter-two .tangent-tab {
     color: #6fb174;
 }
+
+#tab-two .tangent-read-more, #tab-two .tangent-title:hover {
+    color: #6fb174;
+}
+
+
+
+/* Ch 2 Trade maps style */
+
+.ch2-screen-holder {
+    display: none;
+    position: absolute;
+    height: 1100px;
+    padding-top: 2em;
+}
+
+.ch2-screen-holder, #beef-intro {
+    background-color: #97c69a;
+}
+
+.product-intro-text {
+    width: 20em;
+    color: #363845;
+    margin: 3em 1em 2em 1em;
+}
+
+.see-international {
+    padding: 0.3em 0.5em;
+    background-color: #363845;
+    margin-left: 1em;
+    width: 11.5em;
+}
+
+
+.trade-map {
+    display: inline-block;
+    position: relative;
+    top: -22em;
+    left: 22em;
+    width: 50em;
+}
+
+
+.trade-map img {
+    width: 100%;
+}
+
 
 .trade-maps-container {
     overflow: hidden;
@@ -1187,9 +1232,9 @@ h2 {
     padding-right: auto;
 }
 
+/*
 .trade-map-content {
     text-align: center;
-    /*margin-top: 10em;*/
 }
 
 .close-trade-map {
@@ -1210,8 +1255,6 @@ h2 {
 }
 
 .trade-map-title {
-    /*margin-top: 5.5em;*/
-    /*margin-bottom: -6.5em;*/
     margin-bottom: 3em;
     color: #fff;
     text-align: left;
@@ -1255,7 +1298,6 @@ h2 {
 
 .trade-map-info {
     display: inline-block;
-    /*background-color: #fff;*/
     vertical-align: top;
     margin-right: 5px;
     color: #6fb174;
@@ -1325,10 +1367,7 @@ h2 {
     display: none;
 }
 
-#tab-two .tangent-read-more, #tab-two .tangent-title:hover {
-    color: #6fb174;
-}
-
+*/
 
 
 /* Chapter 3 style */

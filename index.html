@@ -7,10 +7,8 @@
 
 
     <!-- Uncomment this for auto refreshing browser when front-end coding
-    -->
-
     <meta http-equiv="refresh" content="3">
-
+    -->
 
     <title>The Brazilian Amazon - Cattle Ranching</title>
 
@@ -261,6 +259,32 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Chapter 1 -->
     <section class="chapter" id="chapter-one">
     <a name="chapter1"></a>
@@ -425,13 +449,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
     <!-- Chapter 2 -->
 
     <section class="chapter" id="chapter-two">
     <a name="chapter2"></a>
-
-    <div class="container">
-         
         <div class="chapter-header">
             <div class="content">
                 <div class="chapter-number-lg">
@@ -467,63 +498,109 @@
             </div>
         </div>
         
-        <div class="graphic-content" id="chapter-two-pt-two">
-            <div id="ch2" class="content">
+        <div class="graphic-content">
+            <div class="chapter-triangle"></div>
 
-                <div class="chapter-triangle"></div>
-
-                <div class="product-headers">
-                    <div class="product-headers-tagline">
-                        Top trade partners for 2014:
-                    </div>
-                    <div class="product-headers-product" id="beef-product-link">
-                        <b>Beef</b><span class="beef-subproducts"> (fresh, frozen, processed)</span>
-                    </div>
-                    <div class="product-headers-product">
-                        <b>Leather</b>
-                    </div>
-                    <div class="product-headers-product" >
-                        <b>Tallow</b>
-                    </div>
+            <div class="product-headers">
+                <div class="product-headers-tagline">
+                    Top trade partners for 2014:
                 </div>
+                <div class="product-category beef">
+                    <b>Beef</b><span class="beef-subproducts"> (fresh, frozen, processed)</span>
+                </div>
+                <div class="product-category leather">
+                    <b>Leather</b>
+                </div>
+                <div class="product-category tallow">
+                    <b>Tallow</b>
+                </div>
+            </div>
 
-                <div class="beef-products">
+            <div id="adult-cow">
+                <img src="img/adult-cow.png">
+            </div>
+            <div id="beef-bubble">
+                <img src="img/beef-bubble.png">
+            </div>
+            <div id="tallow-bubble">
+                <img src="img/tallow-bubble.png">
+            </div>
+            <div id="leather-bubble">
+                <img src="img/leather-bubble.png">
+            </div>
 
-                    <div id="adult-cow">
-                        <img src="img/adult-cow.png">
-                    </div>
+        </div> <!-- .graphic-content-->
+    </section>
 
-                    <div id="product-bubbles">
-                        <div id="beef-bubble">
-                            <div class="bubble-pic">
-                                <img class="bubble-pic" src="img/beef-bubble.png">
-                            </div>
-                        </div>
-                        <div id="tallow-bubble">
-                            <div class="bubble-pic">
-                                <img src="img/tallow-bubble.png">
-                            </div>
-                        </div>
-                        <div id="leather-bubble">
-                            <div class="bubble-pic">
-                                <img src="img/leather-bubble.png">
-                            </div>
-                        </div>
-                    </div> <!-- #product-bubbles -->
 
-                </div> <!-- .beef-products -->
+    <div id="tab-two" class="tangent-tab-holder">
+        <div class="tangent-read-more">
+            FURTHER READING FOR CHAPTER 2
+        </div>
 
-            </div> <!-- #ch2 -->
-        </div> <!-- #chapter-two-pt-two -->
-    </div> <!-- .container -->
+        <div class="tangent-tab tangent-title" id="tab-ch2t1">
+            &#x2780 The Clandestine Slaughter &rarr;
+        </div>
 
-    <a name="trade-maps-section"></a>
+        <div class="tangent-tab tangent-title" id="tab-ch2t2">
+            &#x2781 Exports vs. Consumption &rarr;
+        </div>
+    </div>
 
-    <!-- Beef map -->
-    <div id="beef-trade-map-container" class="trade-maps-container trade-maps-container-start beef-bubble-start">
-        <div class="scrollable">
+
+
+
+    <div class="ch2-screen-holder">
+        <div class="graphic-content" id="beef-intro">
+            <div class="product-headers">
+                <div class="product-headers-tagline">
+                    Top trade partners for 2014:
+                </div>
+                <div class="product-category beef">
+                    <b>Beef</b><span class="beef-subproducts"> (fresh, frozen, processed)</span>
+                </div>
+                <div class="product-category leather">
+                    <b>Leather</b>
+                </div>
+                <div class="product-category tallow" >
+                    <b>Tallow</b>
+                </div>
+                <div class="product-intro-text">
+                    The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.
+                </div>
+                <div class="see-international">
+                    SEE INTERNATIONAL &rarr;
+                </div>
+                <div class="trade-map">
+                    <img src="img/BeefMap-Domestic.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="trade-maps-container">
+        <a name="trade-maps-section"></a>
             <div class="trade-map-title">
-                <div class="beef-product-headers col-9">
+                <div class="beef-product-headers">
                     <div class="graphic-title">
                         As one of the leading producers and exporters of beef and leather products, the Brazilian cattle sector is highly integrated into global markets. The expansion of the cattle herd in the Amazon biome played a key role in supporting growing demand, both within Brazil and internationally, for beef, leather, and tallow. 
                     </div>
@@ -532,13 +609,10 @@
                     <h3>Leather</h3>
                     <h3>Tallow</h3>
                 </div>
-                <div class="close-trade-map-button col-3">
-                    <i class="fa fa-times close-trade-map"></i>
+                <div class="close-trade-map-button">
+                    
                 </div>
             </div>
-
-            
-
             <div class="trade-map-content">
                 <div class="trade-map-info-holder col-3">
                     <div class="trade-map-legend trade-map-info">
@@ -569,30 +643,34 @@
                     </div> <!-- .trade-map-legend -->
                 </div> <!-- .trade-map-info-holder -->
 
-                <div class="trade-map col-9">
+                <div class="trade-map">
                     <img id="main-trade-map" src="img/beef.jpg" class="img-responsive">
                     <img id="EU-popup" src="img/beef-EU-popup.jpg" class="img-responsive">
                 </div> <!-- .trade-map -->
             </div> <!-- .trade-map-content -->
-        </div> <!-- .scrollable -->
+
     </div> <!-- .trade-maps-container -->
 
-    
-    </section>
 
-    <div id="tab-two" class="tangent-tab-holder">
-        <div class="tangent-read-more">
-            FURTHER READING FOR CHAPTER 2
-        </div>
 
-        <div class="tangent-tab tangent-title" id="tab-ch2t1">
-            &#x2780 The Clandestine Slaughter &rarr;
-        </div>
 
-        <div class="tangent-tab tangent-title" id="tab-ch2t2">
-            &#x2781 Exports vs. Consumption &rarr;
-        </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

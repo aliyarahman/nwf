@@ -229,6 +229,40 @@ $('#forest-cover-yr-3').click(function(){
 //Sets the first commodity to open to beef if no clicking happenss
 var commodity = "beef";
 
+$('.product-category').on('click', function() {
+    var topcoord = window.pageYOffset;
+    var leftcoord = window.pageXOffset;
+    var ch2screenwidth = window.innerWidth;
+
+    $('section, .tangent-tab-holder').css('opacity',0.2);
+    $('.ch2-screen-holder').css({'top':topcoord, 'left':leftcoord, 'width': ch2screenwidth});
+    $('.product-category').css('color', '#639f69');
+
+
+    if ($(this).hasClass('beef')) {
+        commodity = 'beef';
+        $('.product-category.beef').css('color', '#fff');
+        $('.product.intro-text').text("The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.");
+        $('.trade-map').show();
+    }
+    else if ($(this).hasClass('leather')) {
+        commodity = 'leather';
+        $('.product-category.leather').css('color', '#fff');
+        $('.product-intro-text').text("Although the majority of hides and leather are exported, Brazil has a significant processing and manufacturing sector for leather-based products, including automotive (for vehicle upholstery), footwear, and apparel.");
+        $('.trade-map').hide();
+    }
+    else if ($(this).hasClass('tallow')) {
+        commodity = 'tallow';
+        $('.product-category.tallow').css('color', '#fff');
+        $('.product-intro-text').text("The majority of tallow is consumed by the domestic market in Brazil, with some of the largest applications in the personal and household products (soaps, etc.) sector as well as the production of biodiesel, an important component of the overall transport fuel portfolio.")
+        $('.trade-map').hide();
+    }
+
+    $('.ch2-screen-holder').fadeOut();
+    $('.ch2-screen-holder').fadeIn();
+
+});
+
 
 
 
