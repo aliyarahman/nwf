@@ -228,49 +228,130 @@ $('#forest-cover-yr-3').click(function(){
 
     //Sets the first commodity to open to beef if no clicking happenss
     var commodity = "beef";
+    var domestic_or_international = "domestic";
 
     // Functionality for the close button
     $('.close-trade-map').on('click', function(){
         $('.ch2-screen-holder').fadeOut();
         $('section, .tangent-tab-holder').css('opacity',1);
+        $('.product-category').css('color', '#fff');
     });
 
-$('.product-category').on('click', function() {
-    var topcoord = window.pageYOffset;
-    var leftcoord = window.pageXOffset;
-    var ch2screenwidth = window.innerWidth;
-
-    $('section, .tangent-tab-holder').css('opacity',0.2);
-    $('.ch2-screen-holder').css({'top':topcoord, 'left':leftcoord, 'width': ch2screenwidth});
-    $('.product-category').css('color', '#639f69');
-
-
-    if ($(this).hasClass('beef')) {
-        commodity = 'beef';
+    function place_beef_domestic () {
+        $('.domestic-international').text("INTERNATIONAL");
+        $('.product-category').css('color', '#639f69');
         $('.product-category.beef').css('color', '#fff');
+        $('.product-intro-text').show();
         $('.product.intro-text').text("The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.");
+        $('.trade-map img').attr('src','img/BeefMap-Domestic.png').parent().removeClass('international-map');
         $('.trade-map').show();
+        commodity = 'beef';
     }
-    else if ($(this).hasClass('leather')) {
-        commodity = 'leather';
+
+    function place_leather_domestic () {
+        $('.domestic-international').text("INTERNATIONAL");
+        $('.product-category').css('color', '#639f69');
         $('.product-category.leather').css('color', '#fff');
+        $('.product-intro-text').show();
         $('.product-intro-text').text("Although the majority of hides and leather are exported, Brazil has a significant processing and manufacturing sector for leather-based products, including automotive (for vehicle upholstery), footwear, and apparel.");
-        $('.trade-map').hide();
+        $('.trade-map img').attr('src','').parent().removeClass('international-map');
+        commodity = 'leather';
     }
-    else if ($(this).hasClass('tallow')) {
-        commodity = 'tallow';
+
+
+    function place_tallow_domestic () {
+        $('.domestic-international').text("INTERNATIONAL");
+        $('.product-category').css('color', '#639f69');
         $('.product-category.tallow').css('color', '#fff');
-        $('.product-intro-text').text("The majority of tallow is consumed by the domestic market in Brazil, with some of the largest applications in the personal and household products (soaps, etc.) sector as well as the production of biodiesel, an important component of the overall transport fuel portfolio.")
-        $('.trade-map').hide();
+        $('.product-intro-text').show();
+        $('.product-intro-text').text("The majority of tallow is consumed by the domestic market in Brazil, with some of the largest applications in the personal and household products (soaps, etc.) sector as well as the production of biodiesel, an important component of the overall transport fuel portfolio.");
+        $('.trade-map img').attr('src','').parent().removeClass('international-map');
+        commodity = 'tallow';
     }
 
-    $('.ch2-screen-holder').fadeOut();
-    $('.ch2-screen-holder').fadeIn();
+    function place_beef_international () {
+        $('.domestic-international').text("DOMESTIC");
+        $('.product-category').css('color', '#639f69');
+        $('.product-category.beef').css('color', '#fff');
+        $('.product-intro-text').hide();
+        $('.trade-map img').attr('src','img/BeefMap-China.png').parent().addClass('international-map');
+        commodity = 'beef';
+    }
 
-});
+    function place_leather_international () {
+        $('.domestic-international').text("DOMESTIC");
+        $('.product-category').css('color', '#639f69');
+        $('.product-category.leather').css('color', '#fff');
+        $('.product-intro-text').hide();
+        $('.trade-map img').attr('src','img/LeatherMap-China.png').parent().addClass('international-map');
+        commodity = 'leather';
+    }
 
 
+    function place_tallow_international () {
+        $('.domestic-international').text("DOMESTIC");
+        $('.product-category').css('color', '#639f69');
+        $('.product-category.tallow').css('color', '#fff');
+        $('.product-intro-text').hide();
+        $('.trade-map img').attr('src','img/TallowMap-Spain.jpg').parent().addClass('international-map');
+        commodity = 'tallow';
+    }
 
+
+    // Functionality for clicking to trade maps from the main site
+    $('.product-category, .product-bubble').on('click', function() {
+        var topcoord = window.pageYOffset;
+        var leftcoord = window.pageXOffset;
+        var ch2screenwidth = window.innerWidth;
+
+        $('section, .tangent-tab-holder').css('opacity',0.2);
+        $('.ch2-screen-holder').fadeOut();
+        $('.ch2-screen-holder').css({'top':topcoord, 'left':leftcoord, 'width': ch2screenwidth});
+
+        if ($(this).hasClass('beef')) {
+            place_beef_domestic();
+        }
+        else if ($(this).hasClass('leather')) {
+            place_leather_domestic();
+        }
+        else if ($(this).hasClass('tallow')) {
+            place_tallow_domestic();
+        }
+
+        $('.ch2-screen-holder').fadeIn();
+    });
+
+    // Functionality for clicking to trade maps
+    var domestic_or_international = "domestic";
+    $('.see-international-domestic').on('click', function(){
+        if (domestic_or_international == "domestic") {
+            $('.domestic-international').text("DOMESTIC");
+            domestic_or_international = "international";
+            if (commodity == 'beef') {
+                place_beef_international();
+            }
+            else if (commodity == 'leather') {
+                place_leather_international();
+            }
+            else if (commodity == 'tallow') {
+                place_tallow_international();
+            }
+        }
+        else {
+            $('.domestic-international').text("INTERNATIONAL");
+            domestic_or_international = "domestic";
+            if (commodity == 'beef') {
+                place_beef_domestic();
+            }
+            else if (commodity == 'leather') {
+                place_leather_domestic();
+            }
+            else if (commodity == 'tallow') {
+                place_tallow_domestic();
+            }
+        }
+
+    });
 
 
 

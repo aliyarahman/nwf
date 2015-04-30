@@ -519,13 +519,13 @@
             <div id="adult-cow">
                 <img src="img/adult-cow.png">
             </div>
-            <div id="beef-bubble">
+            <div id="beef-bubble" class="product-bubble beef">
                 <img src="img/beef-bubble.png">
             </div>
-            <div id="tallow-bubble">
+            <div id="tallow-bubble" class="product-bubble tallow">
                 <img src="img/tallow-bubble.png">
             </div>
-            <div id="leather-bubble">
+            <div id="leather-bubble" class="product-bubble leather">
                 <img src="img/leather-bubble.png">
             </div>
 
@@ -570,7 +570,7 @@
                     The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.
                 </div>
                 <div class="see-international-domestic">
-                    SEE INTERNATIONAL &rarr;
+                    SEE <span class="domestic-international">INTERNATIONAL</span> &rarr;
                 </div>
                 <div class="trade-map">
                     <img src="img/BeefMap-Domestic.png">
@@ -581,78 +581,204 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="trade-maps-container">
-        <a name="trade-maps-section"></a>
-            <div class="trade-map-title">
-                <div class="beef-product-headers">
-                    <div class="graphic-title">
-                        As one of the leading producers and exporters of beef and leather products, the Brazilian cattle sector is highly integrated into global markets. The expansion of the cattle herd in the Amazon biome played a key role in supporting growing demand, both within Brazil and internationally, for beef, leather, and tallow. 
+                <div class="trade-map-data" id="international-beef-data">
+                    <div class="data-row trade-map-legend">
+                        <div class="trade-data-row-left">
+                            <b>% US$</b>
+                            <br>US$ (1000s)
+                        </div>
+                        <div class="trade-data-row-right">
+                            <b>Top Importers</b>
+                            <br>of Brazilian beef, 2014
+                        </div>
                     </div>
-                    <h4>Top trade partners for 2014:</h4>
-                    <h3 id="beef-product-link">Beef (fresh, frozen, processed)</h3>
-                    <h3>Leather</h3>
-                    <h3>Tallow</h3>
-                </div>
-                <div class="close-trade-map-button">
-                    
-                </div>
-            </div>
-            <div class="trade-map-content">
-                <div class="trade-map-info-holder col-3">
-                    <div class="trade-map-legend trade-map-info">
-                        <div class="trade-map-quantity-column">
-                            <div class="trade-map-data-column-title">
-                                TOP TRADE<br>QUANTITY, KG
-                            </div>
-                            <h3 class="china">24%</h3>
-                            <h3 class="russia">18%</h3>
-                            <h3 class="europe">13%</h3>
-                            <h3 class="venezuela">12%</h3>
-                            <h3 class="egypt">8%</h3>
-                            <h3 class="iran">4%</h3>
-                            <h3 class="chile">4%</h3>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">23.72%</div>
+                            <div class="trade-dollar">$1,713,525</div>
                         </div>
-                        <div class="trade-map-partner-column">
-                            <div class="trade-map-data-column-title">
-                                TOP TRADE<br>PARTNERS
-                            </div>
-                            <h3 class="china">China</h3>
-                            <h3 class="russia">Russia</h3>
-                            <h3 class="europe">Europe-28</h3>
-                            <h3 class="venezuela">Venezuela</h3>
-                            <h3 class="egypt">Egypt</h3>
-                            <h3 class="iran">Iran</h3>
-                            <h3 class="chile">Chile</h3>
+                        <div class="trade-data-row-right">
+                            China
                         </div>
-                    </div> <!-- .trade-map-legend -->
-                </div> <!-- .trade-map-info-holder -->
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">18.19%</div>
+                            <div class="trade-dollar">$1,314,094</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Russia
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">12.61%</div>
+                            <div class="trade-dollar">$911,180</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Europe-28
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">12.47%</div>
+                            <div class="trade-dollar">$900,807</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Venezuela
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">8.47%</div>
+                            <div class="trade-dollar">$611,613</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Egypt
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">3.97%</div>
+                            <div class="trade-dollar">$286,815</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Iran
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">3.80%</div>
+                            <div class="trade-dollar">$274,764</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Chile
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">3.20%</div>
+                            <div class="trade-dollar">$231,358</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            United States
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">13.57%</div>
+                            <div class="trade-dollar">$979,975</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Rest of the world
+                        </div>
+                    </div>
+                </div>
 
-                <div class="trade-map">
-                    <img id="main-trade-map" src="img/beef.jpg" class="img-responsive">
-                    <img id="EU-popup" src="img/beef-EU-popup.jpg" class="img-responsive">
-                </div> <!-- .trade-map -->
-            </div> <!-- .trade-map-content -->
-
-    </div> <!-- .trade-maps-container -->
 
 
+                <div class="trade-map-data" id="international-leather-data">
+                    <div class="data-row trade-map-legend">
+                        <div class="trade-data-row-left">
+                            <b>% US$</b>
+                            <br>US$ (1000s)
+                        </div>
+                        <div class="trade-data-row-right">
+                            <b>Top Importers</b>
+                            <br>of Brazilian Raw Leather/Hides, 2014
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">47.62%</div>
+                            <div class="trade-dollar">$622,788</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            China
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">20.23%</div>
+                            <div class="trade-dollar">$264,586</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Italy
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">8.21%</div>
+                            <div class="trade-dollar">$107,322</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Vietnam
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">3.68%</div>
+                            <div class="trade-dollar">$48,133</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Taiwan
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">3.15%</div>
+                            <div class="trade-dollar">$41,241</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Thailand
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">2.72%</div>
+                            <div class="trade-dollar">$35,557</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            South Korea
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">2.66%</div>
+                            <div class="trade-dollar">$34,794</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            United States
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">2.66%</div>
+                            <div class="trade-dollar">$34,739</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            EU-28 (excluding Italy)
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">2.30%</div>
+                            <div class="trade-dollar">$30,060</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Japan
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">6.78%</div>
+                            <div class="trade-dollar">$88,693</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Rest of the world
+                        </div>
+                    </div>
+                </div>
 
 
 
@@ -666,6 +792,45 @@
 
 
 
+                <div class="trade-map-data" id="international-tallow-data">
+                    <div class="data-row trade-map-legend">
+                        <div class="trade-data-row-left">
+                            <b>% US$</b>
+                            <br>US$ (1000s)
+                        </div>
+                        <div class="trade-data-row-right">
+                            <b>Top Importers</b>
+                            <br>of Brazilian Tallow-Based Biodiesel Exports, 2013
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">68.87%</div>
+                            <div class="trade-dollar">$22,571</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Spain
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">19.63%</div>
+                            <div class="trade-dollar">$6,435</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Netherlands
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div class="trade-data-row-left">
+                            <div class="trade-percentage">11.50%</div>
+                            <div class="trade-dollar">$3,769</div>
+                        </div>
+                        <div class="trade-data-row-right">
+                            Belgium
+                        </div>
+                    </div>
+                </div>
 
 
 
