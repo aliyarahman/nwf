@@ -352,7 +352,6 @@ h2 {
     -ms-transform: translateX(-6em);
     -webkit-transform: translateX(-6em);
     transform: translateX(-6em);
- 
 }
 
 
@@ -362,10 +361,7 @@ h2 {
     border-left: 4em solid #484a56;
     color: #484a56;
     padding: 2em;
-    width: 1080px;
-    height: auto;
     position: absolute;
-    margin: 1em auto 1em auto;
 }
 
 .tangent-article-tagline {
@@ -445,6 +441,7 @@ h2 {
     line-height: 1em;
     font-weight: 500;
     margin-bottom: 0.6em;
+    width: 15em;
 }
 
 .tangent-article-left-col, .tangent-article-right-col,
@@ -582,12 +579,14 @@ h2 {
 
 #prequel-blurb {
     color: white;
+    background-color: rgba(54,54,66,0.65);
     font-family: Dala Floda Web;
-    font-size: 2.2em;
-    line-height: 1em;
+    font-size: 2em;
+    line-height: 1.1em;
     width: 23em;
-    margin-left: 10em;
-    margin-top: 5em;
+    margin-left: 12em;
+    margin-top: 4.5em;
+    padding: 1em 1.5em;
 }
 
 .menu-bar {
@@ -1042,6 +1041,8 @@ h2 {
     font-size: 3.5em;
     margin: 0.1em;
     line-height: 1em;
+    position: relative;
+    z-index: 20;
     cursor: pointer;
     cursor: hand;
 }
@@ -1128,6 +1129,7 @@ h2 {
 .close-trade-map {
     border-radius: 50%;
     position: absolute;
+    z-index: 20;
     right: 6em;
     top: 2em;
     background-color: #6fb174;
@@ -1151,6 +1153,7 @@ h2 {
 .product-intro-text, .trade-map-data {
     display: inline-block;
     color: #363845;
+    z-index: 20;
 }
 
 .product-intro-text {
@@ -1178,6 +1181,7 @@ h2 {
     top: -20em;
     left: 25em;
     width: 50em;
+    z-index: 10;
 }
 
 .international-map {
@@ -1192,6 +1196,7 @@ h2 {
 
 
 .trade-map-data {
+    position: relative;
     display: none;
     width: auto;
     margin: 2em 1em 2em 1em;
@@ -1684,7 +1689,7 @@ h2 {
     margin: auto;
     width: 1175px;
     height: 783px;
-    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/recommendations-map.jpg');
+    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/recommendations.jpg');
     }
 
 

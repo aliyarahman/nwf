@@ -16,29 +16,60 @@ $(document).ready(function() {
   });
 
 
-  $(".tangent-tab").click(function () {
+    // Code for opening tangent tabs
+
+    function open_tangent() {
+        $('section, .tangent-tab-holder').css('opacity',0.2);
+    }
+
+    function close_tangent() {
+        $(".tangent-article").fadeOut();
+        $('section, .tangent-tab-holder').css('opacity',1);
+        $('.tangent-tab-holder').fadeIn();
+    }
+
+    $(".tangent-tab").click(function () {
         var which_tangent = $(this).attr('id').split("tab-")[1];
         var topcoord = window.pageYOffset;
         var leftcoord = window.pageXOffset;
-        $('.tangent-tab-holder').hide();
-        $('section').css('opacity',0.2);
-        $("#"+which_tangent).css({'top':topcoord+20, 'left':leftcoord+(window.innerWidth-1280)/2});
+        open_tangent();
+        $("#"+which_tangent).css({'top':topcoord, 'left':leftcoord, 'height':window.innerHeight, 'width': window.innerWidth});
         $("#"+which_tangent).fadeIn();
-        $('section, .tangent-article-back').on('click', function() {
+        $('.tangent-article-back').on('click', function() {
             $("#"+which_tangent).fadeOut();
-            $('section').css('opacity',1);
-            $('.tangent-tab-holder').show();
+            close_tangent();
         });
-  });
+    });
 
+    $('.site-sub-link').on('click', function(){
+        var which_tangent= $(this).attr('id').split('link-')[1];
+        var topcoord = window.pageYOffset;
+        var leftcoord = window.pageXOffset;
+        $('#site-map, #burger-menu').hide();
+        sitemapopen = false;
+        menuopen = false;
+        open_tangent();
+        $("#"+which_tangent).css({'top':topcoord, 'left':leftcoord, 'height':window.innerHeight, 'width': window.innerWidth});
+        $("#"+which_tangent).fadeIn();
+        $('.tangent-article-back').on('click', function() {
+            $("#"+which_tangent).fadeOut();
+            close_tangent();
+        });
+
+    });
+
+
+  // Code for closing tangent tabs
 
     $(document).keyup(function(e) {
         if (e.keyCode == 27) {
-            $(".tangent-article").fadeOut();
-            $('section').css('opacity',1);
-            $('.tangent-tab-holder').fadeIn();
+            close_tangent();
         }
     });
+
+
+
+
 
 
 /*
@@ -125,23 +156,7 @@ $(document).ready(function() {
             }
     });
 
-    // Link code for site-map links
 
-    $('.site-sub-link').on('click', function(){
-        var which_tangent= $(this).attr('id').split('link-')[1];
-        var topcoord = window.pageYOffset;
-        var leftcoord = window.pageXOffset;
-        $('section').css('opacity',0.2);
-        $("#"+which_tangent).css({'top':topcoord+20, 'left':leftcoord+(window.innerWidth-1280)/2});
-        $("#"+which_tangent).fadeIn();
-
-        $('.tangent-article-back, #rainforest-vid, #chapter-one .chapter-header').on('click', function() {
-            $("#"+which_tangent).fadeOut();
-            $('section').css('opacity',1);
-            $('.tangent-tab-holder').show();
-        });
-
-    });
 
 
     // Places and repositions table of contents details on load and resize
@@ -227,7 +242,7 @@ $('#forest-cover-yr-3').click(function(){
 //=====================================
 
     //Sets the first commodity to open to beef if no clicking happenss
-    var commodity = "beef";
+    var commodity = "Beef";
     var domestic_or_international = "domestic";
 
     // Functionality for the close button
@@ -321,17 +336,17 @@ $('#forest-cover-yr-3').click(function(){
         if ($(this).hasClass('beef')) {
             switch_label_to_beef();
             place_beef_domestic_data();
-            commodity = "beef";
+            commodity = "Beef";
         }
         else if ($(this).hasClass('leather')) {
             switch_label_to_leather();
             place_leather_domestic_data();
-            commodity = "leather";
+            commodity = "Leather";
         }
         else if ($(this).hasClass('tallow')) {
             switch_label_to_tallow();
             place_tallow_domestic_data();
-            commodity = "tallow";
+            commodity = "Tallow";
         }
 
     });
@@ -343,45 +358,62 @@ $('#forest-cover-yr-3').click(function(){
         if (domestic_or_international == "domestic") {
             switch_label_to_international();
             domestic_or_international = "international";
-            if (commodity == 'beef') {
+            if (commodity == 'Beef') {
                 switch_label_to_beef();
                 place_beef_international_data();
-                commodity = "beef";
+                commodity = "Beef";
             }
-            else if (commodity == 'leather') {
+            else if (commodity == 'Leather') {
                 switch_label_to_leather();
                 place_leather_international_data();
-                commodity = "leather";
+                commodity = "Leather";
             }
-            else if (commodity == 'tallow') {
+            else if (commodity == 'Tallow') {
                 switch_label_to_tallow();
                 place_tallow_international_data();
-                commodity = "tallow";
+                commodity = "Tallow";
             }
         }
         else if (domestic_or_international == "international") {
             switch_label_to_domestic();
             domestic_or_international = "domestic";
-            if (commodity == 'beef') {
+            if (commodity == 'Beef') {
                 switch_label_to_beef();
                 place_beef_domestic_data();
-                commodity = "beef";
+                commodity = "Beef";
             }
-            else if (commodity == 'leather') {
+            else if (commodity == 'Leather') {
                 switch_label_to_leather();
                 place_leather_domestic_data();
-                commodity = "leather";
+                commodity = "Leather";
             }
-            else if (commodity == 'tallow') {
+            else if (commodity == 'Tallow') {
                 switch_label_to_tallow();
                 place_tallow_domestic_data();
-                commodity = "tallow";
+                commodity = "Tallow";
             }
         }
 
     });
 
 
+    $('.data-row').on('mouseenter', function() {
+        if (!$(this).hasClass('trade-map-legend')) {
+            $('.trade-map').find('img').show();
+            var map_url = '';
+            var which_country = $(this).find('.trade-data-row-right').attr('id');
+            if (commodity=="Tallow") {
+                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity.trim('\n')+"Map-"+which_country+".jpg";
+            }
+            else {
+                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity.trim('\n')+"Map-"+which_country+".png";
+
+            }
+            $('.trade-map').find('img').attr('src', map_url);
+        }
+       
+
+    })
 
 
 
