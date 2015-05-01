@@ -27,7 +27,6 @@
 
 
 
-
 /*
         This font software is the property of Commercial Type.
 
@@ -539,7 +538,7 @@ h2 {
     width: 100%; height: auto;
     min-width: 1280px;
     z-index: -100;
-    background: url("../img/rainforest-backdrop.jpg") no-repeat;
+    background: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/rainforest-backdrop.jpg") no-repeat;
     background-size: cover;
     }
 
@@ -887,7 +886,7 @@ h2 {
 }
 
 #ch1-left-col {
-    background-image: url("../img/BackgroundTile.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/BackgroundTile.png");
     background-repeat: repeat-y;
 }
 
@@ -962,7 +961,7 @@ h2 {
 }
 
 #ch1-legend-box-6 {
-    background-image: url("../img/ch1_state_line.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch1_state_line.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
@@ -1149,11 +1148,16 @@ h2 {
 }
 
 
-.product-intro-text {
-    width: 20em;
+.product-intro-text, .trade-map-data {
+    display: inline-block;
     color: #363845;
-    margin: 3em 1em 2em 1em;
 }
+
+.product-intro-text {
+    margin: 3em 1em 2em 1em;
+    width: 20em;
+}
+
 
 .see-international-domestic {
     padding: 0.3em 0.5em;
@@ -1162,29 +1166,47 @@ h2 {
     width: 11.5em;
 }
 
+#see-domestic {
+    display: none;
+    width: 9.5em;
+}
+
 
 .trade-map {
     display: inline-block;
     position: relative;
     top: -20em;
-    left: 22em;
+    left: 25em;
     width: 50em;
 }
 
 .international-map {
-    width: 60em;
-    top: -10em;
+    width: 65em;
+    top: -32em;
+    left: 18em;
 }
 
 .trade-map img {
     width: 100%;
 }
 
-.data-row {
-    margin-bottom: 1em;
-    margin-top: 1em;
+
+.trade-map-data {
+    display: none;
+    width: auto;
+    margin: 2em 1em 2em 1em;
 }
 
+
+.data-row {
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+}
+
+
+.data-row:hover {
+    background-color: #f5d954;
+}
 
 .trade-data-row-left, .trade-data-row-right {
     display: inline-block;
@@ -1193,21 +1215,40 @@ h2 {
 
 .trade-data-row-left {
     text-align: right;
-    width: 8em;
+    width: 6em;
     margin-right: 1em;
     vertical-align: middle;
+    -webkit-font-feature-settings: 'tnum';
+    -moz-font-feature-settings: 'tnum';
+    -ms-font-feature-settings: 'tnum';
+    line-height: 1em;
+}
+
+
+.trade-percentage {
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 
 .trade-data-row-right {
     text-align: left;
     vertical-align: middle;
+    font-size: 2em;
 }
 
-.trade-map-data {
+.trade-map-legend .trade-data-row-left {
+    font-size: 1em;
+}
+
+.trade-map-legend .trade-data-row-right {
+    font-size: 1em;
+}
+
+
+#international-leather-data, #international-tallow-data {
     display: none;
 }
-
 
 
 
@@ -1219,7 +1260,7 @@ h2 {
 
 #chapter-three .graphic-content {
     height: 915px;
-    background-image: url("../img/ch3-base-map.jpg");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-base-map.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1308,14 +1349,14 @@ h2 {
 
 
 #ch3-legend-box-roads {
-    background-image: url("../img/ch3_road_legend.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3_road_legend.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #ch3-legend-box-states {
-    background-image: url("../img/ch3_state_legend.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3_state_legend.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
@@ -1377,7 +1418,7 @@ h2 {
 #chapter-four .graphic-content {
     height: 890px;
     background-color: #cfbaa9;
-    background-image: url("../img/ch4-zoomout.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch4-zoomout.png");
     background-repeat: no-repeat;
     background-size: 55% auto;
     background-position: 112% 10%;
@@ -1422,7 +1463,7 @@ h2 {
 
 .ch4-map-overlay {
     display: inline-block;
-    background-image: url("../img/preagreement.gif");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/preagreement.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 3em;
@@ -1437,15 +1478,15 @@ h2 {
 }
 
 .ch4-map-overlay-pre {
-    background-image: url("../img/preagreement.gif");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/preagreement.gif");
 }
 
 .ch4-map-overlay-prepost {  
-    background-image: url("../img/prepostagreement.gif");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/prepostagreement.gif");
 }
 
 .ch4-map-overlay-post {
-    background-image: url("../img/postagreement.gif");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/postagreement.gif");
 }
 
 #ch4-map-legend {
@@ -1529,7 +1570,7 @@ h2 {
     top: -3.2em;
     z-index: 0;
     overflow: hidden;
-    background-image: url('../img/ch5.jpg');
+    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/ch5.jpg');
     background-size: 300% 300%;
     background-position: left center;
     background-repeat: no-repeat;
@@ -1643,7 +1684,7 @@ h2 {
     margin: auto;
     width: 1175px;
     height: 783px;
-    background-image: url('../img/recommendations-map.jpg');
+    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/recommendations-map.jpg');
     }
 
 

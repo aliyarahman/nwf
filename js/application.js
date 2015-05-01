@@ -198,27 +198,27 @@ $('#chapter-one .year-number-lg').click(function(){
 });
 
 $('#cattle-head-yr-1').click(function(){
-    $('.cattle-head-growth img').attr('src','img/Map-Herd1993.png');
+    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd1993.png');
 });
 
 $('#cattle-head-yr-2').click(function(){
-    $('.cattle-head-growth img').attr('src','img/Map-Herd2003.png');
+    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd2003.png');
 });
 
 $('#cattle-head-yr-3').click(function(){
-    $('.cattle-head-growth img').attr('src','img/Map-Herd2013.png');
+    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd2013.png');
 });
 
 $('#forest-cover-yr-1').click(function(){
-    $('.forest-cover-loss img').attr('src','img/Map-Defor1991.png');
+    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor1991.png');
 });
 
 $('#forest-cover-yr-2').click(function(){
-    $('.forest-cover-loss img').attr('src','img/Map-Defor2003.png');
+    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor2003.png');
 });
 
 $('#forest-cover-yr-3').click(function(){
-    $('.forest-cover-loss img').attr('src','img/Map-Defor2013.png');
+    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor2013.png');
 });
 
 
@@ -237,65 +237,71 @@ $('#forest-cover-yr-3').click(function(){
         $('.product-category').css('color', '#fff');
     });
 
-    function place_beef_domestic () {
-        $('.domestic-international').text("INTERNATIONAL");
-        $('.product-category').css('color', '#639f69');
-        $('.product-category.beef').css('color', '#fff');
-        $('.product-intro-text').show();
-        $('.product.intro-text').text("The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.");
-        $('.trade-map img').attr('src','img/BeefMap-Domestic.png').parent().removeClass('international-map');
-        $('.trade-map').show();
-        commodity = 'beef';
+
+    function switch_label_to_domestic() {
+        $('#see-domestic').hide();
+        $('#see-international').show();
     }
 
-    function place_leather_domestic () {
-        $('.domestic-international').text("INTERNATIONAL");
+    function switch_label_to_international() {
+        $('#see-international').hide();
+        $('#see-domestic').show();
+    }
+
+    function switch_label_to_beef() {
+        $('.product-category').css('color', '#639f69');
+        $('.product-category.beef').css('color', '#fff');
+    }
+
+    function switch_label_to_leather() {
         $('.product-category').css('color', '#639f69');
         $('.product-category.leather').css('color', '#fff');
-        $('.product-intro-text').show();
+    }
+
+    function switch_label_to_tallow() {
+        $('.product-category').css('color', '#639f69');
+        $('.product-category.tallow').css('color', '#fff');
+    }
+
+
+    function place_beef_domestic_data() {
+        $('.product.intro-text').text("The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.").fadeIn();;
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png').parent().removeClass('international-map');
+        $('.product-intro-text').fadeIn();
+    }
+
+    function place_leather_domestic_data() {
         $('.product-intro-text').text("Although the majority of hides and leather are exported, Brazil has a significant processing and manufacturing sector for leather-based products, including automotive (for vehicle upholstery), footwear, and apparel.");
         $('.trade-map img').attr('src','').parent().removeClass('international-map');
-        commodity = 'leather';
+        $('.product-intro-text').fadeIn();
     }
 
-
-    function place_tallow_domestic () {
-        $('.domestic-international').text("INTERNATIONAL");
-        $('.product-category').css('color', '#639f69');
-        $('.product-category.tallow').css('color', '#fff');
-        $('.product-intro-text').show();
+    function place_tallow_domestic_data() {
         $('.product-intro-text').text("The majority of tallow is consumed by the domestic market in Brazil, with some of the largest applications in the personal and household products (soaps, etc.) sector as well as the production of biodiesel, an important component of the overall transport fuel portfolio.");
         $('.trade-map img').attr('src','').parent().removeClass('international-map');
-        commodity = 'tallow';
-    }
-
-    function place_beef_international () {
-        $('.domestic-international').text("DOMESTIC");
-        $('.product-category').css('color', '#639f69');
-        $('.product-category.beef').css('color', '#fff');
-        $('.product-intro-text').hide();
-        $('.trade-map img').attr('src','img/BeefMap-China.png').parent().addClass('international-map');
-        commodity = 'beef';
-    }
-
-    function place_leather_international () {
-        $('.domestic-international').text("DOMESTIC");
-        $('.product-category').css('color', '#639f69');
-        $('.product-category.leather').css('color', '#fff');
-        $('.product-intro-text').hide();
-        $('.trade-map img').attr('src','img/LeatherMap-China.png').parent().addClass('international-map');
-        commodity = 'leather';
+        $('.product-intro-text').fadeIn();
     }
 
 
-    function place_tallow_international () {
-        $('.domestic-international').text("DOMESTIC");
-        $('.product-category').css('color', '#639f69');
-        $('.product-category.tallow').css('color', '#fff');
-        $('.product-intro-text').hide();
-        $('.trade-map img').attr('src','img/TallowMap-Spain.jpg').parent().addClass('international-map');
-        commodity = 'tallow';
+    function place_beef_international_data() {
+        $('.product-intro-text').fadeOut();
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-China.png').parent().addClass('international-map');
+        $('#international-beef-data').css('display', 'inline-block').fadeIn();
     }
+
+    function place_leather_international_data() {
+        $('.product-intro-text').fadeOut();      
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-China.png').parent().addClass('international-map');
+        $('#international-leather-data').css('display', 'inline-block').fadeIn();
+    }
+
+    function place_tallow_international_data() {
+        $('.product-intro-text').fadeOut();
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.jpg').parent().addClass('international-map');
+        $('#international-tallow-data').css('display', 'inline-block').fadeIn();
+    }
+
+
 
 
     // Functionality for clicking to trade maps from the main site
@@ -307,51 +313,82 @@ $('#forest-cover-yr-3').click(function(){
         $('section, .tangent-tab-holder').css('opacity',0.2);
         $('.ch2-screen-holder').fadeOut();
         $('.ch2-screen-holder').css({'top':topcoord, 'left':leftcoord, 'width': ch2screenwidth});
+        $('.ch2-screen-holder').fadeIn();
+        $('.trade-map-data').fadeOut();
+        switch_label_to_domestic();
+        domestic_or_international = "domestic";
 
         if ($(this).hasClass('beef')) {
-            place_beef_domestic();
+            switch_label_to_beef();
+            place_beef_domestic_data();
+            commodity = "beef";
         }
         else if ($(this).hasClass('leather')) {
-            place_leather_domestic();
+            switch_label_to_leather();
+            place_leather_domestic_data();
+            commodity = "leather";
         }
         else if ($(this).hasClass('tallow')) {
-            place_tallow_domestic();
+            switch_label_to_tallow();
+            place_tallow_domestic_data();
+            commodity = "tallow";
         }
 
-        $('.ch2-screen-holder').fadeIn();
     });
 
-    // Functionality for clicking to trade maps
-    var domestic_or_international = "domestic";
+
+    // Functionality for switching between maps
     $('.see-international-domestic').on('click', function(){
+        $('.trade-map-data').fadeOut();
         if (domestic_or_international == "domestic") {
-            $('.domestic-international').text("DOMESTIC");
+            switch_label_to_international();
             domestic_or_international = "international";
             if (commodity == 'beef') {
-                place_beef_international();
+                switch_label_to_beef();
+                place_beef_international_data();
+                commodity = "beef";
             }
             else if (commodity == 'leather') {
-                place_leather_international();
+                switch_label_to_leather();
+                place_leather_international_data();
+                commodity = "leather";
             }
             else if (commodity == 'tallow') {
-                place_tallow_international();
+                switch_label_to_tallow();
+                place_tallow_international_data();
+                commodity = "tallow";
             }
         }
-        else {
-            $('.domestic-international').text("INTERNATIONAL");
+        else if (domestic_or_international == "international") {
+            switch_label_to_domestic();
             domestic_or_international = "domestic";
             if (commodity == 'beef') {
-                place_beef_domestic();
+                switch_label_to_beef();
+                place_beef_domestic_data();
+                commodity = "beef";
             }
             else if (commodity == 'leather') {
-                place_leather_domestic();
+                switch_label_to_leather();
+                place_leather_domestic_data();
+                commodity = "leather";
             }
             else if (commodity == 'tallow') {
-                place_tallow_domestic();
+                switch_label_to_tallow();
+                place_tallow_domestic_data();
+                commodity = "tallow";
             }
         }
 
     });
+
+
+
+
+
+
+
+
+
 
 
 
@@ -368,11 +405,11 @@ $('#forest-cover-yr-3').click(function(){
     });
 
     $('#ch3-pre-g4').on('click', function(){
-        $('#brazil-map-ch3').find('img').attr('src', "img/ch3-pre-overlay.png");
+        $('#brazil-map-ch3').find('img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-pre-overlay.png');
     });
 
     $('#ch3-post-g4').on('click', function(){
-        $('#brazil-map-ch3').find('img').attr('src', "img/ch3-post-overlay.png");
+        $('#brazil-map-ch3').find('img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-post-overlay.png');
     });
 
 
