@@ -364,6 +364,32 @@ h2 {
     position: absolute;
 }
 
+
+.close-tangent-button {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 25;
+    right: 8em;
+    top: 2em;
+    background-color: #363845;
+    border: 3px #363845 solid;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1.6em;
+    width: 1.15em;
+    height: 1.5em;
+    padding-left: 0.35em;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.close-tangent-button:hover {
+    color: #363845;
+    background-color: #fff;    
+}
+
+
 .tangent-article-tagline {
     margin-top: 3em;
     font-size: 1.25em;
@@ -1256,6 +1282,74 @@ h2 {
 }
 
 
+.open-country-popup, .hide-country-popup {
+    display: none;
+    position: absolute;
+    background-color: #f27050;
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-align: center;
+    width: 1.2em;
+    padding-left: -0.15em;
+    padding-right: 0.05em;
+    height: 1.2em;
+    border-radius: 50%;
+    line-height: 1.1em;
+    cursor: pointer;
+    cursor: hand;
+    z-index: 40;
+}
+
+.europe-popup {
+    display: none;
+    top: 10%;
+    left: 50%;
+}
+
+.italy-popup {
+    display: none;
+    top: 39%;
+    left: 49%;
+}
+
+.china-popup {
+    display: none;
+    top: 39%;
+    left: 78%;
+}
+
+
+.popup-panel {
+    display: none;
+    width: 35em;
+    background-color: #fff;
+    position: absolute;
+    z-index: 35;
+}
+
+popup-panel img {
+    width: 100%;
+}
+
+#europe-popup-panel {
+    top: 15%;
+    left: 5%;
+}
+
+#china-popup-panel {
+    top: 43%;
+    left: 61%;    
+}
+
+#italy-popup-panel {
+    top: 45%;
+    left: 53%;    
+}
+
+
+
+
 
 /* Chapter 3 style */
 
@@ -1761,6 +1855,9 @@ h2 {
     cursor: pointer;
     cursor: hand;
 }
+
+
+
 
 
 

@@ -19,7 +19,7 @@ $(document).ready(function() {
     // Code for opening tangent tabs
 
     function open_tangent() {
-        $('section, .tangent-tab-holder').css('opacity',0.2);
+        $('section, .tangent-tab-holder').css('opacity',0);
     }
 
     function close_tangent() {
@@ -35,7 +35,7 @@ $(document).ready(function() {
         open_tangent();
         $("#"+which_tangent).css({'top':topcoord, 'left':leftcoord, 'height':window.innerHeight, 'width': window.innerWidth});
         $("#"+which_tangent).fadeIn();
-        $('.tangent-article-back').on('click', function() {
+        $('.tangent-article-back, .close-tangent-button').on('click', function() {
             $("#"+which_tangent).fadeOut();
             close_tangent();
         });
@@ -51,7 +51,7 @@ $(document).ready(function() {
         open_tangent();
         $("#"+which_tangent).css({'top':topcoord, 'left':leftcoord, 'height':window.innerHeight, 'width': window.innerWidth});
         $("#"+which_tangent).fadeIn();
-        $('.tangent-article-back').on('click', function() {
+        $('.tangent-article-back, .close-tangent-button').on('click', function() {
             $("#"+which_tangent).fadeOut();
             close_tangent();
         });
@@ -321,11 +321,12 @@ $('#forest-cover-yr-3').click(function(){
 
     // Functionality for clicking to trade maps from the main site
     $('.product-category, .product-bubble').on('click', function() {
+        $('.open-country-popup, .hide-country-popup').hide();
         var topcoord = window.pageYOffset;
         var leftcoord = window.pageXOffset;
         var ch2screenwidth = window.innerWidth;
 
-        $('section, .tangent-tab-holder').css('opacity',0.2);
+        $('section, .tangent-tab-holder').css('opacity',0);
         $('.ch2-screen-holder').fadeOut();
         $('.ch2-screen-holder').css({'top':topcoord, 'left':leftcoord, 'width': ch2screenwidth});
         $('.ch2-screen-holder').fadeIn();
@@ -400,19 +401,61 @@ $('#forest-cover-yr-3').click(function(){
     $('.data-row').on('mouseenter', function() {
         if (!$(this).hasClass('trade-map-legend')) {
             $('.trade-map').find('img').show();
+            $('.popup-panel, .open-country-popup, .hide-country-popup').hide();
             var map_url = '';
             var which_country = $(this).find('.trade-data-row-right').attr('id');
             if (commodity=="Tallow") {
-                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity.trim('\n')+"Map-"+which_country+".jpg";
+                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".jpg";
             }
             else {
-                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity.trim('\n')+"Map-"+which_country+".png";
-
+                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".png";
             }
-            $('.trade-map').find('img').attr('src', map_url);
+            $('.trade-map img').attr('src', map_url);
+            if (which_country == 'Europe' && commodity == 'Beef') {
+                $('#showEurope').show();
+                $('#showEurope').on('click', function() {
+                    $('.open-country-popup').hide();
+                    $('#europe-popup-panel img').attr('src', 'img/BeefMap-EuropeZoom.jpg');
+                    $('#europe-popup-panel').fadeIn();
+                    $('#hideEurope').show();
+                });
+                $('#hideEurope').on('click', function() {
+                    $('.hide-country-popup').hide();
+                    $('#europe-popup-panel').fadeOut();
+                    $('#showEurope').show();
+                });
+            }
+            else if (which_country == 'China' && commodity == 'Leather') {
+                $('#showChina').show();
+                $('#showChina').on('click', function() {
+                    $('.open-country-popup').hide();
+                    $('#china-popup-panel').fadeIn();
+                    $('#hideChina').show();
+                });
+                $('#hideChina').on('click', function() {
+                    $('.hide-country-popup').hide();
+                    $('#china-popup-panel').fadeOut();
+                    $('#showChina').show();
+                });
+            }
+            else if (which_country == 'Italy' && commodity == 'Leather') {
+                $('#showItaly').show();
+                $('#showItaly').on('click', function() {
+                    $('.open-country-popup').hide();
+                    $('#italy-popup-panel').fadeIn();
+                    $('#hideItaly').show();
+                });
+                $('#hideItaly').on('click', function() {
+                    $('.hide-country-popup').hide();
+                    $('#italy-popup-panel').fadeOut();
+                    $('#showItaly').show();
+                });
+            }
+            else {
+                $('.open-country-popup, .hide-country-popup, .popup-panel').hide();
+            }
         }
        
-
     })
 
 
