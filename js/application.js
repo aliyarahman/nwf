@@ -18,57 +18,24 @@ $(document).ready(function() {
 
     // Code for opening tangent tabs
 
-    function open_tangent() {
-        $('section, .tangent-tab-holder').css('opacity',0);
-    }
-
-    function close_tangent() {
-        $(".tangent-article").fadeOut();
-        $('section, .tangent-tab-holder').css('opacity',1);
-        $('.tangent-tab-holder').fadeIn();
-    }
 
     $(".tangent-tab").click(function () {
         var which_tangent = $(this).attr('id').split("tab-")[1];
-        var topcoord = window.pageYOffset;
-        var leftcoord = window.pageXOffset;
-        open_tangent();
-        $("#"+which_tangent).css({'top':topcoord, 'left':leftcoord, 'height':window.innerHeight, 'width': window.innerWidth});
-        $("#"+which_tangent).fadeIn();
-        $('.tangent-article-back, .close-tangent-button').on('click', function() {
-            $("#"+which_tangent).fadeOut();
-            close_tangent();
-        });
+        window.location = which_tangent+'.html';
+        $('.tangent-footer').load('../footer.html');
     });
+
 
     $('.site-sub-link').on('click', function(){
         var which_tangent= $(this).attr('id').split('link-')[1];
-        var topcoord = window.pageYOffset;
-        var leftcoord = window.pageXOffset;
-        $('#site-map, #burger-menu').hide();
-        sitemapopen = false;
-        menuopen = false;
-        open_tangent();
-        $("#"+which_tangent).css({'top':topcoord, 'left':leftcoord, 'height':window.innerHeight, 'width': window.innerWidth});
-        $("#"+which_tangent).fadeIn();
-        $('.tangent-article-back, .close-tangent-button').on('click', function() {
-            $("#"+which_tangent).fadeOut();
-            close_tangent();
-        });
-
+        window.location = which_tangent+'.html';
+        $('.tangent-footer').load('../footer.html');
     });
 
 
-  // Code for closing tangent tabs
-
-    $(document).keyup(function(e) {
-        if (e.keyCode == 27) {
-            close_tangent();
-        }
+    $('.tangent-article-back, .close-tangent-button').on('click', function() {
+        window.location = 'index.html';
     });
-
-
-
 
 
 
@@ -112,6 +79,15 @@ $(document).ready(function() {
         var citation_left = $(this).offset().left;
         $(which_citation).css({'top': citation_top, 'left': citation_left}).show();
         $(which_citation).on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#amazon-biome').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationAmazonBiome').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationAmazonBiome').on('mouseout', function() {
             $(this).hide();
         });
     });

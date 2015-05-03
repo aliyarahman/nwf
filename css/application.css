@@ -281,19 +281,19 @@ h2 {
 
 
 #tab-one {
-    width: 45em;
+    width: 60em;
 }
 
 #tab-one .tangent-tab {
-    width: 23em;
+    width: 32em;
 }
 
 
 #tab-two {
-    width: 32em;
+    width: 45em;
 }
 #tab-two .tangent-tab {
-    width: 15.5em;
+    width: 23em;
 }
 
 
@@ -356,12 +356,17 @@ h2 {
 
 
 .tangent-article {
-    display: none;
     background-color: #fff;
     border-left: 4em solid #484a56;
     color: #484a56;
     padding: 2em;
+    width: 100%;
+    height: 100%;
+}
+
+.tangent-article .copyright-info {
     position: absolute;
+    bottom: 0;
 }
 
 
@@ -407,7 +412,7 @@ h2 {
     color: #eb6451;
 }
 
-#ch3t2 img {
+#ch2t1image img, #ch3t2 img {
     margin-top: 1em;
     width: 35em;
 }
@@ -687,7 +692,7 @@ h2 {
 
 #site-map {
     display: none;
-    width: 35em;
+    width: 43em;
     position: relative;
 }
 
@@ -1321,6 +1326,7 @@ h2 {
 
 
 .popup-panel {
+    display: none;
     width: 35em;
     color: #383645;
     background-color: #fff;
@@ -2003,7 +2009,7 @@ popup-panel img {
 
 /* Citation style */
 
-.citation-number {
+.citation-number, #amazon-biome {
     text-decoration: underline;
     cursor: pointer;
     cursor: hand;
