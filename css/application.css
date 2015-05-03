@@ -1229,7 +1229,7 @@ h2 {
 }
 
 
-.data-row {
+.data-row, .popup-data-row {
     margin-bottom: 0.1em;
     margin-top: 0.1em;
 }
@@ -1309,8 +1309,8 @@ h2 {
 
 .italy-popup {
     display: none;
-    top: 39%;
-    left: 49%;
+    top: 38%;
+    left: 55%;
 }
 
 .china-popup {
@@ -1321,11 +1321,12 @@ h2 {
 
 
 .popup-panel {
-    display: none;
     width: 35em;
+    color: #383645;
     background-color: #fff;
     position: absolute;
-    z-index: 35;
+    padding-left: 1em;
+    padding-top: 3em;
 }
 
 popup-panel img {
@@ -1333,18 +1334,27 @@ popup-panel img {
 }
 
 #europe-popup-panel {
-    top: 15%;
-    left: 5%;
+    background-image: url('../img/BeefMap-EuropeZoom.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 25em;
+    width: 49em;
+    top: 16%;
+    left: 15%;
 }
 
 #china-popup-panel {
-    top: 43%;
-    left: 61%;    
+    height: 15em;
+    width: 28em;
+    top: 36%;
+    left: 39%;    
 }
 
 #italy-popup-panel {
-    top: 45%;
-    left: 53%;    
+    height: 15em;
+    width: 28em;
+    top: 40%;
+    left: 15%;    
 }
 
 
