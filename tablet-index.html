@@ -45,21 +45,21 @@
                     <li onClick='location.href="#about"'>About this site &rarr;</li>
                     <li id="site-map-link" class="hide-medium hide-small">Site-map &rarr;</li>
                     <li>Chapter 1: The Brazilian Amazon &amp; Cattle Ranching
-                        <p>(1) The Clandestine Slaughter</p>
+                        <p>&#x2780; The Clandestine Slaughter</p>
                     </li>
                     <li>Chapter 2: Supply Chain Links
-                        <p>(1) Export vs. Consumption</p>
+                        <p>&#x2781; Export vs. Consumption</p>
                     </li>
                     <li>Chapter 3: Reversing Course
-                        <p>Reversing the Deforestation Trend</p>
-                        <p>Forest Code &amp; CAR</p>
+                        <p>&#x2780; Reversing the Deforestation Trend</p>
+                        <p>&#x2781; Forest Code &amp; CAR</p>
                     </li>
                     <li>Chapter 4: Assessing Impacts
-                        <p>Reversing the Deforestation Trend</p>
-                        <p>Forest Code &amp; CAR</p>
+                        <p>&#x2780; Reversing the Deforestation Trend</p>
+                        <p>&#x2781; Forest Code &amp; CAR</p>
                     </li>
                     <li>Chapter 5: Path Forward &amp; Recommendations
-                        <p>The Clandestine Slaughter</p>
+                        <p>&#x2780; The Clandestine Slaughter</p>
                     </li>
                 </ul>
             </div>
@@ -71,7 +71,12 @@
                 <source src="http://d2tbmhuj3dq9ke.cloudfront.net/img/fbc-480p.webm" type="video/webm">
             </video>
 
-            <video autoplay loop poster="img/rainforest-backdrop.jpg" id="rainforest-vid" class="show-small show-medium">
+            <video autoplay loop poster="img/rainforest-backdrop.jpg" id="rainforest-vid" class="hide-small show-medium">
+            
+            </video>
+
+            <video autoplay loop id="rainforest-vid" class="show-small">
+            
             </video>
 
             <div class="prequel-triangle"></div>
@@ -117,8 +122,7 @@
             <div id ="prequel-title">
                 <div class="prequel-title-wrapper">
                     <div id="prequel-title-large">A Path Towards<br>Zero-Deforestation Cattle</div>
-                    <div id="prequel-blurb" class="hide-small hide-medium">Supply chain solutions offer unprecedented opportunities to reduce cattle-driven deforestation in the Brazilian Amazon and beyond. Achieving that goal, at scale, will require commitments and coordinated support from retailers, meatpackers, banks and investors, governments, and consumers.</div>
-                    <div id="prequel-blurb-tablet" class="show-medium">Supply chain solutions are helping reduce cattle-driven deforestation in the Brazilian Amazon. Through responsible choices, every link in the supply chain can help support verified zero-deforestation production.</div>
+                    <div id="prequel-blurb" class="hide-small">Supply chain solutions are helping reduce cattle-driven deforestation in the Brazilian Amazon. Through responsible choices, every link in the supply chain can help support verified zero-deforestation production.</div>
                 </div>
             </div>
         </div>
@@ -130,7 +134,7 @@
 
         <div class="content">
 
-            <div id="table-of-contents">
+            <div id="table-of-contents" class="hide-small hide-medium">
 
                 <div class="chapter-button" id="chapter-1-button" onClick="location.href='#chapter1'">
                     <div class="chapter-button-left">
@@ -333,19 +337,19 @@
                 <div class="chapter-header-text">
                     <h2>The Brazilian Amazon and Cattle Ranching - A Brief Introduction</h2>
 
-                    <div class="chapter-summary-tagline">
+                    <div class="chapter-summary-tagline hide-medium">
                         <p>Tropical forests provide a wide range of valuable ecosystem benefits, such as climate regulation. The large-scale loss of tropical forests in the Amazon jeopardizes these critical life support systems, disrupting precipitation patterns and leading to potential losses in agricultural productivity.</p>
                     </div>
                 
-                    <div class="read-more-less">
+                    <div class="read-more-less hide-medium">
                         <div class="read-more-button">
                         READ MORE +
                         </div>
                     </div>
                 </div>                 
 
-                <div class="chapter-main-text-holder">
-                    <div class="chapter-main-text">
+                <div class="chapter-main-text-holder show-medium">
+                    <div id="chapter-one-main-text" class="chapter-main-text">
                         <p>The <span id="amazon-biome">Amazon biome</span>, covering almost half of the entire Brazilian territory, is an iconic landscape, with priceless human, wildlife, carbon and water storage, and cultural values for Brazil and the whole planet. It also supports millions of individuals and families who rely on this region to sustain their livelihoods.</p>
 
                         <p>Cattle ranching occurs on over two-thirds of deforested land in the Brazilian Amazon<sup class="citation-number">1</sup><sup>,</sup><sup class="citation-number">2</sup> and has been a default land use for rural properties for many decades, as part of a complex process that includes land occupation, speculation, and cultural tradition. Over the past several decades, this region has undergone a shift from a relatively loose arrangement of un-organized agricultural producers towards more commercially integrated and export-driven production systems.</p>
@@ -356,7 +360,7 @@
                         <br>
                         <p>In many ways, cattle ranching was once beyond the law and efforts aimed at changing land-use practices have largely been ineffective. However, this trend has changed significantly in recent years. A combination of supply chain interventions, including commitments to zero-deforestation production, and government policies have helped reduce the rates of deforestation in the Brazilian Amazon by over 80% in the past decade.<sup class="citation-number">7</sup> Continued support from responsible companies throughout the supply chain is providing critical support for a range of solutions that are helping sever the links between cattle and forest destruction in the Amazon once and for all.</p>
                     </div> 
-                    <div class="read-more-less">
+                    <div class="read-more-less hide-medium">
                         <div class="read-less-button">
                             READ LESS -
                         </div>
@@ -519,7 +523,7 @@
                     </div>
                 </div>
                 <div class="chapter-main-text-holder">
-                    <div class="chapter-main-text">
+                    <div id="chapter-two-main-text" class="chapter-main-text">
                         <p>With the largest commercial cattle herd in the world, Brazil is currently at the forefront of both global production and international trade. The expansion of the cattle herd in the Amazon biome played a key role in supporting growing demand, both within Brazil and internationally, for beef, leather, and tallow.</p>
 
                         <p>Despite its position as a global leader in exports, the majority of beef produced in Brazil (about 80%) is consumed domestically.<sup class="citation-number">21</sup> Large multi-national retailers, including the three largest companies (Walmart, Carrefour, and Pão de Açúcar) play a prominent role in the domestic market. Other prominent brands with a presence in Brazil include, Colgate-Palmolive, Unilever, Mars, and Nestle.</p>
@@ -1104,7 +1108,7 @@
                         </div>
                     </div>    
                     <div class="chapter-main-text-holder">
-                        <div class="chapter-main-text">
+                        <div id="chapter-three-main-text" class="chapter-main-text">
                             <p>During the past decade, significant strides have been made towards reducing cattle-driven deforestation in the Brazilian Amazon. In 2009, high profile campaigns by non-governmental organizations (NGOs) and pressure from the Federal Public Prosecutor’s Offices (Ministério Público Federal, MPF) in several key states, led to two important supply chain interventions: (1) the MPF-TAC Agreement, and (2) the G4 Cattle Agreement.<sup class="citation-number">14</sup></p>
                             <br>
                             <p class="agreement-bullet"><b>(1) MPF-TAC Agreement</b>: The MPFs sued large ranchers who cleared forest illegally and the slaughterhouses that bought from them, and used threats of litigation to convince Brazilian retailers to boycott slaughterhouses connected to illegal deforestation. In response, individual meatpacking companies began signing legally binding TAC agreements (Terms of Adjustment of Conduct) in July 2009, committing to avoid purchases from properties with illegal deforestation. These agreements now include two-thirds of the federally inspected slaughterhouses (SIFs) in the Legal Amazon.<sup class="citation-number">15</sup></p>
@@ -1242,7 +1246,7 @@
                 </div>
 
                 <div class="chapter-main-text-holder">
-                    <div class="chapter-main-text">
+                    <div id="chapter-four-main-text" class="chapter-main-text">
                         <p>Our analysis of the Cattle Agreements demonstrates that they significantly and rapidly changed meatpacker and rancher behavior in the state of Pará. Rancher surveys, property-level analysis, and rigorous statistical analysis were combined to demonstrate the following: 
                             <ul>
                                 <li>JBS slaughterhouses significantly changed purchase behavior and sourcing criteria, and now actively block sales from direct suppliers with deforestation.<sup class="citation-number">18</sup></li>
@@ -1362,7 +1366,7 @@
                     </div>  
                 </div>
                 <div class="chapter-main-text-holder">
-                    <div class="chapter-main-text">
+                    <div id="chapter-five-main-text" class="chapter-main-text">
                         <p>Despite this progress, major challenges still remain to ensuring fully verified zero-deforestation cattle production. The G4 Agreement only extends to three meatpacking companies, which leaves about half of the documented slaughter in the Brazilian Amazon exposed to relatively minimal (if any) monitoring for deforestation and illegal activities. In addition, direct suppliers are the only segment of the supply chain that is current covered by these monitoring efforts. Cattle can move from calving ranches and fattening farms through middlemen and other indirect suppliers without being monitored. Preliminary evidence indicates that the majority of deforestation is now likely occurring on these indirect supplying ranches.</p>
                         <br> 
                         <p>In addition, there are currently no unified and robust audits to check the criteria of the commitments. To ensure compliance with the agreements, a unified, independent auditing system is needed. The results of these audits should be publically available so that all stakeholders in the supply chain can make informed decisions about the performance of this sector.</p>

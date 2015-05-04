@@ -104,32 +104,44 @@ $(document).ready(function() {
     var sitemapopen = false;
 
     $("#burger-box").on('click', function(){
-        if (menuopen === false) {
-            $('.chapter-details').hide();
-            $("#burger-menu").slideDown();
+        $("#burger-menu").toggle();
+        $("#burger-menu").toggleClass('menu-burger-bar-expand');
 
-            $("#site-map-link").on('click', function(){
-                if (sitemapopen === false) {
-                    $("#site-map").show();
-                    sitemapopen = true;
-                    $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
-                        $('#site-map, #burger-menu').hide();
-                        sitemapopen = false;
-                        menuopen = false;
-                    });
-                }
-                else {
-                    $("#site-map").hide();
-                    sitemapopen = false;
-                }
-            });
-            menuopen = true;
-            }
-        else {
-            $("#burger-menu").slideUp();
-            $("#site-map").hide();
-            menuopen = false;
-            }
+        $("#portugues-menu, #english-menu").toggle();
+        $("#portugues-menu, #english-menu").toggleClass('display-inlineblock display-language');
+
+        $("#burger-box").toggleClass("display-inlineblock menu-topbar-expand");
+
+        $("#burger-bar-holder").toggleClass('burger-bar-expanded');
+        // if (menuopen === false) {
+        //     $('.chapter-details').hide();
+        //     // $("#burger-menu").slideDown();
+        //     $("#burger-menu").show();
+        //     // $("#burger-menu").animate({"width": "40em"}, 60);
+        //     $("#burger-menu").toggleClass('menu-burger-bar-expand');
+
+        //     $("#site-map-link").on('click', function(){
+        //         if (sitemapopen === false) {
+        //             $("#site-map").show();
+        //             sitemapopen = true;
+        //             $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
+        //                 $('#site-map, #burger-menu').hide();
+        //                 sitemapopen = false;
+        //                 menuopen = false;
+        //             });
+        //         }
+        //         else {
+        //             $("#site-map").hide();
+        //             sitemapopen = false;
+        //         }
+        //     });
+        //     menuopen = true;
+        //     }
+        // else {
+        //     $("#burger-menu").slideUp();
+        //     $("#site-map").hide();
+        //     menuopen = false;
+        //     }
     });
 
 

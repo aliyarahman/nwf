@@ -2,23 +2,376 @@
     display: none;
 }
 
-/* Smartphones (portrait) */
-@media only screen and (max-width : 320px) {
+/* Tablet sizing */
+/*@media only screen and (max-width : 768px) {*/
+@media only screen and (max-width: 1223px) {
+    body { 
+        font-size: 50%; 
+    }
+    .prequel-title-wrapper {
+        width: 90%;
+    }
+    #prequel {
+        position: relative;
+        top: -3em;
+    }
+    .prequel-triangle, .chapter-triangle {
+        display: none;
+    }
+    #prequel-title-large {
+        font-size: 10em;
+        margin-top: 4.5em;
+        margin-left: 0;
+    }
+    #prequel-blurb-tablet {
+        margin-left: 0;
+        width: 100%;
+        font-size: 4em;
+        background-color: rgba(54, 54, 66, 0.95);
+        padding: 2em 1.5em;
+        margin-top: 2.5em;
+    }
+    .content, .graphic-content {
+        width: 100%;
+    }
+    .show-medium {
+        display: block;
+    }
+    .hide-medium {
+        display: none;
+    }
+    #site-menu {
+        width: 60%;
+    }
+    .display-inlineblock {
+        display: inline-block;
+    }
+    #portugues-menu, #english-menu {
+        display: none;
+    }
+    .display-language {
+        z-index: 1000;
+        font-size: 2.5em;
+        position: absolute;
+        margin: 1em 2em;
+        color: #AFB0B5;
+        top: .5em;
+    }
+    .display-language:nth-child(2) {
+        left: 20%;
+    }
+    .menu-topbar-expand {
+        width: 70% !important;
+        left: 80%;
+    }
+    .burger-bar-expanded {
+        left: 80% !important;
+    }
+    .menu-burger-bar-expand {
+        width: 70%;
+    }
+    .menu-expand {
+        width: 60%;
+    }
+    #burger-box {
+        position: absolute;
+        top: 3em;
+        left: 0;
+        width: 12em;
+        height: 12em;
+        margin-bottom: 0;
+        z-index: 100;
+    }
+    #burger-bar-holder {
+        width: 6em;
+        height: 6em;
+        left: 25%;
+        top: 25%;
+    }
+    .burger-bar {
+        height: 1em;
+        margin: 1em 0px;
+    }
+    #burger-menu {
+        top: 8em;
+        position: absolute;
+        font-size: 175%;
+        height: 50em;
+        width: 60%;
+        z-index: 10;
+    }
+    #burger-menu li, #site-map-menu li {
+        height: auto;
+        border: 0;
+    }
+    .burger-bar:first-child {
+        margin-top: 0;
+    }
+    .burger-bar:last-child {
+        margin-bottom: 0;
+    }
+    #chapter-lines-holder {
+        display: none;
+    }
+    #prequel-blurb {
+        margin-left: 0;
+        font-size: 300%;
+        width: 90%;
+        margin-top: 0.5em;
+        background-color: rgba(54, 54, 66, 0.85)
+    }
+    .tangent-tab-holder {
+        /*display: none;*/
+    }
+    #tab-one, #tab-two, #tab-three, #tab-four, #tab-five {
+        width: 100%;
+    }
+    .tangent-read-more {
+        font-size: 175%;
+    }
+    .tangent-tab {
+        font-size: 250%;
+    }
+    .chapter-number-lg {
+        height: 12em;
+        width: 12em;
+        top: 0.5em;
+    }
+    .read-more-less {
+        display: none;
+    }
+    #chapter-one-main-text, #chapter-two-main-text, #chapter-three-main-text, #chapter-four-main-text, #chapter-five-main-text {
+        display: block;
+        -moz-column-count: 1;
+    }
+    .chapter-summary-tagline {
+        display: none
+    }
+    #chapter-one-main-text p, #chapter-two-main-text p, #chapter-three-main-text p, #chapter-four-main-text p, #chapter-five-main-text p {
+        margin-left: 30%;
+        margin-right: 10%;
+        font-size: 175%;
+    }
+    #chapter-one-main-text p:nth-child(1), #chapter-one-main-text p:nth-child(2) {
+        font-size: 200%;
+        width: 40%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    #chapter-one-main-text p:nth-child(1), #chapter-two-main-text p:nth-child(1), #chapter-three-main-text p:nth-child(1), #chapter-four-main-text p:nth-child(1), #chapter-five-main-text p:nth-child(1) {
+        float: left;
+    }
+    #chapter-one-main-text p:nth-child(2), #chapter-two-main-text p:nth-child(2), #chapter-three-main-text p:nth-child(2), #chapter-four-main-text p:nth-child(2), #chapter-five-main-text p:nth-child(2) {
+        float: right;
+    }
+    #chapter-one-main-text p:nth-child(4), #chapter-two-main-text p:nth-child(4), #chapter-three-main-text p:nth-child(4), #chapter-four-main-text p:nth-child(4), #chapter-five-main-text p:nth-child(4) {
+        margin-top: 20em;
+    }
+    #ch1-left-col, #ch1-right-col {
+        width: 100%;
+        padding-left: 6em;
+    }
+    #chapter-four-main-text ul {
+        font-size: 175%;
+        margin-left: 30%;
+        margin-bottom: -1.5em;
+    }
+    .graphic-title {
+        font-size: 3em;
+    }
+    .graphic-caption {
+        font-size: 150%;
+    }
+    #ch1-left-col .year-number-holder, #ch1-right-col .year-number-holder {
+        top: 0;
+        font-size: 175%;
+    }
+    .ch1-map-legend {
+        font-size: 175%;
+        top: -20em;
+        position: relative;
+        margin-right: -5em;
+    }
+    .brazil-map-ch-1, #ch1-right-col .brazil-map-ch-1 {
+        width: 70%;
+    }
+    #chapter-one .graphic-content, #chapter-two.graphic-content, #chapter-three.graphic-content, #chapter-four.graphic-content, #chapter-five.graphic-content {
+        height: auto;
+    }
+    #chapter-two {
+        margin-bottom: -15em;
+    }
+    #chapter-three-pt-two {
+        padding-top: 12em;
+    }
+    #chapter-four-pt-two, #chapter-five-two {
+        padding-top: 3em;
+    }
+    #ch1-right-col {
+        position: relative;
+        top: -30em;
+        margin-bottom: -60em;
+    }
+    .chapter {
+        padding-top: 3em;
+    }
+    .product-bubble {
+        width: 240px;
+        height: 240px;
+    }
+    #beef-bubble {
+        left: 3em;
+    }
+    .product-headers-tagline {
+        font-size: 3em;
+        width: 80%;
+        padding-top: 3em;
+    }
+    .product-category {
+        font-size: 5em;
+    }
+    .ch5-label {
+        width: 40%;
+        height: 14em;
+    }
+    .ch5-label-text {
+        width: 70%;
+        font-size: 200%;
+    }
+    .credits-row-1 {
+        width: 100%;
+    }
+    #chapter-four-pt-two.graphic-content {
+        background-size: 830% 830%;
+        background-position: 49% 28%;
+    }
+    #chapter-four .year-number-holder {
+        /*width: 100%;*/
+        margin-top: -18em;
+        margin-bottom: 2em;
+        /*font-size: 1em;*/
+        margin-left: 2em;
+    }
+    #chapter-four .graphic-title {
+        font-size: 4em;
+    }
+    #chapter-four .graphic-caption {
+        margin-bottom: 10em;
+        font-size: 200%;
+    }
+    .ch4-map-overlay {
+        width: 440px !important;
+        height: 528px !important;
+        left: 39em !important;
+        top: -15em !important;
+    }
+    #ch4-map-legend {
+        left: 5em;
+        font-size: 150%;
+        margin-top: 15em;
+    }
+    .recommendations-header {
+        margin-left: 4em;
+        font-size: 175%;
+    }
+    .recommendations-map-holder {
+        height: 64em;
+        width: auto;
+        background-size: cover;
+    }
+
+}
+
+/* Desktop sizing */
+@media only screen and (min-width : 1224px) {
+    body { font-size: 100%; }
+}
+
+/* Large screens */
+@media only screen  and (min-width : 1824px) {
+    body { font-size: 120%; }
+}
+
+/* Smartphones */
+@media only screen and (max-width : 767px) {
     .content {
         width: 100%;
     }
     .show-small {
-        display: initial;
+        display: block;
     }
-    body { font-size: 40%; }
-    #rainforest-vid {
-        height: 50em;
-        width: initial;
+    .hide-small {
+        display: none;
+    }
+    .prequel-triangle, .chapter-triangle {
+        display: none;
+    }
+    body { 
+        font-size: 40%;
+    }
+    .read-more-less {
+        display: block;
+        margin-left: 3em;
+    }
+    .chapter-summary-tagline {
+        display: block !important;
+        font-size: 200%;
+    }
+    #chapter-one-main-text, #chapter-two-main-text, #chapter-three-main-text, #chapter-four-main-text, #chapter-five-main-text {
+        display: none;
+        -moz-column-count: 1;
+    }
+    .chapter-summary-tagline {
+        display: none
+    }
+    #chapter-one-main-text p, #chapter-two-main-text p, #chapter-three-main-text p, #chapter-four-main-text p, #chapter-five-main-text p {
+        font-size: 200%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #chapter-one-main-text p:nth-child(1), #chapter-one-main-text p:nth-child(2) {
+        font-size: 200%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #chapter-one-main-text p:nth-child(1), #chapter-two-main-text p:nth-child(1), #chapter-three-main-text p:nth-child(1), #chapter-four-main-text p:nth-child(1), #chapter-five-main-text p:nth-child(1) {
+        float: inherit;
+    }
+    #chapter-one-main-text p:nth-child(2), #chapter-two-main-text p:nth-child(2), #chapter-three-main-text p:nth-child(2), #chapter-four-main-text p:nth-child(2), #chapter-five-main-text p:nth-child(2) {
+        float: inherit;
+    }
+    #chapter-one-main-text p:nth-child(4), #chapter-two-main-text p:nth-child(4), #chapter-three-main-text p:nth-child(4), #chapter-four-main-text p:nth-child(4), #chapter-five-main-text p:nth-child(4) {
+        margin-top: 0;
+    }
+
+    #prequel, #chapter-one {
+        overflow: visible;
+    }
+
+    #burger-box {
+        height: 72px;
+        width: 72px;
+    }
+
+    #burger-menu {
+        height: 53em;
     }
 
     /* Prequel */
+
+    #rainforest-vid {
+        min-width: 0;
+        height: 360px;
+    }
     #prequel-title {
         font-size: 5em;
+    }
+    #prequel-title-large {
+        font-size: 1em;
+        margin-top: 7.5em;
+        margin-left: 0;
     }
     #prequel-title-right {
         top: 0;
@@ -38,11 +391,11 @@
         top: 48em !important;
         width: 5em;
     }
-    #burger-box {
-        height: 5.5em;
-    }
     #burger-bar-holder {
-        left: 1em;
+        left: 15px;
+    }
+    .display-language:nth-child(2) {
+        left: 25%;
     }
 
     /* Chapter Selection */
@@ -61,7 +414,7 @@
 
     /* Chapter 1 */
     .chapter-header {
-        padding-bottom: 20em;
+        /*padding-bottom: 20em;*/
     }
     .chapter-headline {
         text-align: center;
@@ -70,13 +423,26 @@
         top: 0;
     }
     #ch1-left-col {
-        width: 100%;
+        width: 90%;
         margin-bottom: -25em;
+        padding-left: 0;
+        margin-left: 5%;
     }
     #ch1-right-col {
-        width: 100%;
-        margin-top: 1em;
+        width: 90%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-top: 15em;
+        margin-left: 5%;
     }
+    .graphic-title {
+        font-size: 3.5em;
+    }
+    .graphic-caption {
+        width: 100%;
+        font-size: 200%;
+    }
+
     .chapter-1-summary-tagline {
         width: 90%;
         margin-left: auto;
@@ -87,6 +453,11 @@
     }
     .ch1-map-legend {
         margin-left: 2em;
+        top: 5em;
+    }
+    .brazil-map-ch-1 {
+        width: 85%;
+        top: -47em;
     }
     .ch1-legend-note {
         font-size: 1.1em;
@@ -95,30 +466,75 @@
         left: 14em;
     }
 
-    /* Chapter 2 */
-    /* In development */
-    /*.trade-maps-container {
-        display: initial;
-        width: 100%;
-        height: initial;
+    #ch1-right-col .brazil-map-ch-1 {
+        width: 85%;
+        top: -40em;
     }
-    #ch2, .trade-map-bubble, .trade-map-ship-icon, .trade-map-ship-tag, .trade-map-pie {
-        display: none;
-    }*/
 
-}
+    #tab-one .tangent-tab {
+        width: 90%;
+    }
 
-/* Tablet sizing */
-@media only screen and (max-width : 768px) {
-    body { font-size: 50%; }
-}
+    #chapter-four-main-text ul {
+        margin-left: 0;
+    }
+    
+    .product-bubble {
+        width: 120px;
+        height: 120px;
+    }
+    #adult-cow {
+        left: 50%;
+        width: 100%;
+    }
+    #beef-bubble {
+        top: -20em;
+    }
+    #tallow-bubble {
+        top: -16em;
+        left: 14em;
+    }
+    #chapter-four .graphic-title, #chapter-four .graphic-caption {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 0;
+    }
+    .ch4-map-overlay {
+        width: 324px !important;
+        height: 440px !important;
+        left: 0 !important;
+        top: 0 !important;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    #ch4-map-legend {
+        margin-top: 48em;
+    }
+    #chapter-four {
+        overflow: visible;
+    }
+    #chapter-four .graphic-content {
+        height: 1010px;
+    }
+    .ch5-label {
+        width: 50%;
+        height: 18em;
+    }
+    .ch5-label-text {
+        width: 60%;
+        font-size: 175%;
+    }
 
-/* Desktop sizing */
-@media only screen and (min-width : 1224px) {
-    body { font-size: 100%; }
-}
+    .recommendations-header .chapter-summary-tagline {
+        width: 80%;
+    }
 
-/* Large screens */
-@media only screen  and (min-width : 1824px) {
-    body { font-size: 120%; }
+    .recommendations-map-holder {
+        height: 36em;
+        width: auto;
+    }
+    .endorsers {
+        width: 90%;
+    }
 }
