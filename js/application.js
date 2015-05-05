@@ -37,6 +37,12 @@ $(document).ready(function() {
         window.location = 'index.html';
     });
 
+    if ($(window).width() < 1223 && String(window.location).slice(-11) == "/index.html") {
+        window.location.replace("tablet-index.html");
+    }
+    // else if ($(window).width() > 1223 && String(window.location).slice(-11) == "-index.html") {
+    //     window.location.replace("index.html");
+    // }
 
 
 /*
