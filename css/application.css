@@ -361,7 +361,7 @@ h2 {
     color: #484a56;
     padding: 2em;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .tangent-article .copyright-info {
@@ -472,7 +472,8 @@ h2 {
     line-height: 1em;
     font-weight: 500;
     margin-bottom: 0.6em;
-    width: 15em;
+    /*width: 15em;*/
+    width: 90%;
 }
 
 .tangent-article-left-col, .tangent-article-right-col,
@@ -548,6 +549,37 @@ h2 {
     width: 100%;
 }
 
+@media only screen and (max-width: 1223px) {
+    .tangent-article-title {
+        font-size: 200%;
+        width: 60%;
+    }
+    .tangent-article-tagline {
+        width: 60%;
+    }
+    .tangent-article-left-col, .tangent-article-right-col {
+        width: 60%;
+        padding-left: 0;
+    }
+    .tangent-article .copyright-info {
+        position: relative;
+        padding-left: 0;
+        width: 60%;
+    }
+    .close-tangent-button {
+        display: none;
+    }
+    #ch2t1image img, #ch3t2 img {
+        margin-top: 1em;
+        width: 100%;
+    }
+    .ch5t1-top-left, .ch5t-top-right {
+        width: 60%;
+    }
+    .ch5t1-bottom .tangent-article-left-col, .ch5t1-bottom .tangent-article-right-col {
+        width: 60%;
+    }
+}
 
 
 /* Prequel style */

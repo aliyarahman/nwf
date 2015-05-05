@@ -74,8 +74,8 @@
         width: 60%;
     }
     #burger-box {
-        position: absolute;
-        top: 3em;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 12em;
         height: 12em;
@@ -93,8 +93,8 @@
         margin: 1em 0px;
     }
     #burger-menu {
-        top: 8em;
-        position: absolute;
+        top: 6em;
+        position: fixed;
         font-size: 175%;
         height: 50em;
         width: 60%;
@@ -191,6 +191,7 @@
         top: -20em;
         position: relative;
         margin-right: -5em;
+        z-index: 1000;
     }
     .brazil-map-ch-1, #ch1-right-col .brazil-map-ch-1 {
         width: 70%;
@@ -216,11 +217,12 @@
         padding-top: 3em;
     }
     .product-bubble {
-        width: 240px;
-        height: 240px;
+        width: 180px;
+        height: 180px;
     }
-    #beef-bubble {
-        left: 3em;
+    #beef-bubble, #leather-bubble, #tallow-bubble {
+        left: 0;
+        top: 0;
     }
     .product-headers-tagline {
         font-size: 3em;
@@ -269,6 +271,7 @@
         left: 5em;
         font-size: 150%;
         margin-top: 15em;
+        z-index: 1000;
     }
     .recommendations-header {
         margin-left: 4em;
@@ -488,11 +491,11 @@
         width: 100%;
     }
     #beef-bubble {
-        top: -20em;
+        top: -20em !important;
     }
     #tallow-bubble {
-        top: -16em;
-        left: 14em;
+        top: -16em !important;
+        left: 14em !important;
     }
     #chapter-four .graphic-title, #chapter-four .graphic-caption {
         width: 90%;
@@ -530,11 +533,28 @@
         width: 80%;
     }
 
+    .recommendations-header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .recommendations-map-holder {
         height: 36em;
         width: auto;
     }
     .endorsers {
         width: 90%;
+    }
+
+    .funders {
+        border: 0;
+        padding-left: 0;
+    }
+}
+
+/* Very tiny */
+@media only screen and (max-width : 320px) {
+    #ch4-map-legend {
+        margin-top: 1em;
     }
 }

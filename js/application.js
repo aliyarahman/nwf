@@ -144,6 +144,10 @@ $(document).ready(function() {
         //     }
     });
 
+    // After clicking a menu item, close the menu.
+    $("#burger-menu ul li").click(function() {
+        $("#burger-box").click();
+    })
 
 
 
