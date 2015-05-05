@@ -1196,7 +1196,7 @@
                 </div>
             </div>
             <div id="brazil-map-ch3">
-                <img src="http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-pre-overlay.png">
+                <img id="brazil-map-ch3-img" src="http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-pre-overlay.png">
             </div>
         </div>
     </section>
@@ -1684,6 +1684,17 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/application.js"></script> <!-- Custom non-library JavaScript, including settings for library use in this page -->
     <script src="js/adaptive.js"></script>
+
+    <script>
+
+        $("#ch3-pre-g4").click(function() {
+            $("#chapter-three .graphic-content").css("background-image", "url(img/pre_agreements.png)");
+        });
+        $("#ch3-post-g4").click(function() {
+            $("#chapter-three .graphic-content").css("background-image", "url(img/post_agreements.png)");
+        })
+
+    </script>
 
 
   </body>

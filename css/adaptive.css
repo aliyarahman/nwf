@@ -349,6 +349,13 @@
         margin-top: 15em;
         z-index: 1000;
     }
+    #ch3-map-legends {
+        z-index: 1000;
+        font-size: 200%;
+        top: 15em;
+        left: 8em;
+
+    }
     .recommendations-header {
         margin-left: 4em;
         font-size: 175%;
@@ -357,6 +364,16 @@
         height: 64em;
         width: auto;
         background-size: cover;
+    }
+    #brazil-map-ch3 {
+        opacity: 0;
+    }
+    #chapter-three {
+        background: #363845;
+    }
+    #chapter-three .graphic-content {
+        background-image: url(../img/pre_agreements.png);
+        background-size: contain;
     }
 
 }
@@ -566,6 +583,13 @@
         left: 50%;
         width: 100%;
     }
+    #ch3-map-legends {
+        z-index: 1000;
+        font-size: 200%;
+        top: 30em;
+        left: 1em;
+
+    }
     #chapter-four .graphic-title, #chapter-four .graphic-caption {
         width: 90%;
         margin-left: 5%;
@@ -694,7 +718,6 @@
         top: -49em;
         left: 14em;
     }
-    #tallow-bubble {
         top: -38em;
         left: 13em;
     }
