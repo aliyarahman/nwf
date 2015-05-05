@@ -2,6 +2,86 @@
     display: none;
 }
 
+.show-medium {
+    display: none;
+}
+
+/* Menu test */
+
+#site-menu {
+    width: 60%;
+}
+.display-inlineblock {
+    display: inline-block;
+}
+#portugues-menu, #english-menu {
+    display: none;
+}
+.display-language {
+    z-index: 1000;
+    font-size: 2.5em;
+    position: fixed;
+    color: #AFB0B5;
+    top: -.75em;
+    margin-left: 2em;
+}
+.display-language:nth-child(2) {
+    left: 20%;
+}
+.menu-topbar-expand {
+    width: 60% !important;
+    left: 80%;
+}
+.burger-bar-expanded {
+    left: 80% !important;
+}
+.menu-burger-bar-expand {
+    width: 70%;
+}
+.menu-expand {
+    width: 60%;
+}
+#burger-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6em;
+    height: 6em;
+    margin-bottom: 0;
+    z-index: 100;
+}
+#burger-bar-holder {
+    width: 3em;
+    height: 3em;
+    left: 25%;
+    top: 25%;
+}
+.burger-bar {
+    height: .5em;
+    margin: .5em 0px;
+}
+#burger-menu {
+    top: 3em;
+    position: fixed;
+    font-size: 75%;
+    height: 50em;
+    width: 60%;
+    z-index: 10;
+}
+#burger-menu li, #site-map-menu li {
+    height: auto;
+    border: 0;
+    margin-left: 2em;
+}
+.burger-bar:first-child {
+    margin-top: 0;
+}
+.burger-bar:last-child {
+    margin-bottom: 0;
+}
+
+/* End Menu test */
+
 /* Tablet sizing */
 /*@media only screen and (max-width : 768px) {*/
 @media only screen and (max-width: 1223px) {
@@ -52,7 +132,7 @@
     .display-language {
         z-index: 1000;
         font-size: 2.5em;
-        position: absolute;
+        position: fixed;
         margin: 1em 2em;
         color: #AFB0B5;
         top: .5em;
@@ -219,10 +299,6 @@
     .product-bubble {
         width: 180px;
         height: 180px;
-    }
-    #beef-bubble, #leather-bubble, #tallow-bubble {
-        left: 0;
-        top: 0;
     }
     .product-headers-tagline {
         font-size: 3em;
@@ -490,13 +566,6 @@
         left: 50%;
         width: 100%;
     }
-    #beef-bubble {
-        top: -20em !important;
-    }
-    #tallow-bubble {
-        top: -16em !important;
-        left: 14em !important;
-    }
     #chapter-four .graphic-title, #chapter-four .graphic-caption {
         width: 90%;
         margin-left: 5%;
@@ -556,5 +625,119 @@
 @media only screen and (max-width : 320px) {
     #ch4-map-legend {
         margin-top: 1em;
+    }
+}
+
+/* Product bubbles in Chapter 2 need a bit of customization to look good */
+@media only screen and (max-width : 1220px) {
+    #beef-bubble {
+        top: -62em;
+        left: 15em;
+    }
+    #leather-bubble {
+        top: -66em;
+        left: 66em;
+    }
+    #tallow-bubble {
+        top: -82em;
+        left: 45em;
+    }
+}
+@media only screen and (max-width : 1080px) {
+    #beef-bubble {
+        top: -42em;
+        left: 15em;
+    }
+    #leather-bubble {
+        top: -57em;
+        left: 46em;
+    }
+    #tallow-bubble {
+        top: -68em;
+        left: 45em;
+    }
+}
+@media only screen and (max-width : 900px) {
+    #beef-bubble {
+        top: -35em;
+        left: 5em;
+    }
+    #leather-bubble {
+        top: -37em;
+        left: 12em;
+    }
+    #tallow-bubble {
+        top: -68em;
+        left: 45em;
+    }
+}
+@media only screen and (max-width : 767px) {
+    #beef-bubble {
+        top: -73em;
+        left: 5em;
+    }
+    #leather-bubble {
+        top: -77em;
+        left: -7em;
+    }
+    #tallow-bubble {
+        top: -58em;
+        left: 32em;
+    }
+}
+@media only screen and (max-width : 640px) {
+    #beef-bubble {
+        top: -43em;
+        left: 5em;
+    }
+    #leather-bubble {
+        top: -49em;
+        left: 14em;
+    }
+    #tallow-bubble {
+        top: -38em;
+        left: 13em;
+    }
+}
+@media only screen and (max-width : 480px) {
+    #beef-bubble {
+        top: -43em;
+        left: 5em;
+    }
+    #leather-bubble {
+        top: -49em;
+        left: -11em;
+    }
+    #tallow-bubble {
+        top: -22em;
+        left: 0em;
+    }
+}
+@media only screen and (max-width : 410px) {
+    #beef-bubble {
+        top: -43em;
+        left: 5em;
+    }
+    #leather-bubble {
+        top: -26em;
+        left: -2em;
+    }
+    #tallow-bubble {
+        top: -22em;
+        left: -5em;
+    }
+}
+@media only screen and (max-width : 380px) {
+    #beef-bubble {
+        top: -43em;
+        left: 5em;
+    }
+    #leather-bubble {
+        top: -38em;
+        left: 5em;
+    }
+    #tallow-bubble {
+        top: -22em;
+        left: 6em;
     }
 }
