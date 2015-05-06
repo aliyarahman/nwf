@@ -90,6 +90,10 @@ h2 {
     font-size: 4em;
 }
 
+a {
+    color: #363845;
+}
+
 .greyed-out {
     color: #afb0b5;
 }
@@ -308,17 +312,20 @@ h2 {
 
 #tab-four {
     width: 32.5em;
+    position: relative;
+    top: -4em;
 }
+
 #tab-four .tangent-tab {
     width: 16em;
 }
 
 
 #tab-five {
-    width: 42.5em;
+    width: 46em;
 }
 #tab-five .tangent-tab {
-    width: 21.5em;
+    width: 24em;
 }
 
 
@@ -361,20 +368,29 @@ h2 {
     color: #484a56;
     padding: 2em;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+
+.tangent-article a {
+    color: #383645;
+    text-decoration: underline;
 }
 
 .tangent-article .copyright-info {
-    position: absolute;
-    bottom: 0;
+
 }
 
+.tangent-small-graphic {
+    height: 8em;
+}
 
 .close-tangent-button {
     border-radius: 50%;
     position: absolute;
     z-index: 25;
-    right: 8em;
+    right: 2em;
     top: 2em;
     background-color: #363845;
     border: 3px #363845 solid;
@@ -1061,11 +1077,14 @@ h2 {
     color: white;
     margin-top: 3em;
     margin-left: 3em;
+    position: relative;
+    top: -1em;
 }
 
 .product-headers-tagline {
     font-family: Dala Floda Web;
     font-size: 2em;
+    width: 24em;
 }
 
 .product-category {
@@ -1086,7 +1105,7 @@ h2 {
 #adult-cow {
     margin-left: auto;
     margin-right: auto;
-    width: 58%;
+    width: 45%;
     position: relative;
     left: 1em;
     top: -8.5em;
@@ -1111,17 +1130,17 @@ h2 {
 }
 
 #leather-bubble {
-    top: -64em;
+    top: -58em;
     left: 9em;
 }
 
 #beef-bubble {
-    top: -32em;
+    top: -27em;
     left: -2em;
 }
 
 #tallow-bubble {
-    top: -39em;
+    top: -35em;
     left: 40em;
 }
 
@@ -1543,23 +1562,28 @@ popup-panel img {
 }
 
 #chapter-four .graphic-title {
-    width: 17em;
+    position: relative;
+    top: -1em;
+    width: 25em;
 }
 
 #chapter-four .graphic-caption {
+    position: relative;
+    top: -1em;
     width: 36em;
 }
 
 #chapter-four .year-number-holder {
-    width: 43em;
-    margin-top: -3em;
-    margin-bottom: 2em;
+    position: relative;
+    top: -2em;
+    width: 70em;
 }
 
 #chapter-four .year-number-lg {
     color: #876e5a;
     line-height: 0.8em;
     margin-bottom: -0.5em;
+    font-size: 3.8em;
 }
 
 
@@ -1567,14 +1591,12 @@ popup-panel img {
     color: #fff;
 }
 
-#compliance-tag {
-      position: relative;
-      left: 0.1em;
-      top: 0.3em;
-      font-size: 2.9em;
-      font-weight: normal;
+.compliance-tag {
+    font-size: 0.5em;
+    position: relative;
+    left: 1.5em;
+    top: -0.2em;
 }
-
 
 .ch4-map-overlay {
     display: inline-block;
@@ -1585,8 +1607,8 @@ popup-panel img {
     height: 3.72em;
     vertical-align: middle;
     position: relative;
-    left: 62em;
-    top: -23em;
+    left: 68em;
+    top: -41em;
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
     transition: all 1s;
@@ -1609,8 +1631,8 @@ popup-panel img {
     color: #fff;
     position: absolute;
     width: 20em;
-    left: 14.8em;
-    margin-top: 5em;
+    left: 8em;
+    margin-top: -15em;
 }
 
 .ch4-legend-label {
@@ -1699,7 +1721,7 @@ popup-panel img {
     display: inline-block;
     background-color: #fff;
     color: #000;
-    width: 22em;
+    width: 27em;
     height: 7em;
     padding: 1em;
     padding-right: 0.3em;
@@ -1713,7 +1735,7 @@ popup-panel img {
 .ch5-label-text {
     height: 100%;
     vertical-align: middle;
-    width: 12em;
+    width: 17em;
     padding: 0em 1em;
     display: inline-block;
 }
@@ -1807,6 +1829,10 @@ popup-panel img {
     width: 100%;
     }
 
+.rec-photo-caption {
+    color: #363845;
+    text-align: right;
+}
 
 .map-point {
     display: inline-block;
@@ -2009,7 +2035,7 @@ popup-panel img {
 
 /* Citation style */
 
-.citation-number, #amazon-biome {
+.citation-number, #amazon-biome, .gibbs-et-al, #direct-suppliers, #indirect-suppliers {
     text-decoration: underline;
     cursor: pointer;
     cursor: hand;
@@ -2033,6 +2059,7 @@ popup-panel img {
 #citation17 {
     background-color: #5e616a;
 }
+
 
 .citation a {
     color: #fff;

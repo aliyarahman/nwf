@@ -77,6 +77,9 @@ $(document).ready(function() {
         var which_citation = '#citation'+$(this).text();
         var citation_top = $(this).offset().top;
         var citation_left = $(this).offset().left;
+        if (which_citation == '#citation48') {
+            citation_left -=300;
+        }
         $(which_citation).css({'top': citation_top, 'left': citation_left}).show();
         $(which_citation).on('mouseout', function() {
             $(this).hide();
@@ -88,6 +91,34 @@ $(document).ready(function() {
         var citation_left = $(this).offset().left;
         $('#citationAmazonBiome').css({'top': citation_top, 'left': citation_left}).show();
         $('#citationAmazonBiome').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#direct-suppliers').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationDirectSuppliers').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationDirectSuppliers').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#indirect-suppliers').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationIndirectSuppliers').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationIndirectSuppliers').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+
+    $('.gibbs-et-al').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citation8').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citation8').on('mouseout', function() {
             $(this).hide();
         });
     });
@@ -496,7 +527,7 @@ $('#chapter-four .year-number-lg').on('click', function(){
     $('#chapter-four .year-number-lg').css('color', '#876e5a');
     $(this).css('color', '#fff');
     $('#chapter-four .graphic-content').css({'background-size':'830% 830%','background-position':'49% 28%'});
-    $('.ch4-map-overlay').css({'width':'550px','height':'660px', 'left':'42em', 'top':'-30em'});
+    $('.ch4-map-overlay').css({'width':'550px','height':'660px', 'left':'50em', 'top':'-49em'});
     var which_map = $(this).attr('id').split('-')[0];
     $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
     $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
