@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 
 
-
   //Global behavior
   //====================================
 
@@ -27,7 +26,7 @@ $(document).ready(function() {
         $(window).scrollTop() = y_scroll_pos;
     });
 
-    // Code to contr
+    // Code to control main text display for each chapter
 
     $('.read-more-button').on('click', function(){
         $(this).hide();
@@ -42,8 +41,8 @@ $(document).ready(function() {
     });
 
 
-    // Code for opening tangent tabs
 
+    // Code for opening tangent tabs
 
     $(".tangent-tab").click(function () {
         var which_tangent = $(this).attr('id').split("tab-")[1];
@@ -108,11 +107,29 @@ $(document).ready(function() {
         });
     });
 
-    $('#amazon-biome').on('mouseover', function() {
+    $('#direct-suppliers').on('mouseover', function() {
         var citation_top = $(this).offset().top;
         var citation_left = $(this).offset().left;
-        $('#citationAmazonBiome').css({'top': citation_top, 'left': citation_left}).show();
-        $('#citationAmazonBiome').on('mouseout', function() {
+        $('#citationDirectSuppliers').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationDirectSuppliers').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#indirect-suppliers').on('mouseover', function() {
+        var citation_top = $(this).offset().top-20;
+        var citation_left = $(this).offset().left;
+        $('#citationIndirectSuppliers').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationIndirectSuppliers').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('.gibbs-et-al').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationGibbsEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationGibbsEtAl').on('mouseout', function() {
             $(this).hide();
         });
     });
@@ -129,44 +146,33 @@ $(document).ready(function() {
     var sitemapopen = false;
 
     $("#burger-box").on('click', function(){
-        $("#burger-menu").toggle();
-        $("#burger-menu").toggleClass('menu-burger-bar-expand');
-
-        $("#portugues-menu, #english-menu").toggle();
-        $("#portugues-menu, #english-menu").toggleClass('display-inlineblock display-language');
-
-        $("#burger-box").toggleClass("display-inlineblock menu-topbar-expand");
-
-        $("#burger-bar-holder").toggleClass('burger-bar-expanded');
-        // if (menuopen === false) {
-        //     $('.chapter-details').hide();
-        //     // $("#burger-menu").slideDown();
-        //     $("#burger-menu").show();
-        //     // $("#burger-menu").animate({"width": "40em"}, 60);
-        //     $("#burger-menu").toggleClass('menu-burger-bar-expand');
-
-        //     $("#site-map-link").on('click', function(){
-        //         if (sitemapopen === false) {
-        //             $("#site-map").show();
-        //             sitemapopen = true;
-        //             $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
-        //                 $('#site-map, #burger-menu').hide();
-        //                 sitemapopen = false;
-        //                 menuopen = false;
-        //             });
-        //         }
-        //         else {
-        //             $("#site-map").hide();
-        //             sitemapopen = false;
-        //         }
-        //     });
-        //     menuopen = true;
-        //     }
-        // else {
-        //     $("#burger-menu").slideUp();
-        //     $("#site-map").hide();
-        //     menuopen = false;
-        //     }
+         if (menuopen === false) {
+            $('.chapter-details').hide();
+            $("#burger-menu").slideDown();
+            $("#burger-menu").animate({"width": "40em"}, 60);
+            
+             $("#site-map-link").on('click', function(){
+                 if (sitemapopen === false) {
+                     $("#site-map").show();
+                     sitemapopen = true;
+                     $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
+                         $('#site-map, #burger-menu').hide();
+                         sitemapopen = false;
+                         menuopen = false;
+                     });
+                 }
+                 else {
+                     $("#site-map").hide();
+                     sitemapopen = false;
+                 }
+             });
+             menuopen = true;
+             }
+         else {
+             $("#burger-menu").slideUp();
+             $("#site-map").hide();
+             menuopen = false;
+             }
     });
 
     // After clicking a menu item, close the menu.

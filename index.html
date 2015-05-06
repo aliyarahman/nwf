@@ -18,14 +18,13 @@
 
     <!-- Detect if page is opening for the first time on a mobile or tablet device: 1024 is tablet portrait orientation -->
     <script>
-    if (window.width < 1024) {
+    if (window.innerWidth < 768) {
         window.location = "tablet-index.html";
     }
     </script>
 
     <link href="css/application.css" rel="stylesheet">
-    <!-- <link href="css/adaptive.css" rel="stylesheet"> -->
-   
+  
 
   </head>
 
@@ -33,46 +32,6 @@
 
     <!-- Prequel -->
     <section class="chapter" id="prequel">
-
-        <div id="site-menu">
-            <div id="portugues-menu">
-                <h4>Português</h4>
-            </div>
-            <div id="english-menu">
-                <h4>English</h4>
-            </div>
-            <div id="burger-box">
-                <div id="burger-bar-holder">
-                    <div class="burger-bar"></div>
-                    <div class="burger-bar"></div>
-                    <div class="burger-bar"></div>
-                </div>
-            </div>
-            <div id="burger-menu">
-                <ul>
-                    <li onClick='location.href="#about"'>About this site &rarr;</li>
-                    <li id="site-map-link" class="hide-medium hide-small">Site-map &rarr;</li>
-                    <li>Chapter 1: The Brazilian Amazon &amp; Cattle Ranching
-                        <p>(1) The Clandestine Slaughter</p>
-                    </li>
-                    <li>Chapter 2: Supply Chain Links
-                        <p>(1) Export vs. Consumption</p>
-                    </li>
-                    <li>Chapter 3: Reversing Course
-                        <p>Reversing the Deforestation Trend</p>
-                        <p>Forest Code &amp; CAR</p>
-                    </li>
-                    <li>Chapter 4: Assessing Impacts
-                        <p>Reversing the Deforestation Trend</p>
-                        <p>Forest Code &amp; CAR</p>
-                    </li>
-                    <li>Chapter 5: Path Forward &amp; Recommendations
-                        <p>The Clandestine Slaughter</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
 
         <div class="video-wrapper">
             <video autoplay loop poster="http://d2tbmhuj3dq9ke.cloudfront.net/img/rainforest-backdrop.jpg" id="rainforest-vid" class="hide-small hide-medium">
@@ -84,8 +43,7 @@
 
             <div class="prequel-triangle"></div>
 
-            <div class="menu-bar">
-                
+            <div class="menu-bar">                
                 <div id="site-map">
                     <div id="site-map-menu">
                         <ul>
@@ -1680,6 +1638,7 @@
 
     <div class="citation" id="citationIndirectSuppliers">Indirect suppliers (or Tier 2 and Tier 3) are properties that do not sell cattle to the meatpacker/ slaughterhouse, but rather sell, trade, and transfer cattle to other ranches throughout the production lifecycle. Indirect suppliers typically cover earlier production stages, including breeding and rearing operations, such as cow-calf systems.</div>
 
+    <div class="citation" id="citationGibbsEtAl">Gibbs, H.K., J. Munger, J. L’Roe, P. Barreto, R. Pereira, M. Christie, T. Amaral, and N. Walker. 2015. Did Ranchers and Slaughterhoues Respond to Zero-Deforestation Agreements in the Brazilian Amazon?  Conservation Letters (in press).</div>
 
 
 
@@ -1735,9 +1694,7 @@
 
 
     <script src="js/jquery-2.1.0.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/application.js"></script> <!-- Custom non-library JavaScript, including settings for library use in this page -->
-    <script src="js/adaptive.js"></script>
 
 
   </body>
