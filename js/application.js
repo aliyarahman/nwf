@@ -1,7 +1,26 @@
+
+
+
+
+
+
+
 $(document).ready(function() {
 
   //Global behavior
   //====================================
+
+
+  // <!-- Allow switch between mobile and desktop layouts on resize: 1024 is tablet portrait orientation -->
+    $(window).resize(function() {
+        if ($(window).width() < 1024) {
+            window.location = "tablet-index.html";
+        }
+        else {
+             window.location = "index.html";
+        }
+    });
+
 
   $('.read-more-button').on('click', function(){
         $(this).hide();
@@ -36,13 +55,6 @@ $(document).ready(function() {
     $('.tangent-article-back, .close-tangent-button').on('click', function() {
         window.location = 'index.html';
     });
-
-    if ($(window).width() < 1223 && String(window.location).slice(-11) == "/index.html") {
-        window.location.replace("tablet-index.html");
-    }
-    // else if ($(window).width() > 1223 && String(window.location).slice(-11) == "-index.html") {
-    //     window.location.replace("index.html");
-    // }
 
 
 /*
