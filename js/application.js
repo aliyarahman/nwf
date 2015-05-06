@@ -14,11 +14,10 @@ $(document).ready(function() {
   //====================================
 
 
-  // <!-- Allow switch between mobile and desktop layouts on resize: 1024 is tablet portrait orientation -->
+  // Allow switch between mobile and desktop layouts on resize: 1024 is tablet portrait orientation -->
   // Note we don't want the ability to switch back to mobile once we've learned they are on a desktop
   // Scrolltop code prevents a resize from taking user back to the top
   
-
 
     $(window).resize(function() {
         var y_scroll_pos = $(window).scrollTop();
