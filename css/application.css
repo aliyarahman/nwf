@@ -581,6 +581,14 @@ h2 {
     }
 }
 
+.show-small {
+    display: none;
+}
+
+.show-medium {
+    display: none;
+}
+
 
 /* Prequel style */
 
@@ -2076,4 +2084,78 @@ popup-panel img {
     text-decoration: underline;
     cursor: pointer;
     cursor: hand;
+}
+
+
+/* Menu, pulled from adaptive.css */
+#site-menu {
+    width: 60%;
+}
+.display-inlineblock {
+    display: inline-block;
+}
+#portugues-menu, #english-menu {
+    display: none;
+}
+.display-language {
+    z-index: 1000;
+    font-size: 2.5em;
+    position: fixed;
+    color: #AFB0B5;
+    top: -.75em;
+    margin-left: 2em;
+}
+.display-language:nth-child(2) {
+    left: 20%;
+}
+.menu-topbar-expand {
+    width: 60% !important;
+    left: 80%;
+}
+.burger-bar-expanded {
+    left: 80% !important;
+}
+.menu-burger-bar-expand {
+    width: 70%;
+}
+.menu-expand {
+    width: 60%;
+}
+#burger-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6em;
+    height: 6em;
+    margin-bottom: 0;
+    z-index: 100;
+}
+#burger-bar-holder {
+    width: 3em;
+    height: 3em;
+    left: 25%;
+    top: 25%;
+}
+.burger-bar {
+    height: .5em;
+    margin: .5em 0px;
+}
+#burger-menu {
+    top: 3em;
+    position: fixed;
+    font-size: 75%;
+    height: 50em;
+    width: 60%;
+    z-index: 10;
+}
+#burger-menu li, #site-map-menu li {
+    height: auto;
+    border: 0;
+    margin-left: 2em;
+}
+.burger-bar:first-child {
+    margin-top: 0;
+}
+.burger-bar:last-child {
+    margin-bottom: 0;
 }

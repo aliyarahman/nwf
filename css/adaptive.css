@@ -223,6 +223,9 @@
     #chapter-one-main-text, #chapter-two-main-text, #chapter-three-main-text, #chapter-four-main-text, #chapter-five-main-text {
         display: block;
         -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+        margin-top: 3em;
     }
     .chapter-summary-tagline {
         display: none
@@ -231,6 +234,7 @@
         margin-left: 30%;
         margin-right: 10%;
         font-size: 175%;
+        margin-top: 1em;
     }
     #chapter-one-main-text p:nth-child(1), #chapter-one-main-text p:nth-child(2) {
         font-size: 200%;
@@ -246,6 +250,9 @@
     }
     #chapter-one-main-text p:nth-child(4), #chapter-two-main-text p:nth-child(4), #chapter-three-main-text p:nth-child(4), #chapter-four-main-text p:nth-child(4), #chapter-five-main-text p:nth-child(4) {
         margin-top: 20em;
+    }
+    #chapter-one-main-text p:nth-child(4) {
+        margin-top: 16em;
     }
     #ch1-left-col, #ch1-right-col {
         width: 100%;
@@ -342,6 +349,7 @@
         height: 528px !important;
         left: 39em !important;
         top: -15em !important;
+        float: right;
     }
     #ch4-map-legend {
         left: 5em;
@@ -363,7 +371,9 @@
     .recommendations-map-holder {
         height: 64em;
         width: auto;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50%
     }
     #brazil-map-ch3 {
         opacity: 0;
@@ -610,6 +620,9 @@
     #chapter-four {
         overflow: visible;
     }
+    #chapter-four .year-number-lg {
+        margin-left: 1em;
+    }
     #chapter-four .graphic-content {
         height: 1010px;
     }
@@ -701,12 +714,12 @@
         left: 5em;
     }
     #leather-bubble {
-        top: -77em;
+        top: -89em;
         left: -7em;
     }
     #tallow-bubble {
         top: -58em;
-        left: 32em;
+        left: 9em;
     }
 }
 @media only screen and (max-width : 640px) {
@@ -718,6 +731,7 @@
         top: -49em;
         left: 14em;
     }
+    #tallow-bubble {
         top: -38em;
         left: 13em;
     }
