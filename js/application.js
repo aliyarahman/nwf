@@ -1,19 +1,44 @@
+
+
+
+
+
+
+
 $(document).ready(function() {
+
+
+
 
   //Global behavior
   //====================================
 
-  $('.read-more-button').on('click', function(){
+
+  // Allow switch between mobile and desktop layouts on resize: 1024 is tablet portrait orientation -->
+  // Note we don't want the ability to switch back to mobile once we've learned they are on a desktop
+  // Scrolltop code prevents a resize from taking user back to the top
+  
+
+    $(window).resize(function() {
+        var y_scroll_pos = $(window).scrollTop();
+        if ($(window).width() > 1024) {
+            window.location = "index.html";
+        }
+        $(window).scrollTop() = y_scroll_pos;
+    });
+
+
+    $('.read-more-button').on('click', function(){
         $(this).hide();
         $(this).parent().parent().parent().find('.chapter-main-text').slideDown();
         $(this).parent().parent().parent().find('.read-less-button').show();        
-  });
+    });
 
-  $('.read-less-button').on('click', function(){
+    $('.read-less-button').on('click', function(){
         $(this).parent().parent().parent().find('.chapter-main-text').slideUp();
         $('.read-more-button').show();  
         $(this).hide();
-  });
+    });
 
 
     // Code for opening tangent tabs
@@ -36,7 +61,6 @@ $(document).ready(function() {
     $('.tangent-article-back, .close-tangent-button').on('click', function() {
         window.location = 'index.html';
     });
-
 
 
 /*
@@ -135,34 +159,50 @@ $(document).ready(function() {
     var sitemapopen = false;
 
     $("#burger-box").on('click', function(){
-        if (menuopen === false) {
-            $('.chapter-details').hide();
-            $("#burger-menu").slideDown();
+        $("#burger-menu").toggle();
+        $("#burger-menu").toggleClass('menu-burger-bar-expand');
 
-            $("#site-map-link").on('click', function(){
-                if (sitemapopen === false) {
-                    $("#site-map").show();
-                    sitemapopen = true;
-                    $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
-                        $('#site-map, #burger-menu').hide();
-                        sitemapopen = false;
-                        menuopen = false;
-                    });
-                }
-                else {
-                    $("#site-map").hide();
-                    sitemapopen = false;
-                }
-            });
-            menuopen = true;
-            }
-        else {
-            $("#burger-menu").slideUp();
-            $("#site-map").hide();
-            menuopen = false;
-            }
+        $("#portugues-menu, #english-menu").toggle();
+        $("#portugues-menu, #english-menu").toggleClass('display-inlineblock display-language');
+
+        $("#burger-box").toggleClass("display-inlineblock menu-topbar-expand");
+
+        $("#burger-bar-holder").toggleClass('burger-bar-expanded');
+        // if (menuopen === false) {
+        //     $('.chapter-details').hide();
+        //     // $("#burger-menu").slideDown();
+        //     $("#burger-menu").show();
+        //     // $("#burger-menu").animate({"width": "40em"}, 60);
+        //     $("#burger-menu").toggleClass('menu-burger-bar-expand');
+
+        //     $("#site-map-link").on('click', function(){
+        //         if (sitemapopen === false) {
+        //             $("#site-map").show();
+        //             sitemapopen = true;
+        //             $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
+        //                 $('#site-map, #burger-menu').hide();
+        //                 sitemapopen = false;
+        //                 menuopen = false;
+        //             });
+        //         }
+        //         else {
+        //             $("#site-map").hide();
+        //             sitemapopen = false;
+        //         }
+        //     });
+        //     menuopen = true;
+        //     }
+        // else {
+        //     $("#burger-menu").slideUp();
+        //     $("#site-map").hide();
+        //     menuopen = false;
+        //     }
     });
 
+    // After clicking a menu item, close the menu.
+    $("#burger-menu ul li").click(function() {
+        $("#burger-box").click();
+    })
 
 
 
