@@ -73,6 +73,23 @@ body {
     font-size: 100%;
 }
 
+#beta-marker {
+    font-size: 2em;
+    position: fixed;
+    top: 1em;
+    right: -2em;
+    height: auto;
+    width: auto;
+    padding: 0.5em 3em;
+    background-color: rgba(0,0,0,0.1);
+    color: #363845;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+
+}
+
 section {
     overflow: hidden;
 }
@@ -622,7 +639,7 @@ a {
     width: 100%; height: auto;
     min-width: 1280px;
     z-index: -100;
-    background: url("../img/rainforest-backdrop.jpg") no-repeat;
+    background: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/rainforest-backdrop.jpg") no-repeat;
     background-size: cover;
     }
 
@@ -979,7 +996,7 @@ a {
 }
 
 #ch1-left-col {
-    background-image: url("../img/BackgroundTile.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/BackgroundTile.png");
     background-repeat: repeat-y;
 }
 
@@ -1054,7 +1071,7 @@ a {
 }
 
 #ch1-legend-box-6 {
-    background-image: url("../img/ch1_state_line.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch1_state_line.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
@@ -1374,8 +1391,8 @@ a {
 
 .europe-popup {
     display: none;
-    top: 10%;
-    left: 50%;
+    top: 33%;
+    left: 45%;
 }
 
 .italy-popup {
@@ -1406,13 +1423,13 @@ popup-panel img {
 }
 
 #europe-popup-panel {
-    background-image: url('../img/BeefMap-EuropeZoom.jpg');
+    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-EuropeZoom.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     height: 25em;
     width: 49em;
-    top: 16%;
-    left: 15%;
+    top: 36%;
+    left: 10%;
 }
 
 #china-popup-panel {
@@ -1441,7 +1458,7 @@ popup-panel img {
 
 #chapter-three .graphic-content {
     height: 915px;
-    background-image: url("../img/ch3-base-map.jpg");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-base-map.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1530,14 +1547,14 @@ popup-panel img {
 
 
 #ch3-legend-box-roads {
-    background-image: url("../img/ch3_road_legend.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3_road_legend.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #ch3-legend-box-states {
-    background-image: url("../img/ch3_state_legend.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3_state_legend.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
@@ -1599,7 +1616,7 @@ popup-panel img {
 #chapter-four .graphic-content {
     height: 890px;
     background-color: #cfbaa9;
-    background-image: url("../img/ch4-zoomout.png");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch4-zoomout.png");
     background-repeat: no-repeat;
     background-size: 55% auto;
     background-position: 112% 10%;
@@ -1647,7 +1664,7 @@ popup-panel img {
 
 .ch4-map-overlay {
     display: inline-block;
-    background-image: url("../img/preagreement.gif");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/preagreement.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 3em;
@@ -1662,15 +1679,15 @@ popup-panel img {
 }
 
 .ch4-map-overlay-pre {
-    background-image: url("../img/preagreement.gif");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/preagreement.gif");
 }
 
 .ch4-map-overlay-prepost {  
-    background-image: url("../img/prepostagreement.gif");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/prepostagreement.gif");
 }
 
 .ch4-map-overlay-post {
-    background-image: url("../img/postagreement.gif");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/postagreement.gif");
 }
 
 #ch4-map-legend {
@@ -1754,7 +1771,7 @@ popup-panel img {
     top: -3.2em;
     z-index: 0;
     overflow: hidden;
-    background-image: url('../img/ch5.jpg');
+    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/ch5.jpg');
     background-size: 300% 300%;
     background-position: left center;
     background-repeat: no-repeat;
@@ -1868,7 +1885,7 @@ popup-panel img {
     margin: auto;
     width: 1175px;
     height: 783px;
-    background-image: url('../img/recommendations.jpg');
+    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/recommendations.jpg');
     }
 
 
@@ -1998,6 +2015,24 @@ popup-panel img {
     padding-bottom: 3em;
     border-bottom: 4px solid #fff;
 }
+
+.about-main-text {
+    text-align: left;
+    color: #fff;
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+
+.about-main-text a {
+    color: #fff;
+    font-weight: bold;
+}
+
+#about-title {
+    text-align: center;
+    font-size: 1.5em;
+}
+
 
 .funders, .contributors, .endorsers, .copyright-info {
     text-align: center;
