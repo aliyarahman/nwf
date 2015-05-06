@@ -7,32 +7,39 @@
 
 $(document).ready(function() {
 
+
+
+
   //Global behavior
   //====================================
 
 
   // <!-- Allow switch between mobile and desktop layouts on resize: 1024 is tablet portrait orientation -->
+  // Note we don't want the ability to switch back to mobile once we've learned they are on a desktop
+  // Scrolltop code prevents a resize from taking user back to the top
+  
+
+
     $(window).resize(function() {
-        if ($(window).width() < 1024) {
-            window.location = "tablet-index.html";
+        var y_scroll_pos = $(window).scrollTop();
+        if ($(window).width() > 1024) {
+            window.location = "index.html";
         }
-        else {
-             window.location = "index.html";
-        }
+        $(window).scrollTop() = y_scroll_pos;
     });
 
 
-  $('.read-more-button').on('click', function(){
+    $('.read-more-button').on('click', function(){
         $(this).hide();
         $(this).parent().parent().parent().find('.chapter-main-text').slideDown();
         $(this).parent().parent().parent().find('.read-less-button').show();        
-  });
+    });
 
-  $('.read-less-button').on('click', function(){
+    $('.read-less-button').on('click', function(){
         $(this).parent().parent().parent().find('.chapter-main-text').slideUp();
         $('.read-more-button').show();  
         $(this).hide();
-  });
+    });
 
 
     // Code for opening tangent tabs
