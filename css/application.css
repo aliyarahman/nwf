@@ -622,7 +622,7 @@ a {
     width: 100%; height: auto;
     min-width: 1280px;
     z-index: -100;
-    background: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/rainforest-backdrop.jpg") no-repeat;
+    background: url("../img/rainforest-backdrop.jpg") no-repeat;
     background-size: cover;
     }
 
@@ -676,6 +676,7 @@ a {
     padding: 1em 1.5em;
 }
 
+
 .menu-bar {
     z-index: 60;
     margin-top: -3em;
@@ -683,6 +684,7 @@ a {
     cursor: pointer;
     cursor: hand;
 }
+
 
 #site-menu, #site-map {
     cursor: pointer;
@@ -692,6 +694,7 @@ a {
 #site-menu {
     width: 15em;
 }
+
 
 #burger-box {
     background-color: #363845;
@@ -715,6 +718,8 @@ a {
     background-color: #afb0b5;
     margin: 6px 0px;
 }
+
+
 
 #burger-box:hover, #burger-menu {
     background-color: #282a3a;
@@ -788,6 +793,8 @@ a {
     color: #afb0b5 !important;
     padding-right: 1em !important;
 }
+
+
 
 #table-of-contents, #chapter-lines-holder  {
     width: 100%;
@@ -972,7 +979,7 @@ a {
 }
 
 #ch1-left-col {
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/BackgroundTile.png");
+    background-image: url("../img/BackgroundTile.png");
     background-repeat: repeat-y;
 }
 
@@ -1047,7 +1054,7 @@ a {
 }
 
 #ch1-legend-box-6 {
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch1_state_line.png");
+    background-image: url("../img/ch1_state_line.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
@@ -1434,7 +1441,7 @@ popup-panel img {
 
 #chapter-three .graphic-content {
     height: 915px;
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-base-map.jpg");
+    background-image: url("../img/ch3-base-map.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1523,14 +1530,14 @@ popup-panel img {
 
 
 #ch3-legend-box-roads {
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3_road_legend.png");
+    background-image: url("../img/ch3_road_legend.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #ch3-legend-box-states {
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3_state_legend.png");
+    background-image: url("../img/ch3_state_legend.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
@@ -1592,7 +1599,7 @@ popup-panel img {
 #chapter-four .graphic-content {
     height: 890px;
     background-color: #cfbaa9;
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch4-zoomout.png");
+    background-image: url("../img/ch4-zoomout.png");
     background-repeat: no-repeat;
     background-size: 55% auto;
     background-position: 112% 10%;
@@ -1640,7 +1647,7 @@ popup-panel img {
 
 .ch4-map-overlay {
     display: inline-block;
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/preagreement.gif");
+    background-image: url("../img/preagreement.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 3em;
@@ -1655,15 +1662,15 @@ popup-panel img {
 }
 
 .ch4-map-overlay-pre {
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/preagreement.gif");
+    background-image: url("../img/preagreement.gif");
 }
 
 .ch4-map-overlay-prepost {  
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/prepostagreement.gif");
+    background-image: url("../img/prepostagreement.gif");
 }
 
 .ch4-map-overlay-post {
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/postagreement.gif");
+    background-image: url("../img/postagreement.gif");
 }
 
 #ch4-map-legend {
@@ -1747,7 +1754,7 @@ popup-panel img {
     top: -3.2em;
     z-index: 0;
     overflow: hidden;
-    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/ch5.jpg');
+    background-image: url('../img/ch5.jpg');
     background-size: 300% 300%;
     background-position: left center;
     background-repeat: no-repeat;
@@ -1861,7 +1868,7 @@ popup-panel img {
     margin: auto;
     width: 1175px;
     height: 783px;
-    background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/recommendations.jpg');
+    background-image: url('../img/recommendations.jpg');
     }
 
 
@@ -2111,78 +2118,4 @@ popup-panel img {
     text-decoration: underline;
     cursor: pointer;
     cursor: hand;
-}
-
-
-/* Menu, pulled from adaptive.css */
-#site-menu {
-    width: 60%;
-}
-.display-inlineblock {
-    display: inline-block;
-}
-#portugues-menu, #english-menu {
-    display: none;
-}
-.display-language {
-    z-index: 1000;
-    font-size: 2.5em;
-    position: fixed;
-    color: #AFB0B5;
-    top: -.75em;
-    margin-left: 2em;
-}
-.display-language:nth-child(2) {
-    left: 20%;
-}
-.menu-topbar-expand {
-    width: 60% !important;
-    left: 80%;
-}
-.burger-bar-expanded {
-    left: 80% !important;
-}
-.menu-burger-bar-expand {
-    width: 70%;
-}
-.menu-expand {
-    width: 60%;
-}
-#burger-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 6em;
-    height: 6em;
-    margin-bottom: 0;
-    z-index: 100;
-}
-#burger-bar-holder {
-    width: 3em;
-    height: 3em;
-    left: 25%;
-    top: 25%;
-}
-.burger-bar {
-    height: .5em;
-    margin: .5em 0px;
-}
-#burger-menu {
-    top: 3em;
-    position: fixed;
-    font-size: 75%;
-    height: 50em;
-    width: 60%;
-    z-index: 10;
-}
-#burger-menu li, #site-map-menu li {
-    height: auto;
-    border: 0;
-    margin-left: 2em;
-}
-.burger-bar:first-child {
-    margin-top: 0;
-}
-.burger-bar:last-child {
-    margin-bottom: 0;
 }

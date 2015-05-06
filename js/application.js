@@ -140,6 +140,7 @@ $(document).ready(function() {
   // Prequel behavior
   //=====================================
 
+ 
     // Controls site menu / burger box
 
     var menuopen = false;
@@ -149,12 +150,12 @@ $(document).ready(function() {
          if (menuopen === false) {
             $('.chapter-details').hide();
             $("#burger-menu").slideDown();
-            $("#burger-menu").animate({"width": "40em"}, 60);
             
              $("#site-map-link").on('click', function(){
                  if (sitemapopen === false) {
                      $("#site-map").show();
                      sitemapopen = true;
+                     menuopen = true;
                      $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
                          $('#site-map, #burger-menu').hide();
                          sitemapopen = false;
@@ -164,6 +165,7 @@ $(document).ready(function() {
                  else {
                      $("#site-map").hide();
                      sitemapopen = false;
+                     menuopen = true;
                  }
              });
              menuopen = true;
@@ -172,13 +174,9 @@ $(document).ready(function() {
              $("#burger-menu").slideUp();
              $("#site-map").hide();
              menuopen = false;
+             sitemapopen = false;
              }
     });
-
-    // After clicking a menu item, close the menu.
-    $("#burger-menu ul li").click(function() {
-        $("#burger-box").click();
-    })
 
 
 
@@ -236,27 +234,27 @@ $('#chapter-one .year-number-lg').click(function(){
 });
 
 $('#cattle-head-yr-1').click(function(){
-    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd1993.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd1993.png');
 });
 
 $('#cattle-head-yr-2').click(function(){
-    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd2003.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd2003.png');
 });
 
 $('#cattle-head-yr-3').click(function(){
-    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd2013.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd2013.png');
 });
 
 $('#forest-cover-yr-1').click(function(){
-    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor1991.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor1991.png');
 });
 
 $('#forest-cover-yr-2').click(function(){
-    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor2003.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor2003.png');
 });
 
 $('#forest-cover-yr-3').click(function(){
-    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor2013.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor2013.png');
 });
 
 
@@ -304,7 +302,7 @@ $('#forest-cover-yr-3').click(function(){
 
     function place_beef_domestic_data() {
         $('.product.intro-text').text("The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.").fadeIn();;
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png').parent().removeClass('international-map');
+        $('.trade-map img').attr('src','img/BeefMap-Domestic.png').parent().removeClass('international-map');
         $('.product-intro-text').fadeIn();
     }
 
@@ -323,19 +321,19 @@ $('#forest-cover-yr-3').click(function(){
 
     function place_beef_international_data() {
         $('.product-intro-text').fadeOut();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-China.png').parent().addClass('international-map');
+        $('.trade-map img').attr('src','img/BeefMap-China.png').parent().addClass('international-map');
         $('#international-beef-data').css('display', 'inline-block').fadeIn();
     }
 
     function place_leather_international_data() {
         $('.product-intro-text').fadeOut();      
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-China.png').parent().addClass('international-map');
+        $('.trade-map img').attr('src','img/LeatherMap-China.png').parent().addClass('international-map');
         $('#international-leather-data').css('display', 'inline-block').fadeIn();
     }
 
     function place_tallow_international_data() {
         $('.product-intro-text').fadeOut();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.jpg').parent().addClass('international-map');
+        $('.trade-map img').attr('src','img/TallowMap-Spain.jpg').parent().addClass('international-map');
         $('#international-tallow-data').css('display', 'inline-block').fadeIn();
     }
 
@@ -428,10 +426,10 @@ $('#forest-cover-yr-3').click(function(){
             var map_url = '';
             var which_country = $(this).find('.trade-data-row-right').attr('id');
             if (commodity=="Tallow") {
-                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".jpg";
+                map_url = "img/"+commodity+"Map-"+which_country+".jpg";
             }
             else {
-                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".png";
+                map_url = "img/"+commodity+"Map-"+which_country+".png";
             }
             $('.trade-map img').attr('src', map_url);
             if (which_country == 'Europe' && commodity == 'Beef') {
@@ -503,11 +501,11 @@ $('#forest-cover-yr-3').click(function(){
     });
 
     $('#ch3-pre-g4').on('click', function(){
-        $('#brazil-map-ch3').find('img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-pre-overlay.png');
+        $('#brazil-map-ch3').find('img').attr('src','img/ch3-pre-overlay.png');
     });
 
     $('#ch3-post-g4').on('click', function(){
-        $('#brazil-map-ch3').find('img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-post-overlay.png');
+        $('#brazil-map-ch3').find('img').attr('src','img/ch3-post-overlay.png');
     });
 
 
