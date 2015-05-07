@@ -488,33 +488,6 @@ $('#forest-cover-yr-3').click(function(){
   //Chapter 3 behavior
   //=====================================
 
-    $('#ch3-pre-g4').css('color','#fff');
-
-    // Code for switching out maps
-    $('#chapter-three').find('.year-number-lg').click(function(){
-        $('#chapter-three').find('.year-number-lg').css('color','#5e616a');
-        $(this).css('color', '#fff');
-    });
-
-    $('#ch3-pre-g4').on('click', function(){
-        $('#brazil-map-ch3').find('img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-pre-overlay.png');
-    });
-
-    $('#ch3-post-g4').on('click', function(){
-        $('#brazil-map-ch3').find('img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-post-overlay.png');
-    });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

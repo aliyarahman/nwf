@@ -214,7 +214,7 @@ a {
 .chapter-main-text {
     display: none;
     text-align: left;
-    padding-bottom: 2em;
+    padding: auto 1em 2em 1em;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
@@ -1468,20 +1468,6 @@ popup-panel img {
     width: 18em;
 }
 
-#chapter-three .year-number-holder {
-    margin-top: -2em;
-    width: 35em;
-}
-
-#chapter-three .year-number-lg {
-    font-size: 3.5em;
-    color: #5e616a;
-}
-
-#chapter-three .year-number-lg:hover {
-    color: #fff;
-}
-
 
 .agreement-bullet {
     margin-left: 2em;
@@ -1491,13 +1477,13 @@ popup-panel img {
 #ch3-map-legends {
     color: #fff;
     position: relative;
-    top: 2em;
+    top: 8em;
     left: 3.7em;
     width: 34em;
 }
 
 #agreements-legend {
-    margin-top: 2em;    
+    margin-top: 4em;    
 }
 
 .ch3-legend-note {
@@ -1572,18 +1558,18 @@ popup-panel img {
 }
 
 #ch3-legend-box-3-circle {
-    background-color: #eb6451;
+    background-color: #f9e426;
 }
 
 #ch3-legend-box-4-circle {
-    background-color: #6fb174;
+    background-color: #9191fa;
 }
 
 
 #ch3-col-left {
     display: inline-block;
     position: relative;
-    top: -8.7em;
+    top: -15.7em;
     width: 635px;
     height: 915px;
 }
@@ -1596,8 +1582,10 @@ popup-panel img {
 }
 
 #brazil-map-ch3 img {
-    width: 100%;   
+    width: 100%;
+    margin-left: 2px;   
 }
+
 
 
 #tab-three .tangent-read-more, #tab-three .tangent-title:hover {
@@ -2021,6 +2009,18 @@ popup-panel img {
     color: #fff;
     margin-top: 1em;
     margin-bottom: 4em;
+    padding: 0.5em 2em;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 3em; /* Chrome, Safari, Opera */
+    -moz-column-gap: 3em; /* Firefox */
+    column-gap: 3em;
+}
+
+.about-main-text p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
 }
 
 .about-main-text a {
@@ -2067,14 +2067,14 @@ popup-panel img {
     margin-right: auto;
     padding: 2em;
     width: 72em;
+    height: 15em;
     padding-bottom: 3em;
     border-bottom: 4px solid #fff;
 }
 
 .logo {
-    margin-top: 2em;
     display: inline-block;
-    height: 5em;
+    margin-top: 2em;
     margin-bottom: 4em;
 }
 
@@ -2089,6 +2089,11 @@ popup-panel img {
 
 .funders .logo {
     height: 4em;
+}
+
+.endorsers .logo {
+    margin: 1em 1em auto 1em;
+    height: 3.5em;
 }
 
 #GLUE-logo {
@@ -2109,6 +2114,30 @@ popup-panel img {
     position: relative;
     top: -4em;
 }
+
+#RainforestAlliance-logo, #SEI-logo, #ICV-logo, #IMAZON-logo {
+    position: relative;
+    top: -1.5em;
+}
+
+#RainforestAlliance-logo {
+    top: -1.8em;
+}
+
+#ForestHeroes-logo {
+    height: 7em;
+}
+
+#SEI-logo {
+    height: 2em;
+    top: -2.4em;
+}
+
+#ICV-logo {
+    height: 4em;
+}
+
+
 
 .copyright-info {
     padding-top: 1em;
