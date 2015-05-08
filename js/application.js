@@ -304,13 +304,13 @@ $('#forest-cover-yr-3').click(function(){
 
     function place_leather_domestic_data() {
         $('.product-intro-text').text("Although the majority of hides and leather are exported, Brazil has a significant processing and manufacturing sector for leather-based products, including automotive (for vehicle upholstery), footwear, and apparel.");
-        $('.trade-map img').attr('src','').parent().removeClass('international-map');
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png').parent().removeClass('international-map');
         $('.product-intro-text').fadeIn();
     }
 
     function place_tallow_domestic_data() {
         $('.product-intro-text').text("The majority of tallow is consumed by the domestic market in Brazil, with some of the largest applications in the personal and household products (soaps, etc.) sector as well as the production of biodiesel, an important component of the overall transport fuel portfolio.");
-        $('.trade-map img').attr('src','').parent().removeClass('international-map');
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png').parent().removeClass('international-map');
         $('.product-intro-text').fadeIn();
     }
 
@@ -329,7 +329,7 @@ $('#forest-cover-yr-3').click(function(){
 
     function place_tallow_international_data() {
         $('.product-intro-text').fadeOut();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.jpg').parent().addClass('international-map');
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.png').parent().addClass('international-map');
         $('#international-tallow-data').css('display', 'inline-block').fadeIn();
     }
 
@@ -421,12 +421,7 @@ $('#forest-cover-yr-3').click(function(){
             $('.popup-panel, .open-country-popup, .hide-country-popup').hide();
             var map_url = '';
             var which_country = $(this).find('.trade-data-row-right').attr('id');
-            if (commodity=="Tallow") {
-                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".jpg";
-            }
-            else {
-                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".png";
-            }
+            map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".png";
             $('.trade-map img').attr('src', map_url);
             if (which_country == 'Europe' && commodity == 'Beef') {
                 $('#showEurope').show();
