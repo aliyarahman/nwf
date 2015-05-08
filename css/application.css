@@ -1781,8 +1781,8 @@ popup-panel img {
     display: inline-block;
     background-color: #fff;
     color: #000;
-    width: 27em;
-    height: 7em;
+    width: 28em;
+    height: 7.5em;
     padding: 1em;
     padding-right: 0.3em;
     position: relative;
@@ -1795,7 +1795,7 @@ popup-panel img {
 .ch5-label-text {
     height: 100%;
     vertical-align: middle;
-    width: 17em;
+    width: 18em;
     padding: 0em 1em;
     display: inline-block;
 }
