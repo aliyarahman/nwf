@@ -99,7 +99,6 @@ a {
 img {
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges; 
-    image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
 }
 
@@ -212,7 +211,7 @@ img {
     padding: 1em;
     width: 6em;
     position: relative;
-    top: -3em;
+    top: -2em;
 }
 
 .read-more-button:hover, .read-less-button:hover {
@@ -223,6 +222,7 @@ img {
     display: none;
     text-align: left;
     padding: auto 1em 2em 1em;
+    margin-bottom: 3em;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
@@ -310,11 +310,11 @@ img {
 
 
 #tab-one {
-    width: 60em;
+    width: 62em;
 }
 
 #tab-one .tangent-tab {
-    width: 32em;
+    width: 33em;
 }
 
 
@@ -449,15 +449,34 @@ img {
     color: #6fb174;
 }
 
+#ch2t1-icon {
+    display: inline-block;
+    width: 25%;
+}
+
+#ch2t1-icon img {
+    width: 100%;
+}
+
+#ch2t1-icon-caption {
+    display: inline-block;
+    width: 70%;
+    margin-left: 1em;
+}
+
 #ch3t1 .tangent-article-tagline, #ch3t2 .tangent-article-tagline {
     color: #eb6451;
 }
 
-#ch2t1image img, #ch3t2 img {
+#ch2t1 .tangent-article-image, #ch3t2 img, #ch5t1 .tangent-article-image, #ch5t1 .tangent-article-image {
     margin-top: 1em;
     width: 35em;
 }
 
+#ch3t3 .tangent-article-image {
+    margin-top: 1em;
+    width: 25em;
+}
 
 #ch4t1 .tangent-article-tagline {
     color: #bfa991;
@@ -471,6 +490,31 @@ img {
     font-size: 1.25em;
 }
 
+#ch5t1 .tangent-article-left-col, #ch5t1 .tangent-article-right-col {
+    width: 42%;
+}
+
+#solution-certification, #solution-roundtables {
+    margin-top: 4em;
+}
+
+#solution-certification-text {
+    display: inline-block;
+    width: 50%;
+    padding-left: 5%;
+}
+
+#solution-certification-images {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    padding-left: 3%;
+}
+
+#solution-certification-images img {
+    width: 80%;
+    height: auto;
+}
 
 #ch5t3 .tangent-article-sub-subtitle {
     color: #4bb7b7;
@@ -517,8 +561,11 @@ img {
     width: 90%;
 }
 
-.tangent-article-left-col, .tangent-article-right-col,
-.ch5t1-top-left, .ch5t1-top-right {
+.tangent-row {
+    margin-top: 2em;
+}
+
+.tangent-article-left-col, .tangent-article-right-col {
     vertical-align: top;
     display: inline-block;
 }
@@ -533,26 +580,6 @@ img {
     padding-left: 2em;
 }
 
-.ch5t1-bottom .tangent-article-left-col {
-    width: 20%;
-}
-
-.ch5t1-bottom .tangent-article-right-col {
-    width: 60% !important;
-}
-
-.ch5t1-top-left {
-    width: 40%;
-    margin-right: 2em;
-}
-
-.ch5t1-top-right {
-    width: 40%;
-}
-
-.ch5t1-bottom {
-    margin-top: 2em;
-}
 
 .tangent-article-caption {
     font-weight: bold;
@@ -1281,6 +1308,7 @@ img {
 .product-intro-text {
     margin: 3em 1em 2em 1em;
     width: 20em;
+    display: none;
 }
 
 
@@ -1289,6 +1317,8 @@ img {
     background-color: #363845;
     margin-left: 1em;
     width: 11.5em;
+    cursor: pointer;
+    cursor: hand;
 }
 
 #see-domestic {
@@ -1628,14 +1658,12 @@ popup-panel img {
 }
 
 #chapter-four .graphic-caption {
-    position: relative;
-    top: -1em;
     width: 36em;
 }
 
 #chapter-four .year-number-holder {
     position: relative;
-    top: -2em;
+    top: 1em;
     width: 70em;
 }
 
@@ -1667,7 +1695,7 @@ popup-panel img {
     height: 3.72em;
     vertical-align: middle;
     position: relative;
-    left: 68em;
+    left: 75%;
     top: -41em;
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
@@ -1689,10 +1717,9 @@ popup-panel img {
 #ch4-map-legend {
     display: inline-block;
     color: #fff;
-    position: absolute;
     width: 20em;
-    left: 8em;
-    margin-top: -15em;
+    margin-top: 6em;
+    margin-left: 4em;
 }
 
 .ch4-legend-label {
@@ -1712,14 +1739,14 @@ popup-panel img {
     width: 1.8em;
 }
 
-#ch4-legend-box-1 {
-    background: -webkit-repeating-linear-gradient(-45deg, #f6f2ef, #f6f2ef 5px, transparent 5px, transparent 10px);
-    background: -o-repeating-linear-gradient(-45deg, #f6f2ef, #f6f2ef 5px, transparent 5px, transparent 10px);
-    background: -moz-repeating-linear-gradient(-45deg, #f6f2ef, #f6f2ef 5px, transparent 5px, transparent 10px);
-    background: repeating-linear-gradient(-45deg, #f6f2ef, #f6f2ef 5px, transparent 5px, transparent 10px);
+#ch4-legend-box-2 {
+    background: -webkit-repeating-linear-gradient(-45deg, #fc7612, #fc7612 5px, transparent 5px, transparent 10px);
+    background: -o-repeating-linear-gradient(-45deg, #fc7612, #fc7612 5px, transparent 5px, transparent 10px);
+    background: -moz-repeating-linear-gradient(-45deg, #fc7612, #fc7612 5px, transparent 5px, transparent 10px);
+    background: repeating-linear-gradient(-45deg, #fc7612, #fc7612 5px, transparent 5px, transparent 10px);
 }
 
-#ch4-legend-box-2 {
+#ch4-legend-box-1 {
     background: -webkit-repeating-linear-gradient(-45deg, #ea6350, #ea6350 5px, transparent 5px, transparent 10px);
     background: -o-repeating-linear-gradient(-45deg, #ea6350, #ea6350 5px, transparent 5px, transparent 10px);
     background: -moz-repeating-linear-gradient(-45deg, #ea6350, #ea6350 5px, transparent 5px, transparent 10px);
@@ -1741,6 +1768,20 @@ popup-panel img {
 #tab-four .tangent-read-more, #tab-four .tangent-title:hover {
     color: #c2a993;
 }
+
+.ch4-source {
+    width: auto;
+    text-align: left;
+    color: white;
+    margin-top: 2em;
+}
+
+
+
+
+
+
+
 
 
 
@@ -1852,6 +1893,13 @@ popup-panel img {
     color: #6fb174;
 }
 
+#animal-tag {
+    width: 80%;
+}
+
+#animal-tag img {
+    width: 100%;
+}
 
 
 /* Recommendations style */
@@ -2075,7 +2123,7 @@ popup-panel img {
     margin-right: auto;
     padding: 2em;
     width: 72em;
-    height: 15em;
+    height: 20em;
     padding-bottom: 3em;
     border-bottom: 4px solid #fff;
 }
@@ -2137,14 +2185,13 @@ popup-panel img {
 }
 
 #SEI-logo {
-    height: 2em;
+    height: 3em;
     top: -2.4em;
 }
 
 #ICV-logo {
     height: 4em;
 }
-
 
 
 .copyright-info {
@@ -2154,7 +2201,7 @@ popup-panel img {
 
 /* Citation style */
 
-.citation-number, #amazon-biome, .gibbs-et-al, #direct-suppliers, #indirect-suppliers {
+.citation-number, #amazon-biome, .gibbs-et-al, #direct-suppliers, #indirect-suppliers, #strassburg-et-al, #BeefDomestic, #LeatherDomestic, #TallowDomesticA, #TallowDomesticB, #TallowDomesticC {
     text-decoration: underline;
     cursor: pointer;
     cursor: hand;
@@ -2169,6 +2216,7 @@ popup-panel img {
     color: #fff;
     font-size: 1em;
     box-shadow: 7px 7px #e5e5e5;
+    z-index: 200;
 }
 
 #citation6, #citation7 {

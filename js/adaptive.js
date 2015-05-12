@@ -9,25 +9,24 @@ $(document).ready(function() {
 
 
 
-
   //Global behavior
   //====================================
 
 
-  // Allow switch between mobile and desktop layouts on resize: 1024 is tablet portrait orientation -->
+  // Allow switch between mobile and desktop layouts on resize: 768 is tablet portrait orientation, 1024 is tablet landscape orientation -->
   // Note we don't want the ability to switch back to mobile once we've learned they are on a desktop
   // Scrolltop code prevents a resize from taking user back to the top
   
 
     $(window).resize(function() {
         var y_scroll_pos = $(window).scrollTop();
-        if ($(window).width() > 1024) {
+        if ($(window).width() > 768) {
             window.location = "index.html";
         }
         $(window).scrollTop() = y_scroll_pos;
     });
 
-    // Code to contr
+    // Code to control main text display for each chapter
 
     $('.read-more-button').on('click', function(){
         $(this).hide();
@@ -42,8 +41,8 @@ $(document).ready(function() {
     });
 
 
-    // Code for opening tangent tabs
 
+    // Code for opening tangent tabs
 
     $(".tangent-tab").click(function () {
         var which_tangent = $(this).attr('id').split("tab-")[1];
@@ -58,10 +57,6 @@ $(document).ready(function() {
         $('.tangent-footer').load('../footer.html');
     });
 
-
-    $('.tangent-article-back, .close-tangent-button').on('click', function() {
-        window.location = 'index.html';
-    });
 
 
 /*
@@ -117,62 +112,139 @@ $(document).ready(function() {
         });
     });
 
+    $('#strassburg-et-al').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationStrassburgEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationStrassburgEtAl').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#BeefDomestic').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationBeefDomestic').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationBeefDomestic').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#LeatherDomestic').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationLeatherDomestic').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationLeatherDomestic').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#TallowDomesticA').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationTallowDomesticA').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticA').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#TallowDomesticB').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationTallowDomesticB').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticB').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#TallowDomesticC').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationTallowDomesticC').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticC').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#direct-suppliers').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationDirectSuppliers').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationDirectSuppliers').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#indirect-suppliers').on('mouseover', function() {
+        var citation_top = $(this).offset().top-20;
+        var citation_left = $(this).offset().left;
+        $('#citationIndirectSuppliers').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationIndirectSuppliers').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('.gibbs-et-al').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationGibbsEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationGibbsEtAl').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('.walker-et-al').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationWalkerEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationWalkerEtAl').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
 
 
 
   // Prequel behavior
   //=====================================
 
+ 
     // Controls site menu / burger box
 
     var menuopen = false;
     var sitemapopen = false;
 
     $("#burger-box").on('click', function(){
-        $("#burger-menu").toggle();
-        $("#burger-menu").toggleClass('menu-burger-bar-expand');
-
-        $("#portugues-menu, #english-menu").toggle();
-        $("#portugues-menu, #english-menu").toggleClass('display-inlineblock display-language');
-
-        $("#burger-box").toggleClass("display-inlineblock menu-topbar-expand");
-
-        $("#burger-bar-holder").toggleClass('burger-bar-expanded');
-        // if (menuopen === false) {
-        //     $('.chapter-details').hide();
-        //     // $("#burger-menu").slideDown();
-        //     $("#burger-menu").show();
-        //     // $("#burger-menu").animate({"width": "40em"}, 60);
-        //     $("#burger-menu").toggleClass('menu-burger-bar-expand');
-
-        //     $("#site-map-link").on('click', function(){
-        //         if (sitemapopen === false) {
-        //             $("#site-map").show();
-        //             sitemapopen = true;
-        //             $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
-        //                 $('#site-map, #burger-menu').hide();
-        //                 sitemapopen = false;
-        //                 menuopen = false;
-        //             });
-        //         }
-        //         else {
-        //             $("#site-map").hide();
-        //             sitemapopen = false;
-        //         }
-        //     });
-        //     menuopen = true;
-        //     }
-        // else {
-        //     $("#burger-menu").slideUp();
-        //     $("#site-map").hide();
-        //     menuopen = false;
-        //     }
+         if (menuopen === false) {
+            $('.chapter-details').hide();
+            $("#burger-menu").slideDown();
+            
+             $("#site-map-link").on('click', function(){
+                 if (sitemapopen === false) {
+                     $("#site-map").show();
+                     sitemapopen = true;
+                     menuopen = true;
+                     $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
+                         $('#site-map, #burger-menu').hide();
+                         sitemapopen = false;
+                         menuopen = false;
+                     });
+                 }
+                 else {
+                     $("#site-map").hide();
+                     sitemapopen = false;
+                     menuopen = true;
+                 }
+             });
+             menuopen = true;
+             }
+         else {
+             $("#burger-menu").slideUp();
+             $("#site-map").hide();
+             menuopen = false;
+             sitemapopen = false;
+             }
     });
-
-    // After clicking a menu item, close the menu.
-    $("#burger-menu ul li").click(function() {
-        $("#burger-box").click();
-    })
 
 
 
@@ -297,21 +369,21 @@ $('#forest-cover-yr-3').click(function(){
 
 
     function place_beef_domestic_data() {
-        $('.product.intro-text').text("The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.").fadeIn();;
+        $('#LeatherIntroText, #TallowIntroText').hide();
+        $('#BeefIntroText').fadeIn();
         $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png').parent().removeClass('international-map');
-        $('.product-intro-text').fadeIn();
     }
 
     function place_leather_domestic_data() {
-        $('.product-intro-text').text("Although the majority of hides and leather are exported, Brazil has a significant processing and manufacturing sector for leather-based products, including automotive (for vehicle upholstery), footwear, and apparel.");
-        $('.trade-map img').attr('src','').parent().removeClass('international-map');
-        $('.product-intro-text').fadeIn();
+        $('#BeefIntroText, #TallowIntroText').hide();
+        $('#LeatherIntroText').fadeIn();    
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png').parent().removeClass('international-map');
     }
 
     function place_tallow_domestic_data() {
-        $('.product-intro-text').text("The majority of tallow is consumed by the domestic market in Brazil, with some of the largest applications in the personal and household products (soaps, etc.) sector as well as the production of biodiesel, an important component of the overall transport fuel portfolio.");
-        $('.trade-map img').attr('src','').parent().removeClass('international-map');
-        $('.product-intro-text').fadeIn();
+        $('#LeatherIntroText, #BeefIntroText').hide();
+        $('#TallowIntroText').fadeIn();
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png').parent().removeClass('international-map');
     }
 
 
@@ -329,7 +401,7 @@ $('#forest-cover-yr-3').click(function(){
 
     function place_tallow_international_data() {
         $('.product-intro-text').fadeOut();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.jpg').parent().addClass('international-map');
+        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.png').parent().addClass('international-map');
         $('#international-tallow-data').css('display', 'inline-block').fadeIn();
     }
 
@@ -421,18 +493,13 @@ $('#forest-cover-yr-3').click(function(){
             $('.popup-panel, .open-country-popup, .hide-country-popup').hide();
             var map_url = '';
             var which_country = $(this).find('.trade-data-row-right').attr('id');
-            if (commodity=="Tallow") {
-                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".jpg";
-            }
-            else {
-                map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".png";
-            }
+            map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".png";
             $('.trade-map img').attr('src', map_url);
             if (which_country == 'Europe' && commodity == 'Beef') {
                 $('#showEurope').show();
                 $('#showEurope').on('click', function() {
                     $('.open-country-popup').hide();
-                    $('#europe-popup-panel img').attr('src', 'img/BeefMap-EuropeZoom.jpg');
+                    $('#europe-popup-panel img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-EuropeZoom.jpg');
                     $('#europe-popup-panel').fadeIn();
                     $('#hideEurope').show();
                 });
@@ -488,33 +555,6 @@ $('#forest-cover-yr-3').click(function(){
   //Chapter 3 behavior
   //=====================================
 
-    $('#ch3-pre-g4').css('color','#fff');
-
-    // Code for switching out maps
-    $('#chapter-three').find('.year-number-lg').click(function(){
-        $('#chapter-three').find('.year-number-lg').css('color','#5e616a');
-        $(this).css('color', '#fff');
-    });
-
-    $('#ch3-pre-g4').on('click', function(){
-        $('#brazil-map-ch3').find('img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-pre-overlay.png');
-    });
-
-    $('#ch3-post-g4').on('click', function(){
-        $('#brazil-map-ch3').find('img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-post-overlay.png');
-    });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -536,23 +576,23 @@ $('#forest-cover-yr-3').click(function(){
 $('#chapter-four .year-number-lg').on('click', function(){
     $('#chapter-four .year-number-lg').css('color', '#876e5a');
     $(this).css('color', '#fff');
-    $('#chapter-four .graphic-content').css({'background-size':'830% 830%','background-position':'49% 28%'});
-    $('.ch4-map-overlay').css({'width':'550px','height':'660px', 'left':'42em', 'top':'-30em'});
+
     var which_map = $(this).attr('id').split('-')[0];
-    $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
-    $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
+    var ch4mapurl = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+which_map+"agreement.gif";
+
+    $('.ch4-map-overlay img').css('src',ch4mapurl);
+
     if (which_map == 'pre') {
         $('.ch4-box-1').hide();
-        $('.ch4-box-2').show();
-    }
-    else if (which_map =='prepost') {
-        $('.ch4-box-1').show();
+        $('.ch4-box-3').hide();
         $('.ch4-box-2').show();
     }
     else if (which_map =='post') {
         $('.ch4-box-1').show();
         $('.ch4-box-2').hide();
+        $('.ch4-box-3').show();
     }
+
 });
 
 

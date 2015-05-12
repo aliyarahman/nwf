@@ -103,6 +103,69 @@ $(document).ready(function() {
         });
     });
 
+    $('#amazon-biome').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationAmazonBiome').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationAmazonBiome').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#strassburg-et-al').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationStrassburgEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationStrassburgEtAl').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#BeefDomestic').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationBeefDomestic').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationBeefDomestic').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#LeatherDomestic').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationLeatherDomestic').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationLeatherDomestic').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#TallowDomesticA').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationTallowDomesticA').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticA').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#TallowDomesticB').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationTallowDomesticB').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticB').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('#TallowDomesticC').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationTallowDomesticC').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticC').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
     $('#direct-suppliers').on('mouseover', function() {
         var citation_top = $(this).offset().top;
         var citation_left = $(this).offset().left;
@@ -126,6 +189,15 @@ $(document).ready(function() {
         var citation_left = $(this).offset().left;
         $('#citationGibbsEtAl').css({'top': citation_top, 'left': citation_left}).show();
         $('#citationGibbsEtAl').on('mouseout', function() {
+            $(this).hide();
+        });
+    });
+
+    $('.walker-et-al').on('mouseover', function() {
+        var citation_top = $(this).offset().top;
+        var citation_left = $(this).offset().left;
+        $('#citationWalkerEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationWalkerEtAl').on('mouseout', function() {
             $(this).hide();
         });
     });
@@ -297,21 +369,21 @@ $('#forest-cover-yr-3').click(function(){
 
 
     function place_beef_domestic_data() {
-        $('.product.intro-text').text("The majority (about 80%) of beef produced in Brazil is consumed by the domestic market. Large multi-national retailers play a prominent role in the domestic market for beef products.").fadeIn();;
+        $('#LeatherIntroText, #TallowIntroText').hide();
+        $('#BeefIntroText').fadeIn();
         $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png').parent().removeClass('international-map');
-        $('.product-intro-text').fadeIn();
     }
 
     function place_leather_domestic_data() {
-        $('.product-intro-text').text("Although the majority of hides and leather are exported, Brazil has a significant processing and manufacturing sector for leather-based products, including automotive (for vehicle upholstery), footwear, and apparel.");
+        $('#BeefIntroText, #TallowIntroText').hide();
+        $('#LeatherIntroText').fadeIn();    
         $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png').parent().removeClass('international-map');
-        $('.product-intro-text').fadeIn();
     }
 
     function place_tallow_domestic_data() {
-        $('.product-intro-text').text("The majority of tallow is consumed by the domestic market in Brazil, with some of the largest applications in the personal and household products (soaps, etc.) sector as well as the production of biodiesel, an important component of the overall transport fuel portfolio.");
+        $('#LeatherIntroText, #BeefIntroText').hide();
+        $('#TallowIntroText').fadeIn();
         $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png').parent().removeClass('international-map');
-        $('.product-intro-text').fadeIn();
     }
 
 
@@ -505,12 +577,13 @@ $('#chapter-four .year-number-lg').on('click', function(){
     $('#chapter-four .year-number-lg').css('color', '#876e5a');
     $(this).css('color', '#fff');
     $('#chapter-four .graphic-content').css({'background-size':'830% 830%','background-position':'49% 28%'});
-    $('.ch4-map-overlay').css({'width':'550px','height':'660px', 'left':'42em', 'top':'-30em'});
+    $('.ch4-map-overlay').css({'width':'550px','height':'660px', 'left':'48em', 'top':'-48em'});
     var which_map = $(this).attr('id').split('-')[0];
     $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
     $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
     if (which_map == 'pre') {
         $('.ch4-box-1').hide();
+        $('.ch4-box-3').hide();
         $('.ch4-box-2').show();
     }
     else if (which_map =='prepost') {
@@ -520,7 +593,10 @@ $('#chapter-four .year-number-lg').on('click', function(){
     else if (which_map =='post') {
         $('.ch4-box-1').show();
         $('.ch4-box-2').hide();
+        $('.ch4-box-3').show();
+
     }
+    $('#tab-four').css({'position':'relative','top':'-42em', 'margin-bottom':'-40em'});
 });
 
 
