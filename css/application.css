@@ -96,12 +96,6 @@ a {
 }
 
 
-img {
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges; 
-    image-rendering: crisp-edges;
-}
-
 #beta-marker {
     font-size: 2em;
     position: fixed;
