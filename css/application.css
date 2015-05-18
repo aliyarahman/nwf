@@ -725,9 +725,8 @@ a {
 
 .menu-bar {
     z-index: 60;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
+    margin-top: -55px;
     cursor: pointer;
     cursor: hand;
 }

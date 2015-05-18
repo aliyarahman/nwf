@@ -47,14 +47,12 @@ $(document).ready(function() {
     $(".tangent-tab").click(function () {
         var which_tangent = $(this).attr('id').split("tab-")[1];
         window.location = which_tangent+'.html';
-        $('.tangent-footer').load('../footer.html');
     });
 
 
     $('.site-sub-link').on('click', function(){
         var which_tangent= $(this).attr('id').split('link-')[1];
         window.location = which_tangent+'.html';
-        $('.tangent-footer').load('../footer.html');
     });
 
 

@@ -1,10 +1,6 @@
 
 
 
-
-
-
-
 $(document).ready(function() {
 
 
@@ -12,44 +8,25 @@ $(document).ready(function() {
   //Global behavior
   //====================================
 
-  // For now: Eliminate mobile-desktop version switching based on screensize: look for user agent instead, embedded as script in index.html
-  
-  // Old: Allow switch between to desktop layout on resize: 768 is tablet portrait orientation, 1024 is tablet landscape orientation -->
-  // Old: Note we don't want the ability to switch back to mobile once we've learned they are on a desktop
-  // Old: Scrolltop code prevents a resize from taking user back to the top
-  
 
-  //  $(window).resize(function() {
-  //      var y_scroll_pos = $(window).scrollTop();
-  //      if ($(window).width() > 768) {
-  //          window.location = "index.html";
-  //      }
-  //  });
-
-
-    // Code to control menu bar open and close - note Farah's design suggest not using Bootstrap, so that we can keep the button small and in the upper left corner when the menu is not in use, rather than taking up screen real-estate across the whole top
-
-    var menubuttonheight = $('.menu-button').width();
-    $('.menu-button').css('height', menubuttonheight);
-    
-    $(window).resize(function() {
-        menubuttonheight = $('.menu-button').width();
-        $('.menu-button').css('height', menubuttonheight);
-    });
-
+  // Code to control menu bar open and close - note Farah's design suggest not using Bootstrap, so that we can keep the button small and in the upper left corner when the menu is not in use, rather than taking up screen real-estate across the whole top
 
     var menu_is_open = false;
     $('.menu-button').on('click', function() {
         if (menu_is_open === false) {
-            $('.site-menu').css({'width':'75%'});
+            $('.site-menu').css({'width':'300px'});
             menu_is_open = true;
         }
         else {
-	        $('.site-menu').css({'width':'0%'});
+	        $('.site-menu').css({'width':'0px'});
             menu_is_open = false;
         };
     });
 
+    $('.site-menu li').on('click', function() {
+        $('.site-menu').css({'width':'0px'});
+        menu_is_open = false;
+    });
 
 
 
@@ -63,7 +40,7 @@ $(document).ready(function() {
     });
 
     $('.read-less-button').on('click', function(){
-        $(this).paret().parent().parent().find('.chapter-main-text').slideUp();
+        $(this).parent().parent().parent().find('.chapter-main-text').slideUp();
         $('.read-more-less').show();
         $('.read-more-button').show();  
         $(this).hide();
@@ -76,13 +53,13 @@ $(document).ready(function() {
 
     $(".tangent-tab").click(function () {
         var which_tangent = $(this).attr('id').split("tab-")[1];
-        window.location = which_tangent+'.html';
+        window.location = which_tangent+'-mobile.html';
     });
 
 
     $('.site-sub-link').on('click', function(){
         var which_tangent= $(this).attr('id').split('link-')[1];
-        window.location = which_tangent+'.html';
+        window.location = which_tangent+'-mobile.html';
     });
 
 
@@ -94,8 +71,7 @@ $(document).ready(function() {
     $('.citation-number').on('mouseover', function() {
         var which_citation = '#citation'+$(this).text();
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $(which_citation).css({'top': citation_top, 'left': citation_left}).show();
+        $(which_citation).css({'top': citation_top}).show();
         $(which_citation).on('mouseout', function() {
             $(this).hide();
         });
@@ -103,8 +79,7 @@ $(document).ready(function() {
 
     $('#amazon-biome').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationAmazonBiome').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationAmazonBiome').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationAmazonBiome').on('mouseout', function() {
             $(this).hide();
         });
@@ -112,8 +87,7 @@ $(document).ready(function() {
 
     $('#strassburg-et-al').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationStrassburgEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationStrassburgEtAl').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationStrassburgEtAl').on('mouseout', function() {
             $(this).hide();
         });
@@ -121,8 +95,7 @@ $(document).ready(function() {
 
     $('#BeefDomestic').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationBeefDomestic').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationBeefDomestic').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationBeefDomestic').on('mouseout', function() {
             $(this).hide();
         });
@@ -130,8 +103,7 @@ $(document).ready(function() {
 
     $('#LeatherDomestic').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationLeatherDomestic').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationLeatherDomestic').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationLeatherDomestic').on('mouseout', function() {
             $(this).hide();
         });
@@ -139,8 +111,7 @@ $(document).ready(function() {
 
     $('#TallowDomesticA').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationTallowDomesticA').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticA').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationTallowDomesticA').on('mouseout', function() {
             $(this).hide();
         });
@@ -148,8 +119,7 @@ $(document).ready(function() {
 
     $('#TallowDomesticB').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationTallowDomesticB').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticB').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationTallowDomesticB').on('mouseout', function() {
             $(this).hide();
         });
@@ -157,8 +127,7 @@ $(document).ready(function() {
 
     $('#TallowDomesticC').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationTallowDomesticC').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationTallowDomesticC').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationTallowDomesticC').on('mouseout', function() {
             $(this).hide();
         });
@@ -166,8 +135,7 @@ $(document).ready(function() {
 
     $('#direct-suppliers').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationDirectSuppliers').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationDirectSuppliers').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationDirectSuppliers').on('mouseout', function() {
             $(this).hide();
         });
@@ -175,8 +143,7 @@ $(document).ready(function() {
 
     $('#indirect-suppliers').on('mouseover', function() {
         var citation_top = $(this).offset().top-20;
-        var citation_left = $(this).offset().left;
-        $('#citationIndirectSuppliers').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationIndirectSuppliers').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationIndirectSuppliers').on('mouseout', function() {
             $(this).hide();
         });
@@ -184,8 +151,7 @@ $(document).ready(function() {
 
     $('.gibbs-et-al').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationGibbsEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationGibbsEtAl').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationGibbsEtAl').on('mouseout', function() {
             $(this).hide();
         });
@@ -193,60 +159,11 @@ $(document).ready(function() {
 
     $('.walker-et-al').on('mouseover', function() {
         var citation_top = $(this).offset().top;
-        var citation_left = $(this).offset().left;
-        $('#citationWalkerEtAl').css({'top': citation_top, 'left': citation_left}).show();
+        $('#citationWalkerEtAl').css({'top': citation_top, 'left': '15px'}).show();
         $('#citationWalkerEtAl').on('mouseout', function() {
             $(this).hide();
         });
     });
-
-
-
-
-  // Prequel behavior
-  //=====================================
-
- 
-    // Controls site menu / burger box
-
-    //var menuopen = false;
-    //var sitemapopen = false;
-
-    //$("#burger-box").on('click', function(){
-    //     if (menuopen === false) {
-    //        $('.chapter-details').hide();
-    //        $("#burger-menu").slideDown();
-    //        
-    //         $("#site-map-link").on('click', function(){
-    //             if (sitemapopen === false) {
-    //                 $("#site-map").show();
-    //                 sitemapopen = true;
-    //                 menuopen = true;
-    //                 $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
-    //                     $('#site-map, #burger-menu').hide();
-    //                     sitemapopen = false;
-    //                     menuopen = false;
-    //                 });
-    //             }
-    //             else {
-    //                $("#site-map").hide();
-    //                 sitemapopen = false;
-    //                 menuopen = true;
-    //             }
-    //        });
-    //         menuopen = true;
-    //         }
-    //     else {
-    //         $("#burger-menu").slideUp();
-    //         $("#site-map").hide();
-    //         menuopen = false;
-    //        sitemapopen = false;
-    //         }
-    //});
-
-
-
- 
 
 
 
@@ -504,31 +421,11 @@ $('#forest-cover-yr-3').click(function(){
 
 
 
-
-
-
-
-
-  //Chapter 3 behavior
-  //=====================================
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Chapter 4 behavior
 //=====================================
 
 
-    // Control parcel maps
+ // Control parcel maps
 
 $('#chapter-four .year-number-lg').on('click', function(){
     $('#chapter-four .year-number-lg').css('color', '#876e5a');

@@ -239,12 +239,8 @@ h1,h2,a {
 
 .tangent-article {
     background-color: #fff;
-    border-left: 4em solid #484a56;
+    border-left: 20px solid #484a56;
     color: #484a56;
-    padding: 2em;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
 }
 
 
@@ -255,38 +251,81 @@ h1,h2,a {
 
 
 .tangent-small-graphic {
-    height: 8em;
-}
-
-
-.close-tangent-button {
-    border-radius: 50%;
-    position: absolute;
-    z-index: 25;
-    right: 2em;
-    top: 2em;
-    background-color: #363845;
-    border: 3px #363845 solid;
-    color: #fff;
-    font-weight: bold;
-    font-size: 2em;
-    line-height: 1.6em;
-    width: 1.15em;
-    height: 1.5em;
-    padding-left: 0.35em;
-    cursor: pointer;
-    cursor: hand;
-}
-
-.close-tangent-button:hover {
-    color: #363845;
-    background-color: #fff;    
+    width: 50%;
 }
 
 
 .tangent-article-tagline {
     margin-top: 3em;
     font-size: 1.25em;
+    width: 100%;
+}
+
+.tangent-article-back {
+    color: #9a9aa2;
+    font-size: 1.75em;
+    margin: 0.2em 0 0.6em 0;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.tangent-article-title {
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+    /*width: 15em;*/
+    width: 70%;
+}
+
+
+.tangent-article-subtitle {
+    font-size: 1.25em;
+}
+
+.tangent-article-caption {
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 1.25em;
+}
+
+.tangent-article-image {
+    width: 100%;
+}
+
+.tangent-article-image img {
+    width: 100%;
+}
+  
+.tangent-article-download-button {
+    display: inline-block;
+    color: #fff;
+    background-color: #484a56;
+    width: 8em;
+    text-align: center;
+    vertical-align: top;
+    padding: 0.1em;
+    margin-right: 1em;
+    margin-top: 0.1em;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.tangent-article-download-image {
+    display: inline-block;
+    width: 12em;
+    vertical-align: top;
+}
+
+
+.tangent-article-download-image img {
+    width: 100%;
+}
+
+
+.tangent-article .copyright-info {
+    margin: 3em 2em;
+    font-size: 1em;
 }
 
 
@@ -302,31 +341,17 @@ h1,h2,a {
 
 #ch2t1-icon {
     display: inline-block;
-    width: 25%;
+    width: 50%;
+    margin: 2em 0em 1em 0em;
 }
 
 #ch2t1-icon img {
     width: 100%;
 }
 
-#ch2t1-icon-caption {
-    display: inline-block;
-    width: 70%;
-    margin-left: 1em;
-}
 
 #ch3t1 .tangent-article-tagline, #ch3t2 .tangent-article-tagline {
     color: #eb6451;
-}
-
-#ch2t1 .tangent-article-image, #ch3t2 img, #ch5t1 .tangent-article-image, #ch5t1 .tangent-article-image {
-    margin-top: 1em;
-    width: 35em;
-}
-
-#ch3t3 .tangent-article-image {
-    margin-top: 1em;
-    width: 25em;
 }
 
 #ch4t1 .tangent-article-tagline {
@@ -337,13 +362,6 @@ h1,h2,a {
     color: #4bb7b7;
 }
 
-.tangent-article-subtitle {
-    font-size: 1.25em;
-}
-
-#ch5t1 .tangent-article-left-col, #ch5t1 .tangent-article-right-col {
-    width: 42%;
-}
 
 #solution-certification, #solution-roundtables {
     margin-top: 4em;
@@ -395,134 +413,6 @@ h1,h2,a {
 
 
 
-.tangent-article-back {
-    color: #9a9aa2;
-    font-size: 1.75em;
-    margin: 0.2em 0 0.6em 0;
-    cursor: pointer;
-    cursor: hand;
-}
-
-.tangent-article-title {
-    font-size: 5em;
-    line-height: 1em;
-    font-weight: 500;
-    margin-bottom: 0.6em;
-    /*width: 15em;*/
-    width: 90%;
-}
-
-.tangent-row {
-    margin-top: 2em;
-}
-
-.tangent-article-left-col, .tangent-article-right-col {
-    vertical-align: top;
-    display: inline-block;
-}
-
-.tangent-article-left-col {
-    width: 36%;
-    padding-right: 2em;
-}
-
-.tangent-article-right-col {
-    width: 40%;
-    padding-left: 2em;
-}
-
-
-.tangent-article-caption {
-    font-weight: bold;
-    margin-bottom: 1.25em;
-}
-
-.tangent-article-image {
-}
-
-.tangent-article-image img {
-    width: 100%;
-}
-  
-.tangent-article-download-button {
-    display: inline-block;
-    color: #fff;
-    background-color: #484a56;
-    width: 8em;
-    text-align: center;
-    vertical-align: top;
-    padding: 0.1em;
-    margin-right: 1em;
-    margin-top: 0.1em;
-    cursor: pointer;
-    cursor: hand;
-}
-
-.tangent-article-download-image {
-    display: inline-block;
-    width: 12em;
-    vertical-align: top;
-}
-
-.tangent-article-download-image img {
-    width: 100%;
-}
-
-@media only screen and (max-width: 1223px) {
-    .tangent-article-title {
-        font-size: 200%;
-        width: 60%;
-    }
-    .tangent-article-tagline {
-        width: 60%;
-    }
-    .tangent-article-left-col, .tangent-article-right-col {
-        width: 60%;
-        padding-left: 0;
-    }
-    .tangent-article .copyright-info {
-        position: relative;
-        padding-left: 0;
-        width: 60%;
-    }
-    .close-tangent-button {
-        display: none;
-    }
-    #ch2t1image img, #ch3t2 img {
-        margin-top: 1em;
-        width: 100%;
-    }
-    .ch5t1-top-left, .ch5t-top-right {
-        width: 60%;
-    }
-    .ch5t1-bottom .tangent-article-left-col, .ch5t1-bottom .tangent-article-right-col {
-        width: 60%;
-    }
-}
-
-.show-small {
-    display: none;
-}
-
-.show-medium {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -531,12 +421,13 @@ h1,h2,a {
 /* Prequel style */
 
 #prequel {
-    padding-top: 10em;
-    padding-bottom: 4em;
+    margin: 0px;
+    padding: 10em 1em 4em 1em;
     color: #fff;
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/rainforest-backdrop.jpg");
+    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/rainforest-backdrop-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 #prequel-title {
@@ -552,7 +443,7 @@ h1,h2,a {
     font-family: Dala Floda Web;
     font-size: 1.75em;
     line-height: 1.1em;
-    padding: 1em ;
+    padding: 1em;
 }
 
 
@@ -572,7 +463,8 @@ h1,h2,a {
     vertical-align: top;
     background-color: #282a3a;
     color: #afb0b5;
-    width: 11%;
+    width: 50px;
+    height: 50px;
     padding: 2%;
     border: 1px solid #afb0b5;
     margin: 0px;
@@ -1588,7 +1480,7 @@ popup-panel img {
 
 
 .copyright-info {
-    padding-top: 1em;
+    padding-top: 2em;
 }
 
 
@@ -1603,7 +1495,8 @@ popup-panel img {
 .citation {
     display: none;
     position: absolute;
-    width: 20em;
+    left: 15px;
+    width: 90%;
     padding: 1.5em;
     background-color: #363845;
     color: #fff;
