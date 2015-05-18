@@ -572,9 +572,8 @@ h1,h2,a {
     vertical-align: top;
     background-color: #282a3a;
     color: #afb0b5;
-    width: 60px;
-    height: 60px;
-    padding: 10px 15px 15px 15px;
+    width: 11%;
+    padding: 2%;
     border: 1px solid #afb0b5;
     margin: 0px;
     cursor: pointer;
@@ -585,12 +584,16 @@ h1,h2,a {
     background-color: #383645;
 }
 
+.burger-bar-holder {
+    height: 100%;
+    width: 100%;
+}
 
 .burger-bar { 
-    height: 8px;
-    width: 90%;
+    height: 11%;
+    margin: 14% 0%;
+    width: 100%;
     background-color: #afb0b5;
-    margin: 10px auto 10px auto;
 }
 
 
@@ -600,11 +603,11 @@ h1,h2,a {
     width: 0%;
     padding: 0px;
     margin-right: -3px;
-    overflow: hidden;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
     cursor: pointer;
     cursor: hand;
+    overflow: hidden;
 }
 
 .site-menu ul {
@@ -613,7 +616,6 @@ h1,h2,a {
 }
 .site-menu-links li {
     list-style: none;
-    width: 100%;
     height: auto;
     line-height: 1.2em;
     font-size: 1em;

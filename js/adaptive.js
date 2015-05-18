@@ -29,14 +29,23 @@ $(document).ready(function() {
 
     // Code to control menu bar open and close - note Farah's design suggest not using Bootstrap, so that we can keep the button small and in the upper left corner when the menu is not in use, rather than taking up screen real-estate across the whole top
 
+    var menubuttonheight = $('.menu-button').width();
+    $('.menu-button').css('height', menubuttonheight);
+    
+    $(window).resize(function() {
+        menubuttonheight = $('.menu-button').width();
+        $('.menu-button').css('height', menubuttonheight);
+    });
+
+
     var menu_is_open = false;
     $('.menu-button').on('click', function() {
         if (menu_is_open === false) {
-            $('.site-menu').css({'width':'75%'}).slideDown();
+            $('.site-menu').css({'width':'75%'});
             menu_is_open = true;
         }
         else {
-	        $('.site-menu').css({'width':'0%'}).slideUp();
+	        $('.site-menu').css({'width':'0%'});
             menu_is_open = false;
         };
     });
