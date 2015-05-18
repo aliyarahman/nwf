@@ -12,18 +12,38 @@ $(document).ready(function() {
   //Global behavior
   //====================================
 
-
-  // Allow switch between mobile and desktop layouts on resize: 768 is tablet portrait orientation, 1024 is tablet landscape orientation -->
-  // Note we don't want the ability to switch back to mobile once we've learned they are on a desktop
-  // Scrolltop code prevents a resize from taking user back to the top
+  // For now: Eliminate mobile-desktop version switching based on screensize: look for user agent instead, embedded as script in index.html
+  
+  // Old: Allow switch between to desktop layout on resize: 768 is tablet portrait orientation, 1024 is tablet landscape orientation -->
+  // Old: Note we don't want the ability to switch back to mobile once we've learned they are on a desktop
+  // Old: Scrolltop code prevents a resize from taking user back to the top
   
 
-    $(window).resize(function() {
-        var y_scroll_pos = $(window).scrollTop();
-        if ($(window).width() > 768) {
-            window.location = "index.html";
+  //  $(window).resize(function() {
+  //      var y_scroll_pos = $(window).scrollTop();
+  //      if ($(window).width() > 768) {
+  //          window.location = "index.html";
+  //      }
+  //  });
+
+
+    // Code to control menu bar open and close - note Farah's design suggest not using Bootstrap, so that we can keep the button small and in the upper left corner when the menu is not in use, rather than taking up screen real-estate across the whole top
+
+    var menu_is_open = false;
+    $('.menu-button').on('click', function() {
+        if (menu_is_open === false) {
+            $('.site-menu').css({'width':'75%'}).slideDown();
+            menu_is_open = true;
         }
+        else {
+	        $('.site-menu').css({'width':'0%'}).slideUp();
+            menu_is_open = false;
+        };
     });
+
+
+
+
 
     // Code to control main text display for each chapter
 
@@ -34,7 +54,7 @@ $(document).ready(function() {
     });
 
     $('.read-less-button').on('click', function(){
-        $(this).parent().parent().parent().find('.chapter-main-text').slideUp();
+        $(this).paret().parent().parent().find('.chapter-main-text').slideUp();
         $('.read-more-less').show();
         $('.read-more-button').show();  
         $(this).hide();
@@ -48,14 +68,12 @@ $(document).ready(function() {
     $(".tangent-tab").click(function () {
         var which_tangent = $(this).attr('id').split("tab-")[1];
         window.location = which_tangent+'.html';
-        $('.tangent-footer').load('../footer.html');
     });
 
 
     $('.site-sub-link').on('click', function(){
         var which_tangent= $(this).attr('id').split('link-')[1];
         window.location = which_tangent+'.html';
-        $('.tangent-footer').load('../footer.html');
     });
 
 
@@ -182,40 +200,40 @@ $(document).ready(function() {
  
     // Controls site menu / burger box
 
-    var menuopen = false;
-    var sitemapopen = false;
+    //var menuopen = false;
+    //var sitemapopen = false;
 
-    $("#burger-box").on('click', function(){
-         if (menuopen === false) {
-            $('.chapter-details').hide();
-            $("#burger-menu").slideDown();
-            
-             $("#site-map-link").on('click', function(){
-                 if (sitemapopen === false) {
-                     $("#site-map").show();
-                     sitemapopen = true;
-                     menuopen = true;
-                     $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
-                         $('#site-map, #burger-menu').hide();
-                         sitemapopen = false;
-                         menuopen = false;
-                     });
-                 }
-                 else {
-                     $("#site-map").hide();
-                     sitemapopen = false;
-                     menuopen = true;
-                 }
-             });
-             menuopen = true;
-             }
-         else {
-             $("#burger-menu").slideUp();
-             $("#site-map").hide();
-             menuopen = false;
-             sitemapopen = false;
-             }
-    });
+    //$("#burger-box").on('click', function(){
+    //     if (menuopen === false) {
+    //        $('.chapter-details').hide();
+    //        $("#burger-menu").slideDown();
+    //        
+    //         $("#site-map-link").on('click', function(){
+    //             if (sitemapopen === false) {
+    //                 $("#site-map").show();
+    //                 sitemapopen = true;
+    //                 menuopen = true;
+    //                 $('#rainforest-vid, #table-of-contents, #chapter-one').on('mouseenter', function (){
+    //                     $('#site-map, #burger-menu').hide();
+    //                     sitemapopen = false;
+    //                     menuopen = false;
+    //                 });
+    //             }
+    //             else {
+    //                $("#site-map").hide();
+    //                 sitemapopen = false;
+    //                 menuopen = true;
+    //             }
+    //        });
+    //         menuopen = true;
+    //         }
+    //     else {
+    //         $("#burger-menu").slideUp();
+    //         $("#site-map").hide();
+    //         menuopen = false;
+    //        sitemapopen = false;
+    //         }
+    //});
 
 
 
