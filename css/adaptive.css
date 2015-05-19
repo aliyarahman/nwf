@@ -442,8 +442,7 @@ h1,h2,a {
     width: 50px;
     height: 50px;
     padding: 2%;
-    border: 1px solid #afb0b5;
-    margin: 0px;
+    margin-left: -1px;
     cursor: pointer;
     cursor: hand;
 }
@@ -469,6 +468,7 @@ h1,h2,a {
     display: inline-block;
     vertical-align: top;
     width: 0%;
+    height: auto;
     padding: 0px;
     margin-right: -3px;
     -webkit-transition: all 0.4s;
@@ -483,12 +483,12 @@ h1,h2,a {
     margin: 0px;
 }
 .site-menu-links li {
+    display: none;
     list-style: none;
     height: auto;
     line-height: 1.2em;
     font-size: 1em;
     border-bottom: #afb0b5 1px solid;
-    border-left: #afb0b5 1px solid;
     padding: 0.75em;
     background-color: #282a3a;
     color: #afb0b5;
@@ -663,8 +663,8 @@ h1,h2,a {
 .product-bubble {
     background-color: #97c69a;
     padding: 1em;
-    width: 220px;
-    height: 220px;
+    width: 40%;
+    height: 40%;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -685,17 +685,19 @@ h1,h2,a {
 }
 
 #beef-bubble {
-    top: 11em;
-    left: 0.5em;
+    top: 8em;
+    left: 0.2em;
 }
 
 #tallow-bubble {
-    top: 10em;
-    left: 7em;
+    top: 8.5em;
+    left: 4em;
+    padding: 0.25em 1em;
 }
 
 #tallow-bubble img {
     width: 120%;
+    height: 120%;
 }
 
 #chapter-two .tangent-tab {
@@ -1299,6 +1301,7 @@ popup-panel img {
     background-color: #363845;
     color: #fff;
     position: absolute;
+    left: 0px;
     font-size: 1em;
 }
 

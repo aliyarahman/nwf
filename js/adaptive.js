@@ -14,16 +14,21 @@ $(document).ready(function() {
     var menu_is_open = false;
     $('.menu-button').on('click', function() {
         if (menu_is_open === false) {
+            $('.site-menu li').css({'display':'block'});            
             $('.site-menu').css({'width':'300px'});
             menu_is_open = true;
         }
         else {
-	        $('.site-menu').css({'width':'0px'});
+            $('.site-menu').css({'width':'0px'});
+            $('.site-menu').promise().done(function(){
+                $('.site-menu li').fadeOut();
+            });
             menu_is_open = false;
         };
     });
 
-    $('.site-menu li').on('click', function() {
+    $('.site-menu-links li').on('click', function() {
+        $('.site-menu li').css({'display':'none'}); 
         $('.site-menu').css({'width':'0px'});
         menu_is_open = false;
     });
@@ -471,15 +476,28 @@ $('#chapter-four .year-number-lg').on('click', function(){
     $('.map-point').on('click', function() {
         var which_panel = $(this).attr('id').split('open-')[1];
         var topcoord = window.pageYOffset;
-        var panelheight = window.innerHeight*0.95;
-        $('section ,.tangent-tab-holder').css('opacity','0.3');
-        $('.recommendations-panel').css({'top': topcoord+50});
+        $('.recommendations-panel').css({'top': topcoord, 'min-height': $(window).innerHeight()});
         $('#'+which_panel).fadeIn();
+        var scroll_top_limit = $('#'+which_panel).position().top;
+        var scroll_bottom_limit = scroll_top_limit+$('#'+which_panel).outerHeight();
+        $(window).scroll(function() {
+            if ( $(window).scrollTop() < scroll_top_limit-50) {
+                $('.recommendations-panel').fadeOut();
+            }
+            var bottom_of_window = $(window).scrollTop() + $(window).innerHeight();
+            if (bottom_of_window > scroll_bottom_limit+50) {
+                $('.recommendations-panel').fadeOut();
+            }
+        });
+
+
 
         $('.close-recs').on('click', function() {
-            $('.recommendations-panel').hide();
-            $('section ,.tangent-tab-holder').css('opacity','1.0');
+            $('.recommendations-panel').fadeOut();
         });
+
+
+        $
     });
 
 });
