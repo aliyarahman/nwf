@@ -211,7 +211,6 @@ $('#forest-cover-yr-3').click(function(){
 
     //Sets the first commodity to open to beef if no clicking happenss
     var commodity = "Beef";
-    var domestic_or_international = "domestic";
 
     // Functionality for the close button
     $('.close-trade-map').on('click', function(){
@@ -221,15 +220,7 @@ $('#forest-cover-yr-3').click(function(){
     });
 
 
-    function switch_label_to_domestic() {
-        $('#see-domestic').hide();
-        $('#see-international').show();
-    }
 
-    function switch_label_to_international() {
-        $('#see-international').hide();
-        $('#see-domestic').show();
-    }
 
     function switch_label_to_beef() {
         $('.product-category').css('color', '#639f69');
@@ -247,133 +238,67 @@ $('#forest-cover-yr-3').click(function(){
     }
 
 
-    function place_beef_domestic_data() {
-        $('#LeatherIntroText, #TallowIntroText').hide();
+    function place_beef_data() {
+        $('.product-intro-text').fadeOut();
         $('#BeefIntroText').fadeIn();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png').parent().removeClass('international-map');
+        $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png');
+        $('.trade-map-data').fadeOut();
+        $('#international-beef-data').fadeIn();        
+        $('.international-graphic img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-China.png');
     }
 
-    function place_leather_domestic_data() {
-        $('#BeefIntroText, #TallowIntroText').hide();
-        $('#LeatherIntroText').fadeIn();    
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png').parent().removeClass('international-map');
+    function place_leather_data() {
+        $('.product-intro-text').fadeOut();
+        $('#LeatherIntroText').fadeIn();
+        $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png');
+        $('.trade-map-data').fadeOut();
+        $('#international-leather-data').fadeIn();        
+        $('.international-graphic img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-China.png');
     }
 
-    function place_tallow_domestic_data() {
-        $('#LeatherIntroText, #BeefIntroText').hide();
+    function place_tallow_data() {
+        $('.product-intro-text').fadeOut();
         $('#TallowIntroText').fadeIn();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png').parent().removeClass('international-map');
-    }
-
-
-    function place_beef_international_data() {
-        $('.product-intro-text').fadeOut();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-China.png').parent().addClass('international-map');
-        $('#international-beef-data').css('display', 'inline-block').fadeIn();
-    }
-
-    function place_leather_international_data() {
-        $('.product-intro-text').fadeOut();      
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-China.png').parent().addClass('international-map');
-        $('#international-leather-data').css('display', 'inline-block').fadeIn();
-    }
-
-    function place_tallow_international_data() {
-        $('.product-intro-text').fadeOut();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.png').parent().addClass('international-map');
-        $('#international-tallow-data').css('display', 'inline-block').fadeIn();
-    }
-
-
-
-
-    // Functionality for clicking to trade maps from the main site
-    $('.product-category, .product-bubble').on('click', function() {
-        $('.open-country-popup, .hide-country-popup').hide();
-        var topcoord = window.pageYOffset;
-        var leftcoord = window.pageXOffset;
-        var ch2screenwidth = window.innerWidth;
-
-        $('section, .tangent-tab-holder').css('opacity',0);
-        $('.ch2-screen-holder').fadeOut();
-        $('.ch2-screen-holder').css({'top':topcoord, 'left':leftcoord, 'width': ch2screenwidth});
-        $('.ch2-screen-holder').fadeIn();
+        $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png');
         $('.trade-map-data').fadeOut();
-        switch_label_to_domestic();
-        domestic_or_international = "domestic";
+        $('#international-tallow-data').fadeIn();        
+        $('.international-graphic img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.png');
+    }
 
-        if ($(this).hasClass('beef')) {
-            switch_label_to_beef();
-            place_beef_domestic_data();
-            commodity = "Beef";
-        }
-        else if ($(this).hasClass('leather')) {
-            switch_label_to_leather();
-            place_leather_domestic_data();
-            commodity = "Leather";
-        }
-        else if ($(this).hasClass('tallow')) {
-            switch_label_to_tallow();
-            place_tallow_domestic_data();
-            commodity = "Tallow";
-        }
 
+
+    // Functionality for switching between commodities
+
+    $('.product-category.beef').on('click', function() {
+        $('.ch2-maps .product-category').css('color', '#65a06a');
+        $(this).css('color', '#fff');
+        place_beef_data();
+        commodity = 'Beef';
+    });
+
+    $('.product-category.leather').on('click', function() {
+        $('.ch2-maps .product-category').css('color', '#65a06a');
+        $(this).css('color', '#fff');
+        place_leather_data();
+        commodity = 'Leather';
+    });
+
+    $('.product-category.tallow').on('click', function() {
+        $('.ch2-maps .product-category').css('color', '#65a06a');
+        $(this).css('color', '#fff');
+        place_tallow_data();
+        commodity = 'Tallow';
     });
 
 
-    // Functionality for switching between maps
-    $('.see-international-domestic').on('click', function(){
-        $('.trade-map-data').fadeOut();
-        if (domestic_or_international == "domestic") {
-            switch_label_to_international();
-            domestic_or_international = "international";
-            if (commodity == 'Beef') {
-                switch_label_to_beef();
-                place_beef_international_data();
-                commodity = "Beef";
-            }
-            else if (commodity == 'Leather') {
-                switch_label_to_leather();
-                place_leather_international_data();
-                commodity = "Leather";
-            }
-            else if (commodity == 'Tallow') {
-                switch_label_to_tallow();
-                place_tallow_international_data();
-                commodity = "Tallow";
-            }
-        }
-        else if (domestic_or_international == "international") {
-            switch_label_to_domestic();
-            domestic_or_international = "domestic";
-            if (commodity == 'Beef') {
-                switch_label_to_beef();
-                place_beef_domestic_data();
-                commodity = "Beef";
-            }
-            else if (commodity == 'Leather') {
-                switch_label_to_leather();
-                place_leather_domestic_data();
-                commodity = "Leather";
-            }
-            else if (commodity == 'Tallow') {
-                switch_label_to_tallow();
-                place_tallow_domestic_data();
-                commodity = "Tallow";
-            }
-        }
-
-    });
-
-
-    $('.data-row').on('mouseenter', function() {
+    $('.data-row').on('click', function() {
         if (!$(this).hasClass('trade-map-legend')) {
-            $('.trade-map').find('img').show();
+            $('.ch2-maps').find('img').show();
             $('.popup-panel, .open-country-popup, .hide-country-popup').hide();
             var map_url = '';
             var which_country = $(this).find('.trade-data-row-right').attr('id');
             map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".png";
-            $('.trade-map img').attr('src', map_url);
+            $('.international-graphic img').attr('src', map_url);
             if (which_country == 'Europe' && commodity == 'Beef') {
                 $('#showEurope').show();
                 $('#showEurope').on('click', function() {

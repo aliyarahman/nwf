@@ -712,50 +712,34 @@ h1,h2,a {
 
 /* Ch 2 Trade maps style */
 
-.ch2-screen-holder {
-    display: none;
-    position: absolute;
-    height: 1100px;
+.ch2-maps {
     padding-top: 2em;
 }
 
-.ch2-screen-holder, #ch2-intro {
+.ch2-maps, #ch2-intro {
     background-color: #97c69a;
 }
 
-.close-trade-map {
-    border-radius: 50%;
-    position: absolute;
-    z-index: 20;
-    right: 6em;
-    top: 2em;
-    background-color: #6fb174;
-    color: #fff;
-    font-weight: bold;
-    font-size: 2em;
-    line-height: 1.6em;
-    width: 1.15em;
-    height: 1.5em;
-    padding-left: 0.35em;
-    cursor: pointer;
-    cursor: hand;
+
+.ch2-maps .product-category {
+    color: #65a06a;
 }
 
-.close-trade-map:hover {
-    color: #6fb174;
-    background-color: #fff;
+.ch2-maps .product-category.beef {
+    color: #fff;
 }
 
 
 .product-intro-text, .trade-map-data {
-    display: inline-block;
     color: #363845;
     z-index: 20;
 }
 
 .product-intro-text {
-    margin: 3em 1em 2em 1em;
-    width: 20em;
+    width: 100%;
+}
+
+#LeatherIntroText, #TallowIntroText {
     display: none;
 }
 
@@ -763,50 +747,37 @@ h1,h2,a {
 .see-international-domestic {
     padding: 0.3em 0.5em;
     background-color: #363845;
-    margin-left: 1em;
-    width: 11.5em;
-    cursor: pointer;
-    cursor: hand;
+    color: #fff;
+    width: 50%;
+    margin: 40px 0px 20px 0px;
 }
 
-#see-domestic {
-    display: none;
-    width: 9.5em;
-}
-
-
-.trade-map {
-    display: inline-block;
-    position: relative;
-    top: -20em;
-    left: 25em;
-    width: 50em;
+.domestic-graphic, .international-graphic {
+    width: 100%;
     z-index: 10;
 }
 
-.international-map {
-    width: 65em;
-    top: -32em;
-    left: 18em;
+.domestic-graphic img, .international-graphic img {
+    width: 100%;
 }
 
-.trade-map img {
-    width: 100%;
+.international-graphic {
+    position: relative;
+    margin-bottom: 40px;
 }
 
 
 .trade-map-data {
-    position: relative;
-    display: none;
     width: auto;
     margin: 2em 1em 2em 1em;
 }
 
 
-.data-row, .popup-data-row {
+.popup-data-row, .data-row {
     margin-bottom: 0.1em;
     margin-top: 0.1em;
 }
+
 
 
 .data-row:hover {
@@ -820,13 +791,14 @@ h1,h2,a {
 
 .trade-data-row-left {
     text-align: right;
-    width: 6em;
+    width: 20%;
     margin-right: 1em;
     vertical-align: middle;
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
     line-height: 1em;
+    font-size: 1em;
 }
 
 
@@ -839,7 +811,7 @@ h1,h2,a {
 .trade-data-row-right {
     text-align: left;
     vertical-align: middle;
-    font-size: 2em;
+    font-size: 1.4em;
 }
 
 .trade-map-legend .trade-data-row-left {
@@ -848,6 +820,11 @@ h1,h2,a {
 
 .trade-map-legend .trade-data-row-right {
     font-size: 1em;
+    line-height: 0.95em;
+}
+
+.trade-map-legend:hover {
+    background-color: transparent;
 }
 
 
@@ -857,11 +834,10 @@ h1,h2,a {
 
 
 .open-country-popup, .hide-country-popup {
-    display: none;
     position: absolute;
     background-color: #f27050;
     color: #fff;
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     width: 1.2em;
@@ -877,7 +853,7 @@ h1,h2,a {
 
 .europe-popup {
     display: none;
-    top: 33%;
+    top: 25%;
     left: 45%;
 }
 
@@ -896,12 +872,13 @@ h1,h2,a {
 
 .popup-panel {
     display: none;
-    width: 35em;
+    width: 100%;
+    height: auto;
     color: #383645;
     background-color: #fff;
-    position: absolute;
-    padding-left: 1em;
-    padding-top: 3em;
+    padding: 1em;
+    margin-bottom: 20px;
+    font-size: 0.8em;
 }
 
 popup-panel img {
@@ -912,31 +889,7 @@ popup-panel img {
     background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-EuropeZoom.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
-    height: 25em;
-    width: 49em;
-    top: 36%;
-    left: 10%;
 }
-
-#china-popup-panel {
-    height: 15em;
-    width: 28em;
-    top: 36%;
-    left: 39%;    
-}
-
-#italy-popup-panel {
-    height: 15em;
-    width: 28em;
-    top: 40%;
-    left: 15%;    
-}
-
-
-
-
-
-
 
 
 /* Chapter 3 style */
