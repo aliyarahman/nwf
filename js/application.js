@@ -214,6 +214,22 @@ $(document).ready(function() {
     });
 
 
+  // Hint behavior
+
+  $('.hint-button').on('click', function() {
+    $('.graphic-content, .chapter-header').css('opacity','0.8');
+    $('.hint').fadeIn();
+
+    setTimeout(function(){
+        $('.graphic-content, .chapter-header').css('opacity','1');
+        $('.hint').fadeOut();
+    }, 1000);
+
+
+
+  });
+
+
 
 
   // Prequel behavior
@@ -225,7 +241,7 @@ $(document).ready(function() {
     var menuopen = false;
     var sitemapopen = false;
 
-    $("#burger-box").on('click', function(){
+    $("#burger-box-holder, .burger-spacer, .burger-bar").on('click', function(){
          if (menuopen === false) {
             $('.chapter-details').hide();
             $("#burger-menu").slideDown();

@@ -703,8 +703,10 @@ a {
 
 .menu-bar {
     z-index: 60;
-    position: absolute;
-    margin-top: -70px;
+    position: fixed;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
     cursor: pointer;
     cursor: hand;
 }
@@ -717,34 +719,69 @@ a {
 }
 
 #site-menu {
-    width: 250px;
+    width: 300px;
 }
 
 
 #burger-box {
     background-color: #363845;
     width: 100%;
-    margin-bottom: -1em;
     height: 80px;
-    position: relative;
+    margin-bottom: -15px;
 }
+
+
+.hint-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 140px;
+    margin-right: 10px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+
+.hint-button img {
+    height: 100%;
+}
+
+.hint {
+    display: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.hint img {
+    height: 40px;
+    width: 40px;
+}
+
+#chapter-one .hint {
+    top: -7px;
+}
+
 
 #burger-bar-holder {
+    display: inline-block;
+    margin-top: 10px;
     width: 60px;
-    height: 60px;
-    position: relative;
-    top: 25px;
-    left: 160px;
+    height: auto;
+    vertical-align: middle;
 }
 
-.burger-bar { 
-    height: 5px;
-    width: 100%;
+.burger-bar, .burger-spacer { 
+    width: 50px;
+}
+
+.burger-bar {
     background-color: #afb0b5;
-    margin: 8px 0px;
+    height: 5px;
 }
 
-
+.burger-spacer {
+    background-color: transparent;
+    height: 8px;
+}
 
 #burger-box:hover, #burger-menu {
     background-color: #282a3a;
@@ -1136,6 +1173,10 @@ a {
     position: relative;
     z-index: 2;
 }
+
+
+
+
 
 
 
