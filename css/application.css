@@ -20,7 +20,18 @@
     src:url("../fonts/lineto-circular-pro-book.eot?#iefix") format("embedded-opentype"),
         url("../fonts/lineto-circular-pro-book.woff") format("woff"),
         url("../fonts/lineto-circular-pro-book.ttf") format("truetype"),
-        url("../fonts/lineto-circular-pro-book.svg#lineto-circular-pro-book") format("svg");
+        url("../fonts/lineto-`circular-pro-book.svg#lineto-circular-pro-book") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circular-Pro-Medium";
+    src:url("../fonts/lineto-circular-pro-medium.eot");
+    src:url("../fonts/lineto-circular-pro-medium.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-medium.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-medium.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-medium.svg#lineto-circular-pro-medium") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -64,13 +75,15 @@
 /* Global style */
 
 html {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 body {
     font-family: Circular-Pro-Book;
-    margin: 0px;
-    font-size: 100%;
+    margin: 0px auto 0px auto;
+    -webkit-font-smoothing: antialiased;
+    max-width: 1280px;
 }
 
 
@@ -78,18 +91,6 @@ section {
     overflow: hidden;
 }
 
-h1,h2 {
-    font-family: Circular-Pro-Book;
-    color: #363845;
-}
-
-h1 {
-    font-size: 7em;
-}
-
-h2 {
-    font-size: 4em;
-}
 
 a {
     color: #363845;
@@ -97,13 +98,13 @@ a {
 
 
 #beta-marker {
-    font-size: 2em;
+    font-size: 36px;
     position: fixed;
-    top: 1em;
-    right: -2em;
+    top: 35px;
+    right: -65px;
     height: auto;
     width: auto;
-    padding: 0.5em 3em;
+    padding: 20px 80px;
     background-color: rgba(0,0,0,0.1);
     color: #363845;
     -ms-transform: rotate(45deg);
@@ -118,9 +119,13 @@ a {
 
 
 .content, .graphic-content {
-    width: 1280px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.graphic-content {
+    padding-left: 60px;
+    width: 1220px;
 }
 
 .chapter-header {
@@ -131,18 +136,13 @@ a {
 
 .chapter-number-lg {
     display: inline-block;
-    height: 10em;
-    width: 10em;
-    padding: 1em;
+    margin: 55px;
     border-radius: 50%;
-    margin-right: 1.5em;
-    position: relative;
-    top: 2.5em;
 }
 
 
 .chapter-number-lg img {
-    width: 10em;
+    height: 270px;
 }
 
 
@@ -170,42 +170,45 @@ a {
     display: inline-block;
     text-align: left;
     vertical-align: top;
-    width: 75%;
-    padding-top: 1%;
+    margin-top: 95px;
+    width: 895px;
+    font-family: Circular-Pro-Medium;
+    font-weight: normal;
+    color: #363845;
 }
 
-.chapter-header-text h2 {
-    line-height: 1em;
-    margin-bottom: 0.4em;
+.chapter-header-title {
+    font-size: 60px;
+    line-height: 62px;
+    margin-bottom: 20px;
 }
 
 .chapter-summary-tagline {
-    font-size: 1.5em;
+    font-size: 20px;
+    line-height: 25px;
+    color: #353744;
     text-align: left;
 }
 
 .read-more-less {
-    text-align: left;
-    margin: 2em 0;
+    margin: 30px 0px 30px 0px;
     cursor: pointer;
     cursor: hand;
 }
 
-.read-more-button {
+.read-more-button, .read-less-button {
+    width: 136px;
     color: #fff;
     background-color: #484a56;
-    padding: 1em;
-    width: 6.75em;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 11px;  
 }
 
 .read-less-button {
     display: none;
-    color: #fff;
-    background-color: #484a56;
-    padding: 1em;
-    width: 6em;
     position: relative;
-    top: -2em;
+    left: 375px;
 }
 
 .read-more-button:hover, .read-less-button:hover {
@@ -215,14 +218,17 @@ a {
 .chapter-main-text {
     display: none;
     text-align: left;
-    padding: auto 1em 2em 1em;
-    margin-bottom: 3em;
+    width: 1070px;
+    margin-left: 60px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #353744;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
-    -webkit-column-gap: 3em; /* Chrome, Safari, Opera */
-    -moz-column-gap: 3em; /* Firefox */
-    column-gap: 3em;
+    -webkit-column-gap: 60px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 60px; /* Firefox */
+    column-gap: 60px;
 }
 
 .chapter-main-text p {
@@ -232,8 +238,7 @@ a {
 
 .chapter-triangle {
     position: relative;
-    text-align: center;
-    margin: 0 auto;
+    left: 560px;
     width: 0; 
     height: 0;
     border-left: 20px solid transparent;
@@ -241,53 +246,34 @@ a {
     border-top: 20px solid #fff;
 }
 
-#chapter-three .chapter-triangle, #chapter-five .chapter-triangle {
-    top: -2em;
-}
-
 .graphic-title, .graphic-caption, .graphic-title .citation-number, .graphic-caption .citation-number {
     color: #fff;
 }
 
 .graphic-title {
-    font-size: 1.8em;
-    width: 15em;
-    margin-top: 2em;
-    margin-bottom: 0.3em;
+    font-size: 30px;
+    line-height: 36px;
+    width: 505px;
+    margin-top: 76px;
+    margin-bottom: 15px;
     font-family: Dala Floda Web;
 }
 
-#chapter-three .graphic-title, #chapter-four .graphic-title {
-    margin-left: 2em;
-}
-
-#chapter-three .graphic-caption, #chapter-four .graphic-caption {
-    margin-left: 3.5em;
-}
-
-#chapter-three .year-number-holder, #chapter-four .year-number-holder {
-    margin-left: 3.2em;
-}
 
 .graphic-caption {
-    width: 34em;
-    font-size: 1em;
-}
-
-
-.year-number-holder {
-    position: relative;
-    top: 2em;
+    width: 505px;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 
 .year-number-lg  {
     color: #b98728;
     text-align: left;
-    line-height: 0.1em;
     cursor: pointer;
     cursor: hand;
-    font-size: 4.5em;
+    font-size: 80px;
+    line-height: 70px;
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
@@ -295,9 +281,10 @@ a {
 
 
 .tangent-tab-holder {
-    margin-top: -1.25em;
-    margin-right: 0em;
+    margin-top: -20px;
+    margin-right: 0px;
     margin-left: auto;
+    margin-bottom: 50px;
     background-color: #363845;
     padding: 2.2em 0em 2.2em;
 }
@@ -350,7 +337,7 @@ a {
 
 
 .tangent-read-more {
-    font-size: 1.25em;
+    font-size: 20px;
     font-weight: bold;
     margin-left: 2.5em;
     margin-bottom: 0.75em;
@@ -365,7 +352,7 @@ a {
     color: #fff;
     background-color: #40424e;
     text-align: left;
-    font-size: 1.75em;
+    font-size: 26px;
     cursor: pointer;
     cursor: hand;
     -webkit-transition: all 0.4s;
@@ -643,13 +630,8 @@ a {
     }
 }
 
-.show-small {
-    display: none;
-}
 
-.show-medium {
-    display: none;
-}
+
 
 
 /* Prequel style */
@@ -660,7 +642,7 @@ a {
 
 .video-wrapper {
     margin-top: -0.5em;
-
+    border: none;
 }
 
 
@@ -675,7 +657,7 @@ a {
 
 .prequel-triangle {
     text-align: center; margin: 0 auto;
-    margin-top: -.3em;
+    margin-top: -6px;
     width: 0; 
     height: 0;
     border-left: 20px solid transparent;
@@ -699,16 +681,12 @@ a {
 }
 
 #prequel-title-large {
-    font-size: 6em;
+    font-size: 90px;
     line-height: 1em;
-    margin-top: 1em;
+    margin-top: 150px;
     margin-left: 1em;
 }
 
-#prequel-title-small {
-    font-size: 4em;
-    line-height: 1em;
-}
 
 #prequel-blurb {
     color: white;
@@ -718,7 +696,7 @@ a {
     line-height: 1.1em;
     width: 23em;
     margin-left: 12em;
-    margin-top: 4.5em;
+    margin-top: 75px;
     padding: 1em 1.5em;
 }
 
@@ -726,7 +704,7 @@ a {
 .menu-bar {
     z-index: 60;
     position: absolute;
-    margin-top: -55px;
+    margin-top: -70px;
     cursor: pointer;
     cursor: hand;
 }
@@ -735,10 +713,11 @@ a {
 #site-menu, #site-map {
     cursor: pointer;
     cursor: hand;
+    box-shadow: 7px 7px rgba(185,135,40,0.1);
 }
 
 #site-menu {
-    width: 15em;
+    width: 250px;
 }
 
 
@@ -746,23 +725,23 @@ a {
     background-color: #363845;
     width: 100%;
     margin-bottom: -1em;
-    height: 3.5em;
+    height: 80px;
     position: relative;
 }
 
 #burger-bar-holder {
-    width: 2.5em;
-    height: 2.5em;
+    width: 60px;
+    height: 60px;
     position: relative;
-    top: 0.85em;
-    left: 11em;
+    top: 25px;
+    left: 160px;
 }
 
 .burger-bar { 
     height: 5px;
     width: 100%;
     background-color: #afb0b5;
-    margin: 6px 0px;
+    margin: 8px 0px;
 }
 
 
@@ -880,12 +859,11 @@ a {
 
 .chapter-title {
     text-align: left;
-    font-size: 1.05em;
 }
 
 .chapter-icon-holder {
     text-align: left;
-    width: 40%;
+    width: 80px;
     margin-top: 0.5em;
 }
 
@@ -918,7 +896,8 @@ a {
 .chapter-details {
     display: none;
     position: absolute;
-    left: 6em;
+    top: 780px;
+    margin-left: -10px;
     z-index: 50;
     cursor: pointer;
     cursor: hand;
@@ -941,8 +920,9 @@ a {
     margin-right: auto;
     margin-left: auto;
     background-color: #fff;
-    width: 7em;
-    height: 7em;
+    /*background-color: #6db073;*/
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 
@@ -1003,25 +983,19 @@ a {
 
 /* Chapter 1 style */
 
-#chapter-one {
-    height: auto;
-}
+
 
 #chapter-one .graphic-content {
     background-color: #db9d2e;
-    height: 880px;
+    height: 890px;
 }
 
-#chapter-one .chapter-triangle {
-    left: -0.5em;
-}
 
 
 #ch1-left-col, #ch1-right-col {
     vertical-align: top;
     display: inline-block;
-    width: 47%;
-    padding-left: 2em;
+    width: 570px;
 }
 
 #ch1-left-col {
@@ -1029,43 +1003,49 @@ a {
     background-repeat: repeat-y;
 }
 
+
 #ch1-left-col .year-number-holder {
-    top: 2.5em;
+    position: relative;
+    top: 20px;
 }
 
-#ch1-right-col .year-number-holder {
-    top: 0em;
+#ch1-right-col {
+    padding-left: 60px;
 }
+
 
 #chapter-one .year-number-lg  {
     color: #b98728;
 }
 
+
 #chapter-one .year-number-lg:hover {
     color: #363845;
 }
+
 
 .ch1-map-legend {
     display: inline-block;
     color: #363845;
     text-align: left;
-    width: 15em;
-    margin-top: 10em;
+    margin-top: 170px;
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
 }
 
 .ch1-legend-note {
-    font-size: 0.8em;
+    font-size: 15px;
+    line-height: 20px;
     display: inline-block;
     vertical-align: middle;
 }
 
 .ch1-legend-label {
     display: inline-block;
-    vertical-align: middle;
-    font-size: 1.1em;
+    vertical-align: bottom;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 
@@ -1073,10 +1053,9 @@ a {
 #ch1-legend-box-4, #ch1-legend-box-5, 
 #ch1-legend-box-6, #ch1-legend-box-7, #ch1-legend-box-8, #ch1-legend-box-9 {
     display: inline-block;
-    vertical-align: middle;
-    margin-top: 3%;
-    height: 1.8em;
-    width: 1.8em;
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
 }
 
 #ch1-legend-box-1 {
@@ -1118,12 +1097,22 @@ a {
     background-color: #a3cda7;
 }
 
+
+
 .brazil-map-ch-1 {
-    width: 29em;
+    width: 450px;
     display: inline-block;
     position: relative;
-    top: -28em;
-    left: 8.5em;
+    left: 140px;
+}
+
+
+#ch1-left-col .brazil-map-ch-1 {
+    top: -470px;
+}
+
+#ch1-right-col .brazil-map-ch-1 {
+    top: -430px;
 }
 
 
@@ -1131,11 +1120,6 @@ a {
     width: 100%;
 }
 
-#ch1-right-col .brazil-map-ch-1 {
-    width: 30em;
-    left: 8.1em;
-    top: -27.9em;
-}
 
 
 #tab-one .tangent-read-more, #tab-one .tangent-title:hover {
@@ -1157,7 +1141,7 @@ a {
 
 /* Chapter 2 style */
 
-#chapter-two {  
+#chapter-two {
     overflow: initial;
 }
 
@@ -1166,24 +1150,26 @@ a {
     height: 760px;
 }
 
+
+#chapter-two .chapter-summary-tagline {
+    margin-right: 120px;
+}
+
 .product-headers {
     color: white;
-    margin-top: 3em;
-    margin-left: 3em;
-    position: relative;
-    top: -1em;
 }
 
 .product-headers-tagline {
     font-family: Dala Floda Web;
-    font-size: 2em;
+    font-size: 30px;
+    line-height: 36px;
+    padding-top: 55px;
     width: 24em;
 }
 
 .product-category {
     font-size: 3.5em;
-    margin: 0.1em;
-    line-height: 1em;
+    line-height: 62px;
     position: relative;
     z-index: 20;
     cursor: pointer;
@@ -1191,7 +1177,7 @@ a {
 }
 
 .beef-subproducts {
-    font-size: 0.75em;
+    font-size: 40px;
 }
 
 
@@ -1205,13 +1191,13 @@ a {
 }
 
 #adult-cow img {
-    width: 100%;
+    width: 576px;
 }
 
 
 .product-bubble {
     background-color: #97c69a;
-    padding: 1em;
+    padding: 15px;
     display: inline-block;
     width: 320px;
     height: 320px;
@@ -1223,18 +1209,18 @@ a {
 }
 
 #leather-bubble {
-    top: -58em;
-    left: 9em;
+    top: -930px;
+    left: 35px;
 }
 
 #beef-bubble {
-    top: -27em;
-    left: -2em;
+    top: -420px;
+    left: -75px;
 }
 
 #tallow-bubble {
-    top: -35em;
-    left: 40em;
+    top: -525px;
+    left: 590px;
 }
 
 #leather-bubble img, #beef-bubble img, #tallow-bubble img {
@@ -1372,12 +1358,14 @@ a {
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
-    line-height: 1em;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 
 .trade-percentage {
-    font-size: 1.1em;
+    font-size: 20px;
+    line-height: 30px;
     font-weight: bold;
 }
 
@@ -1385,17 +1373,18 @@ a {
 .trade-data-row-right {
     text-align: left;
     vertical-align: middle;
-    font-size: 2em;
+    font-size: 35px;
+    line-height: 45px;
 }
 
-.trade-map-legend .trade-data-row-left {
-    font-size: 1em;
+.trade-map-legend {
+    font-size: 12px;
+    line-height: 14px;
 }
 
-.trade-map-legend .trade-data-row-right {
-    font-size: 1em;
+.trade-map-legend:hover {
+    background-color: transparent;
 }
-
 
 #international-leather-data, #international-tallow-data {
     display: none;
@@ -1484,12 +1473,9 @@ popup-panel img {
 
 /* Chapter 3 style */
 
-#chapter-three .chapter-header-text h2{
-    font-size: 3.9em;
-}
 
 #chapter-three .graphic-content {
-    height: 915px;
+    height: auto;
     background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch3-base-map.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -1497,7 +1483,12 @@ popup-panel img {
 }
 
 #chapter-three .graphic-title {
-    width: 18em;
+    width: 505px;
+}
+
+
+#chapter-three .chapter-triangle {
+    margin-top: -1px;
 }
 
 
@@ -1508,10 +1499,7 @@ popup-panel img {
 
 #ch3-map-legends {
     color: #fff;
-    position: relative;
-    top: 8em;
-    left: 3.7em;
-    width: 34em;
+    margin-top: 70px;
 }
 
 #agreements-legend {
@@ -1525,17 +1513,18 @@ popup-panel img {
 .ch3-legend-label   {
     display: inline-block;
     vertical-align: bottom;
-    font-size: 1.2em;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 #ch3-legend-box-1, #ch3-legend-box-2, #ch3-legend-box-3, #ch3-legend-box-4, 
 #ch3-legend-box-6, #ch3-legend-box-7, #ch3-legend-box-8, #ch3-legend-box-roads, #ch3-legend-box-states {
     display: inline-block;
     vertical-align: bottom;
-    margin-top: 2%;
-    margin-right: 3%;
-    height: 1.8em;
-    width: 1.8em;
+    margin-top: 5px;
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
 }
 
 
@@ -1600,17 +1589,13 @@ popup-panel img {
 
 #ch3-col-left {
     display: inline-block;
-    position: relative;
-    top: -15.7em;
-    width: 635px;
-    height: 915px;
+    vertical-align: top;
 }
 
 #brazil-map-ch3 {
     display: inline-block;
-    height: 915px;
-    width: 635px;
-    margin: 0px;
+    margin-left: 70px;
+    vertical-align: top;
 }
 
 #brazil-map-ch3 img {
@@ -1634,7 +1619,7 @@ popup-panel img {
 }
 
 #chapter-four .graphic-content {
-    height: 890px;
+    height: 880px;
     background-color: #cfbaa9;
     background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch4-zoomout.png");
     background-repeat: no-repeat;
@@ -1645,27 +1630,14 @@ popup-panel img {
     transition: all .75s;
 }
 
-#chapter-four .graphic-title {
-    position: relative;
-    top: -1em;
-    width: 25em;
-}
 
-#chapter-four .graphic-caption {
-    width: 36em;
-}
 
-#chapter-four .year-number-holder {
-    position: relative;
-    top: 1em;
-    width: 70em;
-}
 
 #chapter-four .year-number-lg {
     color: #876e5a;
-    line-height: 0.8em;
-    margin-bottom: -0.5em;
-    font-size: 3.8em;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 62px;
 }
 
 
@@ -1674,10 +1646,11 @@ popup-panel img {
 }
 
 .compliance-tag {
-    font-size: 0.5em;
+    font-size: 40px;
+    line-height: 45px;
     position: relative;
-    left: 1.5em;
-    top: -0.2em;
+    top: -20px;
+    font-weight: normal;
 }
 
 .ch4-map-overlay {
@@ -1685,12 +1658,11 @@ popup-panel img {
     background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/preagreement.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 3em;
-    height: 3.72em;
-    vertical-align: middle;
+    width: 45px;
+    height: 60px;
     position: relative;
-    left: 75%;
-    top: -41em;
+    left: 985px;
+    top: -650px;
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
     transition: all 1s;
@@ -1709,28 +1681,26 @@ popup-panel img {
 }
 
 #ch4-map-legend {
-    display: inline-block;
     color: #fff;
-    width: 20em;
-    margin-top: 6em;
-    margin-left: 4em;
+    width: 505px;
+    margin-top: -10px;
 }
 
 .ch4-legend-label {
     display: inline-block;
     vertical-align: middle;
-    font-size: 1.1em;
-    margin-top: 2%;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 #ch4-legend-box-1, #ch4-legend-box-2, #ch4-legend-box-3,
 #ch4-legend-box-4, #ch4-legend-box-5 {
     display: inline-block;
-    vertical-align: middle;
-    margin-top: 2%;
-    margin-right: 1%;
-    height: 1.8em;
-    width: 1.8em;
+    vertical-align: bottom;
+    margin-top: 10px;
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
 }
 
 #ch4-legend-box-2 {
@@ -1764,10 +1734,10 @@ popup-panel img {
 }
 
 .ch4-source {
-    width: auto;
+    width: 100%;
     text-align: left;
     color: white;
-    margin-top: 2em;
+    margin-top: 40px;
 }
 
 
@@ -1788,7 +1758,9 @@ popup-panel img {
 
 
 #chapter-five .chapter-triangle {
-    z-index: 2;
+    z-index: 20;
+    position: relative;
+    top: 20px;
 }
 
 #chapter-five .tangent-tab {
@@ -1797,9 +1769,7 @@ popup-panel img {
 
 #ch5-image-holder {
     width: 100%;
-    height: 35em;
-    position: relative;
-    top: -3.2em;
+    height: 550px;
     z-index: 0;
     overflow: hidden;
     background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/ch5.jpg');
@@ -1816,23 +1786,22 @@ popup-panel img {
     display: inline-block;
     background-color: #fff;
     color: #000;
-    width: 28em;
-    height: 7.5em;
-    padding: 1em;
-    padding-right: 0.3em;
-    position: relative;
-    top: 1em;
-    left: 1em;
-    font-size: 1em;
+    width: 410px;
+    height: 120px;
+    padding: 20px;
+    margin: 60px;
+    font-size: 15px;
+    line-height: 20px;
+    box-shadow: 7px 7px rgba(185,135,40,0.1);
 }
 
 
 .ch5-label-text {
     height: 100%;
     vertical-align: middle;
-    width: 18em;
-    padding: 0em 1em;
+    width: 260px;
     display: inline-block;
+    margin: 0px 20px;
 }
 
 .ch5-left-arrow, .ch5-right-arrow {
@@ -1841,11 +1810,9 @@ popup-panel img {
     vertical-align: middle;
     color: #fff;
     background-color: #f27050;
-    font-size: 3.5em;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 1em;
-    height: 1em;
+    font-size: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     line-height: 0.9em;
     cursor: pointer;
@@ -1860,8 +1827,8 @@ popup-panel img {
 #ch5-image-overlay-holder {
     vertical-align: top;
     display: inline-block;
-    margin-left: 5em;
-    height: 35em;
+    margin-left: 10px;
+    height: 510px;
 }
 
 #ch5-image-overlay {
@@ -1900,28 +1867,23 @@ popup-panel img {
 
 .recommendations-header {
     color: #363845;
-    width: 30em;
-    margin-bottom: 3em;
+    width: 705px;
+    margin-left: 60px !important;
 }
 
-.recommendations-header h2 {
-    margin: 0;
-    font-size: 3em;
-    font-weight: 100;
+.recommendations-header .graphic-title {
+    color: #363845;
+    width: 705px;
 }
 
-.recommendations-header .chapter-summary-tagline {
-    font-family: Dala Floda Web;
-    font-size: 1.7em;
-    width: 31em;
-    margin-top: 1em;
-    margin-left: 0.2em;
+.recommendations-header .graphic-title {
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
 }
 
 
 .recommendations-map-holder {
-    margin: auto;
-    width: 1175px;
+    width: 1150px;
     height: 783px;
     background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/recommendations.jpg');
     }
@@ -1933,13 +1895,15 @@ popup-panel img {
 
 .rec-photo-caption {
     color: #363845;
-    text-align: right;
+    margin-left: 920px;
+    margin-top: 10px;
+    width: 250px;
 }
 
 .map-point {
     display: inline-block;
-    width: 3em;
-    height: 3em;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
@@ -1953,9 +1917,9 @@ popup-panel img {
 #open-ranchers-recs {top: 246px; left: 668px;}
 #open-meatpackers-recs {top: 245px; left: 11px;}
 #open-retailers-recs {top: 111px; left: 217px;}
-#open-government-recs {top: 516px; left: -48px;}
+#open-government-recs {top: 516px; left: -47px;}
 #open-individuals-recs {top: 606px; left: 249px;}
-#open-banks-recs {top: 561px; left: 633px;}
+#open-banks-recs {top: 561px; left: 634px;}
 
 
 .recommendations-panel {
@@ -1969,6 +1933,7 @@ popup-panel img {
     color: #fff;
     position: absolute;
     font-size: 1.25em;
+    box-shadow: 7px 7px rgba(185,135,40,0.1);
 }
 
 .recommendations-actor {
@@ -2010,7 +1975,7 @@ popup-panel img {
 #about_and_credits {
     background-color: #2b2e37;
     padding-top: 4em;
-    margin-top: 3em;    
+    margin-top: 3em; 
 }
 
 .about-this-site {
@@ -2036,6 +2001,11 @@ popup-panel img {
     left: -0.2em;
     cursor: pointer;
     cursor: hand;
+}
+
+.logo-title {
+    font-size: 20px;
+    line-height: 25px;
 }
 
 .credits {
@@ -2117,7 +2087,7 @@ popup-panel img {
     margin-right: auto;
     padding: 2em;
     width: 72em;
-    height: 20em;
+    height: 25em;
     padding-bottom: 3em;
     border-bottom: 4px solid #fff;
 }
@@ -2144,6 +2114,12 @@ popup-panel img {
 .endorsers .logo {
     margin: 1em 1em auto 1em;
     height: 3.5em;
+}
+
+.disclaimer {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 18px 0px;
 }
 
 #GLUE-logo {
@@ -2187,9 +2163,15 @@ popup-panel img {
     height: 4em;
 }
 
+#IIS-logo {
+    height: 7em;
+}
 
 .copyright-info {
-    padding-top: 1em;
+    padding-top: 16px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #86878f;
 }
 
 
@@ -2209,12 +2191,12 @@ popup-panel img {
     background-color: #363845;
     color: #fff;
     font-size: 1em;
-    box-shadow: 7px 7px #e5e5e5;
+    box-shadow: 7px 7px rgba(229,229,229,0.3);
     z-index: 200;
 }
 
 #citation6, #citation7 {
-    box-shadow: 7px 7px #b98728;
+    box-shadow: 7px 7px rgba(185,135,40,0.1);
 }
 
 #citation17 {

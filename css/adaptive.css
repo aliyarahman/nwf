@@ -70,6 +70,7 @@
 body {
     font-size: 16px;
     font-family: Circular-Pro-Book;
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -1434,13 +1435,13 @@ popup-panel img {
     background-color: #363845;
     color: #fff;
     font-size: 1em;
-    box-shadow: 7px 7px #e5e5e5;
+    box-shadow: 7px 7px rgba(229,229,229,0.65);
     z-index: 200;
 }
 
 
 #citation6, #citation7 {
-    box-shadow: 7px 7px #b98728;
+    box-shadow: 7px 7px rgba(185,135,40,0.1);
 }
 
 #citation17 {

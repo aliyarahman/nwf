@@ -18,12 +18,25 @@ $(document).ready(function() {
   // Scrolltop code prevents a resize from taking user back to the top
   
 
-    $(window).resize(function() {
-        var y_scroll_pos = $(window).scrollTop();
-        if ($(window).width() > 768) {
-            window.location = "index.html";
+    // Make horizontal scroll disappear for windows greater than 1280px
+
+    if ( $(window).width() > 1280) 
+        {
+
+            $('body').css('overflow-x','hidden');
         }
-        $(window).scrollTop() = y_scroll_pos;
+        else {
+            $('body').css('overflow-x','initial');
+        }
+
+    $(window).resize(function() {
+        if ( $(window).width() > 1280) 
+        {
+            $('body').css('overflow-x','hidden');
+        }
+        else {
+            $('body').css('overflow-x','initial');   
+        }
     });
 
     // Code to control main text display for each chapter
@@ -247,33 +260,6 @@ $(document).ready(function() {
 
 
     // Places and repositions table of contents details on load and resize
-
-    function position_contents_details () {
-        var top = $('#chapter-1-button').offset().top;
-        $('.chapter-details').css({'top':top+25});
-
-        var ch1left = $('#chapter-1-button').offset().left;
-        $('#chapter-1-button .chapter-details').css({'left':ch1left+25});
-
-        var ch2left = $('#chapter-2-button').offset().left;
-        $('#chapter-2-button .chapter-details').css({'left':ch2left+25});
-
-        var ch3left = $('#chapter-3-button').offset().left;
-        $('#chapter-3-button .chapter-details').css({'left':ch3left+25});
-
-        var ch4left = $('#chapter-4-button').offset().left;
-        $('#chapter-4-button .chapter-details').css({'left':ch4left+25});
-
-        var ch5left = $('#chapter-5-button').offset().left;
-        $('#chapter-5-button .chapter-details').css({'left':ch5left+25});
-    }
-
-    position_contents_details();
-
-    $(window).resize(function() {
-        position_contents_details();
-    });
-
 
 
     // Code to control rollover for table of contents buttons
@@ -548,23 +534,6 @@ $('#forest-cover-yr-3').click(function(){
 
 
 
-
-
-  //Chapter 3 behavior
-  //=====================================
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Chapter 4 behavior
 //=====================================
 
@@ -574,8 +543,8 @@ $('#forest-cover-yr-3').click(function(){
 $('#chapter-four .year-number-lg').on('click', function(){
     $('#chapter-four .year-number-lg').css('color', '#876e5a');
     $(this).css('color', '#fff');
-    $('#chapter-four .graphic-content').css({'background-size':'830% 830%','background-position':'49% 28%'});
-    $('.ch4-map-overlay').css({'width':'550px','height':'660px', 'left':'48em', 'top':'-48em'});
+    $('#chapter-four .graphic-content').css({'height':'880px', 'background-size':'830% 830%','background-position':'49% 28%'});
+    $('.ch4-map-overlay').css({'margin-bottom':'-100px', 'width':'600px','height':'720px', 'top':'-800px', 'left':'620px'});
     var which_map = $(this).attr('id').split('-')[0];
     $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
     $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
