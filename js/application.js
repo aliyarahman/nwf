@@ -70,34 +70,6 @@ $(document).ready(function() {
 
 
 
-/*
-    // Chapter Scrolling behavior
-    // ====================================
-    $(window).on('scroll', function() {
-        
-        var y_scroll_pos = window.pageYOffset;
-        var sec_2_y = $('#chapter-two').offset().top;
-        var sec_3_y = $('#chapter-three').offset().top;
-        var sec_4_y = $('#chapter-four').offset().top;
-        var sec_5_y = $('#chapter-five').offset().top;
-
-        if (y_scroll_pos > sec_2_y) {
-            // Chapter 2
-            console.log("we've reached chapter two");
-        }
-        else if (y_scroll_pos > sec_3_y) {
-            console.log("we've reached chapter three");
-        }
-        else if (y_scroll_pos > sec_4_y) {
-            console.log("we've reached chapter four");
-        }
-        else if (y_scroll_pos > sec_5_y) {
-            console.log("we've reached chapter five");
-        }
-
-    });
-
-*/
 
 
 
@@ -215,19 +187,45 @@ $(document).ready(function() {
 
 
   // Hint behavior
+  // ========================================
 
-  $('.hint-button').on('click', function() {
-    $('.graphic-content, .chapter-header').css('opacity','0.8');
-    $('.hint').fadeIn();
+    $('.hint-button').on('click', function() {
+        $(".hint-anchor").each(function() { 
+            $('#'+$(this).attr('id').split('-anchor')[0]).css({'top':$(this).offset().top, 'left': $(this).offset().left});
+        });
 
-    setTimeout(function(){
-        $('.graphic-content, .chapter-header').css('opacity','1');
-        $('.hint').fadeOut();
-    }, 1000);
+        $('section, .tangent-tab-holder').css('opacity','0.65');
+        $('.hint').css('opacity','1');
+        
+        setTimeout(function(){
+            $('.hint').css('opacity','0');
+            $('section, .tangent-tab-holder').css('opacity','1');
+        }, 1500);
+    });
+
+
+    $('.close-hint-panel').on('click', function() {
+        $('#hint-panel-wrapper').fadeOut();
+    });
 
 
 
-  });
+    $(window).on('scroll', function() {
+        var y_scroll_pos = window.pageYOffset;
+        var hint_panel_trigger_top = $('#table-of-contents').offset().top-250;
+        var hint_panel_trigger_bottom = $('#table-of-contents').offset().top+200;
+
+        if ((hint_panel_trigger_bottom > y_scroll_pos) && (y_scroll_pos > hint_panel_trigger_top)) {
+            $('#hint-panel-wrapper').css('opacity', '1');
+        }
+        else {
+            $('#hint-panel-wrapper').css('opacity', '0');
+        }
+    });
+
+
+
+
 
 
 
@@ -242,6 +240,7 @@ $(document).ready(function() {
     var sitemapopen = false;
 
     $("#burger-box-holder, .burger-spacer, .burger-bar").on('click', function(){
+        $('#hint-panel-wrapper').fadeOut();
          if (menuopen === false) {
             $('.chapter-details').hide();
             $("#burger-menu").slideDown();
@@ -337,6 +336,7 @@ $('#forest-cover-yr-3').click(function(){
     // Functionality for the close button
     $('.close-trade-map').on('click', function(){
         $('.ch2-screen-holder').fadeOut();
+        $('.menu-bar').fadeIn();
         $('section, .tangent-tab-holder').css('opacity',1);
         $('.product-category').css('color', '#fff');
     });
@@ -416,7 +416,7 @@ $('#forest-cover-yr-3').click(function(){
         var ch2screenwidth = window.innerWidth;
 
         $('section, .tangent-tab-holder').css('opacity',0);
-        $('.ch2-screen-holder').fadeOut();
+        $('.menu-bar').fadeOut();
         $('.ch2-screen-holder').css({'top':topcoord, 'left':leftcoord, 'width': ch2screenwidth});
         $('.ch2-screen-holder').fadeIn();
         $('.trade-map-data').fadeOut();
