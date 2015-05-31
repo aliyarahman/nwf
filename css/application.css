@@ -904,8 +904,8 @@ p.column-balance {
 	width: 100%;
 	margin: 0px;
 	position: relative;
-	left: 15.3em;
-	top: -8.5em;
+	left: 230px;
+	top: -210px;
 }
 #site-map ul {
 	background-color: #353744;
@@ -995,7 +995,7 @@ p.column-balance {
 .chapter-details {
 	display: none;
 	position: absolute;
-	top: 800px;
+	margin-top: -127px;
 	margin-left: -21px;
 	z-index: 50;
 	cursor: pointer;
