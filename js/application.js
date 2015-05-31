@@ -66,6 +66,9 @@ $(document).ready(function() {
     $('.site-sub-link').on('click', function(){
         var which_tangent= $(this).attr('id').split('link-')[1];
         window.location = which_tangent+'.html';
+        $("#site-map").hide();
+        sitemapopen = false;
+        menuopen = true;        
     });
 
 
@@ -257,7 +260,7 @@ $(document).ready(function() {
                      });
                  }
                  else {
-                     $("#site-map").hide();
+                     $("#site-map, #burger-menu").hide();
                      sitemapopen = false;
                      menuopen = true;
                  }
@@ -272,6 +275,12 @@ $(document).ready(function() {
              }
     });
 
+    $('.site-chap-link, .site-main-link').on('click', function() {
+        $("#burger-menu").slideUp();
+        $("#site-map").hide();
+        menuopen = false;
+        sitemapopen = false;
+    });
 
 
     // Places and repositions table of contents details on load and resize
@@ -301,37 +310,35 @@ $('#chapter-one .year-number-lg').click(function(){
 });
 
 $('#cattle-head-yr-1').click(function(){
-    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd1993.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd1993.png');
 });
 
 $('#cattle-head-yr-2').click(function(){
-    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd2003.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd2003.png');
 });
 
 $('#cattle-head-yr-3').click(function(){
-    $('.cattle-head-growth img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd2013.png');
+    $('.cattle-head-growth img').attr('src','img/Map-Herd2013.png');
 });
 
 $('#forest-cover-yr-1').click(function(){
-    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor1991.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor1991.png');
 });
 
 $('#forest-cover-yr-2').click(function(){
-    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor2003.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor2003.png');
 });
 
 $('#forest-cover-yr-3').click(function(){
-    $('.forest-cover-loss img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor2013.png');
+    $('.forest-cover-loss img').attr('src','img/Map-Defor2013.png');
 });
+
 
 
 
 //Chapter 2 behavior
 //=====================================
 
-    //Sets the first commodity to open to beef if no clicking happenss
-    var commodity = "Beef";
-    var domestic_or_international = "domestic";
 
     // Functionality for the close button
     $('.close-trade-map').on('click', function(){
@@ -342,14 +349,18 @@ $('#forest-cover-yr-3').click(function(){
     });
 
 
-    function switch_label_to_domestic() {
+    function switch_to_domestic() {
         $('#see-domestic').hide();
         $('#see-international').show();
+        $('.international-map').hide();
+        $('.domestic-map').fadeIn();
     }
 
-    function switch_label_to_international() {
+    function switch_to_international() {
         $('#see-international').hide();
         $('#see-domestic').show();
+        $('.domestic-map').hide();
+        $('.international-map').fadeIn();
     }
 
     function switch_label_to_beef() {
@@ -369,40 +380,24 @@ $('#forest-cover-yr-3').click(function(){
 
 
     function place_beef_domestic_data() {
+        switch_label_to_beef();
         $('#LeatherIntroText, #TallowIntroText').hide();
         $('#BeefIntroText').fadeIn();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png').parent().removeClass('international-map');
+        $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png');
     }
 
     function place_leather_domestic_data() {
+        switch_label_to_leather();
         $('#BeefIntroText, #TallowIntroText').hide();
         $('#LeatherIntroText').fadeIn();    
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png').parent().removeClass('international-map');
+        $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png');
     }
 
     function place_tallow_domestic_data() {
+        switch_label_to_tallow();
         $('#LeatherIntroText, #BeefIntroText').hide();
         $('#TallowIntroText').fadeIn();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png').parent().removeClass('international-map');
-    }
-
-
-    function place_beef_international_data() {
-        $('.product-intro-text').fadeOut();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-China.png').parent().addClass('international-map');
-        $('#international-beef-data').css('display', 'inline-block').fadeIn();
-    }
-
-    function place_leather_international_data() {
-        $('.product-intro-text').fadeOut();      
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-China.png').parent().addClass('international-map');
-        $('#international-leather-data').css('display', 'inline-block').fadeIn();
-    }
-
-    function place_tallow_international_data() {
-        $('.product-intro-text').fadeOut();
-        $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.png').parent().addClass('international-map');
-        $('#international-tallow-data').css('display', 'inline-block').fadeIn();
+        $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png');
     }
 
 
@@ -411,30 +406,22 @@ $('#forest-cover-yr-3').click(function(){
     // Functionality for clicking to trade maps from the main site
     $('.product-category, .product-bubble').on('click', function() {
         $('.open-country-popup, .hide-country-popup').hide();
-        var topcoord = window.pageYOffset;
-        var leftcoord = window.pageXOffset;
-        var ch2screenwidth = window.innerWidth;
-
         $('section, .tangent-tab-holder').css('opacity',0);
         $('.menu-bar').fadeOut();
-        $('.ch2-screen-holder').css({'top':topcoord, 'left':leftcoord, 'width': ch2screenwidth});
         $('.ch2-screen-holder').fadeIn();
-        $('.trade-map-data').fadeOut();
-        switch_label_to_domestic();
-        domestic_or_international = "domestic";
+        $('.trade-map-data').hide();
+        
+        switch_to_domestic();
 
         if ($(this).hasClass('beef')) {
-            switch_label_to_beef();
             place_beef_domestic_data();
             commodity = "Beef";
         }
         else if ($(this).hasClass('leather')) {
-            switch_label_to_leather();
             place_leather_domestic_data();
             commodity = "Leather";
         }
         else if ($(this).hasClass('tallow')) {
-            switch_label_to_tallow();
             place_tallow_domestic_data();
             commodity = "Tallow";
         }
@@ -443,63 +430,57 @@ $('#forest-cover-yr-3').click(function(){
 
 
     // Functionality for switching between maps
-    $('.see-international-domestic').on('click', function(){
-        $('.trade-map-data').fadeOut();
-        if (domestic_or_international == "domestic") {
-            switch_label_to_international();
-            domestic_or_international = "international";
-            if (commodity == 'Beef') {
-                switch_label_to_beef();
-                place_beef_international_data();
-                commodity = "Beef";
-            }
-            else if (commodity == 'Leather') {
-                switch_label_to_leather();
-                place_leather_international_data();
-                commodity = "Leather";
-            }
-            else if (commodity == 'Tallow') {
-                switch_label_to_tallow();
-                place_tallow_international_data();
-                commodity = "Tallow";
-            }
+    $('#see-international').on('click', function(){
+        switch_to_international();
+        if (commodity == 'Beef') {
+            switch_label_to_beef();
+            $('.product-intro-text').hide();
+            $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-China.png');
+            $('#international-beef-data').css('display', 'inline-block').fadeIn();
         }
-        else if (domestic_or_international == "international") {
-            switch_label_to_domestic();
-            domestic_or_international = "domestic";
-            if (commodity == 'Beef') {
-                switch_label_to_beef();
-                place_beef_domestic_data();
-                commodity = "Beef";
-            }
-            else if (commodity == 'Leather') {
-                switch_label_to_leather();
-                place_leather_domestic_data();
-                commodity = "Leather";
-            }
-            else if (commodity == 'Tallow') {
-                switch_label_to_tallow();
-                place_tallow_domestic_data();
-                commodity = "Tallow";
-            }
+        else if (commodity == 'Leather') {
+            switch_label_to_leather();
+            $('.product-intro-text').hide();      
+            $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-China.png');
+            $('#international-leather-data').css('display', 'inline-block').fadeIn();
         }
+        else if (commodity == 'Tallow') {
+            switch_label_to_tallow();
+            $('.product-intro-text').hide();
+            $('.trade-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.png');
+            $('#international-tallow-data').css('display', 'inline-block').fadeIn();
+        }
+    });
 
+
+    $('#see-domestic').on('click', function(){
+        $('.open-country-popup, .hide-country-popup, .popup-panel').hide();
+        $('.trade-map-data').hide();
+        switch_to_domestic();
+        if (commodity == 'Beef') {
+            place_beef_domestic_data();
+        }
+        else if (commodity == 'Leather') {
+            place_leather_domestic_data();
+        }
+        else if (commodity == 'Tallow') {
+            place_tallow_domestic_data();
+        }
     });
 
 
     $('.data-row').on('mouseenter', function() {
         if (!$(this).hasClass('trade-map-legend')) {
-            $('.trade-map').find('img').show();
+ 
             $('.popup-panel, .open-country-popup, .hide-country-popup').hide();
             var map_url = '';
             var which_country = $(this).find('.trade-data-row-right').attr('id');
             map_url = "http://d2tbmhuj3dq9ke.cloudfront.net/img/"+commodity+"Map-"+which_country+".png";
-            $('.trade-map img').attr('src', map_url);
+
             if (which_country == 'Europe' && commodity == 'Beef') {
                 $('#showEurope').show();
                 $('#showEurope').on('click', function() {
                     $('.open-country-popup').hide();
-                    $('#europe-popup-panel img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-EuropeZoom.jpg');
                     $('#europe-popup-panel').fadeIn();
                     $('#hideEurope').show();
                 });
@@ -538,9 +519,11 @@ $('#forest-cover-yr-3').click(function(){
             else {
                 $('.open-country-popup, .hide-country-popup, .popup-panel').hide();
             }
+        $('.trade-map img').attr('src', map_url);
         }
        
     })
+
 
 
 

@@ -181,27 +181,27 @@ $('#chapter-one .year-number-lg').click(function(){
 });
 
 $('#cattle-head-yr-1').click(function(){
-    $('.ch1-map-1-holder img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd1993.png');
+    $('.ch1-map-1-holder img').attr('src','img/Map-Herd1993-mob.png');
 });
 
 $('#cattle-head-yr-2').click(function(){
-    $('.ch1-map-1-holder img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd2003.png');
+    $('.ch1-map-1-holder img').attr('src','img/Map-Herd2003-mob.png');
 });
 
 $('#cattle-head-yr-3').click(function(){
-    $('.ch1-map-1-holder img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Herd2013.png');
+    $('.ch1-map-1-holder img').attr('src','img/Map-Herd2013-mob.png');
 });
 
 $('#forest-cover-yr-1').click(function(){
-    $('.ch1-map-2-holder img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor1991.png');
+    $('.ch1-map-2-holder img').attr('src','img/Map-Defor1991-mob.png');
 });
 
 $('#forest-cover-yr-2').click(function(){
-    $('.ch1-map-2-holder img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor2003.png');
+    $('.ch1-map-2-holder img').attr('src','img/Map-Defor2003-mob.png');
 });
 
 $('#forest-cover-yr-3').click(function(){
-    $('.ch1-map-2-holder img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/Map-Defor2013.png');
+    $('.ch1-map-2-holder img').attr('src','img/Map-Defor2013-mob.png');
 });
 
 

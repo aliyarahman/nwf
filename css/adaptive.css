@@ -16,14 +16,32 @@
 
 
 @font-face {
-    font-family: "Circular-Pro-Book";
-    src:url("../fonts/lineto-circular-pro-book.eot");
-    src:url("../fonts/lineto-circular-pro-book.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/lineto-circular-pro-book.woff") format("woff"),
-        url("../fonts/lineto-circular-pro-book.ttf") format("truetype"),
-        url("../fonts/lineto-circular-pro-book.svg#lineto-circular-pro-book") format("svg");
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Circular-Pro-Book";
+	src: url("../fonts/lineto-circular-pro-book.eot");
+	src: url("../fonts/lineto-circular-pro-book.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-book.woff") format("woff"), url("../fonts/lineto-circular-pro-book.ttf") format("truetype"), url("../fonts/lineto-`circular-pro-book.svg#lineto-circular-pro-book") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Circular-Pro-Book-Italic";
+	src: url("../fonts/lineto-circular-pro-bookItalic.eot");
+	src: url("../fonts/lineto-circular-pro-bookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-bookItalic.woff") format("woff"), url("../fonts/lineto-circular-pro-bookItalic.ttf") format("truetype"), url("../fonts/lineto-`circular-pro-bookItalic.svg#lineto-circular-pro-book") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Circular-Pro-Medium";
+	src: url("../fonts/lineto-circular-pro-medium.eot");
+	src: url("../fonts/lineto-circular-pro-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-medium.woff") format("woff"), url("../fonts/lineto-circular-pro-medium.ttf") format("truetype"), url("../fonts/lineto-circular-pro-medium.svg#lineto-circular-pro-medium") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Circular-Pro-Bold";
+	src: url("../fonts/lineto-circular-pro-bold.eot");
+	src: url("../fonts/lineto-circular-pro-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-pro-bold.woff") format("woff"), url("../fonts/lineto-circular-pro-bold.ttf") format("truetype"), url("../fonts/lineto-circular-pro-bold.svg#lineto-circular-pro-bold") format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
 
 
@@ -64,7 +82,12 @@
 
 /* Global style */
 
-
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 15px;
+	line-height: 20px;
+}
 
 
 body {
@@ -74,11 +97,24 @@ body {
 }
 
 
-h1,h2,a {
+h1,h2 {
     color: #363845;
 }
 
-
+i, em {
+	font-family: "Circular-Pro-Book-Italic";
+}
+b, strong {
+	font-family: "Circular-Pro-Bold";
+}
+a {
+	color: #f16f4e;
+	text-decoration: none;
+}
+a:hover {
+	color: #f16f4e;
+	border-bottom: 1px solid;
+}
 
 #beta-marker {
     font-size: 2em;
@@ -139,33 +175,46 @@ h1,h2,a {
 
 
 .chapter-header-text h2 {
-    line-height: 1em;
+    line-height: 1.01em;
     margin-bottom: 0.4em;
-    font-weight: 600;
     font-size: 2.5em;
-    font-family: Circular-Pro-Book;
+    font-family: "Circular-Pro-Medium";
 }
 
 
 .read-more-less {
-    margin: 2em 0em;
+    margin: 1em 0em 1.5em -1em;
     cursor: pointer;
     cursor: hand;
 }
 
-.read-more-button {
-    color: #fff;
-    background-color: #484a56;
-    padding: 1em;
-}
+
 
 .read-less-button {
     display: none;
-    color: #fff;
-    background-color: #484a56;
-    padding: 1em;
     position: relative;
     top: -2em;
+}
+
+.read-more-button, .read-less-button, .tangent-article-download-button {
+	color: #fff;
+	background-color: #484a56;
+	font-size: 20px;
+	font-family: "Circular-Pro-Bold";
+	padding: 4px 0;
+	text-align: center;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.read-more-button {
+	width: 155px;
+}
+.read-less-button {
+	width: 145px;
+}
+.tangent-article-download-button {
+	width: 6.5em;
 }
 
 .read-more-button:hover, .read-less-button:hover {
@@ -204,6 +253,8 @@ h1,h2,a {
 .year-number-lg  {
     color: #b98728;
     line-height: 0.6em;
+	    font-family: "Circular-Pro-Bold";
+
     cursor: pointer;
     cursor: hand;
     font-size: 4.5em;
@@ -221,7 +272,7 @@ h1,h2,a {
 
 .tangent-read-more {
     font-size: 1.25em;
-    font-weight: bold;
+    font-family: "Circular-Pro-Bold";
     padding: 0.5em 1em;
 }
 
@@ -285,7 +336,7 @@ h1,h2,a {
 }
 
 .tangent-article-caption {
-    font-weight: bold;
+    font-family: "Circular-Pro-Bold";
     font-size: 0.8em;
     margin-bottom: 1.25em;
 }
@@ -416,7 +467,7 @@ h1,h2,a {
 
 #prequel-blurb {
     color: white;
-    background-color: rgba(54,54,66,0.95);
+    background-color: #5e5f6a;
     font-family: Dala Floda Web;
     font-size: 1.75em;
     line-height: 1.1em;
@@ -440,9 +491,9 @@ h1,h2,a {
     vertical-align: top;
     background-color: #282a3a;
     color: #afb0b5;
-    width: 50px;
-    height: 50px;
-    padding: 2%;
+    width: 90px;
+    height: 80px;
+    padding: 18px 5px;
     margin-left: -1px;
     cursor: pointer;
     cursor: hand;
@@ -453,14 +504,14 @@ h1,h2,a {
 }
 
 .burger-bar-holder {
-    height: 100%;
-    width: 100%;
+    height: 80px;
+    width: 90px;
 }
 
 .burger-bar { 
-    height: 11%;
-    margin: 14% 0%;
-    width: 100%;
+    height: 5px;
+    margin: 7px 20px;
+    width: 40px;
     background-color: #afb0b5;
 }
 
@@ -523,11 +574,12 @@ h1,h2,a {
 
 .ch1-map-1-holder, .ch1-map-2-holder {
     width: 100%;
-    padding-bottom: 1em;
+    padding-bottom: 0em;
 }
 
 .ch1-map-1-holder img, .ch1-map-2-holder img {
     width: 100%;
+	float:right;
 }
 
 
@@ -541,6 +593,7 @@ h1,h2,a {
 
 .ch1-map-legend {
     color: #363845;
+	margin-top:-1em;
     margin-bottom: 2em;
     -webkit-font-feature-settings: 'tnum';
     -moz-font-feature-settings: 'tnum';
@@ -551,12 +604,18 @@ h1,h2,a {
     font-size: 0.8em;
     display: inline-block;
     vertical-align: middle;
+	-font-variant-numeric: proportional-nums;
+	-moz-font-feature-settings: "pnum";
+	-ms-font-feature-settings: "pnum";
+	-webkit-font-feature-settings: "pnum";
+	font-feature-settings: "pnum";
 }
 
 .ch1-legend-label {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 1.1em;
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 20px;
+	line-height: 30px;
 }
 
 
@@ -565,7 +624,7 @@ h1,h2,a {
 #ch1-legend-box-6, #ch1-legend-box-7, #ch1-legend-box-8, #ch1-legend-box-9 {
     display: inline-block;
     vertical-align: middle;
-    margin-top: 3%;
+    margin-top: 10px;
     height: 1.8em;
     width: 1.8em;
 }
@@ -592,7 +651,7 @@ h1,h2,a {
 }
 
 #ch1-legend-box-6 {
-    background-image: url("http://d2tbmhuj3dq9ke.cloudfront.net/img/ch1_state_line.png");
+    background-image: url("../img/ch1_state_line.png");
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
@@ -805,7 +864,7 @@ h1,h2,a {
 
 .trade-percentage {
     font-size: 1.1em;
-    font-weight: bold;
+    font-family: "Circular-Pro-Bold";
 }
 
 
@@ -839,7 +898,7 @@ h1,h2,a {
     background-color: #f27050;
     color: #fff;
     font-size: 2em;
-    font-weight: bold;
+    font-family: "Circular-Pro-Bold";
     text-align: center;
     width: 1.2em;
     padding-left: -0.15em;
@@ -1276,7 +1335,7 @@ popup-panel img {
     background-color: #f27050;
     color: #fff;
     font-size: 2.2em;
-    font-weight: bold;
+    font-family: "Circular-Pro-Bold";
     text-align: center;
     width: 1.2em;
     height: 1.2em;
@@ -1349,7 +1408,7 @@ popup-panel img {
 
 .about-main-text a {
     color: #fff;
-    font-weight: bold;
+    font-family: "Circular-Pro-Bold";
 }
 
 #about-title {
@@ -1421,9 +1480,10 @@ popup-panel img {
 /* Citation style */
 
 .citation-number, #amazon-biome, .gibbs-et-al, #direct-suppliers, #indirect-suppliers, #strassburg-et-al, #BeefDomestic, #LeatherDomestic, #TallowDomesticA, #TallowDomesticB, #TallowDomesticC {
-    text-decoration: underline;
-    cursor: pointer;
-    cursor: hand;
+    text-decoration: none;
+	color: #f16f4e;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .citation {
