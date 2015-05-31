@@ -192,6 +192,8 @@ $(document).ready(function() {
   // Hint behavior
   // ========================================
 
+    var hint_help_closed = false;
+
     $('.hint-button').on('click', function() {
         $(".hint-anchor").each(function() { 
             $('#'+$(this).attr('id').split('-anchor')[0]).css({'top':$(this).offset().top, 'left': $(this).offset().left});
@@ -209,6 +211,7 @@ $(document).ready(function() {
 
     $('.close-hint-panel').on('click', function() {
         $('#hint-panel-wrapper').fadeOut();
+        hint_help_closed = true;
     });
 
 
@@ -218,11 +221,11 @@ $(document).ready(function() {
         var hint_panel_trigger_top = $('#table-of-contents').offset().top-250;
         var hint_panel_trigger_bottom = $('#table-of-contents').offset().top+200;
 
-        if ((hint_panel_trigger_bottom > y_scroll_pos) && (y_scroll_pos > hint_panel_trigger_top)) {
-            $('#hint-panel-wrapper').css('opacity', '1');
+        if ((hint_panel_trigger_bottom > y_scroll_pos) && (y_scroll_pos > hint_panel_trigger_top) && (hint_help_closed === false)) {
+            $('#hint-panel-wrapper').fadeIn();
         }
         else {
-            $('#hint-panel-wrapper').css('opacity', '0');
+            $('#hint-panel-wrapper').fadeOut();
         }
     });
 

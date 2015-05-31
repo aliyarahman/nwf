@@ -632,12 +632,12 @@ p.column-balance {
 /* Hinting style */
 
 #hint-panel-wrapper {
-	opacity: 0;
+	display: none;
 	position: fixed;
-	width: 100%;
-	height: 100%;
 	top: 0px;
 	left: 0px;
+	width: 100%;
+	height: 2000px;
 	background-color: rgba(54,56,69, 0.98);
 	-moz-transition: all .15s;
 	-webkit-transition: all .15s;
