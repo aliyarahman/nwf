@@ -79,6 +79,10 @@ $(document).ready(function() {
   // Citation behavior
   // ====================================
 
+    $('.citation a').on('mouseover', function() {
+        $(this).parent().show();
+    });
+
     $('.citation-number').on('mouseover', function() {
         var which_citation = '#citation'+$(this).text();
         var citation_top = $(this).offset().top;
@@ -209,7 +213,7 @@ $(document).ready(function() {
     });
 
 
-    $('.close-hint-panel').on('click', function() {
+    $('.close-hint-panel, #hint-panel-wrapper').on('click', function() {
         $('#hint-panel-wrapper').fadeOut();
         hint_help_closed = true;
     });

@@ -2080,6 +2080,13 @@ popup-panel img {
 #IIS-logo {
 	height: 7em;
 }
+
+#WWF-logo {
+	height: 5em;
+	position: relative;
+	top: -1em;
+}
+
 .copyright-info {
 	padding-top: 16px;
 	font-size: 14px;
@@ -2121,6 +2128,7 @@ sup, sub {
 	color: #fff;
 	cursor: pointer;
 	cursor: hand;
+	text-decoration: underline;
 }
 .citation-link {
 	text-decoration: none;
