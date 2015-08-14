@@ -700,7 +700,7 @@ p.column-balance {
 .hint-button {
 	display: inline-block;
 	margin-top: 10px;
-	margin-left: 80px;
+	margin-left: 150px;
 	margin-right: 10px;
 	height: 60px;
 	vertical-align: middle;
@@ -736,6 +736,7 @@ p.column-balance {
 	top: 150px;
 	left: -20px;
 }
+
 #ch2-hint-1-anchor {
 	top: 20px;
 	left: 10px;
@@ -849,7 +850,8 @@ p.column-balance {
 }
 #burger-bar-holder {
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 22px;
+	margin-left: 170px;
 	width: 60px;
 	height: auto;
 	vertical-align: middle;
@@ -905,7 +907,7 @@ p.column-balance {
 	margin: 0px;
 	position: relative;
 	left: 230px;
-	top: -210px;
+	top: -110px;
 }
 #site-map ul {
 	background-color: #353744;
@@ -1229,14 +1231,6 @@ p.column-balance {
 	top: -930px;
 	left: 35px;
 }
-#leather-bubble:hover, #beef-bubble:hover, #tallow-bubble:hover {
-	opacity: 0.9;
-	filter: alpha(opacity=90);
-}
-.tangent-article-download-image:hover, .tangent-article-tagline:hover, .tangent-article-back:hover {
-	opacity: 0.6;
-	filter: alpha(opacity=60);
-}
 #beef-bubble {
 	top: -450px;
 	left: -75px;
@@ -1245,6 +1239,7 @@ p.column-balance {
 	top: -525px;
 	left: 590px;
 }
+
 #leather-bubble img, #beef-bubble img, #tallow-bubble img {
 	width: 100%;
 	height: 100%;
@@ -1252,9 +1247,31 @@ p.column-balance {
 #tallow-bubble img {
 	width: 120%;
 }
+.product-bubble:hover {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	width: 400px;
+	height: 400px;
+	margin: -40px;
+}
+
+
+
+
+
+
+
+
+
 #chapter-two .tangent-tab {
 	color: #6fb174;
 }
+
+.tangent-article-download-image:hover, .tangent-article-tagline:hover, .tangent-article-back:hover {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
 #tab-two .tangent-read-more, #tab-two .tangent-title:hover {
 	color: #6fb174;
 }
@@ -1328,7 +1345,7 @@ p.column-balance {
 .domestic-map {
 	display: none;
 	top: 300px;
-	left: 800px;
+	left: 600px;
 	width: 50em;
 }
 
@@ -1336,7 +1353,7 @@ p.column-balance {
 	display: none;
 	width: 950px;
 	top: 300px;
-	left: 600px;
+	left: 550px;
 }
 .trade-map img {
 	width: 100%;
@@ -1803,6 +1820,7 @@ popup-panel img {
 	margin-left: 60px !important;
 }
 .recommendations-header .graphic-title {
+	font-family: "Circular-Pro-Book";
 	color: #353744;
 	width: 705px;
 }
