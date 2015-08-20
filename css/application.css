@@ -317,10 +317,13 @@ p.column-balance {
 	font-size: 80px;
 	line-height: 70px;
 	font-family: "Circular-Pro-Bold";
+	position: relative;
 	-webkit-font-feature-settings: 'tnum';
 	-moz-font-feature-settings: 'tnum';
 	-ms-font-feature-settings: 'tnum';
 	font-variant: tabular-nums;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 .tangent-tab-holder {
@@ -838,6 +841,9 @@ p.column-balance {
 #site-menu, #site-map {
 	cursor: pointer;
 	cursor: hand;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+
 }
 #site-menu {
 	width: 250px;
@@ -847,7 +853,10 @@ p.column-balance {
 	width: 100%;
 	height: 80px;
 	margin-bottom: -15px;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
+
 #burger-bar-holder {
 	display: inline-block;
 	margin-top: 22px;
@@ -855,6 +864,9 @@ p.column-balance {
 	width: 60px;
 	height: auto;
 	vertical-align: middle;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+
 }
 .burger-bar, .burger-spacer {
 	width: 50px;
@@ -875,6 +887,9 @@ p.column-balance {
 	color: #afb0b5;
 	width: 100%;
 	margin: 0px;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+
 }
 #burger-menu ul, #site-map-menu ul {
 	padding: 0px;
@@ -900,7 +915,10 @@ p.column-balance {
 	display: none;
 	width: 35em;
 	position: relative;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
+
 #site-map-menu {
 	color: #afb0b5;
 	width: 100%;
@@ -908,6 +926,9 @@ p.column-balance {
 	position: relative;
 	left: 230px;
 	top: -110px;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+
 }
 #site-map ul {
 	background-color: #353744;
@@ -1066,6 +1087,7 @@ p.column-balance {
 }
 #chapter-one .year-number-lg {
 	color: #b98728;
+
 }
 #chapter-one .year-number-lg:hover {
 	color: #353744;
@@ -1226,6 +1248,7 @@ p.column-balance {
 	position: relative;
 	cursor: pointer;
 	cursor: hand;
+	transition: all 0.5s;
 }
 #leather-bubble {
 	top: -930px;
@@ -1248,15 +1271,12 @@ p.column-balance {
 	width: 120%;
 }
 .product-bubble:hover {
-	opacity: 0.9;
-	filter: alpha(opacity=90);
-	width: 400px;
-	height: 400px;
-	margin: -40px;
+	opacity: 0.9 !important;
+	filter: alpha(opacity=90) !important;
+	width: 400px !important;
+	height: 400px !important;
+	margin: -40px !important;
 }
-
-
-
 
 
 
@@ -1843,6 +1863,7 @@ popup-panel img {
 	width: 250px;
 }
 .map-point {
+	background-color: transparent;
 	display: inline-block;
 	width: 50px;
 	height: 50px;
@@ -1850,12 +1871,19 @@ popup-panel img {
 	position: relative;
 	cursor: pointer;
 	cursor: hand;
+	border: #f27050 solid 0px;
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
 }
+
 .map-point:hover {
-	background-color: #fff;
-	opacity: 0.4;
-	filter: alpha(opacity=40);
+	width: 40px !important;
+	height: 40px !important;
+	border: #f27050 solid 20px !important;
+	margin-left: -15px !important;
+	margin-top: -15px !important;
 }
+
 #open-ranchers-recs {
 	top: 245px;
 	left: 666px;

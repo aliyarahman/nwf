@@ -269,43 +269,94 @@ $(document).ready(function() {
 
 
 
-//Chapter 1 behavior
-//=====================================
+    //Chapter 1 behavior
+    //=====================================
 
-$('#chapter-one .year-number-lg').click(function(){
-    $('#chapter-one .year-number-lg').css('color','#b98728');
-    $(this).css('color', '#363845');
-});
+    // Triggers button animation on scroll to top of graphic content
 
-$('#cattle-head-yr-1').click(function(){
-    $('.cattle-head-growth img').attr('src','img/Map-Herd1993.png');
-});
+    var ch1Waypoint = new Waypoint({
+      element: $('#chapter-one .chapter-header-title'),
+      triggerOnce: true,
+      handler:  function() {
+                    ch1animate();
+                }
+    });
 
-$('#cattle-head-yr-2').click(function(){
-    $('.cattle-head-growth img').attr('src','img/Map-Herd2003.png');
-});
 
-$('#cattle-head-yr-3').click(function(){
-    $('.cattle-head-growth img').attr('src','img/Map-Herd2013.png');
-});
-
-$('#forest-cover-yr-1').click(function(){
-    $('.forest-cover-loss img').attr('src','img/Map-Defor1991.png');
-});
-
-$('#forest-cover-yr-2').click(function(){
-    $('.forest-cover-loss img').attr('src','img/Map-Defor2003.png');
-});
-
-$('#forest-cover-yr-3').click(function(){
-    $('.forest-cover-loss img').attr('src','img/Map-Defor2013.png');
-});
+    function ch1animate() {
+        $("#chapter-one .year-number-lg").each(function(i) {
+            $(this).delay(i*150)
+            .animate({marginLeft: '-40px'}, 
+                {
+                    duration: 500,
+                    complete: function(i) {
+                        $(this).delay(600).animate({marginLeft: '0px'}, {complete: function() {$(this).css({'color':'#b98728'});}}).css({'color':'#363845'});
+                    }
+                }
+            )
+        });
+    }
 
 
 
 
-//Chapter 2 behavior
-//=====================================
+    $('#chapter-one .year-number-lg').click(function(){
+        $('#chapter-one .year-number-lg').css('color','#b98728');
+        $(this).css('color', '#363845');
+    });
+
+    $('#cattle-head-yr-1').click(function(){
+        $('.cattle-head-growth img').attr('src','img/Map-Herd1993.png');
+    });
+
+    $('#cattle-head-yr-2').click(function(){
+        $('.cattle-head-growth img').attr('src','img/Map-Herd2003.png');
+    });
+
+    $('#cattle-head-yr-3').click(function(){
+        $('.cattle-head-growth img').attr('src','img/Map-Herd2013.png');
+    });
+
+    $('#forest-cover-yr-1').click(function(){
+        $('.forest-cover-loss img').attr('src','img/Map-Defor1991.png');
+    });
+
+    $('#forest-cover-yr-2').click(function(){
+        $('.forest-cover-loss img').attr('src','img/Map-Defor2003.png');
+    });
+
+    $('#forest-cover-yr-3').click(function(){
+        $('.forest-cover-loss img').attr('src','img/Map-Defor2013.png');
+    });
+
+
+
+
+    //Chapter 2 behavior
+    //=====================================
+
+    var ch2Waypoint = new Waypoint({
+      element: $('#chapter-two .chapter-header-title'),
+      triggerOnce: true,
+      handler:  function() {
+                    ch2animate();
+                }
+    });
+
+
+    function ch2animate() {
+        $("#chapter-two .product-bubble").each(function(i) {
+            $(this).delay(i*150)
+            .animate({'width': '400px', 'height': '400px', 'margin': '-40px'}, 
+                {
+                    duration: 500,
+                    complete: function(i) {
+                        $(this).delay(600).animate({'width': '320px', 'height': '320px', 'margin': '0px'});
+                    }
+                }
+            );
+        });
+    }
 
 
     // Functionality for the close button
@@ -499,134 +550,187 @@ $('#forest-cover-yr-3').click(function(){
 
 
 
+    //Chapter 4 behavior
+    //=====================================
 
 
-//Chapter 4 behavior
-//=====================================
+    var ch4Waypoint = new Waypoint({
+      element: $('#chapter-four .chapter-header-title'),
+      triggerOnce: true,
+      handler:  function() {
+                    ch4animate();
+                }
+    });
 
 
-    // Control parcel maps
-
-$('#chapter-four .year-number-lg').on('click', function(){
-    $('#chapter-four .year-number-lg').css('color', '#876e5a');
-    $(this).css('color', '#fff');
-    $('#chapter-four .graphic-content').css({'height':'880px', 'background-size':'830% 830%','background-position':'49% 28%'});
-    $('.ch4-map-overlay').css({'margin-bottom':'-100px', 'width':'600px','height':'720px', 'top':'-800px', 'left':'620px'});
-    var which_map = $(this).attr('id').split('-')[0];
-    $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
-    $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
-    if (which_map == 'pre') {
-        $('.ch4-box-1').hide();
-        $('.ch4-box-3').hide();
-        $('.ch4-box-2').show();
+    function ch4animate() {
+        $("#chapter-four .year-number-lg").each(function(i) {
+            $(this).delay(i*150)
+            .animate({marginLeft: '-40px'}, 
+                {
+                    duration: 500,
+                    complete: function(i) {
+                        $(this).delay(600).animate({marginLeft: '0px'}, {complete: function() {$(this).css({'color':'#876e5a'});}}).css({'color':'#fff'});
+                    }
+                }
+            );
+        });
     }
-    else if (which_map =='prepost') {
-        $('.ch4-box-1').show();
-        $('.ch4-box-2').show();
+
+
+
+
+
+        // Control parcel maps
+
+    $('#chapter-four .year-number-lg').on('click', function(){
+        $('#chapter-four .year-number-lg').css('color', '#876e5a');
+        $(this).css('color', '#fff');
+        $('#chapter-four .graphic-content').css({'height':'880px', 'background-size':'830% 830%','background-position':'49% 28%'});
+        $('.ch4-map-overlay').css({'margin-bottom':'-100px', 'width':'600px','height':'720px', 'top':'-800px', 'left':'620px'});
+        var which_map = $(this).attr('id').split('-')[0];
+        $('.ch4-map-overlay').removeClass('ch4-map-overlay-pre').removeClass('ch4-map-overlay-prepost').removeClass('ch4-map-overlay-post');
+        $('.ch4-map-overlay').addClass("ch4-map-overlay-"+which_map);
+        if (which_map == 'pre') {
+            $('.ch4-box-1').hide();
+            $('.ch4-box-3').hide();
+            $('.ch4-box-2').show();
+        }
+        else if (which_map =='prepost') {
+            $('.ch4-box-1').show();
+            $('.ch4-box-2').show();
+        }
+        else if (which_map =='post') {
+            $('.ch4-box-1').show();
+            $('.ch4-box-2').hide();
+            $('.ch4-box-3').show();
+
+        }
+        $('#tab-four').css({'position':'relative','top':'-42em', 'margin-bottom':'-40em'});
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Chapter 5 behavior
+    //=====================================
+
+    var which_frame = 1;
+
+    function ch5_switch_frame() {
+        if (which_frame ==1) {
+            $('#ch5-image-overlay').hide();
+            $('.ch5-label-text div').hide();
+            $('#ct1').show();
+            $('#ch5-image-holder').css({
+             "background-size": "300% 300%",
+             "background-position": "left center"});
+        }
+        else if (which_frame ==2) {
+            $('#ch5-image-overlay').hide();
+            $('.ch5-label-text div').hide();
+            $('#ct2').show();
+            $('#ch5-image-holder').css({
+                "background-size": "210% 210%",
+                "background-position": "10% 55%"});
+        }
+        else if (which_frame ==3) {
+            $('#ch5-image-overlay').hide();
+            $('.ch5-label-text div').hide();
+            $('#ct3').show();
+            $('#ch5-image-holder').css({
+                "background-size": "210% 210%",
+                "background-position": "60% center"});
+        }
+        else if (which_frame ==4) {
+            $('#ch5-image-overlay').hide();
+            $('.ch5-label-text div').hide();
+            $('#ct4').show();
+            $('#ch5-image-holder').css({
+                "background-size": "175% 175%",
+                "background-position": "right 60%"});
+        }
+        else if (which_frame ==5) {
+            $('#ch5-image-overlay').hide();
+            $('.ch5-label-text div').hide();
+            $('#ct5').show();
+            $('#ch5-image-holder').css({
+                "background-size": "100% 100%"});
+        }
+        else if (which_frame ==6) {
+            $('#ch5-image-overlay').hide();
+            $('.ch5-label-text div').hide();
+            $('#ct6').show();
+            $('#ch5-image-holder').css({
+                "background-size": "100% 100%"});
+            $('#ch5-image-overlay').fadeIn(1000);
+        }
     }
-    else if (which_map =='post') {
-        $('.ch4-box-1').show();
-        $('.ch4-box-2').hide();
-        $('.ch4-box-3').show();
-
-    }
-    $('#tab-four').css({'position':'relative','top':'-42em', 'margin-bottom':'-40em'});
-});
 
 
+    $('.ch5-left-arrow').on('click', function() {
+        if (which_frame > 1) {
+            which_frame--;
+        }
+        else {
+            which_frame = 6;
+        }
+        ch5_switch_frame();
+    });
 
 
-
-
-
-
-
-
-
-
-
-//Chapter 5 behavior
-//=====================================
-
-var which_frame = 1;
-
-function ch5_switch_frame() {
-    if (which_frame ==1) {
-        $('#ch5-image-overlay').hide();
-        $('.ch5-label-text div').hide();
-        $('#ct1').show();
-        $('#ch5-image-holder').css({
-         "background-size": "300% 300%",
-         "background-position": "left center"});
-    }
-    else if (which_frame ==2) {
-        $('#ch5-image-overlay').hide();
-        $('.ch5-label-text div').hide();
-        $('#ct2').show();
-        $('#ch5-image-holder').css({
-            "background-size": "210% 210%",
-            "background-position": "10% 55%"});
-    }
-    else if (which_frame ==3) {
-        $('#ch5-image-overlay').hide();
-        $('.ch5-label-text div').hide();
-        $('#ct3').show();
-        $('#ch5-image-holder').css({
-            "background-size": "210% 210%",
-            "background-position": "60% center"});
-    }
-    else if (which_frame ==4) {
-        $('#ch5-image-overlay').hide();
-        $('.ch5-label-text div').hide();
-        $('#ct4').show();
-        $('#ch5-image-holder').css({
-            "background-size": "175% 175%",
-            "background-position": "right 60%"});
-    }
-    else if (which_frame ==5) {
-        $('#ch5-image-overlay').hide();
-        $('.ch5-label-text div').hide();
-        $('#ct5').show();
-        $('#ch5-image-holder').css({
-            "background-size": "100% 100%"});
-    }
-    else if (which_frame ==6) {
-        $('#ch5-image-overlay').hide();
-        $('.ch5-label-text div').hide();
-        $('#ct6').show();
-        $('#ch5-image-holder').css({
-            "background-size": "100% 100%"});
-        $('#ch5-image-overlay').fadeIn(1000);
-    }
-}
-
-
-$('.ch5-left-arrow').on('click', function() {
-    if (which_frame > 1) {
-        which_frame--;
-    }
-    else {
-        which_frame = 6;
-    }
-    ch5_switch_frame();
-});
-
-
-$('.ch5-right-arrow').on('click', function() {
-    if (which_frame < 6) {
-        which_frame++;
-    }
-    else {
-        which_frame = 1;
-    }
-    ch5_switch_frame();
-});
+    $('.ch5-right-arrow').on('click', function() {
+        if (which_frame < 6) {
+            which_frame++;
+        }
+        else {
+            which_frame = 1;
+        }
+        ch5_switch_frame();
+    });
 
 
 
 
     //Recommendations behavior
     //=====================================
+
+    var recWaypoint = new Waypoint({
+      element: $('#recommendations .chapter-header-title'),
+      triggerOnce: true,
+      handler:  function() {
+                    recanimate();
+                }
+    });
+
+
+    function recanimate() {
+        var recTransProperties = {'border-width': '20px', 'width':'40px', 'height':'40px', 'margin-left':'-30px', 'margin-top':'-15px'};
+        var recEndProperties = {'border-width':'0px', 'width':'50px', 'height':'50px', 'margin-left':'0px', 'margin-top':'0px'};
+        var transitionString = "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd";
+        
+
+        $("#open-ranchers-recs").css({ 'border': '#f27050 solid 20px', 'width':'40px', 'height':'40px', 'margin-left':'-15px', 'margin-top':'-15px'})
+        .one(transitionString,
+            function(){ $(this).css(recEndProperties); });
+
+
+        $("#open-meatpackers-recs, #open-retailers-recs, #open-government-recs, #open-individuals-recs, #open-banks-recs")
+            .css(recTransProperties)
+            .one(transitionString,
+            function(){ $(this).css(recEndProperties); });
+    }
+
+
 
     $('.map-point').on('click', function() {
         var which_panel = $(this).attr('id').split('open-')[1];
@@ -646,4 +750,4 @@ $('.ch5-right-arrow').on('click', function() {
     });
 
 
-});
+}); // Close document.ready
