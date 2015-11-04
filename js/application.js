@@ -62,10 +62,23 @@ $(document).ready(function() {
         window.location = which_tangent+'.html';
     });
 
+    $(".tangent-tab-pt").click(function () {
+        var which_tangent = $(this).attr('id').split("tab-")[1];
+        window.location = which_tangent+'_pt.html';
+    });
+
 
     $('.site-sub-link').on('click', function(){
         var which_tangent= $(this).attr('id').split('link-')[1];
         window.location = which_tangent+'.html';
+        $("#site-map").hide();
+        sitemapopen = false;
+        menuopen = true;        
+    });
+
+    $('.site-sub-link-pt').on('click', function(){
+        var which_tangent= $(this).attr('id').split('link-')[1];
+        window.location = which_tangent+'_pt.html';
         $("#site-map").hide();
         sitemapopen = false;
         menuopen = true;        
@@ -402,21 +415,36 @@ $(document).ready(function() {
         switch_label_to_beef();
         $('#LeatherIntroText, #TallowIntroText').hide();
         $('#BeefIntroText').fadeIn();
-        $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png');
+        if ($('.ch2-screen-holder').hasClass('pt-graphic')) {
+            $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic-PR.png');
+        }
+        else {
+            $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png');
+        }
     }
 
     function place_leather_domestic_data() {
         switch_label_to_leather();
         $('#BeefIntroText, #TallowIntroText').hide();
-        $('#LeatherIntroText').fadeIn();    
-        $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png');
+        $('#LeatherIntroText').fadeIn();
+        if ($('.ch2-screen-holder').hasClass("pt-graphic")) {
+            $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic-PR.png');
+        }
+        else {
+            $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png');
+        }
     }
 
     function place_tallow_domestic_data() {
         switch_label_to_tallow();
         $('#LeatherIntroText, #BeefIntroText').hide();
         $('#TallowIntroText').fadeIn();
-        $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png');
+        if ($('.ch2-screen-holder').hasClass("pt-graphic")) {
+            $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic-PR.png');
+        }
+        else {
+            $('.domestic-map img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png');
+        }
     }
 
 
@@ -732,7 +760,7 @@ $(document).ready(function() {
 
 
 
-    $('.map-point').on('click', function() {
+    $('.recommendations-map-holder .map-point').on('click', function() {
         var which_panel = $(this).attr('id').split('open-')[1];
         var offset_top = ($('.recommendations-map-holder').height() - $('.recommendations-panel').height())/4;
         var offset_left = ($('.recommendations-map-holder').width() - $('.recommendations-panel').width())/4;
@@ -746,7 +774,23 @@ $(document).ready(function() {
             $('.recommendations-map-holder').css('opacity', 1.0);
             $('.recommendations-panel').hide();
         });
+    });
 
+
+    $('.recommendations-map-holder-pt .map-point').on('click', function() {
+        var which_panel = $(this).attr('id').split('open-')[1];
+        var offset_top = ($('.recommendations-map-holder-pt').height() - $('.recommendations-panel').height())/4;
+        var offset_left = ($('.recommendations-map-holder-pt').width() - $('.recommendations-panel').width())/4;
+        var recs_top = $('.recommendations-map-holder-pt').offset().top+offset_top;
+        var recs_left = $('.recommendations-map-holder-pt').offset().left+offset_left*1.5;
+        $('.recommendations-panel').css({'top': recs_top, 'left': recs_left});
+        $('.recommendations-map-holder-pt').css('opacity', 0.4);
+        $('#'+which_panel).fadeIn();
+
+        $('.close-recs').on('click', function() {
+            $('.recommendations-map-holder-pt').css('opacity', 1.0);
+            $('.recommendations-panel').hide();
+        });
     });
 
 

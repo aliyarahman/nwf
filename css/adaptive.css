@@ -250,7 +250,7 @@ ul li {
 	font-size: 1.25em;
 	padding: 0.5em 1em 1em 1em;
 }
-.tangent-tab {
+.tangent-tab, .tangent-tab-pt {
 	margin-bottom: 0.3em;
 	padding: 0.5em 0 0.5em 2em;
 	color: #fff;
@@ -425,7 +425,7 @@ ul li {
 }
 .menu-bar {
 	z-index: 300;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -433,6 +433,22 @@ ul li {
 	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
+#language-button {
+	width: auto;
+	height: 60px;
+	padding: 10px 20px 10px 20px;
+	line-height: 60px;
+	display: inline-block;
+	z-index: 300;
+	position: absolute;
+	margin: 0px;
+	left: 250px;
+	background-color: #353744;
+	color: #afb0b5;
+	font-family: "Circular-Pro-Bold";
+	font-size: 1.5em;
+}
+
 .menu-button {
 	display: inline-block;
 	vertical-align: top;
@@ -661,7 +677,7 @@ ul li {
 	width: 120%;
 	height: 120%;
 }
-#chapter-two .tangent-tab {
+#chapter-two .tangent-tab, #chapter-two .tangent-tab-pt {
 	color: #6fb174;
 }
 #tab-two .tangent-read-more, #tab-two .tangent-title:hover {
@@ -904,7 +920,7 @@ popup-panel img {
 /* Chapter 4 style */
 
 
-#chapter-four .tangent-tab {
+#chapter-four .tangent-tab, #chapter-four .tangent-tab-pt {
 	color: #b29377;
 }
 #chapter-four .graphic-content {
@@ -990,7 +1006,7 @@ popup-panel img {
 	background-color: #fff;
 	height: auto;
 }
-#chapter-five .tangent-tab {
+#chapter-five .tangent-tab, #chapter-five .tangent-tab-pt {
 	color: #6fb174;
 }
 .ch5-label {
@@ -1064,6 +1080,14 @@ popup-panel img {
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
+
+.recommendations-map-holder-pt {
+	height: 15em;
+	background-image: url('http://d2tbmhuj3dq9ke.cloudfront.net/img/recommendations-PR.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
 .rec-photo-caption {
 	color: #353744;
 	text-align: right;

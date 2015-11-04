@@ -61,10 +61,20 @@ $(document).ready(function() {
         window.location = which_tangent+'-mobile.html';
     });
 
+    $(".tangent-tab-pt").click(function () {
+        var which_tangent = $(this).attr('id').split("tab-")[1];
+        window.location = which_tangent+'-mobile_pt.html';
+    });
+
 
     $('.site-sub-link').on('click', function(){
         var which_tangent= $(this).attr('id').split('link-')[1];
         window.location = which_tangent+'-mobile.html';
+    });
+
+    $('.site-sub-link-pt').on('click', function(){
+        var which_tangent= $(this).attr('id').split('link-')[1];
+        window.location = which_tangent+'-mobile_pt.html';   
     });
 
 
@@ -241,7 +251,12 @@ $('#forest-cover-yr-3').click(function(){
     function place_beef_data() {
         $('.product-intro-text').fadeOut();
         $('#BeefIntroText').fadeIn();
-        $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png');
+        if ($('.ch2-maps').hasClass("pt-graphic")) {
+            $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic-PR.png');
+        }
+        else {
+            $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-Domestic.png');
+        }
         $('.trade-map-data').fadeOut();
         $('#international-beef-data').fadeIn();        
         $('.international-graphic img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/BeefMap-China.png');
@@ -250,7 +265,12 @@ $('#forest-cover-yr-3').click(function(){
     function place_leather_data() {
         $('.product-intro-text').fadeOut();
         $('#LeatherIntroText').fadeIn();
-        $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png');
+        if ($('.ch2-maps').hasClass("pt-graphic")) {
+            $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic-PR.png');
+        }
+        else {
+            $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-Domestic.png');
+        }
         $('.trade-map-data').fadeOut();
         $('#international-leather-data').fadeIn();        
         $('.international-graphic img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/LeatherMap-China.png');
@@ -259,7 +279,12 @@ $('#forest-cover-yr-3').click(function(){
     function place_tallow_data() {
         $('.product-intro-text').fadeOut();
         $('#TallowIntroText').fadeIn();
-        $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png');
+        if ($('.ch2-maps').hasClass("pt-graphic")) {
+            $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic-PR.png');
+        }
+        else {
+            $('.domestic-graphic img').attr('src', 'http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Domestic.png');
+        }
         $('.trade-map-data').fadeOut();
         $('#international-tallow-data').fadeIn();        
         $('.international-graphic img').attr('src','http://d2tbmhuj3dq9ke.cloudfront.net/img/TallowMap-Spain.png');
